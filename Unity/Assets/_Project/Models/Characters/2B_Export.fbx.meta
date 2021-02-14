@@ -1,80 +1,39 @@
 fileFormatVersion: 2
-guid: 14bcf9149c12f40fd9122419f0c224d6
+guid: 9c74b8995e20348c79d9f88be0e05721
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -623603649343465320
-    second: Scene
-  - first:
       74: 5843623619673129729
-    second: 2B_Walk
-  externalObjects:
+    second: Armature|2B_Walk
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_+part1-part1-eyepatch.part1-part1-eyepatch_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
+      74: 8349542763059015795
+    second: Armature|Walk
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-blackclothes_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
+      74: 2847642367013452201
+    second: Armature|Walk.002
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-clotheswhite_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
+      74: 9187285709365322125
+    second: Armature|Walk.004
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-skin_0.25_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
+      74: 5410160415362694273
+    second: Armature|Walk.005
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-skirt_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
+      74: -200777476874520112
+    second: Armature|Walk.006
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part2-face_0.2_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
+      74: -5523137056588378169
+    second: Armature|Walk.007
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part2-mouth_0.2_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
+      74: 5278979345069750669
+    second: Armature|Walk.008
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part2-headband_0.9_0_0
-    second: {fileID: 2100000, guid: 5a8f05f0dc4884072aeb9e58b3f99479, type: 2}
+      74: -6609003395388206582
+    second: Armature|Walk.009
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part1-feathers_0.3_0_0
-    second: {fileID: 2100000, guid: 7e25105920b884c4b8d6ad73d2e503e7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part2-eyeball_0.1_0_0
-    second: {fileID: 2100000, guid: 55179faa03e084d31b538253b3ebc135, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part2-lashes_0.2_0_0
-    second: {fileID: 2100000, guid: 2aa3f69a846d34aeb9dcc7c6b09e7d10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part2-hair1_0.7_0_0
-    second: {fileID: 2100000, guid: d207e9ffcb505404d85b55eb7951b102, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part2-hair2_0.6_0_0
-    second: {fileID: 2100000, guid: a28174b50904148a39abbe0f505d01a1, type: 2}
+      74: -6992275321216299620
+    second: Armature|2B_Pose
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -87,9 +46,82 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Bone length in configuration
+      does not match position in animation file:\n\t'leg left thigh' : position error
+      = 83.887886 mm\n\t'leg left knee' : position error = 417.398865 mm\n\t'leg
+      left ankle' : position error = 409.623169 mm\n\t'leg left toes' : position
+      error = 120.252502 mm\n\t'leg right thigh' : position error = 85.118210 mm\n\t'leg
+      right knee' : position error = 417.398651 mm\n\t'leg right ankle' : position
+      error = 409.623016 mm\n\t'leg right toes' : position error = 120.252464 mm\n\t'spine
+      lower' : position error = 92.378586 mm\n\t'spine upper' : position error =
+      100.527634 mm\n\t'head neck lower' : position error = 240.386383 mm\n\t'head
+      neck upper' : position error = 71.310104 mm\n\t'head eyeball right' : position
+      error = 102.074661 mm\n\t'head jaw' : position error = 34.553352 mm\n\t'head
+      eyeball left' : position error = 100.961685 mm\n\t'arm left shoulder 1' : position
+      error = 199.262878 mm\n\t'arm left shoulder 2' : position error = 55.574623
+      mm\n\t'arm left elbow' : position error = 243.060165 mm\n\t'arm left wrist'
+      : position error = 240.995224 mm\n\t'unused opt_hand_*_root.1.l' : position
+      error = 1.482488 mm\n\t'arm left finger 2a' : position error = 70.479111 mm\n\t'arm
+      left finger 2b' : position error = 32.348942 mm\n\t'arm left finger 2c' : position
+      error = 19.959940 mm\n\t'arm left finger metacarpal' : position error = 15.671978
+      mm\n\t'arm left finger 5a' : position error = 81.691582 mm\n\t'arm left finger
+      5b' : position error = 25.073067 mm\n\t'arm left finger 5c' : position error
+      = 16.026955 mm\n\t'arm left finger 4a' : position error = 80.074760 mm\n\t'arm
+      left finger 4b' : position error = 31.169046 mm\n\t'arm left finger 4c' : position
+      error = 21.434832 mm\n\t'arm left finger 3a' : position error = 68.011642 mm\n\t'arm
+      left finger 3b' : position error = 34.905441 mm\n\t'arm left finger 3c' : position
+      error = 21.435753 mm\n\t'arm left finger 1a' : position error = 31.189985 mm\n\t'arm
+      left finger 1b' : position error = 34.905697 mm\n\t'arm left finger 1c' : position
+      error = 28.514307 mm\n\t'arm right shoulder 1' : position error = 201.772110
+      mm\n\t'arm right shoulder 2' : position error = 55.574596 mm\n\t'arm right
+      elbow' : position error = 243.060181 mm\n\t'arm right wrist' : position error
+      = 240.994690 mm\n\t'unused opt_hand_*_root.1.r' : position error = 1.482491
+      mm\n\t'arm right finger 2a' : position error = 75.774574 mm\n\t'arm right finger
+      2b' : position error = 32.349209 mm\n\t'arm right finger 2c' : position error
+      = 19.960005 mm\n\t'arm right finger metacarpal' : position error = 15.366678
+      mm\n\t'arm right finger 5a' : position error = 85.676399 mm\n\t'arm right finger
+      5b' : position error = 25.073088 mm\n\t'arm right finger 5c' : position error
+      = 16.027060 mm\n\t'arm right finger 4a' : position error = 85.438187 mm\n\t'arm
+      right finger 4b' : position error = 31.169113 mm\n\t'arm right finger 4c' :
+      position error = 21.434870 mm\n\t'arm right finger 3a' : position error = 73.395714
+      mm\n\t'arm right finger 3b' : position error = 34.905556 mm\n\t'arm right finger
+      3c' : position error = 21.434904 mm\n\t'arm right finger 1a' : position error
+      = 29.562342 mm\n\t'arm right finger 1b' : position error = 34.905575 mm\n\t'arm
+      right finger 1c' : position error = 28.514236 mm\nAvatar Rig Configuration
+      mis-match. Inbetween bone rotation in configuration does not match rotation
+      in animation file:\n\t'unused opt_hand_*_root.1.l' : rotation error = 44.699333
+      deg\n\t'arm left finger metacarpal' : rotation error = 78.366539 deg\n\t'unused
+      opt_hand_*_root.1.r' : rotation error = 48.020020 deg\n\t'arm right finger
+      metacarpal' : rotation error = 74.082947 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Armature|2B_Walk' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'pelvis' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Armature|Action'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.004' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.005' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.006' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.007' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.008' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Armature|Walk.009' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -103,7 +135,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: 2B_Walk
+      name: Armature|2B_Walk
       takeName: Armature|2B_Walk
       internalID: 0
       firstFrame: 0
@@ -115,7 +147,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
@@ -130,7 +162,268 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0.96
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.002
+      takeName: Armature|Walk.002
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.004
+      takeName: Armature|Walk.004
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.005
+      takeName: Armature|Walk.005
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.006
+      takeName: Armature|Walk.006
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.007
+      takeName: Armature|Walk.007
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.008
+      takeName: Armature|Walk.008
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Walk.009
+      takeName: Armature|Walk.009
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|2B_Pose
+      takeName: Armature|2B_Pose
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
