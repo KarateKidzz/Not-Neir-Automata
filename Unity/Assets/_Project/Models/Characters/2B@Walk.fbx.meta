@@ -1,74 +1,15 @@
 fileFormatVersion: 2
-guid: 4fba0890d196e41b28cb16f9f50b3e09
+guid: 8796ee46116424ae19f46df890272940
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_+part1-part1-eyepatch.part1-part1-eyepatch_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
+      74: -524737376369113
+    second: Walk
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-blackclothes_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-clotheswhite_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-skin_0.25_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part1-skirt_0.3_0_0
-    second: {fileID: 2100000, guid: 7000eb72e0ce94902abda4563c2c1ccc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part2-face_0.2_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part1-part2-mouth_0.2_0_0
-    second: {fileID: 2100000, guid: 93347204abbc04355ac0a265c2ebb78a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 24_part2-headband_0.9_0_0
-    second: {fileID: 2100000, guid: 7e25105920b884c4b8d6ad73d2e503e7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part1-feathers_0.3_0_0
-    second: {fileID: 2100000, guid: 7e25105920b884c4b8d6ad73d2e503e7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part2-eyeball_0.1_0_0
-    second: {fileID: 2100000, guid: 55179faa03e084d31b538253b3ebc135, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part1-part2-lashes_0.2_0_0
-    second: {fileID: 2100000, guid: 2aa3f69a846d34aeb9dcc7c6b09e7d10, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part2-hair1_0.7_0_0
-    second: {fileID: 2100000, guid: d207e9ffcb505404d85b55eb7951b102, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 25_part2-hair2_0.6_0_0
-    second: {fileID: 2100000, guid: a28174b50904148a39abbe0f505d01a1, type: 2}
+      74: 761439125558564942
+    second: 2B|Walk
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -83,7 +24,13 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip '2B_Walk' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'spine upper' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip '2B|Walk' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'spine upper' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -95,7 +42,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: 2B|Walk
+      takeName: 2B|Walk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -133,8 +109,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 8796ee46116424ae19f46df890272940
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -2583,11 +2558,12 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 4fba0890d196e41b28cb16f9f50b3e09,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
