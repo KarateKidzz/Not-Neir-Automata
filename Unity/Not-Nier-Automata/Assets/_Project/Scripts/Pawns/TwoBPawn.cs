@@ -31,12 +31,13 @@ public class TwoBPawn : Pawn
 
     void FixedUpdate()
     {
-        float speed = move.normalized.magnitude;
+        bool isMoving = move.magnitude > 0.1f;
+        float speed = isMoving ? isSprinting ? 1f : 0.5f : 0f;
 
         speed = Mathf.SmoothDamp(anim.GetFloat("Velocity Z"), speed, ref velocityY, 0.2f);
         anim.SetFloat("Velocity Z", speed);
 
-        if (move.magnitude > 0.1f)
+        if (isMoving)
         {
             anim.SetBool("Moving", true);
         }
@@ -45,8 +46,8 @@ public class TwoBPawn : Pawn
             anim.SetBool("Moving", false);
         }
 
-        currentSprintSpeed = Mathf.SmoothDamp(anim.GetFloat("AnimationSpeed"), isSprinting ? 2f : 1f, ref sprintVel, 0.2f);
-        anim.SetFloat("AnimationSpeed", currentSprintSpeed);
+        //currentSprintSpeed = Mathf.SmoothDamp(anim.GetFloat("AnimationSpeed"), isSprinting ? 2f : 1f, ref sprintVel, 0.2f);
+        //anim.SetFloat("AnimationSpeed", currentSprintSpeed);
 
         // Update target direction relative to the camera view (or not if the Keep Direction option is checked)
         UpdateTargetDirection();
