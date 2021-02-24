@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Overworld.unity
     guid: 28db45604703d4c83a5c330335c95c6c
   - enabled: 1
-    path: Assets/_Project/Scenes/WalkingDemo.unity
+    path: Assets/_Project/Scenes/Tests/WalkingDemo.unity
     guid: e4753e2227b0a4c5aa6504f81c27980d
   m_configObjects: {}
