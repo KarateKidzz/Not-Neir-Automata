@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+/// <summary>
+/// Handles setting up and receiving beat callbacks from an FMOD Studio Event Emitter.
+/// </summary>
 public class BeatCallbacks : MonoBehaviour
 {
     [StructLayout(LayoutKind.Sequential)]
@@ -21,6 +22,11 @@ public class BeatCallbacks : MonoBehaviour
     EVENT_CALLBACK beatCallback;
 
     public StudioEventEmitter eventEmitter;
+
+    /// <summary>
+    /// Callback when the beat or timeline marker changes.
+    /// </summary>
+    public static Action<EventInstance,TIMELINE_BEAT_PROPERTIES> OnBeatChange;
 
     private void Start()
     {
@@ -52,7 +58,7 @@ public class BeatCallbacks : MonoBehaviour
     static FMOD.RESULT BeatEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instance, IntPtr parameterPtr)
     {
         EventInstance eventInstance = new EventInstance(instance);
-
+        
         // Retrieve the user data
         IntPtr timelineInfoPtr;
         FMOD.RESULT result = eventInstance.getUserData(out timelineInfoPtr);
@@ -71,6 +77,12 @@ public class BeatCallbacks : MonoBehaviour
                 case EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
                     {
                         var parameter = (TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(TIMELINE_BEAT_PROPERTIES));
+                        
+                        if (timelineInfo.currentMusicBar != parameter.beat)
+                        {
+                            OnBeatChange?.Invoke(eventInstance,parameter);
+                        }
+
                         timelineInfo.currentMusicBar = parameter.bar;
                     }
                     break;

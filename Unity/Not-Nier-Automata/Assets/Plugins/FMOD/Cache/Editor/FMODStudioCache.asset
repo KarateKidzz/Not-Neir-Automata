@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../FMOD/Not-Nier-Automata/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637497630910000000
+  lastModified: 637497646930000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -59,7 +59,7 @@ MonoBehaviour:
   Path: ../../FMOD/Not-Nier-Automata/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637497630910000000
+  lastModified: 637497646930000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -87,7 +87,7 @@ MonoBehaviour:
   - {fileID: -1470561099430419065}
   StringsBanks:
   - {fileID: -7504412736801957057}
-  stringsBankWriteTime: 637497630910000000
+  stringsBankWriteTime: 637497646930000000
   cacheVersion: 6
 --- !u!114 &2265181553204567577
 MonoBehaviour:
