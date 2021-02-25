@@ -15,13 +15,36 @@ MonoBehaviour:
   Path: ../../FMOD/Not-Nier-Automata/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637497646930000000
+  lastModified: 637497783423124296
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 952
   Exists: 1
 --- !u!114 &-7096544489889413593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MX/Testing/ActionTest
+  m_EditorClassIdentifier: 
+  Path: event:/MX/Testing/ActionTest
+  guid: c3368dded6f9254fb26e9694647a002d
+  Banks:
+  - {fileID: -1470561099430419065}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 72881
+--- !u!114 &-4555087311747012056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +82,7 @@ MonoBehaviour:
   Path: ../../FMOD/Not-Nier-Automata/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637497646930000000
+  lastModified: 637497783422984215
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -81,13 +104,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 2265181553204567577}
   - {fileID: 6337365910549675093}
-  - {fileID: -7096544489889413593}
+  - {fileID: -4555087311747012056}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1470561099430419065}
   StringsBanks:
   - {fileID: -7504412736801957057}
-  stringsBankWriteTime: 637497646930000000
+  stringsBankWriteTime: 637497783423124296
   cacheVersion: 6
 --- !u!114 &2265181553204567577
 MonoBehaviour:
