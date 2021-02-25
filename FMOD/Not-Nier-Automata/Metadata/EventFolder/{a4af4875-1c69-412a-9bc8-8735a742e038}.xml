@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{a4af4875-1c69-412a-9bc8-8735a742e038}">
+		<property name="name">
+			<value>Humming Bots</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2e6ea47a-3af3-4d3a-bc17-c2fdee413b07}</destination>
+		</relationship>
+	</object>
+</objects>
