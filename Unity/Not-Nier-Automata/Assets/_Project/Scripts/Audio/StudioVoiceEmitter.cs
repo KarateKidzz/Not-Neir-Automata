@@ -8,7 +8,8 @@ namespace FMODUnity
     public enum MultiSoundPlayOrder
     {
         Sequential,
-        Random
+        Random,
+        First
     }
 
     [AddComponentMenu("FMOD Studio/FMOD Studio Voice Emitter")]
@@ -300,8 +301,6 @@ namespace FMODUnity
                 return;
             }
 
-            
-
             string newKey = "";
 
             switch (playOrder)
@@ -317,6 +316,9 @@ namespace FMODUnity
                 case MultiSoundPlayOrder.Random:
                     int randomIndex = UnityEngine.Random.Range(0, programmerSoundKeys.Length);
                     newKey = programmerSoundKeys[randomIndex];
+                    break;
+                case MultiSoundPlayOrder.First:
+                    newKey = programmerSoundKeys[0];
                     break;
             }
 
