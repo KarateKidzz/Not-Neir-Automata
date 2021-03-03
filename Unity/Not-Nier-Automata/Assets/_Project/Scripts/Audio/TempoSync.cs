@@ -17,7 +17,6 @@ public class TempoSync : MonoBehaviour
 
     EventInstance trackedEventInstance;
 
-
     float eventBPM;
     float secondsBetweenBeats;
     int currentBeat;
@@ -25,7 +24,6 @@ public class TempoSync : MonoBehaviour
 
     float currentInputTime;
     float currentBeatTime;
-    
 
     void Start()
     {
@@ -37,7 +35,7 @@ public class TempoSync : MonoBehaviour
     {
         if (context.ReadValueAsButton())
         {
-            currentInputTime = Time.time;
+            currentInputTime = Time.realtimeSinceStartup;
 
             if (IsInputInTime())
             {
@@ -69,7 +67,7 @@ public class TempoSync : MonoBehaviour
             if (timelineProperties.beat != currentBeat)
             {
                 currentBeat = timelineProperties.beat;
-                currentBeatTime = Time.time;
+                currentBeatTime = Time.realtimeSinceStartup;
             }
         }
     }

@@ -13,6 +13,7 @@ public class BeatCallbacks : MonoBehaviour
     class TimelineInfo
     {
         public int currentMusicBar = 0;
+        public int currentMusicBeat = 0;
         public FMOD.StringWrapper lastMarker = new FMOD.StringWrapper();
     }
 
@@ -32,7 +33,6 @@ public class BeatCallbacks : MonoBehaviour
     {
         EventInstance eventInstance = eventEmitter.EventInstance;
 
-
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
@@ -50,9 +50,9 @@ public class BeatCallbacks : MonoBehaviour
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(Screen.width / 2, 10, 400, 100));
-            GUILayout.Box(string.Format("Current Bar = {0}, Last Marker = {1}", timelineInfo.currentMusicBar, (string)timelineInfo.lastMarker));
+            GUILayout.Box(string.Format("Current Bar = {0}, Current Beat = {2}, Last Marker = {1}", timelineInfo.currentMusicBar, (string)timelineInfo.lastMarker, timelineInfo.currentMusicBeat));
         GUILayout.EndArea();
-    }
+    } 
 
     [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
     static FMOD.RESULT BeatEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instance, IntPtr parameterPtr)
@@ -77,13 +77,11 @@ public class BeatCallbacks : MonoBehaviour
                 case EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
                     {
                         var parameter = (TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(TIMELINE_BEAT_PROPERTIES));
-                        
-                        if (timelineInfo.currentMusicBar != parameter.beat)
-                        {
-                            OnBeatChange?.Invoke(eventInstance,parameter);
-                        }
+
+                        OnBeatChange?.Invoke(eventInstance,parameter);
 
                         timelineInfo.currentMusicBar = parameter.bar;
+                        timelineInfo.currentMusicBeat = parameter.beat;
                     }
                     break;
                 case EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
