@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{be0f2325-3351-4ad6-8e32-8f82b7bb3966}">
+		<property name="name">
+			<value>WorkerRobot</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{f4acce88-e59a-4983-94ec-c8366bce9922}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{f4acce88-e59a-4983-94ec-c8366bce9922}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/Robot NPCs/Worker Bot</value>
+		</property>
+	</object>
+</objects>

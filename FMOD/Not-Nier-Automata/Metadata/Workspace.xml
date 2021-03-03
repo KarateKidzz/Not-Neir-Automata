@@ -31,5 +31,8 @@
 		<relationship name="platforms">
 			<destination>{65266218-1aa6-4018-9d4b-3f0ce14fc7cd}</destination>
 		</relationship>
+		<relationship name="locales">
+			<destination>{d444f02b-d286-4059-8452-5ce95d3048f8}</destination>
+		</relationship>
 	</object>
 </objects>

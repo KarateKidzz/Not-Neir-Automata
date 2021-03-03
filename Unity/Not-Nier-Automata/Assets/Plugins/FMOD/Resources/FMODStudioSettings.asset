@@ -415,7 +415,15 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - BrokenRobot
+  - ChildRobot
+  - HummingRobot
+  - RoadmanRobot
+  - SlaveRobot
+  - StacyRobot
+  - TeenRobot
+  - WorkerRobot
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{c71ec554-49c0-42da-a83d-66757a99d292}">
+		<property name="name">
+			<value>HummingRobot</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{6eaa0789-9dbc-4fdf-8bcc-d6abb326b4bc}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{6eaa0789-9dbc-4fdf-8bcc-d6abb326b4bc}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/Robot NPCs/Humming Bots</value>
+		</property>
+	</object>
+</objects>
