@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9804173d6f9d42a998ab6cbcc496eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: Long Sword
 --- !u!1001 &5198280394726169369
 PrefabInstance:
   m_ObjectHideFlags: 0
