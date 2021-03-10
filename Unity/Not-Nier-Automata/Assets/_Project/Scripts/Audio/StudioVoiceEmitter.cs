@@ -268,8 +268,6 @@ namespace FMODUnity
 
         public MultiSoundPlayOrder playOrder = MultiSoundPlayOrder.Sequential;
 
-        GCHandle stringHandle;
-
         int currentSoundIndex;
 
         FMOD.Studio.EVENT_CALLBACK emitterCallback;
@@ -280,13 +278,7 @@ namespace FMODUnity
         }
 
         void SetupCallback()
-        {
-            if (stringHandle.IsAllocated)
-            {
-                stringHandle.Free();
-            }
-            
-
+        { 
             instance.setCallback(emitterCallback);
         }
 
@@ -322,22 +314,16 @@ namespace FMODUnity
                     break;
             }
 
-            // Clear the instance's pointer because we're going to free it
             if (instance.isValid())
             {
-                instance.setUserData(IntPtr.Zero);
-            }
-
-            // Clear the pinned object if it was allocated
-            if (stringHandle.IsAllocated)
-            {
-                stringHandle.Free();
+                instance.release();
+                instance.clearHandle();
             }
 
             Play();
 
             // Pin the string
-            stringHandle = GCHandle.Alloc(newKey, GCHandleType.Pinned);
+            GCHandle stringHandle = GCHandle.Alloc(newKey, GCHandleType.Pinned);
 
             // Set the new user data
             instance.setUserData(GCHandle.ToIntPtr(stringHandle));
@@ -349,24 +335,18 @@ namespace FMODUnity
         /// <param name="key"></param>
         public void PlayProgrammerSound(string key)
         {
-            // Clear the instance's pointer because we're going to free it
+            string newKey = key;
+
             if (instance.isValid())
             {
-                instance.setUserData(IntPtr.Zero);
+                instance.release();
+                instance.clearHandle();
             }
-
-            // Clear the pinned object if it was allocated
-            if (stringHandle.IsAllocated)
-            {
-                stringHandle.Free();
-            }
-
-            string newKey = key;
 
             Play();
 
             // Pin the string
-            stringHandle = GCHandle.Alloc(newKey, GCHandleType.Pinned);
+            GCHandle stringHandle = GCHandle.Alloc(newKey, GCHandleType.Pinned);
 
             // Set the new user data
             instance.setUserData(GCHandle.ToIntPtr(stringHandle));
