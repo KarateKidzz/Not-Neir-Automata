@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: -2355536730049261885}
   - component: {fileID: 784544398553029650}
   - component: {fileID: 5350997672194523798}
-  - component: {fileID: 3256940829054600985}
   m_Layer: 0
   m_Name: 2B
   m_TagString: Player
@@ -255,6 +254,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c84414dc-19cb-4002-ad16-fa6f100f9cd0
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 50114aca-e1df-438b-9495-c5cd001bf1f5
+    m_ActionName: Player/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -279,20 +282,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3256940829054600985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147955055015744007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!1 &4966529718764374391
 GameObject:
   m_ObjectHideFlags: 0
