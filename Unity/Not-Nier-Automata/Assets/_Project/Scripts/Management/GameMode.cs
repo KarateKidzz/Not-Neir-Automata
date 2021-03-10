@@ -55,8 +55,8 @@ public class GameMode : MonoBehaviour
             Debug.Assert(pawn);
             PlayerController player = spawnedPlayer.GetComponent<PlayerController>();
             Debug.Assert(player);
-            player.ActivateController();
             player.Possess(pawn);
+            player.ActivateController();
         }
         else
         {

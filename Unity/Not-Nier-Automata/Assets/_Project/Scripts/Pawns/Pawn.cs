@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pawn : MonoBehaviour
-{
-    [Header("Pawn")]
-
+{ 
     protected Controller owningController;
+
+    /// <summary>
+    /// If true, stops the pawn from accepting input from controllers
+    /// </summary>
+    [Header("Pawn")]
+    public bool stopMovement;
 
     [SerializeField]
     protected bool autoPossessPlayer;
@@ -77,7 +81,5 @@ public class Pawn : MonoBehaviour
         }
 
         owningController = null;
-
-
     }
 }

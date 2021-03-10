@@ -37,6 +37,11 @@ public class PlayerController : Controller
             }
             Debug.Log("Player controller couldn't find pawn to possses");
         }
+        else if (cameraManager)
+        {
+            Transform lookAt = possessedPawn.CameraFollowTarget ? possessedPawn.CameraFollowTarget.transform : possessedPawn.transform;
+            cameraManager.SetFollowTarget(lookAt);
+        }
     }
 
     public override void DisableController()
