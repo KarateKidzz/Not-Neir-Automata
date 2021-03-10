@@ -123,6 +123,7 @@
 		<property name="length">
 			<value>10</value>
 		</property>
+		<property name="name" />
 		<relationship name="timeline">
 			<destination>{a9b8da17-af3f-4a6a-9393-e778492448d5}</destination>
 		</relationship>
