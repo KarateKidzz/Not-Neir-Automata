@@ -9,6 +9,8 @@ public class MeleeWeapon : Weapon
 {
     private readonly List<Collider> colliders = new List<Collider>();
 
+    private int collidersEnabled;
+
     private void Awake()
     {
         Collider[] rootColliders = GetComponents<Collider>();
@@ -33,13 +35,22 @@ public class MeleeWeapon : Weapon
         {
             colliders[i].enabled = true;
         }
+
+        collidersEnabled++;
     }
 
     public void DisableColliders()
     {
-        for (int i = 0; i < colliders.Count; i++)
+        collidersEnabled--;
+
+        if (collidersEnabled <= 0)
         {
-            colliders[i].enabled = false;
+            collidersEnabled = 0;
+
+            for (int i = 0; i < colliders.Count; i++)
+            {
+                colliders[i].enabled = false;
+            }
         }
     }
 
