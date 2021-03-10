@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pawn : MonoBehaviour
 {
+    [Header("Pawn")]
+
     protected Controller owningController;
 
     [SerializeField]
