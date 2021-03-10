@@ -114,8 +114,8 @@ MonoBehaviour:
   autoPossessPlayer: 0
   autoPossessAI: 0
   aiControllerPrefab: {fileID: 0}
-  cameraFollowTarget: {fileID: 0}
-  cameraLookAtTarget: {fileID: 0}
+  cameraFollowTarget: {fileID: 6201965208289335664}
+  cameraLookAtTarget: {fileID: 132833205671510782}
   autoHideCursorOnPossess: 1
   turnSpeed: 10
   animator: {fileID: 3432052739047267097}
@@ -694,6 +694,12 @@ PrefabInstance:
 --- !u!4 &6996918137809495665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fdfcba19109b4905bf178382ab09199,
+    type: 3}
+  m_PrefabInstance: {fileID: 7390603272280736154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &132833205671510782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1781356600409242780, guid: 9fdfcba19109b4905bf178382ab09199,
     type: 3}
   m_PrefabInstance: {fileID: 7390603272280736154}
   m_PrefabAsset: {fileID: 0}

@@ -108,7 +108,7 @@ namespace FMODUnity
             eventDescription = RuntimeManager.GetEventDescription(Event);
         }
 
-        public void Play()
+        void Play()
         {
             if (TriggerOnce && hasTriggered)
             {
@@ -408,6 +408,7 @@ namespace FMODUnity
                             var keyResult = FMODUnity.RuntimeManager.StudioSystem.getSoundInfo(key, out dialogueSoundInfo);
                             if (keyResult != FMOD.RESULT.OK)
                             {
+                                Debug.LogError(keyResult);
                                 break;
                             }
                             FMOD.Sound dialogueSound;

@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
 
     public string weaponName = "Weapon";
 
+    public int damage = 10;
+
     public void Equip(WeaponUser user)
     {
         if (weaponUser)
@@ -36,8 +38,14 @@ public class Weapon : MonoBehaviour
         {
             if (weaponUser.gameObject != collision.gameObject)
             {
-                Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
-            }                        
+                Damageable hit = collision.gameObject.GetComponent<Damageable>();
+
+                if (hit)
+                {
+                    Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
+                    weaponUser.RegisterHit(hit);
+                }
+            }                       
         }        
     }
 }

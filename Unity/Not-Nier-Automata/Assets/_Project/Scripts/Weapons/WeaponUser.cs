@@ -37,4 +37,9 @@ public class WeaponUser : MonoBehaviour
             currentlyEquippedWeapon.Equip(this);
         }
     }
+
+    public void RegisterHit(Damageable hit)
+    {
+        hit.Damage(currentlyEquippedWeapon.damage);
+    }
 }
