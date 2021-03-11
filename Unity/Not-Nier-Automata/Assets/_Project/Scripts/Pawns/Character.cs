@@ -35,6 +35,11 @@ public class Character : Pawn
 
     public void Attack(InputAction.CallbackContext context)
     {
+        if (stopMovement)
+        {
+            return;
+        }
+
         if (context.ReadValueAsButton())
         {
             if (weaponUser)
