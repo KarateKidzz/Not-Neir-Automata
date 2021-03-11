@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class GameMode : MonoBehaviour
 
     public GameObject defaultPlayerControllerPrefab;
 
+    /// <summary>
+    /// Utilities attached to this game mode.
+    /// </summary>
+    public readonly Dictionary<Type, GameModeUtil> Utilities = new Dictionary<Type, GameModeUtil>();
+
     void OnApplicationQuit()
     {
         quitting = true;
@@ -18,6 +24,13 @@ public class GameMode : MonoBehaviour
     void Awake()
     {
         LevelLoader.TryLoadOverworld();
+
+        GameModeUtil[] utils = GetComponents<GameModeUtil>();
+
+        for (int i = 0; i < utils.Length; i++)
+        {
+            Utilities.Add(utils[i].GetType(), utils[i]);
+        }
     }
 
     protected virtual void Start()
@@ -35,6 +48,11 @@ public class GameMode : MonoBehaviour
 
     public virtual void StartGameMode()
     {
+        foreach(GameModeUtil util in Utilities.Values)
+        {
+            util.StartUtil(this);
+        }
+
         GameObject spawnedPawn;
         GameObject spawnedPlayer;
         
@@ -66,11 +84,17 @@ public class GameMode : MonoBehaviour
 
     public virtual void UpdateGameMode()
     {
-
+        foreach (GameModeUtil util in Utilities.Values)
+        {
+            util.UpdateUtil();
+        }
     }
 
     public virtual void EndGameMode()
     {
-
+        foreach (GameModeUtil util in Utilities.Values)
+        {
+            util.EndUtil();
+        }
     }
 }
