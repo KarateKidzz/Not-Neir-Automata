@@ -296,6 +296,8 @@ GameObject:
   - component: {fileID: 325507002}
   - component: {fileID: 325507003}
   - component: {fileID: 325507004}
+  - component: {fileID: 325507005}
+  - component: {fileID: 325507006}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -358,6 +360,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatMusicEvent: event:/MX/Testing/ActionTest
+--- !u!114 &325507005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad344957404e948029bbfa4f5a0586f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &325507006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b0a9bf17bfa4242ac8ee5209fac5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leniency: 0.2
 --- !u!1 &339594794
 GameObject:
   m_ObjectHideFlags: 0

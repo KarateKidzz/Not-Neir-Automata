@@ -30,6 +30,8 @@ public class Pawn : MonoBehaviour
     [SerializeField]
     protected bool autoHideCursorOnPossess;
 
+    protected WeaponUser weaponUser;
+
     public bool AutoPossessPlayer => autoPossessPlayer;
 
     public GameObject CameraFollowTarget => cameraFollowTarget;
@@ -38,6 +40,8 @@ public class Pawn : MonoBehaviour
 
     private void Start()
     {
+        weaponUser = GetComponent<WeaponUser>();
+
         if (!autoPossessPlayer && autoPossessAI)
         {
             if (!aiControllerPrefab)

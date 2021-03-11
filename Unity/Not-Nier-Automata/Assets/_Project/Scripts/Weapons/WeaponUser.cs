@@ -7,6 +7,8 @@ public class WeaponUser : MonoBehaviour
     public Transform leftHandBone;
     public Transform rightHandBone;
 
+    public bool isAttacking;
+
     /// <summary>
     /// Prefabs of weapons
     /// </summary>

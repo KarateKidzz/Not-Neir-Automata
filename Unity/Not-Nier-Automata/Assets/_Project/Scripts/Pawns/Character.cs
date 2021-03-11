@@ -37,7 +37,27 @@ public class Character : Pawn
     {
         if (context.ReadValueAsButton())
         {
-            animator.SetTrigger(AttackHash);
+            if (weaponUser)
+            {
+                if (!weaponUser.isAttacking)
+                {
+                    Debug.Log("Doing first combo");
+                    animator.SetTrigger(AttackHash);
+                }
+                else
+                {
+                    Debug.Log("Checking timing for next combo");
+                    GameModeUtil gameModeUtil;
+                    if (GameManager.Instance.GetCurrentGameMode<GameMode>().Utilities.TryGetValue(typeof(CombatManager), out gameModeUtil))
+                    {
+                        if ((gameModeUtil as CombatManager).WasInputInTimeWithMusic())
+                        {
+                            Debug.Log("Doing next attack");
+                            animator.SetTrigger(AttackHash);
+                        }
+                    }
+                }
+            }
         }
     }
 
