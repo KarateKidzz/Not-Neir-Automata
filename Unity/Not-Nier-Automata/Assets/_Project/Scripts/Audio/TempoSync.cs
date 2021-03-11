@@ -6,11 +6,6 @@ using UnityEngine.InputSystem;
 public class TempoSync : MonoBehaviour
 {
     /// <summary>
-    /// Event to track
-    /// </summary>
-    public StudioEventEmitter eventEmitter;
-
-    /// <summary>
     /// Seconds of leniency between each beat that will register as an "in sync" action
     /// </summary>
     public float leniency = 0.2f;
@@ -22,31 +17,30 @@ public class TempoSync : MonoBehaviour
     int currentBeat;
     int currentBar;
 
-    float currentInputTime;
     float currentBeatTime;
 
-    void Start()
+    public void StartTrackingBeats(EventInstance eventInstance)
     {
-        trackedEventInstance = eventEmitter.EventInstance;
+        trackedEventInstance = eventInstance;
         BeatCallbacks.OnBeatChange += OnBeatChange;
-    }
+    } 
 
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.ReadValueAsButton())
-        {
-            currentInputTime = Time.realtimeSinceStartup;
+    //public void Jump(InputAction.CallbackContext context)
+    //{
+    //    if (context.ReadValueAsButton())
+    //    {
+    //        currentInputTime = Time.realtimeSinceStartup;
 
-            if (IsInputInTime())
-            {
-                Debug.Log("IN TIME");
-            }
-            else
-            {
-                Debug.Log("OUT OF TIME");
-            }
-        }
-    }
+    //        if (IsInputInTime())
+    //        {
+    //            Debug.Log("IN TIME");
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("OUT OF TIME");
+    //        }
+    //    }
+    //}
 
     void OnDestroy()
     {
@@ -78,17 +72,22 @@ public class TempoSync : MonoBehaviour
         eventBPM = newBPM;
     }
 
-    bool IsInputInTime()
+    /// <summary>
+    /// Checks if the current game time is in time with the music
+    /// </summary>
+    /// <returns></returns>
+    public bool IsInputInTime()
     {
+        float currentInputTime = Time.realtimeSinceStartup;
+
         if (currentInputTime >= currentBeatTime && currentInputTime <= currentBeatTime + leniency)
         {
             return true;
         }
-        if (currentBeatTime >= currentBeatTime + secondsBetweenBeats - leniency && currentBeatTime <= currentBeatTime + secondsBetweenBeats)
+        if (currentInputTime >= currentBeatTime + secondsBetweenBeats - leniency && currentInputTime <= currentBeatTime + secondsBetweenBeats)
         {
             return true;
         }
-
        
         return false;
     }

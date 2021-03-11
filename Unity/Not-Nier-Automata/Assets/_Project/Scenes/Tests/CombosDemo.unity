@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 325507001}
   - component: {fileID: 325507002}
   - component: {fileID: 325507003}
+  - component: {fileID: 325507004}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -332,7 +333,6 @@ MonoBehaviour:
     type: 3}
   defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: ea7c71b65247c44bc92ee6b4583e6d25,
     type: 3}
-  combatManager: {fileID: 325507003}
 --- !u!114 &325507003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +345,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6c7ba2671e4441cb189deb4d38734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &325507004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204e7da08e9d04963b0bc77fd16b3811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatMusicEvent: event:/MX/Testing/ActionTest
 --- !u!1 &339594794
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +703,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766176234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2573847291939246954, guid: 51daf680524134ec48676e587a792d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 2575070639390561250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &766176235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766176234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbbb2a9f90804f1085721155fc94c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &766176236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766176234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1e1d677a3cf40d5b299b99b52e0df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopMovement: 0
+  autoPossessPlayer: 0
+  autoPossessAI: 0
+  aiControllerPrefab: {fileID: 0}
+  cameraFollowTarget: {fileID: 0}
+  cameraLookAtTarget: {fileID: 0}
+  autoHideCursorOnPossess: 0
 --- !u!43 &846700932
 Mesh:
   m_ObjectHideFlags: 0
