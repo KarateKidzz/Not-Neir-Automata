@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb746e53c1464715816f276c8b6fe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnControlAt: 0.5
+  returnControlAt: 0.9
 --- !u!1101 &-736551161370983008
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb746e53c1464715816f276c8b6fe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnControlAt: 0.5
+  returnControlAt: 0.8
 --- !u!1101 &2874093373038114886
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
