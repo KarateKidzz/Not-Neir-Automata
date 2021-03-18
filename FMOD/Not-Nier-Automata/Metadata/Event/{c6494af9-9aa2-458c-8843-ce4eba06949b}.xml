@@ -98,9 +98,6 @@
 		<property name="length">
 			<value>2</value>
 		</property>
-		<relationship name="placeholder">
-			<destination>{b6425215-30f8-422a-b155-6baf25fa51f3}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2cbc9b31-fdd2-43fd-9db3-016ea97b05b9}">
 		<property name="name">

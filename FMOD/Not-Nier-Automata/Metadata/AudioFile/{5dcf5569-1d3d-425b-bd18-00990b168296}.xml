@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{55d82ac1-5a0f-4568-b9ae-3f67db058e43}">
+	<object class="AudioFile" id="{5dcf5569-1d3d-425b-bd18-00990b168296}">
 		<property name="assetPath">
-			<value>Robot NPCs/Teen Robot/Robot Voice Presets Robot NPC 13 - Trimmed.wav</value>
+			<value>Robot NPCs/Child Robot/ChildRobot_Mum_A.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2</value>
+			<value>1.5</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

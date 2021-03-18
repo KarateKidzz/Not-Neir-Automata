@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{b6425215-30f8-422a-b155-6baf25fa51f3}">
+	<object class="AudioFile" id="{9a29132c-1dab-4e84-bc67-be5629cdbd8a}">
 		<property name="assetPath">
-			<value>Robot NPCs/Roadman Bot/RoadmanRobot_GonnaPutYouInTheBin.wav</value>
+			<value>Robot NPCs/Child Robot/ChildRobot_WhereIsMyMum_A.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2.5</value>
+			<value>1.5</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
