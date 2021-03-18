@@ -557,9 +557,15 @@
 		<property name="color">
 			<value>Purple Light 1</value>
 		</property>
+		<property name="volume">
+			<value>-1</value>
+		</property>
 		<property name="name">
 			<value>BASS GT</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{96ffcb3b-3395-40c2-a336-ea382eac8481}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{1c080d79-3779-4c03-af07-8a907abb8d21}</destination>
 		</relationship>
@@ -1460,6 +1466,11 @@
 		<relationship name="endPoint">
 			<destination>{74070426-79ad-4e34-8e6b-0d907f44c5d5}</destination>
 		</relationship>
+	</object>
+	<object class="RandomizerModulator" id="{96ffcb3b-3395-40c2-a336-ea382eac8481}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{1c080d79-3779-4c03-af07-8a907abb8d21}">
 		<relationship name="effects">
