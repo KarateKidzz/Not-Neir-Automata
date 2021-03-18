@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{dfd67664-b7ec-4369-b19e-bc8600964021}">
+	<object class="AudioFile" id="{157215f3-bbea-4e89-823a-6dca2a9bfb6a}">
 		<property name="assetPath">
-			<value>MX/RoryBATTLE/Rory Battle Theme (STEMS)/RBT_STEMS- DRUM_TOP_170bpm.wav</value>
+			<value>MX/RoryBATTLE/Rory Battle Theme (STEMS+Tails)/RBT_TAILS_ DRUMS_FULL.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>146.82354166666667</value>
+			<value>180.70589583333333</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

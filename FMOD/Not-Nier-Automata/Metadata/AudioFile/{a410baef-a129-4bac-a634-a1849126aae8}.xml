@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{f9eac461-c3a4-4b38-aff4-2fea4fd1851e}">
+	<object class="AudioFile" id="{a410baef-a129-4bac-a634-a1849126aae8}">
 		<property name="assetPath">
-			<value>MX/RoryBATTLE/Rory Battle Theme (STEMS)/RBT_STEMS- WIND_Gmin_170bpm.wav</value>
+			<value>MX/RoryBATTLE/Rory Battle Theme (ONE SHOTS)/RBT_STEMS - INTRO.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

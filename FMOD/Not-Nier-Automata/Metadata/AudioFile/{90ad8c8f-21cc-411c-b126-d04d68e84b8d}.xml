@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{5c749131-f981-4726-953c-b3aca6d1cf29}">
+	<object class="AudioFile" id="{90ad8c8f-21cc-411c-b126-d04d68e84b8d}">
 		<property name="assetPath">
-			<value>MX/RoryBATTLE/Rory Battle Theme (SECTIONS)/RBT - THREE+Tail.wav</value>
+			<value>MX/RoryBATTLE/Rory Battle Theme (STEMS+Tails)/RBT_TAILS_ STRINGS_Gm_170bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>28.235312499999999</value>
+			<value>180.70589583333333</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
