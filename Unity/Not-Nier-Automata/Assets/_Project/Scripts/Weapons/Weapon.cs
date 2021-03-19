@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Weapon : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Weapon : MonoBehaviour
     protected bool autoFire;
 
     public bool useCameraForAim;
+
+    [EventRef]
+    public string attackSoundEvent;
 
     CameraManager cameraManager;
 
@@ -85,6 +89,11 @@ public class Weapon : MonoBehaviour
 
     protected void SpawnProjectile(GameObject projectilePrefab)
     {
+        if (!string.IsNullOrEmpty(attackSoundEvent))
+        {
+            RuntimeManager.PlayOneShot(attackSoundEvent, transform.position);
+        }
+
         GameObject spawned = Instantiate(projectilePrefab);
 
         Projectile spawnedProjectile = spawned.GetComponent<Projectile>();

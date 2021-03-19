@@ -28,6 +28,13 @@ public class BeatAttackWeapon : AutoAttackWeapon
         readyForFire = false;
     }
 
+    public override void FinishAttack()
+    {
+        base.FinishAttack();
+
+        readyForFire = false;
+    }
+
     protected override bool ShouldDoNextAutoAttack()
     {
         return readyForFire;
