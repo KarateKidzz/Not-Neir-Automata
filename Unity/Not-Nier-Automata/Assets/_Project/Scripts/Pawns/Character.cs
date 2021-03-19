@@ -20,6 +20,8 @@ public class Character : Pawn
     private static readonly int VelocityHash = Animator.StringToHash("Velocity");
     private static readonly int MovingHash = Animator.StringToHash("Moving");
     private static readonly int AttackHash = Animator.StringToHash("Attack");
+    private static readonly int ComboHash = Animator.StringToHash("Combo");
+    private static readonly int FailedComboHash = Animator.StringToHash("FailedCombo");
 
     #region Input
 
@@ -46,17 +48,35 @@ public class Character : Pawn
             {
                 if (!weaponUser.isAttacking)
                 {
-                    Debug.Log("Doing first combo");
                     animator.SetTrigger(AttackHash);
+                    animator.SetBool(ComboHash, false);
+                    animator.SetBool(FailedComboHash, false);
                 }
                 else
                 {
-                    Debug.Log("Checking timing for next combo");
+                    
                     CombatManager combatManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<CombatManager>();
+
+                    // Allow combos outside of combat scenes
+                    if (!combatManager)
+                    {
+                        animator.SetBool(ComboHash, true);
+                        return;
+                    }
+
                     if (combatManager.WasInputInTimeWithMusic())
                     {
-                        Debug.Log("Doing next attack");
-                        animator.SetTrigger(AttackHash);
+                        bool failed = animator.GetBool(FailedComboHash);
+
+                        if (!failed)
+                        {
+                            animator.SetBool(ComboHash, true);
+                        }
+                    }
+                    else
+                    {
+                        animator.SetBool(ComboHash, false);
+                        animator.SetBool(FailedComboHash, true);
                     }
                 }
             }
