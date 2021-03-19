@@ -42,11 +42,5 @@ public class CameraManager : MonoBehaviour
 
             listenerObject.transform.rotation = cameraBrain.transform.rotation;
         }
-
-        
-
-
-
     }
-
 }

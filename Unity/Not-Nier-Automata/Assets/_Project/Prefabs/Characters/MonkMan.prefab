@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 7390603271446795771}
   - component: {fileID: 3432052739047267097}
   - component: {fileID: 5906008614624883889}
+  - component: {fileID: 4268956623854716544}
   m_Layer: 8
   m_Name: MonkMan
   m_TagString: Untagged
@@ -117,6 +118,7 @@ MonoBehaviour:
   cameraFollowTarget: {fileID: 6201965208289335664}
   cameraLookAtTarget: {fileID: 132833205671510782}
   autoHideCursorOnPossess: 1
+  companions: []
   turnSpeed: 10
   animator: {fileID: 3432052739047267097}
 --- !u!114 &7390603271446795771
@@ -242,6 +244,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 50114aca-e1df-438b-9495-c5cd001bf1f5
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7390603271446795768}
+        m_MethodName: CompanionAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0560db02-0af6-4ca5-b7bd-c293f2b4a595
+    m_ActionName: Player/Attack2[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -280,8 +297,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHandBone: {fileID: 0}
   rightHandBone: {fileID: 0}
+  isAttacking: 0
   inventoryWeapons: []
   currentlyEquippedWeapon: {fileID: 511778125092676281}
+--- !u!114 &4268956623854716544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390603271446795770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538b6755db90a43009b8894fa8bb41cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  companionsToSpawn:
+  - {fileID: 4243370100389810858, guid: f62327f52756a4f7fa9b6701f78bff36, type: 3}
 --- !u!1001 &7390603272280736154
 PrefabInstance:
   m_ObjectHideFlags: 0

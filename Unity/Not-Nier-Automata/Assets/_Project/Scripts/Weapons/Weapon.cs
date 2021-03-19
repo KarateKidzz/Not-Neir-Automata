@@ -4,13 +4,39 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    WeaponUser weaponUser;
+    protected WeaponUser weaponUser;
+
+    public WeaponUser WeaponUser => weaponUser;
 
     public string weaponName = "Weapon";
 
     public int damage = 10;
 
-    public void Equip(WeaponUser user)
+    protected bool autoFire;
+
+    public bool useCameraForAim;
+
+    CameraManager cameraManager;
+
+    private void Start()
+    {
+        if (useCameraForAim)
+        {
+            CacheCamera();
+        }
+    }
+
+    void CacheCamera()
+    {
+        PlayerController playerController = GameManager.Instance.PlayerController;
+
+        if (playerController)
+        {
+            cameraManager = playerController.CameraManager;
+        }
+    }
+
+    public void Equip(WeaponUser user, bool useCamera = false)
     {
         if (weaponUser)
         {
@@ -20,6 +46,11 @@ public class Weapon : MonoBehaviour
 
         Debug.Log($"{user.gameObject.name} equipped {weaponName}");
         weaponUser = user;
+        useCameraForAim = useCamera;
+        if (useCamera)
+        {
+            CacheCamera();
+        }
     }
 
     public virtual void StartAttack()
@@ -29,23 +60,43 @@ public class Weapon : MonoBehaviour
 
     public virtual void FinishAttack()
     {
-
+        autoFire = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual void AutoAttack()
     {
-        if (weaponUser)
+        if (CanSingleFire())
         {
-            if (weaponUser.gameObject != collision.gameObject)
-            {
-                Damageable hit = collision.gameObject.GetComponent<Damageable>();
+            StartAttack();
+        }
 
-                if (hit)
-                {
-                    Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
-                    weaponUser.RegisterHit(hit);
-                }
-            }                       
-        }        
+        autoFire = true;
+    }
+
+    protected virtual bool CanSingleFire()
+    {
+        return true;
+    }
+
+    protected void SpawnProjectile(GameObject projectilePrefab)
+    {
+        GameObject spawned = Instantiate(projectilePrefab);
+
+        Projectile spawnedProjectile = spawned.GetComponent<Projectile>();
+        Debug.Assert(spawnedProjectile);
+
+        Vector3 direction;
+
+        if (useCameraForAim && cameraManager)
+        {
+            Debug.Log("Using camera rotation");
+            direction = cameraManager.cameraBrain.transform.forward;
+        }
+        else
+        {
+            direction = transform.forward;
+        }
+
+        spawnedProjectile.Fire(this, direction);
     }
 }

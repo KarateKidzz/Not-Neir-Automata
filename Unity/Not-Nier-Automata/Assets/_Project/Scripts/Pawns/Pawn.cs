@@ -30,7 +30,12 @@ public class Pawn : MonoBehaviour
     [SerializeField]
     protected bool autoHideCursorOnPossess;
 
+    [SerializeField]
+    protected List<Companion> companions = new List<Companion>();
+
     protected WeaponUser weaponUser;
+
+    public List<Companion> Companions => companions;
 
     public bool AutoPossessPlayer => autoPossessPlayer;
 
@@ -60,6 +65,11 @@ public class Pawn : MonoBehaviour
         }
     }
 
+    public Controller GetController()
+    {
+        return owningController;
+    }
+
     public void OnPossessed(Controller possessingController)
     {
         if (owningController)
@@ -85,5 +95,25 @@ public class Pawn : MonoBehaviour
         }
 
         owningController = null;
+    }
+
+    public void AddCompanion(Companion companion)
+    {
+        Companions.Add(companion);
+        companion.Follow(this);
+        if (companion.WeaponUser)
+        {
+            companion.WeaponUser.useCameraAsDirection = true;
+        }
+    }
+
+    public void RemoveCompanion(Companion companion)
+    {
+        companion.StopFollowing();
+        if (companion.WeaponUser)
+        {
+            companion.WeaponUser.useCameraAsDirection = false;
+        }
+        Companions.RemoveAll(c => c == companion);
     }
 }

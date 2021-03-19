@@ -127,7 +127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1606
+  m_Name: pb_Mesh-1508
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -543,7 +543,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1602
+  m_Name: pb_Mesh-1504
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -767,13 +767,14 @@ MonoBehaviour:
   cameraFollowTarget: {fileID: 0}
   cameraLookAtTarget: {fileID: 0}
   autoHideCursorOnPossess: 0
+  companions: []
 --- !u!43 &846700932
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1600
+  m_Name: pb_Mesh-1502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -966,7 +967,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1608
+  m_Name: pb_Mesh-1510
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1129,7 +1130,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1604
+  m_Name: pb_Mesh-1506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

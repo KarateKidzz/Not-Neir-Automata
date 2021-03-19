@@ -66,6 +66,30 @@ public class Character : Pawn
         }
     }
 
+    public void CompanionAttack(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            foreach(Companion companion in Companions)
+            {
+                if (companion.WeaponUser)
+                {
+                    companion.WeaponUser.AttackAutomatic();
+                }
+            }
+        }
+        else
+        {
+            foreach (Companion companion in Companions)
+            {
+                if (companion.WeaponUser)
+                {
+                    companion.WeaponUser.FinishAttack();
+                }
+            }
+        }
+    }
+
     #endregion
 
     #region Movement
