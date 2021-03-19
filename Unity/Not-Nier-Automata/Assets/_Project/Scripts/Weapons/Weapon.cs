@@ -117,6 +117,7 @@ public class Weapon : MonoBehaviour
 
             if (createResult == FMOD.RESULT.OK)
             {
+                instance.set3DAttributes(transform.To3DAttributes());
                 instance.start();
                 instance.release();
             }            
