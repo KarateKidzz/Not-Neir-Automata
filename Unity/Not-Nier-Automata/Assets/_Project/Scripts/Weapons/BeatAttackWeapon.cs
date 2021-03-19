@@ -40,6 +40,11 @@ public class BeatAttackWeapon : AutoAttackWeapon
         return readyForFire;
     }
 
+    protected override bool CanSingleFire()
+    {
+        return false;
+    }
+
     void OnBeat(EventInstance eventInstance, TIMELINE_BEAT_PROPERTIES beats)
     {
         readyForFire = true;

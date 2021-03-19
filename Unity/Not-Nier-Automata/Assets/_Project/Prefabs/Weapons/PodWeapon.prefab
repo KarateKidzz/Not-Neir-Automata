@@ -47,6 +47,6 @@ MonoBehaviour:
   damage: 10
   useCameraForAim: 0
   attackSoundEvent: event:/SFX/PodFire
-  minWait: 0.1
+  minWait: 0.3
   projectilePrefab: {fileID: 7078719393187948800, guid: 56d283493d8b34975a0fc3917aa6fdaf,
     type: 3}
