@@ -97,4 +97,14 @@ public class GameMode : MonoBehaviour
             util.EndUtil();
         }
     }
+
+    public T GetGameModeUtil<T>() where T : GameModeUtil
+    {
+        GameModeUtil gameModeUtil;
+        if (Utilities.TryGetValue(typeof(T), out gameModeUtil))
+        {
+            return gameModeUtil as T;
+        }
+        return null;
+    }
 }

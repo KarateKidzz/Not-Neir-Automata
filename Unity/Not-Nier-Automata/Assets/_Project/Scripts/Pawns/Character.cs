@@ -52,14 +52,11 @@ public class Character : Pawn
                 else
                 {
                     Debug.Log("Checking timing for next combo");
-                    GameModeUtil gameModeUtil;
-                    if (GameManager.Instance.GetCurrentGameMode<GameMode>().Utilities.TryGetValue(typeof(CombatManager), out gameModeUtil))
+                    CombatManager combatManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<CombatManager>();
+                    if (combatManager.WasInputInTimeWithMusic())
                     {
-                        if ((gameModeUtil as CombatManager).WasInputInTimeWithMusic())
-                        {
-                            Debug.Log("Doing next attack");
-                            animator.SetTrigger(AttackHash);
-                        }
+                        Debug.Log("Doing next attack");
+                        animator.SetTrigger(AttackHash);
                     }
                 }
             }

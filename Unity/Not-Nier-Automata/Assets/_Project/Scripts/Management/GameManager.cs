@@ -61,6 +61,11 @@ public class GameManager : Singleton<GameManager>
 
     #region Methods
 
+    public GameMode GetCurrentGameMode()
+    {
+        return currentGameMode;
+    }
+
     /// <summary>
     /// Get the currently running game mode. Can't always promise to be valid.
     /// </summary>
