@@ -53,7 +53,7 @@ public class Companion : MonoBehaviour
         leader = null;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (leader)
         {
