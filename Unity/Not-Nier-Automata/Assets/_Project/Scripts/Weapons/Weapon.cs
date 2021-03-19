@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
 
     CameraManager cameraManager;
 
-    private void Start()
+    protected virtual void Start()
     {
         if (useCameraForAim)
         {
@@ -36,7 +36,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Equip(WeaponUser user, bool useCamera = false)
+    public virtual void Equip(WeaponUser user, bool useCamera = false)
     {
         if (weaponUser)
         {
@@ -51,6 +51,11 @@ public class Weapon : MonoBehaviour
         {
             CacheCamera();
         }
+    }
+
+    public virtual void UnEquip()
+    {
+
     }
 
     public virtual void StartAttack()
@@ -89,7 +94,6 @@ public class Weapon : MonoBehaviour
 
         if (useCameraForAim && cameraManager)
         {
-            Debug.Log("Using camera rotation");
             direction = cameraManager.cameraBrain.transform.forward;
         }
         else
