@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using FMOD.Studio;
 
 public class Weapon : MonoBehaviour
 {
@@ -20,13 +21,34 @@ public class Weapon : MonoBehaviour
     [EventRef]
     public string attackSoundEvent;
 
-    CameraManager cameraManager;
+    protected CameraManager cameraManager;
+
+    protected EventDescription attackSoundDescription;
 
     protected virtual void Start()
     {
         if (useCameraForAim)
         {
             CacheCamera();
+        }
+
+        if (!string.IsNullOrEmpty(attackSoundEvent))
+        {
+            attackSoundDescription = RuntimeManager.GetEventDescription(attackSoundEvent);
+
+            if (attackSoundDescription.isValid())
+            {
+                attackSoundDescription.loadSampleData();
+                RuntimeManager.StudioSystem.update();
+            }
+        }
+    }
+
+    protected virtual void OnDestroy()
+    {
+        if (attackSoundDescription.isValid())
+        {
+            attackSoundDescription.unloadSampleData();
         }
     }
 
@@ -89,9 +111,15 @@ public class Weapon : MonoBehaviour
 
     protected void SpawnProjectile(GameObject projectilePrefab)
     {
-        if (!string.IsNullOrEmpty(attackSoundEvent))
+        if (attackSoundDescription.isValid())
         {
-            RuntimeManager.PlayOneShot(attackSoundEvent, transform.position);
+            FMOD.RESULT createResult = attackSoundDescription.createInstance(out EventInstance instance);
+
+            if (createResult == FMOD.RESULT.OK)
+            {
+                instance.start();
+                instance.release();
+            }            
         }
 
         GameObject spawned = Instantiate(projectilePrefab);
