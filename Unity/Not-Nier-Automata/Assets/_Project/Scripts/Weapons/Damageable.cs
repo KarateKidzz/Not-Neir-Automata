@@ -10,16 +10,24 @@ public class Damageable : MonoBehaviour
 
     protected int startingHealth;
 
+    protected CombatLines combatLines;
+
     public UnityEvent onDamage;
 
     private void Start()
     {
         startingHealth = health;
+        combatLines = GetComponent<CombatLines>();
     }
 
     public void Damage(int amount)
     {
         health -= amount;
+
+        if (combatLines)
+        {
+            combatLines.PlayLine(combatLines.damageLines.GetRandomLine());
+        }
 
         onDamage.Invoke();
         Debug.Log($"{gameObject.name} health is {health}");
