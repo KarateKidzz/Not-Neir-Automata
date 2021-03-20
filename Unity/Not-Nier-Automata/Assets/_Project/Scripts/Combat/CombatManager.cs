@@ -14,6 +14,9 @@ public class CombatManager : GameModeUtil
     /// </summary>
     public bool IsInCombat => NumberOfAttackers > 0;
 
+    [Range(0f,100f)]
+    public float combatLineChance;
+
     List<Pawn> attackers = new List<Pawn>();
 
     TempoSync tempoSync;
@@ -25,6 +28,15 @@ public class CombatManager : GameModeUtil
         base.StartUtil(gameMode);
 
         tempoSync = GetComponent<TempoSync>();
+
+        BeatCallbacks.OnBeatChange += OnBeat;
+    }
+
+    public override void EndUtil()
+    {
+        base.EndUtil();
+
+        BeatCallbacks.OnBeatChange -= OnBeat;
     }
 
     /// <summary>
@@ -73,5 +85,52 @@ public class CombatManager : GameModeUtil
                 musicManager.StartCombat();
             }
         }
+    }
+
+    void SayEnemyCombatLine()
+    {
+        if (attackers.Count == 0)
+        {
+            return;
+        }
+
+        float random = Random.Range(0f, 100f);
+
+        if (random >= combatLineChance)
+        {
+            int randomEnemy = Random.Range(0, attackers.Count);
+
+            Pawn randomPawn = attackers[randomEnemy];
+
+            if (!randomPawn)
+            {
+                return;
+            }
+
+            CombatLines combatLines = randomPawn.GetComponent<CombatLines>();
+
+            if (!combatLines)
+            {
+                return;
+            }
+
+            FMODUnity.StudioVoiceEmitter voiceEmitter = randomPawn.GetComponent<FMODUnity.StudioVoiceEmitter>();
+
+            if (!voiceEmitter)
+            {
+                return;
+            }
+
+            int randomLineIndex = Random.Range(0, combatLines.combatLines.Length);
+
+            string randomLine = combatLines.combatLines[randomLineIndex];
+
+            voiceEmitter.PlayProgrammerSound(randomLine);
+        }
+    }
+
+    void OnBeat(FMOD.Studio.EventInstance instance, FMOD.Studio.TIMELINE_BEAT_PROPERTIES beat)
+    {
+        SayEnemyCombatLine();
     }
 }

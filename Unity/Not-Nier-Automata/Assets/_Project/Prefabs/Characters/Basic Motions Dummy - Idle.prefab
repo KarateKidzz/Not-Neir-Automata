@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2575070638344023304}
   - component: {fileID: 2575070638344023305}
   - component: {fileID: 2575070638344023310}
+  - component: {fileID: 1047744104790266311}
   m_Layer: 8
   m_Name: Basic Motions Dummy - Idle
   m_TagString: Untagged
@@ -231,6 +232,33 @@ MonoBehaviour:
   - RoadmanRobot_Grunt2
   - RoadmanRobot_Grunt3
   playOrder: 1
+--- !u!114 &1047744104790266311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573847291939246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9325b978657234624bf6626c19ed19e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatLines:
+  - Temp_BattleLine_01
+  - Temp_BattleLine_02
+  - Temp_BattleLine_03
+  - Temp_BattleLine_04
+  - Temp_BattleLine_05
+  - Temp_BattleLine_06
+  - Temp_BattleLine_07
+  - Temp_BattleLine_08
+  - Temp_BattleLine_09
+  - Temp_BattleLine_10
+  - Temp_BattleLine_11
+  - Temp_BattleLine_12
+  - Temp_BattleLine_13
+  - Temp_BattleLine_14
 --- !u!1 &2573874922511683962
 GameObject:
   m_ObjectHideFlags: 0
