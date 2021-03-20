@@ -1,16 +1,68 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Weapon : MonoBehaviour
 {
-    WeaponUser weaponUser;
+    protected WeaponUser weaponUser;
+
+    public WeaponUser WeaponUser => weaponUser;
 
     public string weaponName = "Weapon";
 
     public int damage = 10;
 
-    public void Equip(WeaponUser user)
+    protected bool autoFire;
+
+    public bool useCameraForAim;
+
+    [EventRef]
+    public string attackSoundEvent;
+
+    protected CameraManager cameraManager;
+
+    protected EventDescription attackSoundDescription;
+
+    protected virtual void Start()
+    {
+        if (useCameraForAim)
+        {
+            CacheCamera();
+        }
+
+        if (!string.IsNullOrEmpty(attackSoundEvent))
+        {
+            attackSoundDescription = RuntimeManager.GetEventDescription(attackSoundEvent);
+
+            if (attackSoundDescription.isValid())
+            {
+                attackSoundDescription.loadSampleData();
+                RuntimeManager.StudioSystem.update();
+            }
+        }
+    }
+
+    protected virtual void OnDestroy()
+    {
+        if (attackSoundDescription.isValid())
+        {
+            attackSoundDescription.unloadSampleData();
+        }
+    }
+
+    void CacheCamera()
+    {
+        PlayerController playerController = GameManager.Instance.PlayerController;
+
+        if (playerController)
+        {
+            cameraManager = playerController.CameraManager;
+        }
+    }
+
+    public virtual void Equip(WeaponUser user, bool useCamera = false)
     {
         if (weaponUser)
         {
@@ -20,6 +72,16 @@ public class Weapon : MonoBehaviour
 
         Debug.Log($"{user.gameObject.name} equipped {weaponName}");
         weaponUser = user;
+        useCameraForAim = useCamera;
+        if (useCamera)
+        {
+            CacheCamera();
+        }
+    }
+
+    public virtual void UnEquip()
+    {
+
     }
 
     public virtual void StartAttack()
@@ -29,23 +91,54 @@ public class Weapon : MonoBehaviour
 
     public virtual void FinishAttack()
     {
-
+        autoFire = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual void AutoAttack()
     {
-        if (weaponUser)
+        if (CanSingleFire())
         {
-            if (weaponUser.gameObject != collision.gameObject)
-            {
-                Damageable hit = collision.gameObject.GetComponent<Damageable>();
+            StartAttack();
+        }
 
-                if (hit)
-                {
-                    Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
-                    weaponUser.RegisterHit(hit);
-                }
-            }                       
-        }        
+        autoFire = true;
+    }
+
+    protected virtual bool CanSingleFire()
+    {
+        return true;
+    }
+
+    protected void SpawnProjectile(GameObject projectilePrefab)
+    {
+        if (attackSoundDescription.isValid())
+        {
+            FMOD.RESULT createResult = attackSoundDescription.createInstance(out EventInstance instance);
+
+            if (createResult == FMOD.RESULT.OK)
+            {
+                instance.set3DAttributes(transform.To3DAttributes());
+                instance.start();
+                instance.release();
+            }            
+        }
+
+        GameObject spawned = Instantiate(projectilePrefab);
+
+        Projectile spawnedProjectile = spawned.GetComponent<Projectile>();
+        Debug.Assert(spawnedProjectile);
+
+        Vector3 direction;
+
+        if (useCameraForAim && cameraManager)
+        {
+            direction = cameraManager.cameraBrain.transform.forward;
+        }
+        else
+        {
+            direction = transform.forward;
+        }
+
+        spawnedProjectile.Fire(this, direction);
     }
 }

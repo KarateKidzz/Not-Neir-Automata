@@ -18,6 +18,8 @@ public class CombatManager : GameModeUtil
 
     TempoSync tempoSync;
 
+    public TempoSync TempoSync => tempoSync;
+
     public override void StartUtil(GameMode gameMode)
     {
         base.StartUtil(gameMode);

@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A melee weapon uses colliders to check if it hit an object.
 /// </summary>
-public class MeleeWeapon : Weapon
+public class MeleeWeapon : SingleAttackWeapon
 {
     private readonly List<Collider> colliders = new List<Collider>();
 
@@ -29,7 +29,21 @@ public class MeleeWeapon : Weapon
         DisableColliders();
     }
 
-    public void EnableColliders()
+    public override void StartAttack()
+    {
+        base.StartAttack();
+
+        EnableColliders();
+    }
+
+    public override void FinishAttack()
+    {
+        base.FinishAttack();
+
+        DisableColliders();
+    }
+
+    void EnableColliders()
     {
         for (int i = 0; i < colliders.Count; i++)
         {
@@ -39,7 +53,7 @@ public class MeleeWeapon : Weapon
         collidersEnabled++;
     }
 
-    public void DisableColliders()
+    void DisableColliders()
     {
         collidersEnabled--;
 
@@ -54,17 +68,20 @@ public class MeleeWeapon : Weapon
         }
     }
 
-    public override void StartAttack()
+    private void OnCollisionEnter(Collision collision)
     {
-        base.StartAttack();
+        if (weaponUser)
+        {
+            if (weaponUser.gameObject != collision.gameObject)
+            {
+                Damageable hit = collision.gameObject.GetComponent<Damageable>();
 
-        EnableColliders();
-    }
-
-    public override void FinishAttack()
-    {
-        base.FinishAttack();
-
-        DisableColliders();
+                if (hit)
+                {
+                    Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
+                    weaponUser.RegisterHit(hit);
+                }
+            }
+        }
     }
 }

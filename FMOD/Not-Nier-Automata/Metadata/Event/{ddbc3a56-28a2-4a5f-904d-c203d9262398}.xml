@@ -243,7 +243,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{4c4b28cc-8fc9-44b3-8312-1f3e332d6fc2}">
 		<property name="volume">
-			<value>-2</value>
+			<value>1</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{f937a64c-c27d-4fda-a98b-d7e02618afb9}</destination>
@@ -265,48 +265,51 @@
 		<property name="color">
 			<value>Purple</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>5.6470588235294121</value>
 		</property>
 		<property name="length">
-			<value>28.235294117647058</value>
+			<value>21.176470588235293</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{157215f3-bbea-4e89-823a-6dca2a9bfb6a}</destination>
+			<destination>{a4fd9538-9c85-4a29-97a3-4cd705805dc9}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{df43bd90-e19c-4dfd-a4d4-ad4a4c0fba2a}">
 		<property name="color">
 			<value>Purple</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>129.87555006623759</value>
 		</property>
 		<property name="length">
-			<value>50.823529411764696</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>90.35294117647058</value>
+			<value>42.359744051409479</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{157215f3-bbea-4e89-823a-6dca2a9bfb6a}</destination>
+			<destination>{9f80b4a3-1c34-4534-acba-35de0f34a259}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{ce74f41e-d0f1-4b5d-9a40-35c5243498d7}">
 		<property name="color">
 			<value>Purple</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>39.522583154472883</value>
 		</property>
 		<property name="length">
-			<value>28.235294117647058</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>33.882352941176471</value>
+			<value>21.183299198468298</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{157215f3-bbea-4e89-823a-6dca2a9bfb6a}</destination>
+			<destination>{b5aa5fed-f362-436b-b2bb-467920ba8d70}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{54bddb32-30b1-48e4-850c-38506e90f0d1}">
@@ -347,34 +350,34 @@
 		<property name="color">
 			<value>Green</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>39.522583154472883</value>
 		</property>
 		<property name="length">
-			<value>28.371725933393996</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>33.882352941176471</value>
+			<value>21.183299198468298</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{90ad8c8f-21cc-411c-b126-d04d68e84b8d}</destination>
+			<destination>{ff438a6a-4ca3-47e8-9171-9f4aba4b1055}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{fdfa605a-3af5-4019-84fa-76aa67ee3a78}">
 		<property name="color">
 			<value>Green</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>129.87555006623759</value>
 		</property>
 		<property name="length">
-			<value>50.823529411764696</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>90.35294117647058</value>
+			<value>42.359744051409479</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{90ad8c8f-21cc-411c-b126-d04d68e84b8d}</destination>
+			<destination>{5e2d15d5-59b0-4bdf-b18b-5454b3883fc7}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b3f50d8b-6379-4780-8903-de1e906cd1e6}">
@@ -398,19 +401,25 @@
 		<property name="color">
 			<value>Green</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>5.6470588235293979</value>
 		</property>
 		<property name="length">
-			<value>28.235294117647079</value>
+			<value>21.176470588235308</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{022b95dc-b624-4931-8c47-0725226a1f22}</destination>
+			<destination>{a830692c-25e6-4bbc-83c7-179deb74a08e}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{155d78f2-33aa-490b-9151-a40434d94037}">
 		<property name="color">
 			<value>Green</value>
+		</property>
+		<property name="isAsync">
+			<value>true</value>
 		</property>
 		<property name="start">
 			<value>73.404961830943463</value>
@@ -418,14 +427,11 @@
 		<property name="length">
 			<value>25.411713235294243</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>62.11764705882355</value>
-		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{b6c4a14d-5ccb-4fc6-9068-0046322331aa}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{022b95dc-b624-4931-8c47-0725226a1f22}</destination>
+			<destination>{37765826-679c-42ad-a29c-c43b316e7f87}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{fe6916e6-2093-4746-b459-51c4b0886a16}">
@@ -469,20 +475,20 @@
 		<property name="color">
 			<value>Green</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>101.64017874270834</value>
 		</property>
 		<property name="length">
 			<value>25.411764705882362</value>
 		</property>
-		<property name="timelockedOffset">
-			<value>62.11764705882355</value>
-		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{c4e32b68-3027-4d33-a2dd-78bac335cc89}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{022b95dc-b624-4931-8c47-0725226a1f22}</destination>
+			<destination>{f5904537-13e5-4622-833d-384f16de6b78}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{0893fdb4-dd39-4b6e-a1d9-9cc3789a624a}">
@@ -520,17 +526,17 @@
 		<property name="color">
 			<value>Purple Light 1</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>39.522583154472883</value>
 		</property>
 		<property name="length">
-			<value>28.235294117647058</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>33.882352941176471</value>
+			<value>21.183299198468298</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{44e3cddf-1e56-409d-8925-974200ea53aa}</destination>
+			<destination>{5769247f-2bb4-45c5-84fd-185b6aab0b1c}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{6edc75cf-8c38-42e9-b26f-9c9c023a7f12}">
@@ -671,17 +677,17 @@
 		<property name="color">
 			<value>Blue Light 1</value>
 		</property>
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>39.522583154472883</value>
 		</property>
 		<property name="length">
-			<value>28.235294117647058</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>33.882352941176471</value>
+			<value>21.183299198468298</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{33eb48d9-2dbe-4ef6-b852-2860fd4b322c}</destination>
+			<destination>{4b6fc6ed-9f2d-4d3d-9f8a-c03d5e20d54a}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{94f06ff3-6bfa-49c4-a7ef-ea3f24a7ea8c}">
@@ -1140,7 +1146,7 @@
 			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>50</value>
+			<value>75</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{aa93917d-30bf-4d1d-babd-4e26a17f2d99}</destination>
