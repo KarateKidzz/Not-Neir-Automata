@@ -65,11 +65,22 @@ public class CombatManager : GameModeUtil
         {
             StartCombat();
         }
+
+        CombatLines combatLines = attackingPawn.GetComponent<CombatLines>();
+        if (combatLines)
+        {
+            combatLines.PlayLine(combatLines.enterCombatLines.GetRandomLine());
+        }
     }
 
     public void RemoveAttacker(Pawn attackingPawn)
     {
         attackers.Remove(attackingPawn);
+        CombatLines combatLines = attackingPawn.GetComponent<CombatLines>();
+        if (combatLines)
+        {
+            combatLines.PlayLine(combatLines.leaveCombatLines.GetRandomLine());
+        }
     }
 
     void StartCombat()
@@ -114,18 +125,7 @@ public class CombatManager : GameModeUtil
                 return;
             }
 
-            FMODUnity.StudioVoiceEmitter voiceEmitter = randomPawn.GetComponent<FMODUnity.StudioVoiceEmitter>();
-
-            if (!voiceEmitter)
-            {
-                return;
-            }
-
-            int randomLineIndex = Random.Range(0, combatLines.combatLines.Length);
-
-            string randomLine = combatLines.combatLines[randomLineIndex];
-
-            voiceEmitter.PlayProgrammerSound(randomLine);
+            combatLines.PlayLine(combatLines.combatLines.GetRandomLine());
         }
     }
 

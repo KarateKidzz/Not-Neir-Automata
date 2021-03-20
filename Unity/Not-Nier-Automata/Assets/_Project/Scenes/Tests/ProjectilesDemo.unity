@@ -769,6 +769,18 @@ MonoBehaviour:
   cameraLookAtTarget: {fileID: 0}
   autoHideCursorOnPossess: 0
   companions: []
+--- !u!114 &766176238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 2575070639390561250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766176234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &846700932
 Mesh:
   m_ObjectHideFlags: 0
@@ -1297,6 +1309,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
+      propertyPath: voiceEmitter
+      value: 
+      objectReference: {fileID: 766176238}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
       propertyPath: combatLines.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1304,6 +1321,126 @@ PrefabInstance:
         type: 3}
       propertyPath: combatLines.Array.data[0]
       value: Temp_BattleLine_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.waitBetweenLines
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[0]
+      value: Temp_BattleLine_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[1]
+      value: Temp_BattleLine_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[2]
+      value: Temp_BattleLine_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[3]
+      value: Temp_BattleLine_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[4]
+      value: Temp_BattleLine_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[5]
+      value: Temp_BattleLine_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[6]
+      value: Temp_BattleLine_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[7]
+      value: Temp_BattleLine_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[8]
+      value: Temp_BattleLine_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[9]
+      value: Temp_BattleLine_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.waitBetweenLines
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.waitBetweenLines
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[0]
+      value: Temp_BattleLine_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[1]
+      value: Temp_BattleLine_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[2]
+      value: Temp_BattleLine_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.data[0]
+      value: Temp_BattleLine_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.data[1]
+      value: Temp_BattleLine_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.data[2]
+      value: Temp_BattleLine_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.data[3]
+      value: Temp_BattleLine_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.data[4]
+      value: Temp_BattleLine_11
       objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}

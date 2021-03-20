@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 2575070638344023305}
   - component: {fileID: 2575070638344023310}
   - component: {fileID: 1047744104790266311}
+  - component: {fileID: 766176235}
+  - component: {fileID: 766176236}
   m_Layer: 8
   m_Name: Basic Motions Dummy - Idle
   m_TagString: Untagged
@@ -226,11 +228,11 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   programmerSoundKeys:
-  - RoadmanRobot_CanIHelpYou
-  - RoadmanRobot_DoYouMind
-  - RoadmanRobot_Grunt1
-  - RoadmanRobot_Grunt2
-  - RoadmanRobot_Grunt3
+  - RoadmanRobot_CanIHelpYou_F#
+  - RoadmanRobot_DoYouMind_F#
+  - RoadmanRobot_Grunt1_A#
+  - RoadmanRobot_Grunt2_A#
+  - RoadmanRobot_Grunt3_A#
   playOrder: 1
 --- !u!114 &1047744104790266311
 MonoBehaviour:
@@ -244,21 +246,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9325b978657234624bf6626c19ed19e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voiceEmitter: {fileID: 2575070638344023310}
+  enterCombatLines:
+    lines:
+    - Temp_BattleLine_12
+    - Temp_BattleLine_13
+    - Temp_BattleLine_14
+    waitBetweenLines: 5
   combatLines:
-  - Temp_BattleLine_01
-  - Temp_BattleLine_02
-  - Temp_BattleLine_03
-  - Temp_BattleLine_04
-  - Temp_BattleLine_05
-  - Temp_BattleLine_06
-  - Temp_BattleLine_07
-  - Temp_BattleLine_08
-  - Temp_BattleLine_09
-  - Temp_BattleLine_10
-  - Temp_BattleLine_11
-  - Temp_BattleLine_12
-  - Temp_BattleLine_13
-  - Temp_BattleLine_14
+    lines:
+    - Temp_BattleLine_01
+    - Temp_BattleLine_02
+    - Temp_BattleLine_03
+    - Temp_BattleLine_04
+    - Temp_BattleLine_05
+    - Temp_BattleLine_06
+    - Temp_BattleLine_05
+    - Temp_BattleLine_05
+    - Temp_BattleLine_05
+    - Temp_BattleLine_05
+    waitBetweenLines: 10
+  leaveCombatLines:
+    lines:
+    - Temp_BattleLine_07
+    - Temp_BattleLine_08
+    - Temp_BattleLine_09
+    - Temp_BattleLine_10
+    - Temp_BattleLine_11
+    waitBetweenLines: 5
+  deathLines:
+    lines: []
+    waitBetweenLines: 0
+  damageLines:
+    lines: []
+    waitBetweenLines: 0
+  gruntLines:
+    lines: []
+    waitBetweenLines: 0
+--- !u!114 &766176235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573847291939246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbbb2a9f90804f1085721155fc94c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &766176236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573847291939246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1e1d677a3cf40d5b299b99b52e0df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopMovement: 0
+  autoPossessPlayer: 0
+  autoPossessAI: 0
+  aiControllerPrefab: {fileID: 0}
+  cameraFollowTarget: {fileID: 0}
+  cameraLookAtTarget: {fileID: 0}
+  autoHideCursorOnPossess: 0
+  companions: []
 --- !u!1 &2573874922511683962
 GameObject:
   m_ObjectHideFlags: 0
