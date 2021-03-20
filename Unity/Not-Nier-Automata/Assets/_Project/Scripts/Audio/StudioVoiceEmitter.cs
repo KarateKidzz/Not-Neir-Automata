@@ -24,6 +24,7 @@ namespace FMODUnity
         public bool AllowFadeout = true;
         public bool TriggerOnce = false;
         public bool Preload = false;
+        public bool OverridePlayingEvents;
 
         protected FMOD.Studio.EventDescription eventDescription;
         public FMOD.Studio.EventDescription EventDescription { get { return eventDescription; } }
@@ -293,6 +294,14 @@ namespace FMODUnity
                 return;
             }
 
+            if (IsPlaying())
+            {
+                if (!OverridePlayingEvents)
+                {
+                    return;
+                }
+            }
+
             string newKey = "";
 
             switch (playOrder)
@@ -336,6 +345,14 @@ namespace FMODUnity
         public void PlayProgrammerSound(string key)
         {
             string newKey = key;
+
+            if (IsPlaying())
+            {
+                if (!OverridePlayingEvents)
+                {
+                    return;
+                }
+            }
 
             if (instance.isValid())
             {
