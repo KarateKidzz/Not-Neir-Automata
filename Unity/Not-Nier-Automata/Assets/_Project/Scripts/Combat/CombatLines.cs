@@ -19,15 +19,19 @@ public struct VoiceLines
     /// <returns></returns>
     public string GetRandomLine()
     {
-        float currentTime = Time.time;
-
-        if (lastLineTime + waitBetweenLines > currentTime)
+        if(waitBetweenLines != 0)
         {
-            return string.Empty;
+            float currentTime = Time.time;
+
+            if (lastLineTime + waitBetweenLines > currentTime)
+            {
+                return string.Empty;
+            }
+
+            lastLineTime = Time.time;
         }
 
         int randomIndex = UnityEngine.Random.Range(0, lines.Length);
-        lastLineTime = Time.time;
         return lines[randomIndex];
     }
 }
@@ -82,5 +86,10 @@ public class CombatLines : MonoBehaviour
             return;
         }
         voiceEmitter.PlayProgrammerSound(line);
+    }
+
+    public void Grunt()
+    {
+        PlayLine(gruntLines.GetRandomLine());
     }
 }

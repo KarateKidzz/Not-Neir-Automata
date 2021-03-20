@@ -296,9 +296,9 @@ namespace FMODUnity
 
             if (IsPlaying())
             {
-                if (!OverridePlayingEvents)
+                if (OverridePlayingEvents)
                 {
-                    return;
+                    Stop();
                 }
             }
 
@@ -348,9 +348,9 @@ namespace FMODUnity
 
             if (IsPlaying())
             {
-                if (!OverridePlayingEvents)
+                if (OverridePlayingEvents)
                 {
-                    return;
+                    Stop();
                 }
             }
 

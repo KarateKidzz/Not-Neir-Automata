@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{5fac660f-242f-4de6-ae5e-fffddc3aa196}">
 		<property name="name">
-			<value>PlayerBattle</value>
+			<value>PlayerVoice</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -53,7 +53,7 @@
 			<destination>{c3eb0fad-114d-45bb-b6f3-ad604816ba00}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{29937847-0e5e-496a-a252-f8717767cdd9}</destination>
+			<destination>{59acc3e2-5b10-4de2-85bd-efb62e8d8787}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{10872c03-9c2c-4d10-af62-ec2813079a67}" />
@@ -89,9 +89,15 @@
 	</object>
 	<object class="MixerBusPanner" id="{c3eb0fad-114d-45bb-b6f3-ad604816ba00}" />
 	<object class="ProgrammerSound" id="{34132978-fecf-4838-9ba0-08c9c81c588d}">
-		<property name="length">
-			<value>6</value>
+		<property name="isAsync">
+			<value>true</value>
 		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
+		<relationship name="placeholder">
+			<destination>{68a935cf-1248-4b09-a8bb-35d0f076087c}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d2103dd4-fe16-4b37-80ed-ecb15ee94b7d}">
 		<property name="name">

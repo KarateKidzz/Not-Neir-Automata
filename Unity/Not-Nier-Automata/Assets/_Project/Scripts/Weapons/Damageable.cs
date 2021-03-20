@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
-    [SerializeField]
-    protected int health = 100;
+    public int startingHealth = 100;
 
-    protected int startingHealth;
+    [SerializeField, ReadOnly]
+    protected int health = 100;
 
     protected CombatLines combatLines;
 

@@ -30,7 +30,7 @@ public class Pawn : MonoBehaviour
     [SerializeField]
     protected bool autoHideCursorOnPossess;
 
-    [SerializeField]
+    [SerializeField, ReadOnly]
     protected List<Companion> companions = new List<Companion>();
 
     protected WeaponUser weaponUser;
