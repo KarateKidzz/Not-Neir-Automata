@@ -1257,6 +1257,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.waitBetweenLines
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.data[0]
+      value: RoadmanRobot_CanIHelpYou_F#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.data[1]
+      value: RoadmanRobot_DoYouMind_F#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.data[2]
+      value: RoadmanRobot_Grunt1_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.data[3]
+      value: RoadmanRobot_Grunt2_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: damageLines.lines.Array.data[4]
+      value: RoadmanRobot_Grunt3_A#
+      objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
       propertyPath: m_RootOrder
@@ -1316,6 +1351,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Motions Dummy - Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023305, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: onDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
