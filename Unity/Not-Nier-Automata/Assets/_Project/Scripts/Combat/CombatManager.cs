@@ -60,8 +60,9 @@ public class CombatManager : GameModeUtil
 
     public void AddAttacker(Pawn attackingPawn)
     {
+        int previousAttackers = NumberOfAttackers;
         attackers.Add(attackingPawn);
-        if (NumberOfAttackers > 0)
+        if (NumberOfAttackers > 0 && previousAttackers == 0)
         {
             StartCombat();
         }

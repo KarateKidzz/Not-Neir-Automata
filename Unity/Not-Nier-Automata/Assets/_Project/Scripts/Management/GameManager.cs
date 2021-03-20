@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// The currently running game mode, if any
     /// </summary>
+    [SerializeField, ReadOnly]
     private GameMode currentGameMode;
 
     /// <summary>

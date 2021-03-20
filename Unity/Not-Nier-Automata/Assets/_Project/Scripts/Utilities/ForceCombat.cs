@@ -12,14 +12,27 @@ public class ForceCombat : MonoBehaviour
 
         if (pawn)
         {
-            GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode<GameMode>();
+            GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode();
 
-            if (currentGameMode)
+            if (!currentGameMode)
             {
-                if (currentGameMode.Utilities.ContainsKey(typeof(CombatManager)))
+                GameMode test = GameManager.Instance.GetCurrentGameMode<GameMode>();
+
+                if (test)
                 {
-                    (currentGameMode.Utilities[typeof(CombatManager)] as CombatManager).AddAttacker(pawn);
+                    Debug.LogError("ERROR");
                 }
+                
+
+                Debug.Log("No game mode. Can't start combat");
+                return;
+            }
+
+            CombatManager combatManager = currentGameMode.GetGameModeUtil<CombatManager>();
+
+            if (combatManager)
+            {
+                combatManager.AddAttacker(pawn);
             }
         }
     }
