@@ -96,7 +96,7 @@ public class CombatManager : GameModeUtil
 
         float random = Random.Range(0f, 100f);
 
-        if (random >= combatLineChance)
+        if (random < combatLineChance)
         {
             int randomEnemy = Random.Range(0, attackers.Count);
 

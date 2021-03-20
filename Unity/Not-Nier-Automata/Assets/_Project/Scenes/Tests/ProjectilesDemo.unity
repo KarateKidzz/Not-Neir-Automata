@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6c7ba2671e4441cb189deb4d38734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combatLineChance: 25
 --- !u!114 &325507004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1295,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.Array.data[0]
+      value: Temp_BattleLine_13
+      objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
       propertyPath: m_RootOrder
