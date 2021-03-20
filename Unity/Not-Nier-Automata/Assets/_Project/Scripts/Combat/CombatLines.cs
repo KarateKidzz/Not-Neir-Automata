@@ -7,9 +7,21 @@ using FMODUnity;
 [Serializable]
 public struct VoiceLines
 {
+    /// <summary>
+    /// List of lines to load by programmer instrument
+    /// </summary>
     public string[] lines;
 
+    /// <summary>
+    /// Minumum number of seconds between each voice line
+    /// </summary>
     public float waitBetweenLines;
+
+    /// <summary>
+    /// If set, plays this event rather than voice lines
+    /// </summary>
+    [EventRef]
+    public string audioEvent;
 
     float lastLineTime;
 
@@ -33,6 +45,11 @@ public struct VoiceLines
 
         int randomIndex = UnityEngine.Random.Range(0, lines.Length);
         return lines[randomIndex];
+    }
+
+    public bool HasEvent()
+    {
+        return !string.IsNullOrEmpty(audioEvent);
     }
 }
 
@@ -90,6 +107,13 @@ public class CombatLines : MonoBehaviour
 
     public void Grunt()
     {
-        PlayLine(gruntLines.GetRandomLine());
+        if (gruntLines.HasEvent())
+        {
+            RuntimeManager.PlayOneShotAttached(gruntLines.audioEvent, gameObject);
+        }
+        else
+        {
+            PlayLine(gruntLines.GetRandomLine());
+        }
     }
 }

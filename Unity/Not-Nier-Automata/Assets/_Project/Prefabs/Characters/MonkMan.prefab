@@ -351,31 +351,27 @@ MonoBehaviour:
   enterCombatLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   combatLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   leaveCombatLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   deathLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   damageLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   gruntLines:
-    lines:
-    - Player_Grunt_01
-    - Player_Grunt_02
-    - Player_Grunt_03
-    - Player_Grunt_04
-    - Player_Grunt_05
-    - Player_Grunt_06
-    - Player_Grunt_07
-    - Player_Grunt_08
-    - Player_Grunt_09
-    - Player_Grunt_10
+    lines: []
     waitBetweenLines: 0
+    audioEvent: event:/DX/ENG/ENG_PlayerGrunt
 --- !u!114 &1786192110702600644
 MonoBehaviour:
   m_ObjectHideFlags: 0
