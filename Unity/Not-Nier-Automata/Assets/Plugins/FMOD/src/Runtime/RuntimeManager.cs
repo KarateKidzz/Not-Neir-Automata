@@ -216,9 +216,9 @@ namespace FMODUnity
             {
                 CheckInitResult(result, "FMOD.Debug.Initialize");
             }
-            #endif
+#endif
 
-            FMOD.Studio.INITFLAGS studioInitFlags = FMOD.Studio.INITFLAGS.NORMAL | FMOD.Studio.INITFLAGS.DEFERRED_CALLBACKS;
+            FMOD.Studio.INITFLAGS studioInitFlags = FMOD.Studio.INITFLAGS.NORMAL | FMOD.Studio.INITFLAGS.DEFERRED_CALLBACKS | FMOD.Studio.INITFLAGS.SYNCHRONOUS_UPDATE;
             if (currentPlatform.IsLiveUpdateEnabled)
             {
                 studioInitFlags |= FMOD.Studio.INITFLAGS.LIVEUPDATE;
