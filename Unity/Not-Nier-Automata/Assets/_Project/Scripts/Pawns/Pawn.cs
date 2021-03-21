@@ -44,6 +44,8 @@ public class Pawn : MonoBehaviour
 
     protected WeaponUser weaponUser;
 
+    public WeaponUser WeaponUser => weaponUser;
+
     /// <summary>
     /// This update's movement
     /// </summary>
