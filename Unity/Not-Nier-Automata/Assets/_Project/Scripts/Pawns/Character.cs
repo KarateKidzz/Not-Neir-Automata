@@ -25,6 +25,32 @@ public class Character : Pawn
 
     #region Input
 
+    public override void SetupInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+        inputComponent.actions["Move"].performed += Move;
+        inputComponent.actions["Sprint"].performed += Sprint;
+        inputComponent.actions["Attack1"].performed += Attack;
+        inputComponent.actions["Attack2"].performed += CompanionAttack;
+
+        inputComponent.actions["Move"].canceled += Move;
+        inputComponent.actions["Sprint"].canceled += Sprint;
+        inputComponent.actions["Attack1"].canceled += Attack;
+        inputComponent.actions["Attack2"].canceled += CompanionAttack;
+    }
+
+    public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+        inputComponent.actions["Move"].performed -= Move;
+        inputComponent.actions["Sprint"].performed -= Sprint;
+        inputComponent.actions["Attack"].performed -= Attack;
+        inputComponent.actions["Attack2"].performed -= CompanionAttack;
+
+        inputComponent.actions["Move"].canceled -= Move;
+        inputComponent.actions["Sprint"].canceled -= Sprint;
+        inputComponent.actions["Attack"].canceled -= Attack;
+        inputComponent.actions["Attack2"].canceled -= CompanionAttack;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
@@ -151,6 +177,11 @@ public class Character : Pawn
     {
         PlayerController playerController = owningController as PlayerController;
         Camera camera = playerController && playerController.CameraManager && playerController.CameraManager.managingCamager ? playerController.CameraManager.managingCamager : Camera.main;
+
+        if (!camera)
+        {
+            return;
+        }
 
         var forward = camera.transform.TransformDirection(Vector3.forward);
         forward.y = 0;

@@ -5,10 +5,9 @@ using FMOD.Studio;
 
 public enum BeatFireRate
 {
-        StandardSpeed,
-        DoubleSpeed,
-        TripletSpeed
-
+    StandardSpeed,
+    DoubleSpeed,
+    TripletSpeed
 }
 
 public class BeatAttackWeapon : AutoAttackWeapon
@@ -57,26 +56,28 @@ public class BeatAttackWeapon : AutoAttackWeapon
 
     void OnBeat(EventInstance eventInstance, TIMELINE_BEAT_PROPERTIES beats)
     {
-        readyForFire = true;
-        StartCoroutine(FireRate(beats));
-
+        if (this)
+        {
+            readyForFire = true;
+            StartCoroutine(FireRate(beats));
+        }
     }
+
     IEnumerator FireRate(TIMELINE_BEAT_PROPERTIES beats)
     {
         float bpm = beats.tempo;
         float millisecondsBetweenBeats = 60 / bpm;
-        if(fireRate== BeatFireRate.StandardSpeed)
+
+        if (fireRate == BeatFireRate.StandardSpeed)
         {
             yield return null;
-
         }
 
-        if(fireRate== BeatFireRate.DoubleSpeed)
+        if (fireRate == BeatFireRate.DoubleSpeed)
         {
             float millisecondsDoubleSpeed = millisecondsBetweenBeats / 2;
             yield return new WaitForSeconds(millisecondsDoubleSpeed);
             readyForFire = true;
-
         }
 
         if (fireRate == BeatFireRate.TripletSpeed)
@@ -86,8 +87,6 @@ public class BeatAttackWeapon : AutoAttackWeapon
             readyForFire = true;
             yield return new WaitForSeconds(millisecondsTripleSpeed);
             readyForFire = true;
-
-
         }
 
         yield return null;

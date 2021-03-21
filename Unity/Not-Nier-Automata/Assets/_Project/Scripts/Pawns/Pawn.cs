@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Pawn : MonoBehaviour
 { 
@@ -15,6 +16,8 @@ public class Pawn : MonoBehaviour
     [SerializeField]
     protected bool autoPossessPlayer;
 
+    public bool AutoPossessPlayer => autoPossessPlayer;
+
     [SerializeField]
     protected bool autoPossessAI;
 
@@ -24,8 +27,12 @@ public class Pawn : MonoBehaviour
     [SerializeField]
     protected GameObject cameraFollowTarget;
 
+    public GameObject CameraFollowTarget => cameraFollowTarget;
+
     [SerializeField]
     protected GameObject cameraLookAtTarget;
+
+    public GameObject CameraLookAtTarget => cameraLookAtTarget;
 
     [SerializeField]
     protected bool autoHideCursorOnPossess;
@@ -33,18 +40,19 @@ public class Pawn : MonoBehaviour
     [SerializeField, ReadOnly]
     protected List<Companion> companions = new List<Companion>();
 
-    protected WeaponUser weaponUser;
-
     public List<Companion> Companions => companions;
 
-    public bool AutoPossessPlayer => autoPossessPlayer;
+    protected WeaponUser weaponUser;
 
-    public GameObject CameraFollowTarget => cameraFollowTarget;
+    /// <summary>
+    /// This update's movement
+    /// </summary>
+    protected Vector3 movementVector;
 
-    public GameObject CameraLookAtTarget => cameraLookAtTarget;
+    #region Unity Methods
 
-    private void Start()
-    {
+    protected virtual void Start()
+    { 
         weaponUser = GetComponent<WeaponUser>();
 
         if (!autoPossessPlayer && autoPossessAI)
@@ -65,12 +73,45 @@ public class Pawn : MonoBehaviour
         }
     }
 
+    protected virtual void Update()
+    {
+
+    }
+
+    protected virtual void LateUpdate()
+    {
+        if (movementVector != Vector3.zero)
+        {
+            transform.position += ConsumeMovement();
+        }
+    }
+
+    #endregion
+
+    #region Movement
+
+    public void AddMovement(Vector3 movement)
+    {
+        movementVector += movement;
+    }
+
+    public Vector3 ConsumeMovement()
+    {
+        Vector3 result = movementVector;
+        movementVector = Vector3.zero;
+        return result;
+    }
+
+    #endregion
+
+    #region Pawn
+
     public Controller GetController()
     {
         return owningController;
     }
 
-    public void OnPossessed(Controller possessingController)
+    public virtual void OnPossessed(Controller possessingController)
     {
         if (owningController)
         {
@@ -86,7 +127,7 @@ public class Pawn : MonoBehaviour
         }
     }
 
-    public void OnUnpossessed()
+    public virtual void OnUnpossessed()
     {
         if (owningController is PlayerController && autoHideCursorOnPossess)
         {
@@ -97,7 +138,11 @@ public class Pawn : MonoBehaviour
         owningController = null;
     }
 
-    public void AddCompanion(Companion companion)
+    #endregion
+
+    #region Companions
+
+    public virtual void AddCompanion(Companion companion)
     {
         Companions.Add(companion);
         companion.Follow(this);
@@ -107,7 +152,7 @@ public class Pawn : MonoBehaviour
         }
     }
 
-    public void RemoveCompanion(Companion companion)
+    public virtual void RemoveCompanion(Companion companion)
     {
         companion.StopFollowing();
         if (companion.WeaponUser)
@@ -116,4 +161,28 @@ public class Pawn : MonoBehaviour
         }
         Companions.RemoveAll(c => c == companion);
     }
+
+    #endregion
+
+    #region Input
+
+    /// <summary>
+    /// Called by player controllers to allow a pawn to take action on player input
+    /// </summary>
+    /// <param name="inputComponent"></param>
+    public virtual void SetupInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+
+    }
+
+    /// <summary>
+    /// Gives the pawn chance to clear any inputs they added during <see cref="SetupInput(UnityEngine.InputSystem.PlayerInput)"/>
+    /// </summary>
+    /// <param name="inputComponent"></param>
+    public virtual void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+
+    }
+
+    #endregion
 }

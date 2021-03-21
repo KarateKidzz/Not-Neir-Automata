@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(UnityEngine.InputSystem.PlayerInput))]
 public class PlayerController : Controller
 {
     public GameObject cameraManagerPrefab;
+
+    [SerializeField]
+    protected UnityEngine.InputSystem.PlayerInput playerInput;
 
     protected CameraManager cameraManager;
 
@@ -60,5 +64,22 @@ public class PlayerController : Controller
             Transform lookAt = pawnToPossess.CameraFollowTarget ? pawnToPossess.CameraFollowTarget.transform : pawnToPossess.transform;
             cameraManager.SetFollowTarget(lookAt);
         }
+
+        pawnToPossess.SetupInput(GetPlayerInputComponent());
+    }
+
+    public override void Unpossess()
+    {
+        if (PossessedPawn)
+        {
+            PossessedPawn.ClearInput(GetPlayerInputComponent());
+        }
+
+        base.Unpossess();
+    }
+
+    public UnityEngine.InputSystem.PlayerInput GetPlayerInputComponent()
+    {
+        return playerInput;
     }
 }
