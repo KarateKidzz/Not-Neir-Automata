@@ -15,7 +15,17 @@ public class WeaponUser : MonoBehaviour
     /// <summary>
     /// Are we holding down the fire button and should do automatic fire?
     /// </summary>
-    protected bool isFiring;
+    public bool IsFiring
+    {
+        get
+        {
+            if(currentlyEquippedWeapon)
+            {
+                return currentlyEquippedWeapon.AutoFire;
+            }
+            return false;
+        }
+    }
 
     /// <summary>
     /// Prefabs of weapons

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3504165867168990812}
   - component: {fileID: 2112945259528323034}
   - component: {fileID: 1473681378688806958}
+  - component: {fileID: 2502473938846230689}
   m_Layer: 0
   m_Name: Pod
   m_TagString: Untagged
@@ -49,6 +50,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a40a07e45fad463899946a80440f7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopMovement: 0
+  autoPossessPlayer: 0
+  autoPossessAI: 0
+  aiControllerPrefab: {fileID: 0}
+  cameraFollowTarget: {fileID: 0}
+  cameraLookAtTarget: {fileID: 0}
+  autoHideCursorOnPossess: 0
+  companions: []
   turnSpeed: 5
   followOffset: {x: 1.13, y: 2, z: -1}
 --- !u!114 &3504165867168990812
@@ -100,6 +109,21 @@ MonoBehaviour:
   turnOffTime: 0.2
   onIntensity: 2
   offIntensity: 0
+--- !u!114 &2502473938846230689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce5aa766c52240db90d68f74073d4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledLight: {fileID: 8893009833847565728}
+  weaponUser: {fileID: 2112945259528323034}
+  firingColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &7002868928408713796
 GameObject:
   m_ObjectHideFlags: 0
