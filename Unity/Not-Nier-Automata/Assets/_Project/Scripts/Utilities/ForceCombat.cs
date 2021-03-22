@@ -6,6 +6,13 @@ public class ForceCombat : MonoBehaviour
 {
     Pawn pawn;
 
+    bool quitting;
+
+    private void OnApplicationQuit()
+    {
+        quitting = true;
+    }
+
     private void Start()
     {
         pawn = GetComponent<Pawn>();
@@ -16,14 +23,6 @@ public class ForceCombat : MonoBehaviour
 
             if (!currentGameMode)
             {
-                GameMode test = GameManager.Instance.GetCurrentGameMode<GameMode>();
-
-                if (test)
-                {
-                    Debug.LogError("ERROR");
-                }
-                
-
                 Debug.Log("No game mode. Can't start combat");
                 return;
             }
@@ -34,6 +33,30 @@ public class ForceCombat : MonoBehaviour
             {
                 combatManager.AddAttacker(pawn);
             }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (quitting)
+        {
+            return;
+        }
+
+        if (pawn)
+        {
+            GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode();
+
+            CombatManager combatManager = currentGameMode.GetGameModeUtil<CombatManager>();
+
+            if (combatManager)
+            {
+                combatManager.RemoveAttacker(pawn);
+            }
+        }
+        else
+        {
+            Debug.Log("No PAWN");
         }
     }
 }
