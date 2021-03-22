@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Follows a pawn
 /// </summary>
-public class Companion : MonoBehaviour
+public class Companion : Pawn
 {
     /// <summary>
     /// Party leader / pawn to follow
@@ -19,25 +19,21 @@ public class Companion : MonoBehaviour
 
     protected MovementNoise noise;
 
-    protected WeaponUser weaponUser;
-
     public float turnSpeed = 1;
 
     public Vector3 followOffset;
 
-    public WeaponUser WeaponUser => weaponUser;
-
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         noise = GetComponent<MovementNoise>();
-        weaponUser = GetComponent<WeaponUser>();
     }
 
     /// <summary>
     /// Tells this companion to start following the leader
     /// </summary>
     /// <param name="leader"></param>
-    public void Follow(Pawn leader)
+    public virtual void Follow(Pawn leader)
     {
         this.leader = leader;
 
@@ -48,17 +44,17 @@ public class Companion : MonoBehaviour
         transform.position = leader.transform.position + followOffset;
     }
 
-    public void StopFollowing()
+    public virtual void StopFollowing()
     {
         leader = null;
     }
 
-    private void LateUpdate()
+    protected override void Update()
     {
         if (leader)
         {
             if (cameraManager)
-            {                
+            {
                 Vector3 currentEuler = transform.rotation.eulerAngles;
                 Vector3 desiredEuler = cameraManager.cameraBrain.transform.rotation.eulerAngles;
                 float currentYaw = currentEuler.y;
@@ -76,12 +72,17 @@ public class Companion : MonoBehaviour
                     finalPosition += noise.GetMovementNoise();
                 }
 
-                transform.position = Vector3.Lerp(transform.position, finalPosition, turnSpeed * Time.deltaTime);
+                Vector3 updatedPosition = Vector3.Lerp(transform.position, finalPosition, turnSpeed * Time.deltaTime);
+
+                AddMovement(updatedPosition - transform.position);
+                
             }
             else
             {
-                transform.position = leader.transform.position + followOffset;
-            }            
+                Vector3 updatedPosition = leader.transform.position + followOffset;
+
+                AddMovement(updatedPosition - transform.position);
+            }
         }
     }
 }

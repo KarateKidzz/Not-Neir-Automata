@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7749882144344286652}
   - component: {fileID: 3163114057097046551}
+  - component: {fileID: 3682839698223163086}
   m_Layer: 0
   m_Name: 3rd Person Player Controller
   m_TagString: Untagged
@@ -45,3 +46,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraManagerPrefab: {fileID: 6193707777684292978, guid: 33f4b393c4b164b28afebb37fdb8b823,
     type: 3}
+  playerInput: {fileID: 3682839698223163086}
+--- !u!114 &3682839698223163086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081435157633656733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 6476ec8a5283c439fa2dcaffb7111b4e,
+    type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

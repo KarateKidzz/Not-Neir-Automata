@@ -16,6 +16,8 @@ public class Weapon : MonoBehaviour
 
     protected bool autoFire;
 
+    public bool AutoFire => autoFire;
+
     public bool useCameraForAim;
 
     [EventRef]
