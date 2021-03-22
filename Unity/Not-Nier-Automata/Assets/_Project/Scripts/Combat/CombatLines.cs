@@ -43,6 +43,11 @@ public struct VoiceLines
             lastLineTime = Time.time;
         }
 
+        if (lines.Length == 0)
+        {
+            return string.Empty;
+        }
+
         int randomIndex = UnityEngine.Random.Range(0, lines.Length);
         return lines[randomIndex];
     }
