@@ -475,6 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatMusicEvent: event:/MX/RoryBATTLE
+  explorationMusicEvent: event:/MX/ExplorationTest
+  currentState: 0
 --- !u!114 &325507005
 MonoBehaviour:
   m_ObjectHideFlags: 0
