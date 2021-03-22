@@ -20,6 +20,8 @@ public class Weapon : MonoBehaviour
 
     public bool useCameraForAim;
 
+    protected Vector3 rangedAttackDirection;
+
     [EventRef]
     public string attackSoundEvent;
 
@@ -86,9 +88,9 @@ public class Weapon : MonoBehaviour
 
     }
 
-    public virtual void StartAttack()
+    public virtual void StartAttack(Vector3 direction = new Vector3())
     {
-
+        rangedAttackDirection = direction;
     }
 
     public virtual void FinishAttack()
@@ -96,8 +98,10 @@ public class Weapon : MonoBehaviour
         autoFire = false;
     }
 
-    public virtual void AutoAttack()
+    public virtual void AutoAttack(Vector3 direction = new Vector3())
     {
+        rangedAttackDirection = direction;
+
         if (CanSingleFire())
         {
             StartAttack();
@@ -108,6 +112,8 @@ public class Weapon : MonoBehaviour
 
     protected virtual bool CanSingleFire()
     {
+        rangedAttackDirection = Vector3.zero;
+
         return true;
     }
 
@@ -135,6 +141,10 @@ public class Weapon : MonoBehaviour
         if (useCameraForAim && cameraManager)
         {
             direction = cameraManager.cameraBrain.transform.forward;
+        }
+        else if (rangedAttackDirection != Vector3.zero)
+        {
+            direction = rangedAttackDirection;
         }
         else
         {

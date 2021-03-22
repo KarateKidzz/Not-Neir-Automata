@@ -30,7 +30,7 @@ public class BeatAttackWeapon : AutoAttackWeapon
         BeatCallbacks.OnBeatChange -= OnBeat;
     }
 
-    public override void StartAttack()
+    public override void StartAttack(Vector3 direction = default)
     {
         base.StartAttack();
 

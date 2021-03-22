@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SingleAttackWeapon : Weapon
 {
-    public override void AutoAttack()
+    public override void AutoAttack(Vector3 direction = default)
     {
-        base.AutoAttack();
+        base.AutoAttack(direction);
 
         autoFire = false;
     }

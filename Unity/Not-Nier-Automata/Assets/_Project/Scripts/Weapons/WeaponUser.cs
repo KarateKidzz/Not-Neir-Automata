@@ -36,22 +36,22 @@ public class WeaponUser : MonoBehaviour
 
     public bool useCameraAsDirection;
 
-    public void Attack()
+    public void Attack(Vector3 direction = new Vector3())
     {
         if (currentlyEquippedWeapon)
         {
-            currentlyEquippedWeapon.StartAttack();
+            currentlyEquippedWeapon.StartAttack(direction);
         }
     }
 
     /// <summary>
     /// Toggle auto fire. The weapon will keep attacking. Some weapons, like swords, only attack once per input. However, projectiles and "machine guns" and so on will do auto fire.
     /// </summary>
-    public void AttackAutomatic()
+    public void AttackAutomatic(Vector3 direction = new Vector3())
     {
         if (currentlyEquippedWeapon)
         {
-            currentlyEquippedWeapon.AutoAttack();
+            currentlyEquippedWeapon.AutoAttack(direction);
         }
     }
 

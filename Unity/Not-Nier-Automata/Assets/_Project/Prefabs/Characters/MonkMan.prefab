@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopMovement: 0
+  faction: {fileID: 11400000, guid: 11107f3dd80d14e9a980c1c0b6d279b5, type: 2}
   autoPossessPlayer: 0
   autoPossessAI: 0
   aiControllerPrefab: {fileID: 0}

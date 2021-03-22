@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutomaticProjectileWeapon : DelayedAutoWeapon
+public class SingleShotProjectile : SingleAttackWeapon
 {
-    public GameObject projectile;
+    public GameObject projectilePrefab;
 
     public override void StartAttack(Vector3 direction = default)
     {
         base.StartAttack(direction);
 
-        SpawnProjectile(projectile);
+        SpawnProjectile(projectilePrefab);
     }
 }

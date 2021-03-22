@@ -14,6 +14,11 @@ public class Pawn : MonoBehaviour
     public bool stopMovement;
 
     [SerializeField]
+    protected Faction faction;
+
+    public Faction Faction => faction;
+
+    [SerializeField]
     protected bool autoPossessPlayer;
 
     public bool AutoPossessPlayer => autoPossessPlayer;
@@ -46,6 +51,13 @@ public class Pawn : MonoBehaviour
 
     public WeaponUser WeaponUser => weaponUser;
 
+    bool isQuitting;
+
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     /// <summary>
     /// This update's movement
     /// </summary>
@@ -54,7 +66,9 @@ public class Pawn : MonoBehaviour
     #region Unity Methods
 
     protected virtual void Start()
-    { 
+    {
+        GameManager.Instance.AllPawns.Add(this);
+
         weaponUser = GetComponent<WeaponUser>();
 
         if (!autoPossessPlayer && autoPossessAI)
@@ -72,6 +86,14 @@ public class Pawn : MonoBehaviour
             {
                 controller.Possess(this);
             }
+        }
+    }
+
+    protected virtual void OnDestroy()
+    {
+        if (!isQuitting)
+        {
+            GameManager.Instance.AllPawns.Remove(this);
         }
     }
 

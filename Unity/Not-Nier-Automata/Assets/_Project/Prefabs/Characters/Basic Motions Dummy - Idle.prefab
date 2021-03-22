@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1047744104790266311}
   - component: {fileID: 766176235}
   - component: {fileID: 766176236}
+  - component: {fileID: 2673727901214248841}
   m_Layer: 8
   m_Name: Basic Motions Dummy - Idle
   m_TagString: Untagged
@@ -129,6 +130,7 @@ Transform:
   m_Children:
   - {fileID: 2570627437622007088}
   - {fileID: 2570951667977551946}
+  - {fileID: 5981317763147400329}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a162499dc568a42b8a8973b2874dc257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 100
   health: 100
   onDamage:
     m_PersistentCalls:
@@ -227,6 +230,7 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
+  OverridePlayingEvents: 0
   programmerSoundKeys:
   - RoadmanRobot_CanIHelpYou_F#
   - RoadmanRobot_DoYouMind_F#
@@ -253,6 +257,7 @@ MonoBehaviour:
     - Temp_BattleLine_13
     - Temp_BattleLine_14
     waitBetweenLines: 5
+    audioEvent: 
   combatLines:
     lines:
     - Temp_BattleLine_01
@@ -266,6 +271,7 @@ MonoBehaviour:
     - Temp_BattleLine_05
     - Temp_BattleLine_05
     waitBetweenLines: 10
+    audioEvent: 
   leaveCombatLines:
     lines:
     - Temp_BattleLine_07
@@ -274,15 +280,19 @@ MonoBehaviour:
     - Temp_BattleLine_10
     - Temp_BattleLine_11
     waitBetweenLines: 5
+    audioEvent: 
   deathLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   damageLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
   gruntLines:
     lines: []
     waitBetweenLines: 0
+    audioEvent: 
 --- !u!114 &766176235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,13 +318,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopMovement: 0
+  faction: {fileID: 11400000, guid: 556b7e3b5ff62466989b67826edd7e82, type: 2}
   autoPossessPlayer: 0
-  autoPossessAI: 0
-  aiControllerPrefab: {fileID: 0}
+  autoPossessAI: 1
+  aiControllerPrefab: {fileID: 5092266020934848138, guid: b5d2bbef2594e4368844b609dd7974b9,
+    type: 3}
   cameraFollowTarget: {fileID: 0}
   cameraLookAtTarget: {fileID: 0}
   autoHideCursorOnPossess: 0
   companions: []
+--- !u!114 &2673727901214248841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573847291939246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c45a53e827d442ab8983efa6b7f390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandBone: {fileID: 0}
+  rightHandBone: {fileID: 0}
+  isAttacking: 0
+  inventoryWeapons: []
+  currentlyEquippedWeapon: {fileID: 7926755122667917459}
+  useCameraAsDirection: 0
 --- !u!1 &2573874922511683962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,3 +2308,52 @@ Transform:
   m_Father: {fileID: 2572555068721498664}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7692973205370963867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5981317763147400329}
+  - component: {fileID: 7926755122667917459}
+  m_Layer: 8
+  m_Name: Dummy AI Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5981317763147400329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692973205370963867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.741, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2570553944337172870}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7926755122667917459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7692973205370963867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5de03f9e1b4e4f348147746d0f995c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Dummy Gun
+  damage: 5
+  useCameraForAim: 0
+  attackSoundEvent: event:/SFX/PodFire
+  projectilePrefab: {fileID: 7078719393187948800, guid: fdeb34f3a89aa46d8beefdade40f0ef8,
+    type: 3}
