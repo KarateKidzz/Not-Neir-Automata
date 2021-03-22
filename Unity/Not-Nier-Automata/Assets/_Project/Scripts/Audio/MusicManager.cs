@@ -19,6 +19,11 @@ public class MusicManager : GameModeUtil
         StartInstance();
     }
 
+    public void EndCombat()
+    {
+        StopInstance();
+    }
+
     void StartInstance()
     {
         BeatCallbacks beatCallbacks = GetComponent<BeatCallbacks>();
