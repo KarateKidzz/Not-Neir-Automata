@@ -91,4 +91,20 @@ public class BeatAttackWeapon : AutoAttackWeapon
 
         yield return null;
     }
+
+    protected override Projectile SpawnProjectile(GameObject projectilePrefab)
+    {
+        Projectile spawnedProjectile =  base.SpawnProjectile(projectilePrefab);
+
+        if (fireRate == BeatFireRate.DoubleSpeed)
+        {
+            spawnedProjectile.transform.localScale /= 2;
+        }
+        else if (fireRate == BeatFireRate.TripletSpeed)
+        {
+            spawnedProjectile.transform.localScale /= 3;
+        }
+
+        return spawnedProjectile;
+    }
 }

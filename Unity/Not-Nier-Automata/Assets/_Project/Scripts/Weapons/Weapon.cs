@@ -117,7 +117,7 @@ public class Weapon : MonoBehaviour
         return true;
     }
 
-    protected void SpawnProjectile(GameObject projectilePrefab)
+    protected virtual Projectile SpawnProjectile(GameObject projectilePrefab)
     {
         if (attackSoundDescription.isValid())
         {
@@ -152,5 +152,7 @@ public class Weapon : MonoBehaviour
         }
 
         spawnedProjectile.Fire(this, direction);
+
+        return spawnedProjectile;
     }
 }
