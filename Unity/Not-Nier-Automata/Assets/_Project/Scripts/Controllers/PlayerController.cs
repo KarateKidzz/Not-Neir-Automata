@@ -18,7 +18,7 @@ public class PlayerController : Controller
     {
         GameManager.Instance.SetPlayerController(this);
 
-        if (cameraManagerPrefab)
+        if (cameraManagerPrefab && !cameraManager)
         {
             GameObject spawnedCameraManager = Instantiate(cameraManagerPrefab);
             Debug.Assert(spawnedCameraManager);
