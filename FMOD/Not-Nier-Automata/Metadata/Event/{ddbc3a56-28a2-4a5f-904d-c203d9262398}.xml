@@ -277,7 +277,7 @@
 			<value>5.6470588235294121</value>
 		</property>
 		<property name="length">
-			<value>21.176470588235293</value>
+			<value>21.17647058823529</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{a4fd9538-9c85-4a29-97a3-4cd705805dc9}</destination>
@@ -342,7 +342,7 @@
 			<value>Green</value>
 		</property>
 		<property name="start">
-			<value>5.6470588235294121</value>
+			<value>5.6691176470588243</value>
 		</property>
 		<property name="length">
 			<value>28.235294117647058</value>
@@ -410,11 +410,12 @@
 			<value>true</value>
 		</property>
 		<property name="start">
-			<value>5.6470588235293979</value>
+			<value>5.6470588235294121</value>
 		</property>
 		<property name="length">
-			<value>21.176470588235308</value>
+			<value>21.18500993305647</value>
 		</property>
+		<property name="name" />
 		<relationship name="audioFile">
 			<destination>{a830692c-25e6-4bbc-83c7-179deb74a08e}</destination>
 		</relationship>
@@ -1722,10 +1723,16 @@
 	<object class="MixerBusFader" id="{ccae2c93-31e0-4a0f-baac-ce3132e575c4}" />
 	<object class="CompressorEffect" id="{dc76e033-4d30-4268-a406-379fc0799a9f}">
 		<property name="threshold">
-			<value>-9</value>
+			<value>-1.5</value>
+		</property>
+		<property name="ratio">
+			<value>9.60000038</value>
 		</property>
 		<property name="releaseTime">
 			<value>420</value>
+		</property>
+		<property name="gain">
+			<value>2.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{9612082d-1b54-4b53-be30-6128fc50a3cf}" />
