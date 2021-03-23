@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{45fce3cf-3262-46c1-98df-87fe55f05acc}">
+		<property name="assetPath">
+			<value>DX/RobotNPC_DX/RoadmanBot_DX/RoadmanRobot_GonnaPutYouInTheBin_A#.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>

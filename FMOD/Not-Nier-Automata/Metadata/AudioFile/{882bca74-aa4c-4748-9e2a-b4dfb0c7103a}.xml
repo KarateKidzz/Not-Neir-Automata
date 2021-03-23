@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{882bca74-aa4c-4748-9e2a-b4dfb0c7103a}">
 		<property name="assetPath">
-			<value>PC DX/Battle Voice - Enough!.wav</value>
+			<value>DX/AnimeBattleVoice_DX (Cringe)/Battle Voice - Enough!.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

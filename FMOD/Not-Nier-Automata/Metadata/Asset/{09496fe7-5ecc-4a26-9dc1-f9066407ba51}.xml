@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="EncodableAsset" id="{09496fe7-5ecc-4a26-9dc1-f9066407ba51}">
 		<property name="assetPath">
-			<value>Robot NPCs/Humming Bots/</value>
+			<value>DX/RobotNPC_DX/HummingBots_DX/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

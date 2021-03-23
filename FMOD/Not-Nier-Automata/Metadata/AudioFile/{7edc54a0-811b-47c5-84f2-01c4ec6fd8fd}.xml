@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{7edc54a0-811b-47c5-84f2-01c4ec6fd8fd}">
 		<property name="assetPath">
-			<value>PC DX/Battle Voice - Damage6.wav</value>
+			<value>DX/AnimeBattleVoice_DX (Cringe)/Battle Voice - Damage6.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

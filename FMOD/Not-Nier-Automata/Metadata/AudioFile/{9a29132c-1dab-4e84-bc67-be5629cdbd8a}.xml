@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{9a29132c-1dab-4e84-bc67-be5629cdbd8a}">
 		<property name="assetPath">
-			<value>Robot NPCs/Child Robot/ChildRobot_WhereIsMyMum_A.wav</value>
+			<value>DX/RobotNPC_DX/ChildRobot_DX/ChildRobot_WhereIsMyMum_A.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

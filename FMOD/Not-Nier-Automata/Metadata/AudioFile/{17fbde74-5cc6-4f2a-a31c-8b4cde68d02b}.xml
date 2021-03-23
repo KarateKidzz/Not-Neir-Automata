@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{17fbde74-5cc6-4f2a-a31c-8b4cde68d02b}">
 		<property name="assetPath">
-			<value>TempVoiceLines/Temp_BattleLine_13.wav</value>
+			<value>DX/TempVoiceLines/Temp_BattleLine_13.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
