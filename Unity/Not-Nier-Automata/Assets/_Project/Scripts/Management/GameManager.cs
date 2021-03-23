@@ -32,6 +32,10 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     private PlayerController playerController;
 
+    private List<Pawn> allPawns = new List<Pawn>();
+
+    private List<Controller> allControllers = new List<Controller>();
+
     #endregion
 
     #region Properties
@@ -39,6 +43,10 @@ public class GameManager : Singleton<GameManager>
     public LevelLoader LevelLoader => levelLoader;
 
     public PlayerController PlayerController => playerController;
+
+    public List<Pawn> AllPawns => allPawns;
+
+    public List<Controller> AllControllers => allControllers;
 
     #endregion
 

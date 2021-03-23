@@ -31,11 +31,17 @@ public class Character : Pawn
         inputComponent.actions["Sprint"].performed += Sprint;
         inputComponent.actions["Attack1"].performed += Attack;
         inputComponent.actions["Attack2"].performed += CompanionAttack;
+        inputComponent.actions["FireRate1"].performed += FireRate1;
+        inputComponent.actions["FireRate2"].performed += FireRate2;
+        inputComponent.actions["FireRate3"].performed += FireRate3;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["Sprint"].canceled += Sprint;
         inputComponent.actions["Attack1"].canceled += Attack;
         inputComponent.actions["Attack2"].canceled += CompanionAttack;
+        inputComponent.actions["FireRate1"].canceled += FireRate1;
+        inputComponent.actions["FireRate2"].canceled += FireRate2;
+        inputComponent.actions["FireRate3"].canceled += FireRate3;
     }
 
     public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
@@ -44,11 +50,17 @@ public class Character : Pawn
         inputComponent.actions["Sprint"].performed -= Sprint;
         inputComponent.actions["Attack"].performed -= Attack;
         inputComponent.actions["Attack2"].performed -= CompanionAttack;
+        inputComponent.actions["FireRate1"].performed -= FireRate1;
+        inputComponent.actions["FireRate2"].performed -= FireRate2;
+        inputComponent.actions["FireRate3"].performed -= FireRate3;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
         inputComponent.actions["Attack"].canceled -= Attack;
         inputComponent.actions["Attack2"].canceled -= CompanionAttack;
+        inputComponent.actions["FireRate1"].canceled -= FireRate1;
+        inputComponent.actions["FireRate2"].canceled -= FireRate2;
+        inputComponent.actions["FireRate3"].canceled -= FireRate3;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -128,6 +140,51 @@ public class Character : Pawn
                 if (companion.WeaponUser)
                 {
                     companion.WeaponUser.FinishAttack();
+                }
+            }
+        }
+    }
+
+    public void FireRate1(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            SetFireRate(0);
+        }
+    }
+
+    public void FireRate2(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            SetFireRate(1);
+        }
+    }
+
+    public void FireRate3(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            SetFireRate(2);
+        }
+    }
+
+    void SetFireRate(int rate)
+    {
+        foreach (Companion companion in Companions)
+        {
+            if (companion.WeaponUser)
+            {
+                Debug.Log("Set rate");
+
+                Weapon weapon = companion.WeaponUser.currentlyEquippedWeapon;
+
+                BeatAttackWeapon beatAttackWeapon = weapon ? weapon as BeatAttackWeapon : null;
+
+                if (beatAttackWeapon)
+                {
+                    Debug.Log("Weapon exists");
+                    beatAttackWeapon.fireRate = (BeatFireRate)rate;
                 }
             }
         }

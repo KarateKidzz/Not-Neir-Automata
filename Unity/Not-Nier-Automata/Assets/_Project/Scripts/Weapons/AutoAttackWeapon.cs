@@ -11,9 +11,9 @@ public class AutoAttackWeapon : Weapon
 
     public float minWait = 0.1f;
 
-    public override void StartAttack()
+    public override void StartAttack(Vector3 direction = default)
     {
-        base.StartAttack();
+        base.StartAttack(direction);
 
         timeOfLastAttack = Time.time;
     }

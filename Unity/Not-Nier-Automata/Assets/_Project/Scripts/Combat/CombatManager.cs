@@ -76,26 +76,41 @@ public class CombatManager : GameModeUtil
 
     public void RemoveAttacker(Pawn attackingPawn)
     {
+        int previousAttackers = NumberOfAttackers;
         attackers.Remove(attackingPawn);
         CombatLines combatLines = attackingPawn.GetComponent<CombatLines>();
         if (combatLines)
         {
             combatLines.PlayLine(combatLines.leaveCombatLines.GetRandomLine());
         }
+
+        if (NumberOfAttackers == 0 && previousAttackers > 0)
+        {
+            EndCombat();
+        }
     }
 
     void StartCombat()
     {
-        GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode<GameMode>();
+        GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode();
 
-        if (currentGameMode)
+        MusicManager musicManager = currentGameMode.GetGameModeUtil<MusicManager>();
+
+        if (musicManager)
         {
-            if (currentGameMode.Utilities.ContainsKey(typeof(MusicManager)))
-            {
-                MusicManager musicManager = currentGameMode.Utilities[typeof(MusicManager)] as MusicManager;
+            musicManager.StartCombat();
+        }
+    }
 
-                musicManager.StartCombat();
-            }
+    void EndCombat()
+    {
+        GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode();
+
+        MusicManager musicManager = currentGameMode.GetGameModeUtil<MusicManager>();
+
+        if (musicManager)
+        {
+            musicManager.EndCombat();
         }
     }
 

@@ -11,9 +11,9 @@ public class DelayedAutoWeapon : AutoAttackWeapon
 
     protected float nextAttackTime;
 
-    public override void StartAttack()
+    public override void StartAttack(Vector3 direction = default)
     {
-        base.StartAttack();
+        base.StartAttack(direction);
 
         nextAttackTime = Time.time + attackDelay;
     }

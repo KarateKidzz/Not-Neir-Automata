@@ -4,19 +4,39 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
+public enum MusicState
+{
+    NotPlaying,
+    Exploration,
+    Combat
+}
+
 public class MusicManager : GameModeUtil
 {
     [EventRef]
     public string combatMusicEvent;
 
+    [EventRef]
+    public string explorationMusicEvent;
+
+    [SerializeField, ReadOnly]
+    protected MusicState currentState;
+
     EventInstance eventInstance;
+
+    private void Start()
+    {
+        StartCoroutine(StartExplorationAfterWait(2f));
+    }
 
     public void StartCombat()
     {
-        StopInstance();
+        StartCoroutine(WaitForInstanceToEnd(MusicState.Combat));
+    }
 
-        eventInstance = RuntimeManager.CreateInstance(combatMusicEvent);
-        StartInstance();
+    public void EndCombat()
+    {
+        StartCoroutine(WaitForInstanceToEnd(MusicState.Exploration));
     }
 
     void StartInstance()
@@ -38,5 +58,49 @@ public class MusicManager : GameModeUtil
             eventInstance.release();
             eventInstance.clearHandle();
         }
+    }
+
+    IEnumerator StartExplorationAfterWait(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+
+        if (!eventInstance.isValid())
+        {
+            yield return WaitForInstanceToEnd(MusicState.Exploration);
+        }
+    }
+
+    IEnumerator WaitForInstanceToEnd(MusicState nextState)
+    {
+        if (eventInstance.isValid())
+        {
+            eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            PLAYBACK_STATE playbackState;
+
+            do
+            {
+                eventInstance.getPlaybackState(out playbackState);
+
+                yield return null;
+            }
+            while (playbackState != PLAYBACK_STATE.STOPPED);
+
+            eventInstance.release();
+            eventInstance.clearHandle();
+        }
+
+        if (nextState == MusicState.Exploration)
+        {
+            eventInstance = RuntimeManager.CreateInstance(explorationMusicEvent);
+            StartInstance();
+        }
+        else if (nextState == MusicState.Combat)
+        {
+            eventInstance = RuntimeManager.CreateInstance(combatMusicEvent);
+            StartInstance();
+        }
+
+        yield return null;
     }
 }

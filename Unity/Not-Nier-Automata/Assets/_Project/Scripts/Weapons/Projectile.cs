@@ -50,7 +50,8 @@ public class Projectile : MonoBehaviour
             {
                 if (weaponUser.gameObject != other.gameObject)
                 {
-                    Damageable hit = other.gameObject.GetComponent<Damageable>();
+
+                    Damageable hit = other.gameObject.GetComponentInParentThenChildren<Damageable>();
 
                     if (hit)
                     {
