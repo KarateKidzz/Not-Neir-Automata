@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 8238997193246616860}
   - component: {fileID: -2806129429148359115}
   - component: {fileID: 1786192110702600644}
+  - component: {fileID: 414551528153417014}
   m_Layer: 8
   m_Name: MonkMan
   m_TagString: Untagged
@@ -251,6 +252,19 @@ MonoBehaviour:
   OverridePlayingEvents: 0
   programmerSoundKeys: []
   playOrder: 0
+--- !u!114 &414551528153417014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390603271446795770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4165341d55c1462c8ea8625b8596090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingSoundEvent: event:/SFX/SwordSwing
 --- !u!1001 &7390603272280736154
 PrefabInstance:
   m_ObjectHideFlags: 0

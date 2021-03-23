@@ -57,6 +57,7 @@ public class Projectile : MonoBehaviour
                     {
                         Debug.Log("Weapon hit something: " + other.gameObject.transform.root.gameObject.name);
                         weaponUser.RegisterHit(hit);
+                        Destroy(transform.root.gameObject);
                     }
                 }
             }
