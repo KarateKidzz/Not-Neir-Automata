@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{44aca83f-0dff-4557-a11a-d1cfd393d3c7}">
+		<property name="note">
+			<value>A bus containing all busses that need to stop playing when the game pauses</value>
+		</property>
+		<property name="name">
+			<value>Pause</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{381bf4e6-8b73-43d3-9941-4a6beb4cbe33}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{757d6596-d37e-48b0-bc08-8ef6c459e342}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{29937847-0e5e-496a-a252-f8717767cdd9}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{381bf4e6-8b73-43d3-9941-4a6beb4cbe33}">
+		<relationship name="effects">
+			<destination>{10de58c9-0909-421b-9fd5-239e529b302e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{757d6596-d37e-48b0-bc08-8ef6c459e342}" />
+	<object class="MixerBusFader" id="{10de58c9-0909-421b-9fd5-239e529b302e}" />
+</objects>

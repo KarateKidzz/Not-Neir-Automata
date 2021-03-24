@@ -34,6 +34,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate1"].performed += FireRate1;
         inputComponent.actions["FireRate2"].performed += FireRate2;
         inputComponent.actions["FireRate3"].performed += FireRate3;
+        inputComponent.actions["Pause"].performed += Pause;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["Sprint"].canceled += Sprint;
@@ -42,6 +43,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate1"].canceled += FireRate1;
         inputComponent.actions["FireRate2"].canceled += FireRate2;
         inputComponent.actions["FireRate3"].canceled += FireRate3;
+        inputComponent.actions["Pause"].canceled += Pause;
     }
 
     public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
@@ -53,6 +55,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate1"].performed -= FireRate1;
         inputComponent.actions["FireRate2"].performed -= FireRate2;
         inputComponent.actions["FireRate3"].performed -= FireRate3;
+        inputComponent.actions["Pause"].performed -= Pause;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
@@ -61,6 +64,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate1"].canceled -= FireRate1;
         inputComponent.actions["FireRate2"].canceled -= FireRate2;
         inputComponent.actions["FireRate3"].canceled -= FireRate3;
+        inputComponent.actions["Pause"].canceled -= Pause;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -186,6 +190,21 @@ public class Character : Pawn
                     Debug.Log("Weapon exists");
                     beatAttackWeapon.fireRate = (BeatFireRate)rate;
                 }
+            }
+        }
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            if  (GameManager.Instance.IsPaused())
+            {
+                GameManager.Instance.PauseGame(false);
+            }
+            else
+            {
+                GameManager.Instance.PauseGame(true);
             }
         }
     }

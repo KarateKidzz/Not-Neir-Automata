@@ -27,6 +27,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject playerControllerPrefab;
 
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
     /// <summary>
     /// Spawned player controller
     /// </summary>
@@ -128,6 +131,23 @@ public class GameManager : Singleton<GameManager>
     public void ClearPlayerController()
     {
         playerController = null;
+    }
+
+    public void PauseGame(bool pause)
+    {
+        if (pause)
+        {
+            pauseMenu.Pause();
+        }
+        else
+        {
+            pauseMenu.UnPause();
+        }
+    }
+
+    public bool IsPaused()
+    {
+        return pauseMenu.gameObject.activeSelf;
     }
 
     #endregion
