@@ -50,7 +50,7 @@ public class Character : Pawn
     {
         inputComponent.actions["Move"].performed -= Move;
         inputComponent.actions["Sprint"].performed -= Sprint;
-        inputComponent.actions["Attack"].performed -= Attack;
+        inputComponent.actions["Attack1"].performed -= Attack;
         inputComponent.actions["Attack2"].performed -= CompanionAttack;
         inputComponent.actions["FireRate1"].performed -= FireRate1;
         inputComponent.actions["FireRate2"].performed -= FireRate2;
@@ -59,7 +59,7 @@ public class Character : Pawn
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
-        inputComponent.actions["Attack"].canceled -= Attack;
+        inputComponent.actions["Attack1"].canceled -= Attack;
         inputComponent.actions["Attack2"].canceled -= CompanionAttack;
         inputComponent.actions["FireRate1"].canceled -= FireRate1;
         inputComponent.actions["FireRate2"].canceled -= FireRate2;

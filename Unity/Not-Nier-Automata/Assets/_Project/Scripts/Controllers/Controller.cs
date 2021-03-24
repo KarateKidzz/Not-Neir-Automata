@@ -38,7 +38,7 @@ public class Controller : MonoBehaviour
 
     public virtual void DisableController()
     {
-
+        Unpossess();
     }
 
     public virtual void Possess(Pawn pawnToPossess)

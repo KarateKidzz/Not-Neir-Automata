@@ -13,7 +13,7 @@ public class ForceCombat : MonoBehaviour
         quitting = true;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         pawn = GetComponent<Pawn>();
 
@@ -36,7 +36,7 @@ public class ForceCombat : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         if (quitting)
         {
@@ -47,11 +47,14 @@ public class ForceCombat : MonoBehaviour
         {
             GameMode currentGameMode = GameManager.Instance.GetCurrentGameMode();
 
-            CombatManager combatManager = currentGameMode.GetGameModeUtil<CombatManager>();
-
-            if (combatManager)
+            if (currentGameMode)
             {
-                combatManager.RemoveAttacker(pawn);
+                CombatManager combatManager = currentGameMode.GetGameModeUtil<CombatManager>();
+
+                if (combatManager)
+                {
+                    combatManager.RemoveAttacker(pawn);
+                }
             }
         }
         else
