@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{53c2757a-5b24-4f94-bd1b-313661cc6157}">
 		<property name="assetPath">
-			<value>SFX/Custom Reload_3.wav</value>
+			<value>SFX/Pod_AUTO_SFX/Custom Reload_3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

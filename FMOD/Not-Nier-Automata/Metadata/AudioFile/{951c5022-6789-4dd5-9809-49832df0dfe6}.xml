@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{6b6cd47f-3986-4b66-9e48-2dd0e64ce7e6}">
+	<object class="AudioFile" id="{951c5022-6789-4dd5-9809-49832df0dfe6}">
 		<property name="assetPath">
-			<value>SFX/Pod_AUTO_SFX/Barrel WindDown.wav</value>
+			<value>SFX/Footsteps_SFX/Cutsom_ Footstep3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.84743749999999995</value>
+			<value>0.34375</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

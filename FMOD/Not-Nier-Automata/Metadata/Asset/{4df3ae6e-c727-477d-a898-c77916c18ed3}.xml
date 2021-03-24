@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="EncodableAsset" id="{7e91815f-082d-44aa-9dbe-b5b8f1c0f03c}">
+	<object class="EncodableAsset" id="{4df3ae6e-c727-477d-a898-c77916c18ed3}">
 		<property name="assetPath">
-			<value>SFX/Sword_FIER_SFX/</value>
+			<value>MX/Desert_Exploration/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
