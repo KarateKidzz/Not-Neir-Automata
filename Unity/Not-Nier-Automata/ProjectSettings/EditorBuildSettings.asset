@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/Tests/ProjectilesDemo.unity
-    guid: 73be6ee452f3e4e7984263dfec5f4634
+    path: Assets/_Project/Scenes/Tests/ExploreDemo.unity
+    guid: 0eb8a9655ef9e4e04b3e0a22a0c1698e
   - enabled: 1
     path: Assets/_Project/Scenes/Overworld.unity
     guid: 28db45604703d4c83a5c330335c95c6c
-  - enabled: 1
-    path: Assets/_Project/Scenes/Tests/WalkingDemo.unity
-    guid: e4753e2227b0a4c5aa6504f81c27980d
   m_configObjects: {}
