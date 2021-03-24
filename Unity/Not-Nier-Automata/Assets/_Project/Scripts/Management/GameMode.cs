@@ -23,6 +23,8 @@ public class GameMode : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("Game Mode Awake");
+
         LevelLoader.TryLoadOverworld();
 
         GameModeUtil[] utils = GetComponents<GameModeUtil>();
@@ -35,6 +37,7 @@ public class GameMode : MonoBehaviour
 
     protected virtual void Start()
     {
+        Debug.Log("Game Mode Start");
         GameManager.Instance.SetCurrentGameMode(this);
     }
 

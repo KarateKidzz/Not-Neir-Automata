@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 /// <summary>
 /// Controls level loading, level transitions, game mode management and more.
@@ -148,6 +151,15 @@ public class GameManager : Singleton<GameManager>
     public bool IsPaused()
     {
         return pauseMenu.gameObject.activeSelf;
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 
     #endregion

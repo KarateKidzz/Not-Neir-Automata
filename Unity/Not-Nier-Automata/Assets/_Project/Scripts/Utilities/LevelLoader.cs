@@ -38,7 +38,9 @@ public class LevelLoader : MonoBehaviour
         // We just need to get some content on screen
         if (SceneManager.sceneCount == 1)
         {
-            SceneManager.LoadScene(MainMenuSceneName, LoadSceneMode.Additive);
+            //SceneManager.LoadScene(MainMenuSceneName, LoadSceneMode.Additive);
+            //StartCoroutine(SetActiveAfterLoaded(MainMenuSceneName));
+            StartCoroutine(LoadSceneAndUnload(MainMenuSceneName));
         }
     }
 
@@ -79,21 +81,44 @@ public class LevelLoader : MonoBehaviour
             Debug.Log("[Scene Transition] Unloaded Scene (" + UnloadSceneName + ")");
         }
 
-        AsyncOperation LoadOperation = SceneManager.LoadSceneAsync(LoadSceneName, LoadSceneMode.Additive);
-        LoadOperation.allowSceneActivation = true;
+        yield return new WaitForSeconds(.2f);
 
-        while (!LoadOperation.isDone)
+        AsyncOperation LoadOperation = SceneManager.LoadSceneAsync(LoadSceneName, LoadSceneMode.Additive);
+        LoadOperation.allowSceneActivation = false;
+
+        yield return new WaitForSeconds(.2f);
+
+        Debug.Log($"Is Done? {LoadOperation.isDone}");
+
+        while(!LoadOperation.isDone)
+        {
+            Debug.Log($"Progress? {LoadOperation.progress}");
+            if (LoadOperation.progress >= 0.9f)
+            {
+                Debug.Log("[Scene Transition] Loaded Scene (" + LoadSceneName + ")");
+
+                LoadOperation.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+
+        bool active = SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
+
+        Debug.Log($"Active: {active}");
+
+        Debug.Log($"Is Done? {LoadOperation.isDone}");
+    }
+
+    IEnumerator SetActiveAfterLoaded(string sceneName)
+    {
+        Scene scene = SceneManager.GetSceneByName(sceneName);
+
+        while (!scene.isLoaded)
         {
             yield return null;
         }
 
-        Debug.Log("[Scene Transition] Loaded Scene (" + LoadSceneName + ")");
-
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
-
-        yield return new WaitForSeconds(0.2f);
-
-        yield return null;
+        SceneManager.SetActiveScene(scene);
     }
 
 }

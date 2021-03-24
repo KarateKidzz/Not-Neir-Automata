@@ -39,6 +39,13 @@ public class MusicManager : GameModeUtil
         StartCoroutine(WaitForInstanceToEnd(MusicState.Exploration));
     }
 
+    public override void EndUtil()
+    {
+        base.EndUtil();
+
+        StopInstance();
+    }
+
     void StartInstance()
     {
         BeatCallbacks beatCallbacks = GetComponent<BeatCallbacks>();

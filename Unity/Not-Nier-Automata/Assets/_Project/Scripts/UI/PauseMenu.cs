@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using FMOD;
 using FMOD.Studio;
 using FMODUnity;
@@ -74,10 +71,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        GameManager.Instance.LevelLoader.LoadScene("Menu");
     }
 }
