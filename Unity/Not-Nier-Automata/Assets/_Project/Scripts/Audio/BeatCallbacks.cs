@@ -43,6 +43,10 @@ public class BeatCallbacks : MonoBehaviour
         SetupForEventInstance(eventEmitter.EventInstance);
     }
 
+    /// <summary>
+    /// Monitor this event instance for callbacks
+    /// </summary>
+    /// <param name="eventInstance"></param>
     public void SetupForEventInstance(EventInstance eventInstance)
     {
         if (!firstInstance.isValid())
@@ -55,6 +59,11 @@ public class BeatCallbacks : MonoBehaviour
         eventInstance.setCallback(beatCallback, EVENT_CALLBACK_TYPE.TIMELINE_BEAT | EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
     }
 
+    /// <summary>
+    /// Callback for on beat changes for GUI
+    /// </summary>
+    /// <param name="eventInstance"></param>
+    /// <param name="properties"></param>
     void OnBeat(EventInstance eventInstance, TIMELINE_BEAT_PROPERTIES properties)
     {
         if (eventInstance.handle == firstInstance.handle)
@@ -63,6 +72,11 @@ public class BeatCallbacks : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Callack for on marker changes for GUI
+    /// </summary>
+    /// <param name="eventInstance"></param>
+    /// <param name="marker"></param>
     void OnMarker(EventInstance eventInstance, TIMELINE_MARKER_PROPERTIES marker)
     {
         if (eventInstance.handle == firstInstance.handle)
@@ -71,6 +85,9 @@ public class BeatCallbacks : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Visualise the beat and bar
+    /// </summary>
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(Screen.width / 2, 10, 400, 100));
@@ -78,6 +95,13 @@ public class BeatCallbacks : MonoBehaviour
         GUILayout.EndArea();
     } 
 
+    /// <summary>
+    /// Callback from FMOD
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="instance"></param>
+    /// <param name="parameterPtr"></param>
+    /// <returns></returns>
     [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
     static FMOD.RESULT BeatEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instance, IntPtr parameterPtr)
     {

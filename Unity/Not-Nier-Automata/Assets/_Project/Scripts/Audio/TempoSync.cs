@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
-using UnityEngine.InputSystem;
 
 public class TempoSync : MonoBehaviour
 {
@@ -24,23 +23,6 @@ public class TempoSync : MonoBehaviour
         trackedEventInstance = eventInstance;
         BeatCallbacks.OnBeatChange += OnBeatChange;
     } 
-
-    //public void Jump(InputAction.CallbackContext context)
-    //{
-    //    if (context.ReadValueAsButton())
-    //    {
-    //        currentInputTime = Time.realtimeSinceStartup;
-
-    //        if (IsInputInTime())
-    //        {
-    //            Debug.Log("IN TIME");
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("OUT OF TIME");
-    //        }
-    //    }
-    //}
 
     void OnDestroy()
     {
