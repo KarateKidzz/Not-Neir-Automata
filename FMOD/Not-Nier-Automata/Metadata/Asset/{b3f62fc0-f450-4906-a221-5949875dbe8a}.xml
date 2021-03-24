@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="EncodableAsset" id="{b3f62fc0-f450-4906-a221-5949875dbe8a}">
 		<property name="assetPath">
-			<value>PC DX/</value>
+			<value>DX/AnimeBattleVoice_DX (Cringe)/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
