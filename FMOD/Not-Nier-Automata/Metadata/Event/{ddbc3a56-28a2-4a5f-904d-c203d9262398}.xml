@@ -415,7 +415,6 @@
 		<property name="length">
 			<value>21.18500993305647</value>
 		</property>
-		<property name="name" />
 		<relationship name="audioFile">
 			<destination>{a830692c-25e6-4bbc-83c7-179deb74a08e}</destination>
 		</relationship>
@@ -1359,6 +1358,12 @@
 		</property>
 		<property name="length">
 			<value>45.176470588235304</value>
+		</property>
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>0</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{aa93917d-30bf-4d1d-babd-4e26a17f2d99}</destination>

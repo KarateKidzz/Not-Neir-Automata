@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{1c0916ae-d7f6-4d5e-a3ce-1b43218aab12}">
+	<object class="AudioFile" id="{7c07e8db-9fe5-4212-a448-fc1047a4e1bb}">
 		<property name="assetPath">
-			<value>SFX/RoryPodFires_SFX/Gunshots/Gunshots 1 12th PodFire 2.wav</value>
+			<value>SFX/PodFire_SHOT.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.4117708333333334</value>
+			<value>2.07375</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
