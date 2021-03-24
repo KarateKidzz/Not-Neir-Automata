@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Project/Scenes/Overworld.unity
+    guid: 28db45604703d4c83a5c330335c95c6c
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menu.unity
+    guid: abc0271baa1304836b0d1be449fe8e4a
+  - enabled: 1
     path: Assets/_Project/Scenes/Tests/ExploreDemo.unity
     guid: 0eb8a9655ef9e4e04b3e0a22a0c1698e
   - enabled: 1
-    path: Assets/_Project/Scenes/Overworld.unity
-    guid: 28db45604703d4c83a5c330335c95c6c
+    path: Assets/_Project/Scenes/Tests/CombatDemo.unity
+    guid: 10bac7752caf44870b725ae8aacc5257
   m_configObjects: {}
