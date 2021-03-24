@@ -72,5 +72,27 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         GameManager.Instance.LevelLoader.LoadScene("Menu");
+
+        if (GameManager.Instance.PlayerController)
+        {
+            UnityEngine.InputSystem.PlayerInput playerInput = GameManager.Instance.PlayerController.GetPlayerInputComponent();
+
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Bus pauseBus = RuntimeManager.GetBus("bus:/Pause");
+
+        if (pauseBus.isValid())
+        {
+            pauseBus.lockChannelGroup();
+            pauseBus.setPaused(false);
+            pauseBus.unlockChannelGroup();
+        }
     }
 }
