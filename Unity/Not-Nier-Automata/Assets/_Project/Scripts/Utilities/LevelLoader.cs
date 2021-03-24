@@ -81,32 +81,15 @@ public class LevelLoader : MonoBehaviour
             Debug.Log("[Scene Transition] Unloaded Scene (" + UnloadSceneName + ")");
         }
 
-        yield return new WaitForSeconds(.2f);
-
         AsyncOperation LoadOperation = SceneManager.LoadSceneAsync(LoadSceneName, LoadSceneMode.Additive);
-        LoadOperation.allowSceneActivation = false;
+        LoadOperation.allowSceneActivation = true;
 
-        yield return new WaitForSeconds(.2f);
-
-        Debug.Log($"Is Done? {LoadOperation.isDone}");
-
-        while(!LoadOperation.isDone)
+        LoadOperation.completed += (AsyncOperation Op) =>
         {
-            Debug.Log($"Progress? {LoadOperation.progress}");
-            if (LoadOperation.progress >= 0.9f)
-            {
-                Debug.Log("[Scene Transition] Loaded Scene (" + LoadSceneName + ")");
-
-                LoadOperation.allowSceneActivation = true;
-            }
-            yield return null;
-        }
-
-        bool active = SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
-
-        Debug.Log($"Active: {active}");
-
-        Debug.Log($"Is Done? {LoadOperation.isDone}");
+            Debug.Log("Set Active");
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
+            Debug.Log("Set Active After");
+        };
     }
 
     IEnumerator SetActiveAfterLoaded(string sceneName)
