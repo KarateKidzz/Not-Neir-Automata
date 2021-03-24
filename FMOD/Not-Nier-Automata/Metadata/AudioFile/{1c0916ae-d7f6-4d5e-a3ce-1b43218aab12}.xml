@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{1c0916ae-d7f6-4d5e-a3ce-1b43218aab12}">
 		<property name="assetPath">
-			<value>SFX/RoryPodFires_SFX/Gunshots/Gunshots 1 12th PodFire 2.wav</value>
+			<value>SFX/Old_Pod_SFX/Gunshots 1 12th PodFire 2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

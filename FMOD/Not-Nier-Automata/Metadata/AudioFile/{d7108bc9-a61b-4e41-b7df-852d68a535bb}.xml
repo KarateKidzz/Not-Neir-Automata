@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{01a03eca-66b4-412f-9c27-496c0a3ebf2d}">
+	<object class="AudioFile" id="{d7108bc9-a61b-4e41-b7df-852d68a535bb}">
 		<property name="assetPath">
-			<value>SFX/Sword_FIER_SFX/SwordSwing_02.wav</value>
+			<value>MX/SeveredServo_Exploration/Severed_Servo_STEMS/Severed_Servo_ Glock.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>96</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2.1390625000000001</value>
+			<value>181.33333333333334</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
