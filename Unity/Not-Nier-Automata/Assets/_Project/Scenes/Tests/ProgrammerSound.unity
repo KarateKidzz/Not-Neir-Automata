@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506ca99d94e3a418d9eed9e265ce0d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPawnPrefab: {fileID: 4147955055015744007, guid: 72067b49ae4284567936b49ada7e7dfb,
+  defaultPawnPrefab: {fileID: 7390603271446795770, guid: 52c48ff4464964237aedb4e0385f203f,
     type: 3}
   defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: ea7c71b65247c44bc92ee6b4583e6d25,
     type: 3}
@@ -400,10 +400,13 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
+  OverridePlayingEvents: 0
   programmerSoundKeys:
-  - ChildRobot_Mum
-  - ChildRobot_Mummy
-  - ChildRobot_WhereIsMyMum
+  - RoadmanRobot_CanIHelpYou_F#
+  - RoadmanRobot_Conversation_F#
+  - RoadmanRobot_DoYouMind_F#
+  - RoadmanRobot_FuckOff_F#
+  - RoadmanRobot_GoElsewhere_F#
   playOrder: 0
 --- !u!135 &428964741
 SphereCollider:
