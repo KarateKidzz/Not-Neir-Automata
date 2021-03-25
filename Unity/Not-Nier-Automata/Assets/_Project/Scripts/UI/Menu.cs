@@ -14,6 +14,11 @@ public class Menu : MonoBehaviour
         GameManager.Instance.LevelLoader.LoadScene("CombatDemo");
     }
 
+    public void LoadCollision()
+    {
+        GameManager.Instance.LevelLoader.LoadScene("ProgrammerSound");
+    }
+
     public void Quit()
     {
         GameManager.Instance.Quit();
