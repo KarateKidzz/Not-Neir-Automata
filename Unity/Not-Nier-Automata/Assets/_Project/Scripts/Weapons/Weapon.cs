@@ -25,6 +25,9 @@ public class Weapon : MonoBehaviour
     [EventRef]
     public string attackSoundEvent;
 
+    [EventRef]
+    public string cooldownSoundEvent;
+
     protected CameraManager cameraManager;
 
     protected EventDescription attackSoundDescription;
@@ -95,6 +98,10 @@ public class Weapon : MonoBehaviour
 
     public virtual void FinishAttack()
     {
+        if (!string.IsNullOrEmpty(cooldownSoundEvent))
+        {
+            RuntimeManager.PlayOneShotAttached(cooldownSoundEvent, gameObject);
+        }
         autoFire = false;
     }
 

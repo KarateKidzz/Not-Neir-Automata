@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopMovement: 0
+  faction: {fileID: 0}
   autoPossessPlayer: 0
   autoPossessAI: 0
   aiControllerPrefab: {fileID: 0}
@@ -303,6 +304,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4243370100389810861}
     m_Modifications:
+    - target: {fileID: 3360448164646810430, guid: 0ad9e6477b8de478ea4c550edea9a0a9,
+        type: 3}
+      propertyPath: cooldownSoundEvent
+      value: event:/SFX/PodCooldown
+      objectReference: {fileID: 0}
     - target: {fileID: 7395551598965349380, guid: 0ad9e6477b8de478ea4c550edea9a0a9,
         type: 3}
       propertyPath: m_RootOrder
