@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da99c940271c30b40b7dadd5c1dc5639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepEvent: 
+  footstepEvent: event:/SFX/Footsteps
 --- !u!1001 &7390603272280736154
 PrefabInstance:
   m_ObjectHideFlags: 0
