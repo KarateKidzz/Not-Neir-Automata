@@ -95,7 +95,7 @@
 	</object>
 	<object class="ParameterProxy" id="{34dd3150-ab11-4fa9-ad24-5b0f2e29871d}">
 		<relationship name="preset">
-			<destination>{c31d7919-256d-4170-847f-7899c80b9e5c}</destination>
+			<destination>{18cda0c9-1a69-4df9-b197-a03261207ea9}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{7d348fdc-b90a-4b00-b8ba-ee0b2ad7a177}">
@@ -202,7 +202,7 @@
 	<object class="MixerBusPanner" id="{1b5f373d-9097-44ab-b32e-22e2d3688edd}" />
 	<object class="AutomationCurve" id="{bd9575e7-e132-436d-ad5b-ed6edb711f72}">
 		<relationship name="parameter">
-			<destination>{c31d7919-256d-4170-847f-7899c80b9e5c}</destination>
+			<destination>{18cda0c9-1a69-4df9-b197-a03261207ea9}</destination>
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{d6ffb23d-ca1c-414a-8761-641cbb465c5d}</destination>
