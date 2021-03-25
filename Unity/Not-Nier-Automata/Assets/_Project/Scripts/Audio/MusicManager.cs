@@ -61,7 +61,7 @@ public class MusicManager : GameModeUtil
     {
         if (eventInstance.isValid())
         {
-            eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             eventInstance.release();
             eventInstance.clearHandle();
         }
