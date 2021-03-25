@@ -406,7 +406,7 @@ MonoBehaviour:
   - RoadmanRobot_Conversation_F#
   - RoadmanRobot_DoYouMind_F#
   - RoadmanRobot_FuckOff_F#
-  - RoadmanRobot_GoElsewhere_F#
+  - RoadmanRobot_GoElsewhereF#
   playOrder: 0
 --- !u!135 &428964741
 SphereCollider:
