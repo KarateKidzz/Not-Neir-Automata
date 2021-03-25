@@ -16,7 +16,7 @@
 			<value>Audio Table</value>
 		</property>
 		<property name="sourceDirectory">
-			<value>Assets/Robot NPCs/Humming Bots</value>
+			<value>Assets/DX/RobotNPC_DX/HummingBots_DX</value>
 		</property>
 	</object>
 </objects>

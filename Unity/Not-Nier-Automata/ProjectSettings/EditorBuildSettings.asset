@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Tests/CombatDemo.unity
     guid: 10bac7752caf44870b725ae8aacc5257
+  - enabled: 1
+    path: Assets/_Project/Scenes/Tests/ProgrammerSound.unity
+    guid: 5dd560709a24b4a83afb7e756a30dd30
   m_configObjects: {}

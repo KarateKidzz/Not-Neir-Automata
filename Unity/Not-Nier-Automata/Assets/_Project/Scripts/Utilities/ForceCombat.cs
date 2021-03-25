@@ -13,7 +13,7 @@ public class ForceCombat : MonoBehaviour
         quitting = true;
     }
 
-    private void OnEnable()
+    private void Start()
     {
         pawn = GetComponent<Pawn>();
 
