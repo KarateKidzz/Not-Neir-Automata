@@ -136,7 +136,7 @@
 	</object>
 	<object class="LoopRegion" id="{61717981-7c33-417f-bc4f-5057575deb08}">
 		<property name="position">
-			<value>0</value>
+			<value>0.15789473684210525</value>
 		</property>
 		<property name="length">
 			<value>93.473684210526315</value>
