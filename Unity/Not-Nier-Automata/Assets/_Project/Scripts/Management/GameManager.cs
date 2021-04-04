@@ -96,6 +96,7 @@ public class GameManager : Singleton<GameManager>
     /// <param name="gameMode"></param>
     public void SetCurrentGameMode(GameMode gameMode)
     {
+        Debug.Log("[Game Manager] Setting new game mode");
         RemoveCurrentGameMode();   
         currentGameMode = gameMode;
         currentGameMode.StartGameMode();
@@ -108,6 +109,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (currentGameMode)
         {
+            Debug.Log("[Game Manager] Unsetting old game mode");
             currentGameMode.EndGameMode();
             currentGameMode = null;
         }

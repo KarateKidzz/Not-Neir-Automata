@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: Opening Talk
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: MonkMan
+      cachedScene: {fileID: 0}
+    subtitle: What a nice town!
+    audioLine: Temp_BattleLine_01
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: MonkMan
+      cachedScene: {fileID: 0}
+    subtitle: It really is!
+    audioLine: StaceyRobot_BtwAmVegan_A

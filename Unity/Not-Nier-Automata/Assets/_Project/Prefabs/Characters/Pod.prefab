@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 2112945259528323034}
   - component: {fileID: 1473681378688806958}
   - component: {fileID: 2502473938846230689}
+  - component: {fileID: 7659528140307034755}
+  - component: {fileID: 5449906070918686544}
+  - component: {fileID: 5644260708011059833}
   m_Layer: 0
   m_Name: Pod
   m_TagString: Untagged
@@ -125,6 +128,55 @@ MonoBehaviour:
   controlledLight: {fileID: 8893009833847565728}
   weaponUser: {fileID: 2112945259528323034}
   firingColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &7659528140307034755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedGuid: 
+--- !u!114 &5449906070918686544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0bc17cd8457404184a01e3aa05565a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: f62327f52756a4f7fa9b6701f78bff36
+  guidComponent: {fileID: 0}
+--- !u!114 &5644260708011059833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/DX/RobotVoice
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  OverridePlayingEvents: 0
+  programmerSoundKeys: []
+  playOrder: 0
 --- !u!1 &7002868928408713796
 GameObject:
   m_ObjectHideFlags: 0
