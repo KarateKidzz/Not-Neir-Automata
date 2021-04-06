@@ -18,11 +18,12 @@ public class DialogueManager : GameModeUtil
     public void StartDialogue(DialogueScript script)
     {
         scripts.Add(new OngoingDialogue() { script = script });
+        Debug.Log($"[Dialogue Manager] Starting script {script}");
     }
 
     List<OngoingDialogue> toRemove = new List<OngoingDialogue>();
 
-    void Update()
+    public override void UpdateUtil()
     {
         foreach (OngoingDialogue dialogue in scripts)
         {

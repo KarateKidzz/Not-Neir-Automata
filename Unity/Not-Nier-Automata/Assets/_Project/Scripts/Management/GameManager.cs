@@ -8,7 +8,7 @@ using UnityEditor;
 /// <summary>
 /// Controls level loading, level transitions, game mode management and more.
 /// </summary>
-public class GameManager : Singleton<GameManager>
+public sealed class GameManager : Singleton<GameManager>
 {
     #region Fields
 
