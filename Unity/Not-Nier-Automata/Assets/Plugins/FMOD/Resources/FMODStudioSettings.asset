@@ -353,6 +353,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - AUTO
   - BrokenRobot
   - ChildRobot
   - HummingRobot
