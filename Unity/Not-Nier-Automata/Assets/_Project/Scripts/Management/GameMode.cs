@@ -21,9 +21,9 @@ public class GameMode : MonoBehaviour
         quitting = true;
     }
 
-    void Awake()
+    protected virtual void Awake()
     {
-        Debug.Log("Game Mode Awake");
+        Debug.Log("[Game Mode] Awake");
 
         LevelLoader.TryLoadOverworld();
 
