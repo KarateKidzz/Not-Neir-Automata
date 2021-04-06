@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{af07ef91-91dc-4793-a5f8-7948714f28d7}">
+	<object class="AudioFile" id="{14d005d1-a9fb-4466-ab18-2b04cea2d019}">
 		<property name="assetPath">
-			<value>DX/RB.VIII-AUTO/AUTO_VA - Line 8.wav</value>
+			<value>DX/RB.VIII-AUTO/AUTO_IntroLine_07.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>6.6914999999999996</value>
+			<value>2.4458541666666669</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

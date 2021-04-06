@@ -474,6 +474,7 @@ MonoBehaviour:
   combatMusicEvent: event:/MX/RoryBATTLE
   explorationMusicEvent: event:/MX/ExplorationTest
   currentState: 0
+  playExploreMusic: 0
 --- !u!114 &325507005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   playEvent: 1
-  script: {fileID: 11400000, guid: 36496119894344603b577ef2ec4363e8, type: 2}
+  script: {fileID: 11400000, guid: 3203c0f201d374aeea7093c1228cc676, type: 2}
 --- !u!1 &1302001932
 GameObject:
   m_ObjectHideFlags: 0

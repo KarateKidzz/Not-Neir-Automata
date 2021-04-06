@@ -22,6 +22,8 @@ public class MusicManager : GameModeUtil
     [SerializeField, ReadOnly]
     protected MusicState currentState;
 
+    public bool playExploreMusic = true;
+
     EventInstance eventInstance;
 
     private void Start()
@@ -97,7 +99,7 @@ public class MusicManager : GameModeUtil
             eventInstance.clearHandle();
         }
 
-        if (nextState == MusicState.Exploration)
+        if (nextState == MusicState.Exploration && playExploreMusic)
         {
             eventInstance = RuntimeManager.CreateInstance(explorationMusicEvent);
             StartInstance();
