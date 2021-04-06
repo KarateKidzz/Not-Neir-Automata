@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{4cc75540-ff8c-4c93-a98e-8b2b120ddb4f}">
+		<property name="assetPath">
+			<value>DX/RB.VIII-AUTO/AUTO_VA - Line 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.7977083333333326</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>
