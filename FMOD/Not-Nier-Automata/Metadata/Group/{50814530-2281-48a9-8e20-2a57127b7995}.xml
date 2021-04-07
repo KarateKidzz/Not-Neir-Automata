@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{50814530-2281-48a9-8e20-2a57127b7995}">
+		<property name="name">
+			<value>2D</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f594ad3b-ab0f-4d6c-822e-a048f6e94ce5}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{35988645-52f3-43c0-ac82-762493cbe342}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{94c0b94c-1440-421b-81e8-ef556db158c7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{f594ad3b-ab0f-4d6c-822e-a048f6e94ce5}">
+		<relationship name="effects">
+			<destination>{8db4b72d-cde8-4bdf-b4db-78440070cdf6}</destination>
+			<destination>{5049f0e3-9df7-4a3c-8cc8-3011c5a1b192}</destination>
+			<destination>{71733bec-f7d0-42aa-a0d0-741636c745f9}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{35988645-52f3-43c0-ac82-762493cbe342}" />
+	<object class="TransceiverEffect" id="{8db4b72d-cde8-4bdf-b4db-78440070cdf6}">
+		<property name="transmitMode">
+			<value>true</value>
+		</property>
+		<property name="speakerMode">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{5049f0e3-9df7-4a3c-8cc8-3011c5a1b192}" />
+	<object class="LowpassSimpleEffect" id="{71733bec-f7d0-42aa-a0d0-741636c745f9}">
+		<property name="cutoff">
+			<value>22000</value>
+		</property>
+	</object>
+</objects>
