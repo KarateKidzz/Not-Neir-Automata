@@ -42,7 +42,6 @@ public class AssetIDs : ScriptableObject
     /// <summary>
     /// Runtime instances of GUID strings to the runtime objects
     /// </summary>
-    [SerializeField, ReadOnly]
     List<RuntimeAssets> runtimeIDs = new List<RuntimeAssets>();
 
     const string AssetIDsAssetName = "AssetIDs";
