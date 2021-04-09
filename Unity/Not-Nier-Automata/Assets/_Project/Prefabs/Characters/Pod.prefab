@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/DX/RobotVoice
+  Event: event:/DX/AutoVoice
   PlayEvent: 0
   StopEvent: 2
   AllowFadeout: 1
