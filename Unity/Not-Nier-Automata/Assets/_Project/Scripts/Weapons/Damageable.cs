@@ -16,7 +16,7 @@ public class Damageable : MonoBehaviour
 
     private void Start()
     {
-        startingHealth = health;
+        health = startingHealth;
         combatLines = GetComponent<CombatLines>();
     }
 
