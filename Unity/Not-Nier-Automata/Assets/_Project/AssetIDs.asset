@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff839ca13e23148b4981783b3d96299e, type: 3}
   m_Name: AssetIDs
   m_EditorClassIdentifier: 
-  assetsIDs: []
-  runtimeIDs: []
+  assetsIDs:
+  - AssetID: 52c48ff4464964237aedb4e0385f203f
+    Object: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+  - AssetID: f62327f52756a4f7fa9b6701f78bff36
+    Object: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+  runtimeIDs:
+  - AssetID: 52c48ff4464964237aedb4e0385f203f
+    Instances: []
+  - AssetID: f62327f52756a4f7fa9b6701f78bff36
+    Instances: []
