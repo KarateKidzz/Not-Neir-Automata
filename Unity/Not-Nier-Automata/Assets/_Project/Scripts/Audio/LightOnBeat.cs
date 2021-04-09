@@ -15,6 +15,7 @@ public class LightOnBeat : MonoBehaviour
 
     private void Start()
     {
+        controllingLight.intensity = offIntensity;
         BeatCallbacks.OnBeatChange += OnBeat;
     }
 
