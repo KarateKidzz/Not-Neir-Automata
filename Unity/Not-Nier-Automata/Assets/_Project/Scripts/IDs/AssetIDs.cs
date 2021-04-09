@@ -55,6 +55,13 @@ public class AssetIDs : ScriptableObject
     private static Comparer<RuntimeAssets> orderRuntimeAssetsByAssetId = Comparer<RuntimeAssets>.Create(
         (x, y) => x.AssetID.CompareTo(y.AssetID));
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Initialize()
+    {
+        AssetIDs tempInstance = Instance;
+        Debug.Assert(tempInstance);
+    }
+
     public static AssetIDs Instance
     {
         get
@@ -70,12 +77,20 @@ public class AssetIDs : ScriptableObject
                 instance = Resources.Load(AssetIDsAssetName) as AssetIDs;
                 if (instance == null)
                 {
+                    Debug.Log("[Asset IDs] No Asset ID Database Exists. Creating AssetID database");
                     instance = CreateInstance<AssetIDs>();
-                    instance.name = "AssetIDsAssetName";
+                    instance.name = AssetIDsAssetName;
 
 #if UNITY_EDITOR
+                    string rootDirectory = "Assets/_Project";
+                    string resourcesDirectoryName = "Resources";
+                    string resourcesDirectory = rootDirectory + "/" + resourcesDirectoryName;
 
-                    AssetDatabase.CreateAsset(instance, "Assets/_Project/" + AssetIDsAssetName + ".asset");
+                    if (!Directory.Exists("Assets/_Project/Resources"))
+                    {
+                        AssetDatabase.CreateFolder("Assets/_Project", "Resources");
+                    }
+                    AssetDatabase.CreateAsset(instance, "Assets/_Project/Resources" + AssetIDsAssetName + ".asset");
 #endif
                 }
                 isInitializing = false;
@@ -131,14 +146,18 @@ public class AssetIDs : ScriptableObject
             {
                 return false;
             }
+
+            Debug.LogError($"Old Object for ID and new object don't match. Old: {currentObject}. New {setObject}");
+
             assetsIDs[index] = new UniquePair() { Object = setObject, AssetID = id };
+            return true;
         }
         else
         {
+            Debug.Log($"[Asset IDs] Adding New ID:Object Pair --> {id}:{setObject}");
             assetsIDs.Add(new UniquePair() { AssetID = id, Object = setObject });
             return true;
         }
-        return false;
     }
 
     public Object GetPrefabObjectOfID(string id)
