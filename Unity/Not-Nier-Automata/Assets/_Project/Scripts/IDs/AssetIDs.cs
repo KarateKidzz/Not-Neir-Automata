@@ -82,10 +82,6 @@ public class AssetIDs : ScriptableObject
                     instance.name = AssetIDsAssetName;
 
 #if UNITY_EDITOR
-                    string rootDirectory = "Assets/_Project";
-                    string resourcesDirectoryName = "Resources";
-                    string resourcesDirectory = rootDirectory + "/" + resourcesDirectoryName;
-
                     if (!Directory.Exists("Assets/_Project/Resources"))
                     {
                         AssetDatabase.CreateFolder("Assets/_Project", "Resources");
