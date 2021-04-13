@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: InteractionTest1
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: aa1f50ca7e48cc4091990b62eb7b297d
+      cachedName: BROKENROBOT
+      cachedScene: {fileID: 102900000, guid: 401d8e87a48b540579393656a65dfd3a, type: 3}
+    subtitle: What a nice town!
+    audioLine: Temp_BattleLine_01
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 8b283a8e1c763c4eb375ee430f3ce56c
+      cachedName: BROKENROBOT (1)
+      cachedScene: {fileID: 102900000, guid: 401d8e87a48b540579393656a65dfd3a, type: 3}
+    subtitle: It really is!
+    audioLine: StaceyRobot_BtwAmVegan_A
