@@ -6,24 +6,27 @@ public class PlayerInteract : MonoBehaviour
 {
     Interactable currentInteractable;
 
-    public float interactDistance = 15f;
-
-    public Vector3 raycastOffset;
-
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.DrawRay(transform.position + raycastOffset, transform.forward * interactDistance, Color.blue, 0.2f);
+        GameObject go = other.gameObject;
+        currentInteractable = go.GetComponent<Interactable>();
 
-        if (Physics.Raycast(transform.position + raycastOffset, transform.forward, out RaycastHit info, interactDistance))
+        if (currentInteractable)
         {
-            GameObject go = info.collider.gameObject;
-            currentInteractable = go.GetComponent<Interactable>();
+            Debug.Log("Found interactable");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Interactable>())
+        {
+            currentInteractable = null;
         }
     }
 
     public void Interact()
     {
-        Debug.Log("Interact");
         if (currentInteractable)
         {
             Debug.Log("Actually Interact");
