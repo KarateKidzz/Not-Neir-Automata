@@ -20,7 +20,7 @@ public class UniqueIDAttributeDrawer : PropertyDrawer
 
         Object targetObject = property.serializedObject.targetObject;
 
-        string assetPath;
+        string assetPath = null;
 
         if (targetObject is MonoBehaviour component)
         {
@@ -31,20 +31,23 @@ public class UniqueIDAttributeDrawer : PropertyDrawer
             else
             {
                 PrefabStage prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
-                
-                if (component.gameObject == prefabStage.prefabContentsRoot)
+
+                if (prefabStage != null)
                 {
-                    assetPath = prefabStage.prefabAssetPath;
-                }
-                else if (PrefabUtility.IsAnyPrefabInstanceRoot(component.gameObject))
-                {
-                    assetPath = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(component);
-                    if (property.prefabOverride)
-                        PrefabUtility.RevertPropertyOverride(property, InteractionMode.AutomatedAction);
-                }
-                else
-                {
-                    assetPath = null;
+                    if (component.gameObject == prefabStage.prefabContentsRoot)
+                    {
+                        assetPath = prefabStage.prefabAssetPath;
+                    }
+                    else if (PrefabUtility.IsAnyPrefabInstanceRoot(component.gameObject))
+                    {
+                        assetPath = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(component);
+                        if (property.prefabOverride)
+                            PrefabUtility.RevertPropertyOverride(property, InteractionMode.AutomatedAction);
+                    }
+                    else
+                    {
+                        assetPath = null;
+                    }
                 }
             }
         }
