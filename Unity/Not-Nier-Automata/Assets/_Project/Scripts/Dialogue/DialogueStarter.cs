@@ -23,15 +23,20 @@ public class DialogueStarter : EventHandler
     {
         if (playEvent == gameEvent)
         {
-            DialogueManager dialogueManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<DialogueManager>();
-            if (dialogueManager != null)
-            {
-                dialogueManager.StartDialogue(script);
-            }
-            else
-            {
-                Debug.Log("Dialogue is null");
-            }
+            PlayDialogue();
+        }
+    }
+
+    public void PlayDialogue()
+    {
+        DialogueManager dialogueManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<DialogueManager>();
+        if (dialogueManager != null)
+        {
+            dialogueManager.StartDialogue(script);
+        }
+        else
+        {
+            Debug.Log("Dialogue manager is null");
         }
     }
 }

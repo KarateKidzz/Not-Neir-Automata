@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 7130946441172393962}
   - component: {fileID: -2112732518436957221}
   - component: {fileID: -5206099949525424089}
+  - component: {fileID: 1796133631171631584}
   m_Layer: 8
   m_Name: MonkMan
   m_TagString: Untagged
@@ -308,6 +309,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 52c48ff4464964237aedb4e0385f203f
   guidComponent: {fileID: 0}
+--- !u!114 &1796133631171631584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390603271446795770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e4188bc7e644c8eb6f424da28501be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 5
+  raycastOffset: {x: 0, y: 1, z: 0}
 --- !u!1001 &7390603272280736154
 PrefabInstance:
   m_ObjectHideFlags: 0
