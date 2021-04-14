@@ -122,4 +122,36 @@ public class PauseMenu : MonoBehaviour
             musicVCA.setVolume(value);
         }
     }
+
+    public void SetSoundEffectsVolume(float value)
+    {
+        VCA soundVCA = RuntimeManager.GetVCA("vca:/SFX");
+
+        if (soundVCA.isValid())
+        {
+            soundVCA.setVolume(value);
+        }
+    }
+
+    public void SetDialogueVolume(float value)
+    {
+        VCA dialogueVCA = RuntimeManager.GetVCA("vca:/DX");
+
+        if (dialogueVCA.isValid())
+        {
+            dialogueVCA.setVolume(value);
+        }
+    }
+
+    public void SetMasterVolume(float value)
+    {
+        Bus masterBus = RuntimeManager.GetBus("bus:/");
+
+        if (masterBus.isValid())
+        {
+            masterBus.lockChannelGroup();
+            masterBus.setVolume(value);
+            masterBus.unlockChannelGroup();
+        }
+    }
 }
