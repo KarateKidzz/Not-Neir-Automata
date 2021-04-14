@@ -20,8 +20,16 @@ public class Interactable : MonoBehaviour
         owningPawn = GetComponent<Pawn>();
     }
 
+    public virtual bool CanInteract()
+    {
+        return true;
+    }
+
     public void Interact()
     {
-        onInteract.Invoke();
+        if (CanInteract())
+        {
+            onInteract.Invoke();
+        }
     }
 }

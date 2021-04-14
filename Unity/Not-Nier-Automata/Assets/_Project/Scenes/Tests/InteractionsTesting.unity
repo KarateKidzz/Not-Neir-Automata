@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1697141981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0bf48a3e9b144284a8e73dd57ca86fc, type: 3}
+  m_Script: {fileID: 11500000, guid: ef85348718d984037b91749471417b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onInteract:
@@ -1499,6 +1499,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  volumeThreshold: 0.1
 --- !u!114 &1697141983
 MonoBehaviour:
   m_ObjectHideFlags: 0
