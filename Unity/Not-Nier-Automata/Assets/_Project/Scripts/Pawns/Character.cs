@@ -35,6 +35,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate2"].performed += FireRate2;
         inputComponent.actions["FireRate3"].performed += FireRate3;
         inputComponent.actions["Pause"].performed += Pause;
+        inputComponent.actions["Interact"].performed += Interact;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["Sprint"].canceled += Sprint;
@@ -44,6 +45,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate2"].canceled += FireRate2;
         inputComponent.actions["FireRate3"].canceled += FireRate3;
         inputComponent.actions["Pause"].canceled += Pause;
+        inputComponent.actions["Interact"].canceled += Interact;
     }
 
     public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
@@ -56,6 +58,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate2"].performed -= FireRate2;
         inputComponent.actions["FireRate3"].performed -= FireRate3;
         inputComponent.actions["Pause"].performed -= Pause;
+        inputComponent.actions["Interact"].performed -= Interact;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
@@ -65,6 +68,7 @@ public class Character : Pawn
         inputComponent.actions["FireRate2"].canceled -= FireRate2;
         inputComponent.actions["FireRate3"].canceled -= FireRate3;
         inputComponent.actions["Pause"].canceled -= Pause;
+        inputComponent.actions["Interact"].canceled -= Interact;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -205,6 +209,25 @@ public class Character : Pawn
             else
             {
                 GameManager.Instance.PauseGame(true);
+            }
+        }
+    }
+
+    PlayerInteract cachePlayerInteract;
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            if (cachePlayerInteract)
+            {
+                cachePlayerInteract.Interact();
+            }
+            else
+            {
+                cachePlayerInteract = GetComponent<PlayerInteract>();
+                Debug.Assert(cachePlayerInteract);
+                cachePlayerInteract.Interact();
             }
         }
     }

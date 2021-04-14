@@ -43,15 +43,16 @@ public class DialogueManager : GameModeUtil
                 DialogueLine line = dialogue.script.lines[dialogue.currentLine];
 
                 UniqueAsset uniqueAsset = line.staticSpeaker;
-                UniqueAsset runtimeSpeaker = AssetIDs.Instance.GetFirstInstanceOfID(uniqueAsset.ID);
-                GameObject speaker = null;
-                if (uniqueAsset == null)
+                GameObject speaker;
+
+                if (uniqueAsset != null)
                 {
-                    speaker = line.runtimeSpeaker.gameObject;
+                    UniqueAsset runtimeSpeaker = AssetIDs.Instance.GetFirstInstanceOfID(uniqueAsset.ID);
+                    speaker = runtimeSpeaker.gameObject;
                 }
                 else
                 {
-                    speaker = runtimeSpeaker.gameObject;
+                    speaker = line.runtimeSpeaker.gameObject;
                 }
 
                 if (speaker == null)
@@ -67,10 +68,9 @@ public class DialogueManager : GameModeUtil
 
                 if (voice)
                 {
-                    Debug.Log($"[Dialogue] \"{line.subtitle}\"");
+                    Debug.Log($"[Dialogue] {speaker.gameObject.name} is saying \"{line.subtitle}\"");
                     voice.PlayProgrammerSound(line.audioLine);
                 }
-                
             }
             else
             {

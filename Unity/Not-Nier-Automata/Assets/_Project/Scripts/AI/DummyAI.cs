@@ -13,11 +13,15 @@ public class DummyAI : Controller
 
     int previousBar;
 
+    CombatManager combatManager;
+
     public override void ActivateController()
     {
         base.ActivateController();
 
         BeatCallbacks.OnBeatChange += OnBeat;
+
+        combatManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<CombatManager>();
     }
 
     public override void DisableController()
@@ -29,6 +33,11 @@ public class DummyAI : Controller
 
     protected virtual void OnBeat(EventInstance instance, TIMELINE_BEAT_PROPERTIES beat)
     {
+        if (!combatManager || !combatManager.IsInCombat)
+        {
+            return;
+        }
+
         if (PossessedPawn && PossessedPawn.Faction)
         {
             if (previousBar == beat.bar)
