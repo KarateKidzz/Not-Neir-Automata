@@ -227,6 +227,7 @@ public class Character : Pawn
             {
                 cachePlayerInteract = GetComponent<PlayerInteract>();
                 Debug.Assert(cachePlayerInteract);
+                cachePlayerInteract.Interact();
             }
         }
     }
