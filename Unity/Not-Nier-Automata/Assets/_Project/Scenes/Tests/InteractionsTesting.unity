@@ -521,6 +521,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onFailedInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &471026651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,6 +1502,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onFailedInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1697141989}
+        m_MethodName: PlayProgrammerSound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RoadmanRobot_PissOff_A#
+          m_BoolArgument: 0
+        m_CallState: 2
   volumeThreshold: 0.1
 --- !u!114 &1697141983
 MonoBehaviour:
@@ -1542,6 +1559,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedGuid: aa1f50ca7e48cc4091990b62eb7b297d
+--- !u!114 &1697141989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2575070638344023310, guid: 992217e821b3f3e4a83e573c083ddc0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697141980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697141981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1821956054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1730,6 +1759,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onFailedInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5597478987981610008
 PrefabInstance:
   m_ObjectHideFlags: 0

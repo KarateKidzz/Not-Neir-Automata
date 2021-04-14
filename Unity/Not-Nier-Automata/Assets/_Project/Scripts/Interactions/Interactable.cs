@@ -15,6 +15,8 @@ public class Interactable : MonoBehaviour
 
     public UnityEvent onInteract;
 
+    public UnityEvent onFailedInteraction;
+
     private void Awake()
     {
         owningPawn = GetComponent<Pawn>();
@@ -30,6 +32,10 @@ public class Interactable : MonoBehaviour
         if (CanInteract())
         {
             onInteract.Invoke();
+        }
+        else
+        {
+            onFailedInteraction.Invoke();
         }
     }
 }
