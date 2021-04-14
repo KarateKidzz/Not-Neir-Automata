@@ -1736,6 +1736,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5597478989493790408, guid: 2905f7fb0e4114eb385c024148aba519,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Welcome to the Interaction Test!
+
+
+        Walk up to any robot and
+        press ''F''.
+
+
+        They will either play dialogue or music.'
+      objectReference: {fileID: 0}
     - target: {fileID: 5597478989493790410, guid: 2905f7fb0e4114eb385c024148aba519,
         type: 3}
       propertyPath: m_RootOrder
