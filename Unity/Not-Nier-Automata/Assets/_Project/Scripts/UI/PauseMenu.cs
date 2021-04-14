@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     private CursorLockMode previousLockMode = CursorLockMode.None;
     private bool previousCursorVisible = true;
 
+    public GameObject mainPauseButtons;
+    public GameObject optionsButtons;
+
     private void Awake()
     {
         UnPause();
@@ -24,6 +27,9 @@ public class PauseMenu : MonoBehaviour
 
             playerInput.SwitchCurrentActionMap("UI");
         }
+
+        mainPauseButtons.SetActive(true);
+        optionsButtons.SetActive(false);
 
         gameObject.SetActive(true);
         Time.timeScale = 0;
@@ -41,7 +47,6 @@ public class PauseMenu : MonoBehaviour
             pauseBus.setPaused(true);
             pauseBus.unlockChannelGroup();
         }
-
     }
 
     public void UnPause()
@@ -93,6 +98,28 @@ public class PauseMenu : MonoBehaviour
             pauseBus.lockChannelGroup();
             pauseBus.setPaused(false);
             pauseBus.unlockChannelGroup();
+        }
+    }
+
+    public void ShowOptions()
+    {
+        mainPauseButtons.SetActive(false);
+        optionsButtons.SetActive(true);
+    }
+
+    public void HideOptions()
+    {
+        mainPauseButtons.SetActive(true);
+        optionsButtons.SetActive(false);
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        VCA musicVCA = RuntimeManager.GetVCA("vca:/MX");
+
+        if (musicVCA.isValid())
+        {
+            musicVCA.setVolume(value);
         }
     }
 }

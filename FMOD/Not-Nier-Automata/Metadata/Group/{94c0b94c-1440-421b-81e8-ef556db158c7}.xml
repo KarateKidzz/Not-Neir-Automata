@@ -7,6 +7,9 @@
 		<property name="name">
 			<value>MX</value>
 		</property>
+		<relationship name="masters">
+			<destination>{759c78ce-0de5-4ef3-82c8-0cfc3b39125b}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{3a91a61b-3902-401a-974d-7f782eac1e0b}</destination>
 		</relationship>
