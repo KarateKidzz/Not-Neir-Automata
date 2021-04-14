@@ -105,7 +105,7 @@ public class BeatCallbacks : MonoBehaviour
     [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
     static FMOD.RESULT BeatEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instance, IntPtr parameterPtr)
     {
-        if (GameManager.Instance.IsPaused())
+        if (!GameManager.IsValid() || GameManager.Instance.IsPaused())
         {
             return FMOD.RESULT.OK;
         }
