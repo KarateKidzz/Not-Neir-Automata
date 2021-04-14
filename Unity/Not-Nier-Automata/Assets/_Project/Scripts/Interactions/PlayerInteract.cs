@@ -10,18 +10,13 @@ public class PlayerInteract : MonoBehaviour
     {
         GameObject go = other.gameObject;
         currentInteractable = go.GetComponent<Interactable>();
-
-        if (currentInteractable)
-        {
-            Debug.Log("Found interactable");
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<Interactable>())
         {
-            currentInteractable = null;
+            currentInteractable = null; 
         }
     }
 
@@ -29,7 +24,6 @@ public class PlayerInteract : MonoBehaviour
     {
         if (currentInteractable)
         {
-            Debug.Log("Actually Interact");
             currentInteractable.Interact();
         }
     }
