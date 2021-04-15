@@ -11,6 +11,8 @@ public class Controller : MonoBehaviour
 
     bool isQuitting;
 
+    public bool Activated { get; protected set; }
+
     private void OnApplicationQuit()
     {
         isQuitting = true;
@@ -33,7 +35,7 @@ public class Controller : MonoBehaviour
 
     public virtual void ActivateController()
     {
-
+        Activated = true;
     }
 
     public virtual void DisableController()
@@ -44,8 +46,15 @@ public class Controller : MonoBehaviour
     public virtual void Possess(Pawn pawnToPossess)
     {
         Unpossess();
+
+        if (!Activated)
+        {
+            ActivateController();
+        }
+
         possessedPawn = pawnToPossess;
         possessedPawn.OnPossessed(this);
+        Debug.Log($"{gameObject.name} possessed {pawnToPossess.gameObject.name}");
     }
 
     public virtual void Unpossess()
@@ -53,6 +62,7 @@ public class Controller : MonoBehaviour
         if (possessedPawn)
         {
             possessedPawn.OnUnpossessed();
+            Debug.Log($"{gameObject.name} unpossessed {possessedPawn.gameObject.name}");
             possessedPawn = null;
         }
     }

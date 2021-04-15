@@ -15,6 +15,15 @@ public class LevelLoader : MonoBehaviour
     /// </summary>
     private static readonly string MainMenuSceneName = "Menu";
 
+    public GameObject LoadingScreenGameObject;
+
+    public bool WaitForExtraLoad;
+
+    private void Awake()
+    {
+        LoadingScreenGameObject.SetActive(false);
+    }
+
     /// <summary>
     /// Tries to load the overworld scene, if it's not already loaded.
     /// </summary>
@@ -59,7 +68,7 @@ public class LevelLoader : MonoBehaviour
 
         bool inOverworld = ActiveScene.name == OverworldSceneName;
 
-        StartCoroutine(LoadSceneAndUnload(sceneName, !inOverworld ? SceneManager.GetActiveScene().name : null));
+        StartCoroutine(LoadSceneAndUnload(sceneName, !inOverworld ? SceneManager.GetActiveScene().name : null, true));
     }
 
     /// <summary>
@@ -68,8 +77,10 @@ public class LevelLoader : MonoBehaviour
     /// <param name="LoadSceneName"></param>
     /// <param name="UnloadSceneName"></param>
     /// <returns></returns>
-    IEnumerator LoadSceneAndUnload(string LoadSceneName, string UnloadSceneName = null)
+    IEnumerator LoadSceneAndUnload(string LoadSceneName, string UnloadSceneName = null, bool unloadAllExtraScenes = false)
     {
+        LoadingScreenGameObject.SetActive(true);
+
         if (UnloadSceneName != null)
         {
             AsyncOperation UnloadOperation = SceneManager.UnloadSceneAsync(UnloadSceneName);
@@ -81,15 +92,64 @@ public class LevelLoader : MonoBehaviour
             Debug.Log("[Scene Transition] Unloaded Scene (" + UnloadSceneName + ")");
         }
 
+        if (unloadAllExtraScenes)
+        {
+            List<Scene> scenesToUnload = new List<Scene>();
+
+            int loadedScenes = SceneManager.sceneCount;
+
+            // If this was equal to 1, we could assume only the overworld was loaded
+            if (loadedScenes > 1)
+            {
+                for (int i = 0; i < loadedScenes; i++)
+                {
+                    Scene currentScene = SceneManager.GetSceneAt(i);
+
+                    if (currentScene.name != OverworldSceneName)
+                    {
+                        scenesToUnload.Add(currentScene);
+                    }
+                }
+            }
+
+            Debug.Log($"[Scene Transition] Unloading {scenesToUnload.Count} extra levels");
+
+            foreach (Scene scene in scenesToUnload)
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+
+            while (SceneManager.sceneCount > 1)
+            {
+                yield return null;
+            }
+        }
+
         AsyncOperation LoadOperation = SceneManager.LoadSceneAsync(LoadSceneName, LoadSceneMode.Additive);
         LoadOperation.allowSceneActivation = true;
 
         LoadOperation.completed += (AsyncOperation Op) =>
         {
-            Debug.Log("Set Active");
+            Debug.Log($"[Scene Transition] Loading complete. Setting {LoadSceneName} scene to active");
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
-            Debug.Log("Set Active After");
+            Debug.Log("[Scene Transition] Scene set active");
+
+            StartCoroutine(WaitForExtraLoads());
         };
+    }
+
+    IEnumerator WaitForExtraLoads()
+    {
+        Debug.Log("[Scene Transition] Waiting for extra loading");
+
+        while (WaitForExtraLoad)
+        {
+            yield return null;
+        }
+
+        Debug.Log("[Scene Transition] Finished all loading. Removing loading screen");
+
+        LoadingScreenGameObject.SetActive(false);
     }
 
     IEnumerator SetActiveAfterLoaded(string sceneName)

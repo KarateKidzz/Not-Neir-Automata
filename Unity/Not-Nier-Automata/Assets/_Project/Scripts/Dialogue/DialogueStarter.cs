@@ -36,7 +36,7 @@ public class DialogueStarter : EventHandler
         }
         else
         {
-            Debug.Log("Dialogue manager is null");
+            Debug.LogError("Dialogue manager is null");
         }
     }
 }

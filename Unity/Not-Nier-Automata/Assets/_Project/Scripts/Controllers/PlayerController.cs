@@ -16,6 +16,8 @@ public class PlayerController : Controller
 
     public override void ActivateController()
     {
+        base.ActivateController();
+
         GameManager.Instance.SetPlayerController(this);
 
         if (cameraManagerPrefab && !cameraManager)

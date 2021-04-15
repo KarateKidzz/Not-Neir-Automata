@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Tests/ProgrammerSound.unity
     guid: 5dd560709a24b4a83afb7e756a30dd30
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level01.unity
+    guid: 948c7fd3d4eaef3408dbc09e1adaed40
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level01_Environment.unity
+    guid: 78f2cfce41f3149aa8f6e0f1459e31ca
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level01_Gameplay.unity
+    guid: 938fed2212ba94f2b9e086b245fbb3be
   m_configObjects: {}

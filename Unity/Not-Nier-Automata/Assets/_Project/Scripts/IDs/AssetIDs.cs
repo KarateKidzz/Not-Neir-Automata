@@ -97,8 +97,10 @@ public class AssetIDs : ScriptableObject
 
     public static void SaveAssetIDs()
     {
+#if UNITY_EDITOR
         EditorUtility.SetDirty(instance);
         AssetDatabase.SaveAssets();
+#endif
     }
 
     public void AddRuntimeInstance(UniqueAsset uniqueAsset)

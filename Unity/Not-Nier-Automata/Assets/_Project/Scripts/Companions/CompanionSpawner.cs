@@ -7,10 +7,36 @@ public class CompanionSpawner : MonoBehaviour
 {
     public GameObject[] companionsToSpawn;
 
+    Pawn pawn;
+    Companion spawnedCompanion;
+
+    private void Awake()
+    {
+        pawn = GetComponent<Pawn>();
+        Debug.Assert(pawn, "Must be attached to a pawn");
+        pawn.OnPossess += OnPawnPossessed;
+    }
+
     private void Start()
     {
-        Pawn pawn = GetComponent<Pawn>();
-        Debug.Assert(pawn, "Must be attached to a pawn");
+        Controller controller = pawn.GetController();
+
+        if (controller)
+        {
+            pawn.OnPossess -= OnPawnPossessed;
+            OnPawnPossessed(controller);
+        }
+    }
+
+    void OnPawnPossessed(Controller controller)
+    {
+        pawn.OnPossess -= OnPawnPossessed;
+
+        if (spawnedCompanion)
+        {
+            Debug.LogWarning("[Companion Spawner] Companion already spawned. Ignoring");
+            return;
+        }
 
         for (int i = 0; i < companionsToSpawn.Length; i++)
         {
@@ -19,14 +45,16 @@ public class CompanionSpawner : MonoBehaviour
                 continue;
             }
 
+            Debug.Log("[Companion Spawner] Spawning companion");
+
             GameObject spawned = Instantiate(companionsToSpawn[i]);
 
             if (spawned)
             {
-                Companion companion = spawned.GetComponent<Companion>();
-                Debug.Assert(companion, "Spawned object must be a companion");
+                spawnedCompanion = spawned.GetComponent<Companion>();
+                Debug.Assert(spawnedCompanion, "Spawned object must be a companion");
 
-                pawn.AddCompanion(companion);
+                pawn.AddCompanion(spawnedCompanion);
             }
         }
     }

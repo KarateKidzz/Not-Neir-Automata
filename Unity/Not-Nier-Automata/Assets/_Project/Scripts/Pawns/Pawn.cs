@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -52,6 +53,10 @@ public class Pawn : MonoBehaviour
     public WeaponUser WeaponUser => weaponUser;
 
     bool isQuitting;
+
+    public event Action<Controller> OnPossess;
+
+    public event Action<Controller> OnUnpossess;
 
     private void OnApplicationQuit()
     {
@@ -144,6 +149,8 @@ public class Pawn : MonoBehaviour
 
         owningController = possessingController;
 
+        OnPossess?.Invoke(possessingController);
+
         if (possessingController is PlayerController && autoHideCursorOnPossess)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -159,6 +166,8 @@ public class Pawn : MonoBehaviour
             Cursor.visible = true;
         }
 
+        OnUnpossess?.Invoke(owningController);
+
         owningController = null;
     }
 
@@ -168,6 +177,7 @@ public class Pawn : MonoBehaviour
 
     public virtual void AddCompanion(Companion companion)
     {
+        Debug.Log($"{gameObject.name} added {companion.gameObject.name} as a companion");
         Companions.Add(companion);
         companion.Follow(this);
         if (companion.WeaponUser)
@@ -178,6 +188,7 @@ public class Pawn : MonoBehaviour
 
     public virtual void RemoveCompanion(Companion companion)
     {
+        Debug.Log($"{gameObject.name} removed {companion.gameObject.name} as a companion");
         companion.StopFollowing();
         if (companion.WeaponUser)
         {
