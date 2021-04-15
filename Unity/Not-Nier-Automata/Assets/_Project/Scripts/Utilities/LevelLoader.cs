@@ -59,7 +59,7 @@ public class LevelLoader : MonoBehaviour
 
         bool inOverworld = ActiveScene.name == OverworldSceneName;
 
-        StartCoroutine(LoadSceneAndUnload(sceneName, !inOverworld ? SceneManager.GetActiveScene().name : null));
+        StartCoroutine(LoadSceneAndUnload(sceneName, !inOverworld ? SceneManager.GetActiveScene().name : null, true));
     }
 
     /// <summary>
@@ -68,7 +68,7 @@ public class LevelLoader : MonoBehaviour
     /// <param name="LoadSceneName"></param>
     /// <param name="UnloadSceneName"></param>
     /// <returns></returns>
-    IEnumerator LoadSceneAndUnload(string LoadSceneName, string UnloadSceneName = null)
+    IEnumerator LoadSceneAndUnload(string LoadSceneName, string UnloadSceneName = null, bool unloadAllExtraScenes = false)
     {
         if (UnloadSceneName != null)
         {
@@ -79,6 +79,37 @@ public class LevelLoader : MonoBehaviour
             }
 
             Debug.Log("[Scene Transition] Unloaded Scene (" + UnloadSceneName + ")");
+        }
+
+        if (unloadAllExtraScenes)
+        {
+            List<Scene> scenesToUnload = new List<Scene>();
+
+            int loadedScenes = SceneManager.sceneCount;
+
+            // If this was equal to 1, we could assume only the overworld was loaded
+            if (loadedScenes > 1)
+            {
+                for (int i = 0; i < loadedScenes; i++)
+                {
+                    Scene currentScene = SceneManager.GetSceneAt(i);
+
+                    if (currentScene.name != OverworldSceneName)
+                    {
+                        scenesToUnload.Add(currentScene);
+                    }
+                }
+            }
+
+            foreach(Scene scene in scenesToUnload)
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+
+            while(SceneManager.sceneCount > 1)
+            {
+                yield return null;
+            }
         }
 
         AsyncOperation LoadOperation = SceneManager.LoadSceneAsync(LoadSceneName, LoadSceneMode.Additive);
