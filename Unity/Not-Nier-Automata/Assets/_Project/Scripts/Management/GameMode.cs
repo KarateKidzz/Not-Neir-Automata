@@ -7,8 +7,14 @@ public class GameMode : MonoBehaviour
 {
     private static bool quitting;
 
+    /// <summary>
+    /// If set, will spawn this pawn and make the player posses it. If not set, the player controller will find a pawn marked "auto possess player" in the world
+    /// </summary>
     public GameObject defaultPawnPrefab;
 
+    /// <summary>
+    /// If set, spawns this player controller. Otherwise, spawns the default player controller
+    /// </summary>
     public GameObject defaultPlayerControllerPrefab;
 
     /// <summary>
@@ -58,29 +64,37 @@ public class GameMode : MonoBehaviour
 
         GameObject spawnedPawn;
         GameObject spawnedPlayer;
-        
+        PlayerController player;
 
+        // If no default player controller, spawn the default one and use that
         if (!defaultPlayerControllerPrefab)
         {
             Debug.Log("[Game Mode] No player controller prefab. Spawning default");
             GameManager.Instance.TrySpawnPlayerController();
-            return;
+            player = GameManager.Instance.PlayerController;
+        }
+        // Else spawn the player controller
+        else
+        {
+            spawnedPlayer = Instantiate(defaultPlayerControllerPrefab);
+            Debug.Assert(spawnedPlayer);
+            player = spawnedPlayer.GetComponent<PlayerController>();
+            Debug.Assert(player);
         }
 
-        spawnedPlayer = Instantiate(defaultPlayerControllerPrefab);
-
+        // If there's a default pawn defined, spawn it and possess it
         if (defaultPawnPrefab)
         {
             spawnedPawn = Instantiate(defaultPawnPrefab);
+            Debug.Assert(spawnedPawn);
             Pawn pawn = spawnedPawn.GetComponent<Pawn>();
             Debug.Assert(pawn);
-            PlayerController player = spawnedPlayer.GetComponent<PlayerController>();
-            Debug.Assert(player);
             player.Possess(pawn);
         }
+        // Else, assume there is a pawn in the world marked "auto possess player"
         else
         {
-            Debug.LogWarning("No pawn for the player to possess");
+            Debug.Log("[Game Mode] Assuming pawn in the world will be possessed. If the player controller doesn't find a pawn, the player will not be able to move");
         }
     }
 
