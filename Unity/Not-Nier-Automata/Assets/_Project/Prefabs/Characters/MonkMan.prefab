@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1796133631171631584}
   m_Layer: 8
   m_Name: MonkMan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,8 +366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e4188bc7e644c8eb6f424da28501be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 5
-  raycastOffset: {x: 0, y: 1, z: 0}
 --- !u!1001 &7390603272280736154
 PrefabInstance:
   m_ObjectHideFlags: 0

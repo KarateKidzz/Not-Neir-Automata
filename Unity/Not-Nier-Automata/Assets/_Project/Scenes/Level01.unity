@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 7390603271446795770, guid: 52c48ff4464964237aedb4e0385f203f,
         type: 3}
       propertyPath: m_Name
-      value: MonkMan (1)
+      value: MonkMan
       objectReference: {fileID: 0}
     - target: {fileID: 7390603271446795774, guid: 52c48ff4464964237aedb4e0385f203f,
         type: 3}
