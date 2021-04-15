@@ -43,7 +43,7 @@ public class GameMode : MonoBehaviour
 
     protected virtual void Start()
     {
-        Debug.Log("Game Mode Start");
+        Debug.Log("[Game Mode] Start");
         GameManager.Instance.SetCurrentGameMode(this);
     }
 
@@ -85,6 +85,7 @@ public class GameMode : MonoBehaviour
         // If there's a default pawn defined, spawn it and possess it
         if (defaultPawnPrefab)
         {
+            Debug.Log("[Game Mode] Spawning default pawn");
             spawnedPawn = Instantiate(defaultPawnPrefab);
             Debug.Assert(spawnedPawn);
             Pawn pawn = spawnedPawn.GetComponent<Pawn>();

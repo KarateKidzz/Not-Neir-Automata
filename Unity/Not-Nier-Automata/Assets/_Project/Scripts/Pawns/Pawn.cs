@@ -177,6 +177,7 @@ public class Pawn : MonoBehaviour
 
     public virtual void AddCompanion(Companion companion)
     {
+        Debug.Log($"{gameObject.name} added {companion.gameObject.name} as a companion");
         Companions.Add(companion);
         companion.Follow(this);
         if (companion.WeaponUser)
@@ -187,6 +188,7 @@ public class Pawn : MonoBehaviour
 
     public virtual void RemoveCompanion(Companion companion)
     {
+        Debug.Log($"{gameObject.name} removed {companion.gameObject.name} as a companion");
         companion.StopFollowing();
         if (companion.WeaponUser)
         {
