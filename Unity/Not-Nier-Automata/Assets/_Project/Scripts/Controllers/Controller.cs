@@ -46,6 +46,7 @@ public class Controller : MonoBehaviour
         Unpossess();
         possessedPawn = pawnToPossess;
         possessedPawn.OnPossessed(this);
+        Debug.Log($"{gameObject.name} possessed {pawnToPossess.gameObject.name}");
     }
 
     public virtual void Unpossess()
@@ -53,6 +54,7 @@ public class Controller : MonoBehaviour
         if (possessedPawn)
         {
             possessedPawn.OnUnpossessed();
+            Debug.Log($"{gameObject.name} unpossessed {possessedPawn.gameObject.name}");
             possessedPawn = null;
         }
     }
