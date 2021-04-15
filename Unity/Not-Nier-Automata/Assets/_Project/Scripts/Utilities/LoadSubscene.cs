@@ -17,6 +17,8 @@ public class LoadSubscene : MonoBehaviour
 
         Debug.Log($"[Load Subscene] Loading {Scenes.Length} scenes");
 
+        GameManager.Instance.LevelLoader.WaitForExtraLoad = true;
+
         for (int i = 0; i < Scenes.Length; i++)
         {
             string currentScene = Scenes[i];
@@ -29,6 +31,12 @@ public class LoadSubscene : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Start()
+    {
+        Debug.Log($"[Load Subscene] Finished loading {Scenes.Length} scenes");
+        GameManager.Instance.LevelLoader.WaitForExtraLoad = false;
     }
 
     private void OnDestroy()

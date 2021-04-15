@@ -15,6 +15,15 @@ public class LevelLoader : MonoBehaviour
     /// </summary>
     private static readonly string MainMenuSceneName = "Menu";
 
+    public GameObject LoadingScreenGameObject;
+
+    public bool WaitForExtraLoad;
+
+    private void Awake()
+    {
+        LoadingScreenGameObject.SetActive(false);
+    }
+
     /// <summary>
     /// Tries to load the overworld scene, if it's not already loaded.
     /// </summary>
@@ -70,6 +79,8 @@ public class LevelLoader : MonoBehaviour
     /// <returns></returns>
     IEnumerator LoadSceneAndUnload(string LoadSceneName, string UnloadSceneName = null, bool unloadAllExtraScenes = false)
     {
+        LoadingScreenGameObject.SetActive(true);
+
         if (UnloadSceneName != null)
         {
             AsyncOperation UnloadOperation = SceneManager.UnloadSceneAsync(UnloadSceneName);
@@ -122,7 +133,23 @@ public class LevelLoader : MonoBehaviour
             Debug.Log($"[Scene Transition] Loading complete. Setting {LoadSceneName} scene to active");
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
             Debug.Log("[Scene Transition] Scene set active");
+
+            StartCoroutine(WaitForExtraLoads());
         };
+    }
+
+    IEnumerator WaitForExtraLoads()
+    {
+        Debug.Log("[Scene Transition] Waiting for extra loading");
+
+        while (WaitForExtraLoad)
+        {
+            yield return null;
+        }
+
+        Debug.Log("[Scene Transition] Finished all loading. Removing loading screen");
+
+        LoadingScreenGameObject.SetActive(false);
     }
 
     IEnumerator SetActiveAfterLoaded(string sceneName)
