@@ -7,10 +7,18 @@ public class CompanionSpawner : MonoBehaviour
 {
     public GameObject[] companionsToSpawn;
 
-    private void Start()
+    Pawn pawn;
+
+    private void Awake()
     {
-        Pawn pawn = GetComponent<Pawn>();
+        pawn = GetComponent<Pawn>();
         Debug.Assert(pawn, "Must be attached to a pawn");
+        pawn.OnPossess += OnPawnPossessed;
+    }
+
+    void OnPawnPossessed(Controller controller)
+    {
+        pawn.OnPossess -= OnPawnPossessed;
 
         for (int i = 0; i < companionsToSpawn.Length; i++)
         {
@@ -18,6 +26,8 @@ public class CompanionSpawner : MonoBehaviour
             {
                 continue;
             }
+
+            Debug.Log("[Companion Spawner] Spawning companion");
 
             GameObject spawned = Instantiate(companionsToSpawn[i]);
 
