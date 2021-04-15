@@ -101,12 +101,14 @@ public class LevelLoader : MonoBehaviour
                 }
             }
 
-            foreach(Scene scene in scenesToUnload)
+            Debug.Log($"[Scene Transition] Unloading {scenesToUnload.Count} extra levels");
+
+            foreach (Scene scene in scenesToUnload)
             {
                 SceneManager.UnloadSceneAsync(scene);
             }
 
-            while(SceneManager.sceneCount > 1)
+            while (SceneManager.sceneCount > 1)
             {
                 yield return null;
             }
@@ -117,9 +119,9 @@ public class LevelLoader : MonoBehaviour
 
         LoadOperation.completed += (AsyncOperation Op) =>
         {
-            Debug.Log("Set Active");
+            Debug.Log($"[Scene Transition] Loading complete. Setting {LoadSceneName} scene to active");
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(LoadSceneName));
-            Debug.Log("Set Active After");
+            Debug.Log("[Scene Transition] Scene set active");
         };
     }
 

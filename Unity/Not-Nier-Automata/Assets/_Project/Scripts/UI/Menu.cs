@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
+    public void LoadLevelOne()
+    {
+        GameManager.Instance.LevelLoader.LoadScene("Level01");
+    }
+
     public void LoadExplore()
     {
         GameManager.Instance.LevelLoader.LoadScene("ExploreDemo");
