@@ -97,6 +97,8 @@ public class GameMode : MonoBehaviour
         {
             Debug.Log("[Game Mode] Assuming pawn in the world will be possessed. If the player controller doesn't find a pawn, the player will not be able to move");
         }
+
+        ScriptExecution.BeginPlay();
     }
 
     public virtual void UpdateGameMode()

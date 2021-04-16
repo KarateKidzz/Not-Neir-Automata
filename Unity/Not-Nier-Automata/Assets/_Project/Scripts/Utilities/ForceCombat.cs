@@ -2,18 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForceCombat : MonoBehaviour
+public class ForceCombat : Actor, IBeginPlay, IEndPlay
 {
     Pawn pawn;
 
-    bool quitting;
-
-    private void OnApplicationQuit()
-    {
-        quitting = true;
-    }
-
-    private void Start()
+    public void BeginPlay()
     {
         pawn = GetComponent<Pawn>();
 
@@ -36,9 +29,9 @@ public class ForceCombat : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public void EndPlay(EndPlayModeReason Reason)
     {
-        if (quitting)
+        if (Reason == EndPlayModeReason.ApplicationQuit)
         {
             return;
         }

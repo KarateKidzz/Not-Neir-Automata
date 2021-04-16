@@ -81,6 +81,8 @@ public class LevelLoader : MonoBehaviour
     {
         LoadingScreenGameObject.SetActive(true);
 
+        ScriptExecution.StartLevelTransition();
+
         if (UnloadSceneName != null)
         {
             AsyncOperation UnloadOperation = SceneManager.UnloadSceneAsync(UnloadSceneName);

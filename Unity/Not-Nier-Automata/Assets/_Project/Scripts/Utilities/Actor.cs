@@ -7,8 +7,6 @@ using UnityEngine;
 /// </summary>
 public abstract class Actor : MonoBehaviour
 {
-    public bool Started { get; }
-
     private void OnEnable()
     {
         ScriptExecution.Register(this);

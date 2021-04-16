@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponUser : MonoBehaviour
+public class WeaponUser : Actor, IBeginPlay
 {
     public Transform leftHandBone;
     public Transform rightHandBone;
@@ -63,7 +63,7 @@ public class WeaponUser : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void BeginPlay()
     {
         if (currentlyEquippedWeapon)
         {

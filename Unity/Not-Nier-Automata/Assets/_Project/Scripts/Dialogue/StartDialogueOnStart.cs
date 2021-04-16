@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartDialogueOnStart : MonoBehaviour
+public class StartDialogueOnStart : Actor, IBeginPlay
 {
     public DialogueScript script;
 
     // Start is called before the first frame update
-    void Start()
+    public void BeginPlay()
     {
         if (!GameManager.Instance)
         {

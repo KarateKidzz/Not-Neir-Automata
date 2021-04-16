@@ -3,39 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Pawn))]
-public class CompanionSpawner : MonoBehaviour
+public class CompanionSpawner : Actor, IBeginPlay
 {
     public GameObject[] companionsToSpawn;
 
-    Pawn pawn;
-    Companion spawnedCompanion;
-
-    private void Awake()
+    public void BeginPlay()
     {
-        pawn = GetComponent<Pawn>();
-        Debug.Assert(pawn, "Must be attached to a pawn");
-        pawn.OnPossess += OnPawnPossessed;
-    }
+        Pawn pawn = GetComponent<Pawn>();
 
-    private void Start()
-    {
-        Controller controller = pawn.GetController();
-
-        if (controller)
+        if (!pawn)
         {
-            pawn.OnPossess -= OnPawnPossessed;
-            OnPawnPossessed(controller);
-        }
-    }
-
-    void OnPawnPossessed(Controller controller)
-    {
-        pawn.OnPossess -= OnPawnPossessed;
-
-        if (spawnedCompanion)
-        {
-            Debug.LogWarning("[Companion Spawner] Companion already spawned. Ignoring");
-            return;
+            Debug.LogError("No pawn!");
         }
 
         for (int i = 0; i < companionsToSpawn.Length; i++)
@@ -51,7 +29,7 @@ public class CompanionSpawner : MonoBehaviour
 
             if (spawned)
             {
-                spawnedCompanion = spawned.GetComponent<Companion>();
+                Companion spawnedCompanion = spawned.GetComponent<Companion>();
                 Debug.Assert(spawnedCompanion, "Spawned object must be a companion");
 
                 pawn.AddCompanion(spawnedCompanion);

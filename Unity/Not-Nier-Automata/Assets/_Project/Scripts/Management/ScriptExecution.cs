@@ -64,7 +64,7 @@ public class ScriptExecution : MonoBehaviour
 
         public void Register(T Actor)
         {
-            if (Actor == null || ActorsSet.Add(Actor))
+            if (Actor == null || !ActorsSet.Add(Actor))
             {
                 return;
             }
@@ -73,7 +73,7 @@ public class ScriptExecution : MonoBehaviour
 
         public void Unregister(T Actor)
         {
-            if (Actor == null || ActorsSet.Remove(Actor))
+            if (Actor == null || !ActorsSet.Remove(Actor))
             {
                 return;
             }
@@ -88,6 +88,17 @@ public class ScriptExecution : MonoBehaviour
             Actors.Clear();
             ActorsSet.Clear();
         }
+
+        public void ClearFromList(List<T> ListToRemove)
+        {
+            foreach(T Remove in ListToRemove)
+            {
+                if (ActorsSet.Remove(Remove))
+                {
+                    Actors.Remove(Remove);
+                }
+            }
+        }
     }
 
     private static readonly ActorStore<IInitialize> InitializeActors = new ActorStore<IInitialize>();
@@ -99,7 +110,7 @@ public class ScriptExecution : MonoBehaviour
 
     private static bool StartedPlay;
 
-    public static void Register(Actor Actor)
+    public static void Register(MonoBehaviour Actor)
     {
         InitializeActors.Register(Actor as IInitialize);
         BeginPlayActors.Register(Actor as IBeginPlay);
@@ -109,7 +120,7 @@ public class ScriptExecution : MonoBehaviour
         LateTickActors.Register(Actor as ILateTick);
     }
 
-    public static void Unregister(Actor Actor)
+    public static void Unregister(MonoBehaviour Actor)
     {
         InitializeActors.Unregister(Actor as IInitialize);
         BeginPlayActors.Unregister(Actor as IBeginPlay);
@@ -124,18 +135,27 @@ public class ScriptExecution : MonoBehaviour
     /// </summary>
     public static void BeginPlay()
     {
-        foreach (IInitialize Initialize in InitializeActors.Actors)
+        Debug.Log($"[Script Execution] Starting Initialization");
+
+        List<IInitialize> Inits = new List<IInitialize>(InitializeActors.Actors);
+
+        foreach (IInitialize Initialize in Inits)
         {
             Initialize.Initialize();
         }
 
-        InitializeActors.Clear();
+        InitializeActors.ClearFromList(Inits);
 
-        foreach (IBeginPlay BeginPlay in BeginPlayActors.Actors)
+        Debug.Log($"[Script Execution] Starting Play");
+
+        List<IBeginPlay> beginPlays = new List<IBeginPlay>(BeginPlayActors.Actors);
+
+        foreach (IBeginPlay BeginPlay in beginPlays)
         {
             BeginPlay.BeginPlay();
         }
-        BeginPlayActors.Clear();    // clear this so any actors created later in the game can have BeginPlay called without worrying
+
+        BeginPlayActors.ClearFromList(beginPlays);
 
         StartedPlay = true;
     }
@@ -145,6 +165,8 @@ public class ScriptExecution : MonoBehaviour
     /// </summary>
     public static void StartLevelTransition()
     {
+        Debug.Log($"[Script Execution] Starting Level Transition");
+
         foreach (IEndPlay EndPlay in EndPlayActors.Actors)
         {
             EndPlay.EndPlay(EndPlayModeReason.LevelTransition);
@@ -211,7 +233,9 @@ public class ScriptExecution : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        foreach(IEndPlay EndPlay in EndPlayActors.Actors)
+        Debug.Log($"[Script Execution] On Application Quit");
+
+        foreach (IEndPlay EndPlay in EndPlayActors.Actors)
         {
             EndPlay.EndPlay(EndPlayModeReason.ApplicationQuit);
         }

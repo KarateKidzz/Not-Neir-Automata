@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Pawn : MonoBehaviour
+public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 { 
     protected Controller owningController;
 
@@ -52,16 +52,9 @@ public class Pawn : MonoBehaviour
 
     public WeaponUser WeaponUser => weaponUser;
 
-    bool isQuitting;
-
     public event Action<Controller> OnPossess;
 
     public event Action<Controller> OnUnpossess;
-
-    private void OnApplicationQuit()
-    {
-        isQuitting = true;
-    }
 
     /// <summary>
     /// This update's movement
@@ -70,12 +63,23 @@ public class Pawn : MonoBehaviour
 
     #region Unity Methods
 
-    protected virtual void Start()
+    public virtual void Initialize()
     {
         GameManager.Instance.AllPawns.Add(this);
 
         weaponUser = GetComponent<WeaponUser>();
+    }
 
+    public virtual void EndPlay(EndPlayModeReason Reason)
+    {
+        if (Reason != EndPlayModeReason.ApplicationQuit)
+        {
+            GameManager.Instance.AllPawns.Remove(this);
+        }
+    }
+
+    public virtual void BeginPlay()
+    {
         if (!autoPossessPlayer && autoPossessAI)
         {
             if (!aiControllerPrefab)
@@ -94,20 +98,7 @@ public class Pawn : MonoBehaviour
         }
     }
 
-    protected virtual void OnDestroy()
-    {
-        if (!isQuitting)
-        {
-            GameManager.Instance.AllPawns.Remove(this);
-        }
-    }
-
-    protected virtual void Update()
-    {
-
-    }
-
-    protected virtual void LateUpdate()
+    public virtual void LateTick(float DeltaTime)
     {
         if (movementVector != Vector3.zero)
         {
