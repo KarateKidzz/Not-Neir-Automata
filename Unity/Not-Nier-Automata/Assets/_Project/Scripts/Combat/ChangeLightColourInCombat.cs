@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeLightColourInCombat : MonoBehaviour
+public class ChangeLightColourInCombat : Actor, IBeginPlay, IPhysicsTick
 {
     public Light controlledLight;
 
@@ -12,14 +12,13 @@ public class ChangeLightColourInCombat : MonoBehaviour
 
     Color startColor;
 
-    private void Start()
+    public void BeginPlay()
     {
         startColor = controlledLight.color;   
     }
 
-
     // Fixed update so it's less often
-    private void FixedUpdate()
+    public void PhysicsTick(float DeltaTime)
     {
         if (weaponUser)
         {

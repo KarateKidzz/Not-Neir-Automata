@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class LightOnBeat : MonoBehaviour
+public class LightOnBeat : Actor, IBeginPlay, IEndPlay
 {
     public Light controllingLight;
 
@@ -13,13 +13,13 @@ public class LightOnBeat : MonoBehaviour
 
     public float offIntensity = 0f;
 
-    private void Start()
+    public void BeginPlay()
     {
         controllingLight.intensity = offIntensity;
         BeatCallbacks.OnBeatChange += OnBeat;
     }
 
-    private void OnDestroy()
+    public void EndPlay(EndPlayModeReason Reason)
     {
         BeatCallbacks.OnBeatChange -= OnBeat;
     }

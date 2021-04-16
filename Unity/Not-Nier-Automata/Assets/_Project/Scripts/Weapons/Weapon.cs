@@ -4,7 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 
-public class Weapon : MonoBehaviour
+public class Weapon : Actor, IBeginPlay, IEndPlay
 {
     protected WeaponUser weaponUser;
 
@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
 
     protected EventDescription attackSoundDescription;
 
-    protected virtual void Start()
+    public virtual void BeginPlay()
     {
         if (useCameraForAim)
         {
@@ -51,7 +51,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    protected virtual void OnDestroy()
+    public virtual void EndPlay(EndPlayModeReason Reason)
     {
         if (attackSoundDescription.isValid())
         {

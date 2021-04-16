@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
 
-public class DialogueStarter : EventHandler
+public class DialogueStarter : EventHandler, IBeginPlay
 {
     public EmitterGameEvent playEvent;
 
     public DialogueScript script;
 
-    private void Start()
+    private void OnEnable()
+    {
+        ScriptExecution.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        ScriptExecution.Unregister(this);
+    }
+
+    public void BeginPlay()
     {
         HandleGameEvent(EmitterGameEvent.ObjectStart);
     }

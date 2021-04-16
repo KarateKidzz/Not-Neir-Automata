@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Follows a pawn
 /// </summary>
-public class Companion : Pawn
+public class Companion : Pawn, ITick
 {
     /// <summary>
     /// Party leader / pawn to follow
@@ -23,9 +23,9 @@ public class Companion : Pawn
 
     public Vector3 followOffset;
 
-    protected override void Start()
+    public override void Initialize()
     {
-        base.Start();
+        base.Initialize();
         noise = GetComponent<MovementNoise>();
     }
 
@@ -49,7 +49,7 @@ public class Companion : Pawn
         leader = null;
     }
 
-    protected override void Update()
+    public void Tick(float DeltaTime)
     {
         if (leader)
         {
@@ -59,7 +59,7 @@ public class Companion : Pawn
                 Vector3 desiredEuler = cameraManager.cameraBrain.transform.rotation.eulerAngles;
                 float currentYaw = currentEuler.y;
                 float desiredYaw = desiredEuler.y;
-                Vector3 finalEuler = new Vector3(currentEuler.x, Mathf.LerpAngle(currentYaw, desiredYaw, turnSpeed * Time.deltaTime), currentEuler.z);
+                Vector3 finalEuler = new Vector3(currentEuler.x, Mathf.LerpAngle(currentYaw, desiredYaw, turnSpeed * DeltaTime), currentEuler.z);
 
                 Quaternion quaternion = transform.rotation;
                 quaternion.eulerAngles = finalEuler;
@@ -72,7 +72,7 @@ public class Companion : Pawn
                     finalPosition += noise.GetMovementNoise();
                 }
 
-                Vector3 updatedPosition = Vector3.Lerp(transform.position, finalPosition, turnSpeed * Time.deltaTime);
+                Vector3 updatedPosition = Vector3.Lerp(transform.position, finalPosition, turnSpeed * DeltaTime);
 
                 AddMovement(updatedPosition - transform.position);
                 

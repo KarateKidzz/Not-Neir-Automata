@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Damageable : MonoBehaviour
+public class Damageable : Actor, IInitialize
 {
     public int startingHealth = 100;
 
@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour
 
     public UnityEvent onDamage;
 
-    private void Start()
+    public void Initialize()
     {
         health = startingHealth;
         combatLines = GetComponent<CombatLines>();

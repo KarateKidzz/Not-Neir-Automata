@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(GuidComponent))]   // need GuidComponent for runtime instances
-public class UniqueAsset : MonoBehaviour
+public class UniqueAsset : Actor, IInitialize, IEndPlay
 {
     [SerializeField, UniqueID]
     protected string id;
@@ -15,17 +15,13 @@ public class UniqueAsset : MonoBehaviour
 
     public GuidComponent GuidComponent => guidComponent;
 
-    private void Awake()
+    public void Initialize()
     {
         guidComponent = GetComponent<GuidComponent>();
-    }
-
-    private void OnEnable()
-    {
         AssetIDs.Instance.AddRuntimeInstance(this);
     }
 
-    private void OnDisable()
+    public void EndPlay(EndPlayModeReason Reason)
     {
         AssetIDs.Instance.RemoveRuntimeInstance(this);
     }

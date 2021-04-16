@@ -2,31 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
+public class Controller : Actor, IInitialize, IEndPlay
 {
     [SerializeField, ReadOnly]
     protected Pawn possessedPawn;
 
     public Pawn PossessedPawn => possessedPawn;
 
-    bool isQuitting;
-
     public bool Activated { get; protected set; }
 
-    private void OnApplicationQuit()
-    {
-        isQuitting = true;
-    }
-
-    protected virtual void Start()
+    public void Initialize()
     {
         GameManager.Instance.AllControllers.Add(this);
         ActivateController();
     }
 
-    protected virtual void OnDestroy()
+    public void EndPlay(EndPlayModeReason Reason)
     {
-        if (!isQuitting)
+        if (Reason != EndPlayModeReason.ApplicationQuit)
         {
             GameManager.Instance.AllControllers.Remove(this);
             DisableController();
@@ -46,11 +39,6 @@ public class Controller : MonoBehaviour
     public virtual void Possess(Pawn pawnToPossess)
     {
         Unpossess();
-
-        if (!Activated)
-        {
-            ActivateController();
-        }
 
         possessedPawn = pawnToPossess;
         possessedPawn.OnPossessed(this);
