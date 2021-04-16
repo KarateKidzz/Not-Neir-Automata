@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{1177b33d-f1c0-46df-b2aa-3048b58c40e6}">
+	<object class="AudioFile" id="{bee8531d-e1af-493f-aff3-69b3b1cfb0b3}">
 		<property name="assetPath">
 			<value>DX/RB.VIII-AUTO/AUTO_IntroLine_01.wav</value>
 		</property>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.625</value>
+			<value>5.2812708333333331</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
