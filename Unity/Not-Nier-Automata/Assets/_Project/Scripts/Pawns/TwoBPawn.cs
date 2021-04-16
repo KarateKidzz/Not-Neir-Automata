@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 
-public class TwoBPawn : Pawn
+public class TwoBPawn : Pawn, IPhysicsTick
 {
     public bool lockToCameraForward = false;
     public float turnSpeed = 10f;
@@ -29,7 +29,7 @@ public class TwoBPawn : Pawn
         isSprinting = context.ReadValueAsButton();
     }
 
-    void FixedUpdate()
+    public void PhysicsTick(float DeltaTime)
     {
         bool isMoving = move.magnitude > 0.1f;
         float speed = isMoving ? isSprinting ? 1f : 0.5f : 0f;
@@ -63,7 +63,7 @@ public class TwoBPawn : Pawn
 
             //if (move.y > 0.8f && move.x < 0.2f)
             //{
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * turnSpeedMultiplier * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * turnSpeedMultiplier * DeltaTime);
             //}
         }
     }

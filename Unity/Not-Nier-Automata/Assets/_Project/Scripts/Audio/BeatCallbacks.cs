@@ -7,7 +7,7 @@ using FMOD.Studio;
 /// <summary>
 /// Handles setting up and receiving beat callbacks from an FMOD Studio Event Emitter.
 /// </summary>
-public class BeatCallbacks : MonoBehaviour
+public class BeatCallbacks : Actor, IInitialize
 {
     EVENT_CALLBACK beatCallback;
 
@@ -27,7 +27,7 @@ public class BeatCallbacks : MonoBehaviour
 
     EventInstance firstInstance;
 
-    private void Start()
+    public void Initialize()
     { 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
         // by the garbage collected while it's being used

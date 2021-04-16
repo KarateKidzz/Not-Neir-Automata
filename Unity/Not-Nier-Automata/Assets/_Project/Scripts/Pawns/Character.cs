@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Character : Pawn
+public class Character : Pawn, IPhysicsTick
 {
     [Header("Character")]
     [Header("Movement")]
@@ -236,7 +236,7 @@ public class Character : Pawn
 
     #region Movement
 
-    void FixedUpdate()
+    public void PhysicsTick(float DeltaTime)
     {
         bool isMoving = move.magnitude > 0.1f;
         float speed = isMoving ? isSprinting ? 1f : 0.5f : 0f;

@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Profiling;
 
 public interface IInitialize
 {
@@ -91,6 +92,11 @@ public class ScriptExecution : MonoBehaviour
 
         public void ClearFromList(List<T> ListToRemove)
         {
+            if (ListToRemove.Count == 0)
+            {
+                return;
+            }
+
             foreach(T Remove in ListToRemove)
             {
                 if (ActorsSet.Remove(Remove))
@@ -107,6 +113,15 @@ public class ScriptExecution : MonoBehaviour
     private static readonly ActorStore<ITick> TickActors = new ActorStore<ITick>();
     private static readonly ActorStore<IPhysicsTick> PhysicsTickActors = new ActorStore<IPhysicsTick>();
     private static readonly ActorStore<ILateTick> LateTickActors = new ActorStore<ILateTick>();
+
+    private readonly Dictionary<object, string> nameCache = new Dictionary<object, string>();
+
+    private string GetName(object obj)
+    {
+        if (!nameCache.TryGetValue(obj, out string ret))
+            nameCache.Add(obj, ret = obj.GetType().Name);
+        return ret;
+    }
 
     private static bool StartedPlay;
 
@@ -182,25 +197,66 @@ public class ScriptExecution : MonoBehaviour
             return;
         }
 
-        foreach (IInitialize Initialize in InitializeActors.Actors)
+        Profiler.BeginSample("Script Update");
+
+        List<IInitialize> Inits = new List<IInitialize>(InitializeActors.Actors);
+
+        for(int i = 0; i < Inits.Count; i++)
         {
-            Initialize.Initialize();
+            IInitialize Initialize = Inits[i];
+            Profiler.BeginSample(GetName(Initialize));
+            try
+            {
+                Initialize.Initialize();
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
 
-        InitializeActors.Clear();
+        InitializeActors.ClearFromList(Inits); 
 
-        foreach (IBeginPlay BeginPlay in BeginPlayActors.Actors)
+        List<IBeginPlay> beginPlays = new List<IBeginPlay>(BeginPlayActors.Actors);
+
+        for (int i = 0; i < beginPlays.Count; i++)
         {
-            BeginPlay.BeginPlay();
+            IBeginPlay BeginPlay = beginPlays[i];
+            Profiler.BeginSample(GetName(BeginPlay));
+            try
+            {
+                BeginPlay.BeginPlay();
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
 
-        BeginPlayActors.Clear();
+        BeginPlayActors.ClearFromList(beginPlays);
 
         float DeltaTime = Time.deltaTime;
-        foreach (ITick Tick in TickActors.Actors)
+
+        List<ITick> Ticks = new List<ITick>(TickActors.Actors);
+
+        for (int i = 0; i < Ticks.Count; i++)
         {
-            Tick.Tick(DeltaTime);
+            ITick Tick = Ticks[i];
+            Profiler.BeginSample(GetName(Tick));
+            try
+            {
+                Tick.Tick(DeltaTime);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
+
+        Profiler.EndSample();
     }
 
     private void LateUpdate()
@@ -210,11 +266,27 @@ public class ScriptExecution : MonoBehaviour
             return;
         }
 
+        Profiler.BeginSample("Script Late Update");
+
         float DeltaTime = Time.deltaTime;
-        foreach (ILateTick Tick in LateTickActors.Actors)
+        List<ILateTick> Ticks = new List<ILateTick>(LateTickActors.Actors);
+
+        for (int i = 0; i < Ticks.Count; i++)
         {
-            Tick.LateTick(DeltaTime);
+            ILateTick Tick = Ticks[i];
+            Profiler.BeginSample(GetName(Tick));
+            try
+            {
+                Tick.LateTick(DeltaTime);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
+
+        Profiler.EndSample();
     }
 
     private void FixedUpdate()
@@ -224,11 +296,27 @@ public class ScriptExecution : MonoBehaviour
             return;
         }
 
+        Profiler.BeginSample("Script Fixed Update");
+
         float DeltaTime = Time.fixedDeltaTime;
-        foreach (IPhysicsTick Tick in PhysicsTickActors.Actors)
+        List<IPhysicsTick> Ticks = new List<IPhysicsTick>(PhysicsTickActors.Actors);
+
+        for (int i = 0; i < Ticks.Count; i++)
         {
-            Tick.PhysicsTick(DeltaTime);
+            IPhysicsTick Tick = Ticks[i];
+            Profiler.BeginSample(GetName(Tick));
+            try
+            {
+                Tick.PhysicsTick(DeltaTime);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
+
+        Profiler.EndSample();
     }
 
     private void OnApplicationQuit()

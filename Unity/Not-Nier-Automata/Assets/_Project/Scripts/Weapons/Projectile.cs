@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Projectile : MonoBehaviour
+public class Projectile : Actor, ITick
 {
     public float speed = 10f;
 
@@ -21,10 +21,10 @@ public class Projectile : MonoBehaviour
         StartCoroutine(WaitToDie());
     }
 
-    private void Update()
+    public void Tick(float DeltaTime)
     {
         Vector3 newPosition = transform.position;
-        newPosition += direction * speed * Time.deltaTime;
+        newPosition += direction * speed * DeltaTime;
         transform.position = newPosition;
     }
 
