@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A type of weapon that keeps firing when AutoAttack is called
 /// </summary>
-public class AutoAttackWeapon : Weapon
+public class AutoAttackWeapon : Weapon, ITick
 {
     float timeOfLastAttack;
 
@@ -28,7 +28,7 @@ public class AutoAttackWeapon : Weapon
         return Time.time >= timeOfLastAttack + minWait;
     }
 
-    protected void Update()
+    public void Tick(float DeltaTime)
     {
         if (autoFire)
         {

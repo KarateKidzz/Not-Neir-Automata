@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class CameraManager : MonoBehaviour
+public class CameraManager : Actor, ITick
 {
     public Camera managingCamager;
 
@@ -34,7 +34,7 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void Tick(float DeltaTime)
     {
         if (target && listenerObject && cameraBrain)
         {
