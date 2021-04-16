@@ -118,8 +118,7 @@ public class ScriptExecution : MonoBehaviour
 
     private string GetName(object obj)
     {
-        string ret;
-        if (!nameCache.TryGetValue(obj, out ret))
+        if (!nameCache.TryGetValue(obj, out string ret))
             nameCache.Add(obj, ret = obj.GetType().Name);
         return ret;
     }
@@ -267,11 +266,27 @@ public class ScriptExecution : MonoBehaviour
             return;
         }
 
+        Profiler.BeginSample("Script Late Update");
+
         float DeltaTime = Time.deltaTime;
-        foreach (ILateTick Tick in LateTickActors.Actors)
+        List<ILateTick> Ticks = new List<ILateTick>(LateTickActors.Actors);
+
+        for (int i = 0; i < Ticks.Count; i++)
         {
-            Tick.LateTick(DeltaTime);
+            ILateTick Tick = Ticks[i];
+            Profiler.BeginSample(GetName(Tick));
+            try
+            {
+                Tick.LateTick(DeltaTime);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
+
+        Profiler.EndSample();
     }
 
     private void FixedUpdate()
@@ -281,11 +296,27 @@ public class ScriptExecution : MonoBehaviour
             return;
         }
 
+        Profiler.BeginSample("Script Fixed Update");
+
         float DeltaTime = Time.fixedDeltaTime;
-        foreach (IPhysicsTick Tick in PhysicsTickActors.Actors)
+        List<IPhysicsTick> Ticks = new List<IPhysicsTick>(PhysicsTickActors.Actors);
+
+        for (int i = 0; i < Ticks.Count; i++)
         {
-            Tick.PhysicsTick(DeltaTime);
+            IPhysicsTick Tick = Ticks[i];
+            Profiler.BeginSample(GetName(Tick));
+            try
+            {
+                Tick.PhysicsTick(DeltaTime);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
+            Profiler.EndSample();
         }
+
+        Profiler.EndSample();
     }
 
     private void OnApplicationQuit()
