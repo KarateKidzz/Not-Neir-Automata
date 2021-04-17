@@ -141,7 +141,7 @@ public class AssetIDs : ScriptableObject
 
         if (index >= 0)
         {
-            runtimeIDs[index].Instances.RemoveAll(gr => gr != null && gr.gameObject != null && gr.gameObject == uniqueAsset.gameObject);
+            runtimeIDs[index].Instances.RemoveAll(gr => gr == null || gr.gameObject == null || gr.gameObject == uniqueAsset.gameObject);
         }
         // else, maybe throw error? we shouldn't get here if "AddRuntimeInstance" was called
     }
