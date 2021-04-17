@@ -12,6 +12,8 @@ public class GameMode : MonoBehaviour
     /// </summary>
     public GameObject defaultPawnPrefab;
 
+    public GameObject defaultSpectatorPawnPrefab;
+
     /// <summary>
     /// If set, spawns this player controller. Otherwise, spawns the default player controller
     /// </summary>
