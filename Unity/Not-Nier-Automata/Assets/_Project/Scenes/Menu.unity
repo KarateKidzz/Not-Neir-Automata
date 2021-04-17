@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -666,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPawnPrefab: {fileID: 7410849899630217961, guid: 310339e2f271f4d2b8b1fe77484d2606,
     type: 3}
+  defaultSpectatorPawnPrefab: {fileID: 0}
   defaultPlayerControllerPrefab: {fileID: 2724940942541262986, guid: 3d6a6237a2ae34508a40f98bf6c351e0,
     type: 3}
 --- !u!4 &618173542
@@ -692,6 +693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784862931}
   - component: {fileID: 784862932}
+  - component: {fileID: 784862933}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -736,6 +738,24 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &784862933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784862930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - Menu
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1077930320
 GameObject:
   m_ObjectHideFlags: 0

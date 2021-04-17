@@ -5,7 +5,7 @@
 			<value>AUTO</value>
 		</property>
 		<relationship name="folder">
-			<destination>{131dd985-f217-40ce-847c-147ce4ba1fc5}</destination>
+			<destination>{90ba8783-b957-45ed-a833-f17e8c13379d}</destination>
 		</relationship>
 		<relationship name="audioTable">
 			<destination>{3d7b80c9-94a5-4eea-a8b1-1cb8e7c6b91e}</destination>
