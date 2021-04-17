@@ -19,3 +19,12 @@ MonoBehaviour:
   - AssetID: f62327f52756a4f7fa9b6701f78bff36
     Object: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
+  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
+    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
+      type: 3}
+  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
+    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
+      type: 3}
+  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
+    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
+      type: 3}
