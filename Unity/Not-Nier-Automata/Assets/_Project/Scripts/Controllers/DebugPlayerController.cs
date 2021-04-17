@@ -15,8 +15,6 @@ public class DebugPlayerController : PlayerController
     {
         base.SetupInput(inputComponent);
 
-        Debug.Log("Setup Input");
-
         inputComponent.actions["Debug"].performed += ToggleDebug;
         inputComponent.actions["Debug"].canceled += ToggleDebug;
     }
@@ -24,8 +22,6 @@ public class DebugPlayerController : PlayerController
     protected override void ClearInput(PlayerInput inputComponent)
     {
         base.ClearInput(inputComponent);
-
-        Debug.Log("Clear Input");
 
         inputComponent.actions["Debug"].performed -= ToggleDebug;
         inputComponent.actions["Debug"].canceled -= ToggleDebug;
