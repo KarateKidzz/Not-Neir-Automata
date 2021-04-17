@@ -38,6 +38,7 @@ public class PlayerController : Controller
                 if (allPawns[i].AutoPossessPlayer)
                 {
                     Possess(allPawns[i]);
+                    SetupInput(GetPlayerInputComponent());
                     return;
                 }
             }
@@ -48,12 +49,15 @@ public class PlayerController : Controller
             Transform lookAt = possessedPawn.CameraFollowTarget ? possessedPawn.CameraFollowTarget.transform : possessedPawn.transform;
             cameraManager.SetFollowTarget(lookAt);
         }
+
+        SetupInput(GetPlayerInputComponent());
     }
 
     public override void DisableController()
     {
         base.DisableController();
 
+        ClearInput(GetPlayerInputComponent());
         GameManager.Instance.ClearPlayerController();
     }
 
@@ -78,6 +82,16 @@ public class PlayerController : Controller
         }
 
         base.Unpossess();
+    }
+
+    protected virtual void SetupInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+
+    }
+
+    protected virtual void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
+    {
+
     }
 
     public UnityEngine.InputSystem.PlayerInput GetPlayerInputComponent()

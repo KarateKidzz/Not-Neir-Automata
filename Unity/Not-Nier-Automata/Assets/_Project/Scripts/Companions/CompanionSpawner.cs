@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Pawn))]
-public class CompanionSpawner : Actor, IBeginPlay
+public class CompanionSpawner : Actor, IBeginPlay, IInitialize
 {
     public GameObject[] companionsToSpawn;
 
-    public void BeginPlay()
+    List<Companion> spawnedCompanions = new List<Companion>();
+
+    Pawn pawn;
+
+    public void Initialize()
     {
-        Pawn pawn = GetComponent<Pawn>();
+        pawn = GetComponent<Pawn>();
 
         if (!pawn)
         {
             Debug.LogError("No pawn!");
+            return;
         }
 
         for (int i = 0; i < companionsToSpawn.Length; i++)
@@ -31,9 +36,19 @@ public class CompanionSpawner : Actor, IBeginPlay
             {
                 Companion spawnedCompanion = spawned.GetComponent<Companion>();
                 Debug.Assert(spawnedCompanion, "Spawned object must be a companion");
-
-                pawn.AddCompanion(spawnedCompanion);
+                spawnedCompanions.Add(spawnedCompanion); 
             }
         }
+    }
+
+    public void BeginPlay()
+    {
+        if (pawn)
+        {
+            foreach (Companion companion in spawnedCompanions)
+            {
+                pawn.AddCompanion(companion);
+            }
+        }    
     }
 }

@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000004, guid: 078c2c7090bb14159ae3734b059e10ea,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -167,7 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPawnPrefab: {fileID: 0}
-  defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: ea7c71b65247c44bc92ee6b4583e6d25,
+  defaultSpectatorPawnPrefab: {fileID: 4243652203899812640, guid: 026a1332a8ee5468699b6116160660a0,
+    type: 3}
+  defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: da1c0ab85ecca4071a8681694d945e38,
     type: 3}
 --- !u!114 &325507003
 MonoBehaviour:
@@ -462,6 +464,7 @@ MonoBehaviour:
   Scenes:
   - Level01_Gameplay
   - Level01_Environment
+  - Level01_Audio
 --- !u!4 &1672112111
 Transform:
   m_ObjectHideFlags: 0

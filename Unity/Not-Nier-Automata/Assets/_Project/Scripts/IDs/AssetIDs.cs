@@ -105,6 +105,12 @@ public class AssetIDs : ScriptableObject
 
     public void AddRuntimeInstance(UniqueAsset uniqueAsset)
     {
+        if (!uniqueAsset)
+        {
+            Debug.LogWarning("[Unique Asset] Can't add null asset");
+            return;
+        }
+
         string assetGUID = uniqueAsset.ID;
 
         int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
@@ -123,13 +129,19 @@ public class AssetIDs : ScriptableObject
 
     public void RemoveRuntimeInstance(UniqueAsset uniqueAsset)
     {
+        if (!uniqueAsset || uniqueAsset == null)
+        {
+            Debug.LogWarning("[Unique Asset] Can't remove null asset");
+            return;
+        }
+
         string assetGUID = uniqueAsset.ID;
 
         int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
 
         if (index >= 0)
         {
-            runtimeIDs[index].Instances.RemoveAll(gr => gr.gameObject == uniqueAsset.gameObject);
+            runtimeIDs[index].Instances.RemoveAll(gr => gr == null || gr.gameObject == null || gr.gameObject == uniqueAsset.gameObject);
         }
         // else, maybe throw error? we shouldn't get here if "AddRuntimeInstance" was called
     }

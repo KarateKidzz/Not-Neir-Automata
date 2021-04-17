@@ -5,13 +5,17 @@ using Cinemachine;
 
 public class CameraManager : Actor, ITick
 {
-    public Camera managingCamager;
+    public Camera managingCamera;
 
     public GameObject listenerObject;
 
     public GameObject cameraBrain;
 
-    public Transform target; 
+    public Transform target;
+
+    public GameObject thirdPersonCamera;
+
+    public GameObject firstPersonCamera;
 
     /// <summary>
     /// Cameras that need a follow target
@@ -34,6 +38,16 @@ public class CameraManager : Actor, ITick
         }
     }
 
+    public Vector3 GetCameraPosition()
+    {
+        return cameraBrain.transform.position;
+    }
+
+    public Quaternion GetCameraRotation()
+    {
+        return cameraBrain.transform.rotation;
+    }
+
     public void Tick(float DeltaTime)
     {
         if (target && listenerObject && cameraBrain)
@@ -42,5 +56,17 @@ public class CameraManager : Actor, ITick
 
             listenerObject.transform.rotation = cameraBrain.transform.rotation;
         }
+    }
+
+    public void SwitchToFirstPerson()
+    {
+        thirdPersonCamera.SetActive(false);
+        firstPersonCamera.SetActive(true);
+    }
+
+    public void SwitchToThirdPerson()
+    {
+        thirdPersonCamera.SetActive(true);
+        firstPersonCamera.SetActive(false);
     }
 }

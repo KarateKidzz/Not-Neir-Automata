@@ -51,6 +51,12 @@ public class BeatAttackWeapon : AutoAttackWeapon
 
     protected override bool CanSingleFire()
     {
+        if (!GameManager.IsValid() || !GameManager.Instance.GetCurrentGameMode() || !GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<CombatManager>() ||
+            !GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<CombatManager>().IsInCombat)
+        {
+            return true;
+        }
+
         return false;
     }
 
