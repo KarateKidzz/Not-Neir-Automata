@@ -67,12 +67,14 @@ public class SpectatorPawn : Pawn, ITick
         inputComponent.actions["Sprint"].performed += Sprint;
         inputComponent.actions["Scroll"].performed += Scroll;
         inputComponent.actions["MouseMove"].performed += MouseMove;
+        inputComponent.actions["Screenshot"].performed += Screenshot;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["VerticalMove"].canceled += UpDown;
         inputComponent.actions["Sprint"].canceled += Sprint;
         inputComponent.actions["Scroll"].canceled += Scroll;
         inputComponent.actions["MouseMove"].canceled += MouseMove;
+        inputComponent.actions["Screenshot"].canceled += Screenshot;
     }
 
     public override void ClearInput(PlayerInput inputComponent)
@@ -84,12 +86,14 @@ public class SpectatorPawn : Pawn, ITick
         inputComponent.actions["Sprint"].performed -= Sprint;
         inputComponent.actions["Scroll"].performed -= Scroll;
         inputComponent.actions["MouseMove"].performed -= MouseMove;
+        inputComponent.actions["Screenshot"].performed -= Screenshot;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["VerticalMove"].canceled -= UpDown;
         inputComponent.actions["Sprint"].canceled -= Sprint;
         inputComponent.actions["Scroll"].canceled -= Scroll;
         inputComponent.actions["MouseMove"].canceled -= MouseMove;
+        inputComponent.actions["Screenshot"].canceled -= Screenshot;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -115,6 +119,15 @@ public class SpectatorPawn : Pawn, ITick
     public void MouseMove(InputAction.CallbackContext context)
     {
         mouseMove = context.ReadValue<Vector2>();
+    }
+
+    public void Screenshot(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            string file = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + System.IO.Path.DirectorySeparatorChar + System.Guid.NewGuid().ToString();
+            ScreenCapture.CaptureScreenshot(file);
+        }
     }
 
 #if UNITY_EDITOR
