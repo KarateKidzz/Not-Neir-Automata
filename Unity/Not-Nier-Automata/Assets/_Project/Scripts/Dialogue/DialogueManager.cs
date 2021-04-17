@@ -48,7 +48,7 @@ public class DialogueManager : GameModeUtil
                 if (uniqueAsset != null)
                 {
                     UniqueAsset runtimeSpeaker = AssetIDs.Instance.GetFirstInstanceOfID(uniqueAsset.ID);
-                    speaker = runtimeSpeaker.gameObject;
+                    speaker = runtimeSpeaker ? runtimeSpeaker.gameObject : null;
                 }
                 else
                 {
