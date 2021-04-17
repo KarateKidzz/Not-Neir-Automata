@@ -126,6 +126,11 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 
     #region Pawn
 
+    public bool IsPossessed()
+    {
+        return owningController != null;
+    }
+
     public Controller GetController()
     {
         return owningController;

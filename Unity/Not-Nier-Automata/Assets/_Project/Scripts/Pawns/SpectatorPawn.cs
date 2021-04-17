@@ -141,7 +141,7 @@ public class SpectatorPawn : Pawn, ITick
 
     public void Tick(float DeltaTime)
     {
-        if (Cursor.visible)
+        if (!IsPossessed())
             return;
 
         // Translation
@@ -158,14 +158,14 @@ public class SpectatorPawn : Pawn, ITick
         // Calc acceleration
         CalculateCurrentIncrease(deltaPosition != Vector3.zero);
 
-        AddMovement(deltaPosition * currentSpeed * _currentIncrease); 
+        AddMovement(transform.rotation * deltaPosition * currentSpeed * _currentIncrease); 
 
         // Rotation
         if (_enableRotation)
         {
             // Pitch
             transform.rotation *= Quaternion.AngleAxis(
-                mouseMove.y * _mouseSense,
+                -mouseMove.y * _mouseSense,
                 Vector3.right
             );
 

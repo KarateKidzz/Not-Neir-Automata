@@ -50,12 +50,12 @@ MonoBehaviour:
   aiControllerPrefab: {fileID: 0}
   cameraFollowTarget: {fileID: 0}
   cameraLookAtTarget: {fileID: 0}
-  autoHideCursorOnPossess: 0
+  autoHideCursorOnPossess: 1
   companions: []
   _enableRotation: 1
   _mouseSense: 1.8
   _enableTranslation: 1
-  _translationSpeed: 55
+  _translationSpeed: 25
   _movementSpeed: 10
   _boostedSpeed: 50
   _enableSpeedAcceleration: 1

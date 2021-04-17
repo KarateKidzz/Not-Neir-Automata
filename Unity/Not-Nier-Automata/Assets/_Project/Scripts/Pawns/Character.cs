@@ -275,7 +275,7 @@ public class Character : Pawn, IPhysicsTick
     void UpdateTargetDirection()
     {
         PlayerController playerController = owningController as PlayerController;
-        Camera camera = playerController && playerController.CameraManager && playerController.CameraManager.managingCamager ? playerController.CameraManager.managingCamager : Camera.main;
+        Camera camera = playerController && playerController.CameraManager && playerController.CameraManager.managingCamera ? playerController.CameraManager.managingCamera : Camera.main;
 
         if (!camera)
         {

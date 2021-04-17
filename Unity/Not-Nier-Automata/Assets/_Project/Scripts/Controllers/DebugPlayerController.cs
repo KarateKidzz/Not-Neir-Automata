@@ -11,13 +11,6 @@ public class DebugPlayerController : PlayerController
 
     protected Pawn spectatorPawn;
 
-    public override void ActivateController()
-    {
-        base.ActivateController();
-
-        Debug.LogError("ACTIVATE");
-    }
-
     protected override void SetupInput(PlayerInput inputComponent)
     {
         base.SetupInput(inputComponent);
@@ -39,17 +32,17 @@ public class DebugPlayerController : PlayerController
     }
 
     protected void ToggleDebug(InputAction.CallbackContext context)
-    {
-        Debug.Log("BUTTON");
+    { 
         if (context.ReadValueAsButton())
         {
-            Debug.Log("TOGGLE DEBUG");
             if (DebugEnabled)
             {
                 if (mainPawn)
                 {
                     Unpossess();
                     Possess(mainPawn);
+
+                    cameraManager.SwitchToThirdPerson();
 
                     DebugEnabled = false;
                 }
@@ -65,6 +58,8 @@ public class DebugPlayerController : PlayerController
                     Unpossess();
                     Possess(spectatorPawn);
 
+                    cameraManager.SwitchToFirstPerson();
+
                     DebugEnabled = true;
                 }
                 else
@@ -75,12 +70,10 @@ public class DebugPlayerController : PlayerController
 
                         if (gameMode)
                         {
-                            Debug.Log("spawning spectator");
                             GameObject prefab = GameManager.Instance.GetCurrentGameMode().defaultSpectatorPawnPrefab;
 
                             if (prefab)
                             {
-                                Debug.Log("possessing spectator");
                                 GameObject spawnedSpectator = Instantiate(prefab);
                                 spectatorPawn = spawnedSpectator.GetComponent<Pawn>();
                                 Debug.Assert(spectatorPawn);
@@ -89,6 +82,8 @@ public class DebugPlayerController : PlayerController
 
                                 Unpossess();
                                 Possess(spectatorPawn);
+
+                                cameraManager.SwitchToFirstPerson();
 
                                 DebugEnabled = true;
                             }
