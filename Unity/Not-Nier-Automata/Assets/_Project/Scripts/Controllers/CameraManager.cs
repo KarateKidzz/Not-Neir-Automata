@@ -38,6 +38,16 @@ public class CameraManager : Actor, ITick
         }
     }
 
+    public Vector3 GetCameraPosition()
+    {
+        return cameraBrain.transform.position;
+    }
+
+    public Quaternion GetCameraRotation()
+    {
+        return cameraBrain.transform.rotation;
+    }
+
     public void Tick(float DeltaTime)
     {
         if (target && listenerObject && cameraBrain)

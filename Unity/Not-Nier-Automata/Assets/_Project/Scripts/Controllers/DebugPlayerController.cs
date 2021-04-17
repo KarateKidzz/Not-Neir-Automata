@@ -80,6 +80,9 @@ public class DebugPlayerController : PlayerController
 
                                 mainPawn = PossessedPawn;
 
+                                spawnedSpectator.transform.position = cameraManager.GetCameraPosition();
+                                spawnedSpectator.transform.rotation = cameraManager.GetCameraRotation();
+
                                 Unpossess();
                                 Possess(spectatorPawn);
 
