@@ -55,8 +55,9 @@ public class Companion : Pawn, ITick
         {
             if (cameraManager)
             {
+                bool leaderIsPossessedByPlayer = leader.IsPossessed() && leader.GetController() is PlayerController;
                 Vector3 currentEuler = transform.rotation.eulerAngles;
-                Vector3 desiredEuler = cameraManager.cameraBrain.transform.rotation.eulerAngles;
+                Vector3 desiredEuler = leaderIsPossessedByPlayer ? cameraManager.cameraBrain.transform.rotation.eulerAngles : currentEuler;
                 float currentYaw = currentEuler.y;
                 float desiredYaw = desiredEuler.y;
                 Vector3 finalEuler = new Vector3(currentEuler.x, Mathf.LerpAngle(currentYaw, desiredYaw, turnSpeed * DeltaTime), currentEuler.z);
