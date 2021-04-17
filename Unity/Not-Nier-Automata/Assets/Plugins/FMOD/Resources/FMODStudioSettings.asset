@@ -333,8 +333,8 @@ MonoBehaviour:
   sourceProjectPath: ../../FMOD/Not-Nier-Automata/Not-Nier-Automata.fspro
   sourceBankPath: ../../FMOD/Not-Nier-Automata/Build
   SourceBankPathUnformatted: 
-  AutomaticEventLoading: 1
-  BankLoadType: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 1
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
@@ -359,14 +359,18 @@ MonoBehaviour:
   - ChildRobot
   - ChillGuy
   - FashionGirl
+  - Fier
   - Ghoul
   - HappyGreenGuy
   - HummingRobot
   - James
   - Level01
+  - Level01_Cinematic
+  - Menu
+  - Misc
   - NewYorkGuy
-  - Player
   - RoadmanRobot
+  - Robot
   - Roswaal
   - Salesman
   - ShadyDude
@@ -376,7 +380,9 @@ MonoBehaviour:
   - TeenRobot
   - Urixius
   - WorkerRobot
-  BanksToLoad: []
+  BanksToLoad:
+  - /Master.strings.bank
+  - /Master.bank
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
