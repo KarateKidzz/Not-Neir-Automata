@@ -125,7 +125,7 @@ public class SpectatorPawn : Pawn, ITick
     {
         if (context.ReadValueAsButton())
         {
-            string file = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + System.IO.Path.DirectorySeparatorChar + System.Guid.NewGuid().ToString();
+            string file = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + System.IO.Path.DirectorySeparatorChar + System.Guid.NewGuid().ToString() + ".png";
             ScreenCapture.CaptureScreenshot(file);
         }
     }
