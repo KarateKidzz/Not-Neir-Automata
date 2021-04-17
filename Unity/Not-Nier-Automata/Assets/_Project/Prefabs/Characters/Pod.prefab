@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7659528140307034755}
   - component: {fileID: 5449906070918686544}
   - component: {fileID: 5644260708011059833}
+  - component: {fileID: -5425330765604659394}
   m_Layer: 0
   m_Name: Pod
   m_TagString: Untagged
@@ -177,6 +178,24 @@ MonoBehaviour:
   OverridePlayingEvents: 0
   programmerSoundKeys: []
   playOrder: 0
+--- !u!114 &-5425330765604659394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - AUTO
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &7002868928408713796
 GameObject:
   m_ObjectHideFlags: 0
