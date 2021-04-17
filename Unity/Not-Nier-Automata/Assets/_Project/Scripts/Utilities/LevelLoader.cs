@@ -31,7 +31,7 @@ public class LevelLoader : MonoBehaviour
     {
         Scene OverworldScene = SceneManager.GetSceneByName(OverworldSceneName);
 
-        if (!OverworldScene.isLoaded)
+        if (!OverworldScene.IsValid())
         {
             SceneManager.LoadScene(OverworldSceneName, LoadSceneMode.Additive);
         }
