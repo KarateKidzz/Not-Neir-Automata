@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{21d45536-01e1-4e3d-a381-2ae6e5b72347}">
+		<property name="name">
+			<value>HappyGreenGuy</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{a6b697a3-62a9-4ad3-9ed9-47fb842cde3a}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{a6b697a3-62a9-4ad3-9ed9-47fb842cde3a}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/HappyGreenGuy</value>
+		</property>
+	</object>
+</objects>

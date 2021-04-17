@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{f2bb5757-b25c-48a5-b1d4-adc9934993c3}">
+		<property name="name">
+			<value>SwedishCook</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{ab9f3a0b-8df0-41df-8d03-8f8b7a948f64}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{ab9f3a0b-8df0-41df-8d03-8f8b7a948f64}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/SwedishCook</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{830de930-0b73-45f7-804f-d5bcfac7ae0e}">
+		<property name="name">
+			<value>Adrian</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{9a470a2e-14cc-4d9a-9715-50cf3b25054d}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{9a470a2e-14cc-4d9a-9715-50cf3b25054d}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/Adrian</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{21cccfc5-3258-49cf-a7f2-85f2492b2fa4}">
+		<property name="name">
+			<value>FashionGirl</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{b40a35cd-c29a-42ef-b3be-383e67ab6088}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{b40a35cd-c29a-42ef-b3be-383e67ab6088}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/FashionGirl</value>
+		</property>
+	</object>
+</objects>

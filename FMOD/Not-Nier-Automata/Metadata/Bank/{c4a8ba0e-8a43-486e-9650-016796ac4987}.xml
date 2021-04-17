@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{c4a8ba0e-8a43-486e-9650-016796ac4987}">
+		<property name="name">
+			<value>ShadyDude</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{4c24e771-11ba-4259-a2da-02c10e7d7f0d}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{4c24e771-11ba-4259-a2da-02c10e7d7f0d}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/ShadyDude</value>
+		</property>
+	</object>
+</objects>

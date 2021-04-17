@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{83b7771a-a419-4c2f-9612-51e438bc6832}">
+		<property name="name">
+			<value>ChillGuy</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{03fc6f93-eed7-4793-a561-86add0f00a56}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{03fc6f93-eed7-4793-a561-86add0f00a56}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/ChillGuy</value>
+		</property>
+	</object>
+</objects>
