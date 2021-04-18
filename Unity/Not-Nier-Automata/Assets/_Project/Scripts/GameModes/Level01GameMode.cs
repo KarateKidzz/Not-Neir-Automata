@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using FMODUnity;
-using FMOD.Studio;
+using UnityEngine.InputSystem;
 
 public class Level01GameMode : GameMode
 {
@@ -11,15 +10,7 @@ public class Level01GameMode : GameMode
 
     public GameObject[] introObjects;
 
-    [EventRef]
-    public string musicEvent;
-
-    [EventRef]
-    public string snapshotEvent;
-
-    EventInstance musicInstance;
-
-    EventInstance snapshotInstance;
+    public InputAction skipAction;
 
     public override void StartGameMode()
     {
@@ -29,30 +20,46 @@ public class Level01GameMode : GameMode
         introDirector.stopped += FinishedPlaying;
 
         introDirector.Play();
+
+        skipAction.Enable();
+
+        skipAction.performed += OnSkipButton;
+        skipAction.canceled += OnSkipButton;
+    }
+
+    public void OnSkipButton(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            if (introDirector.state == PlayState.Playing)
+            {
+                introDirector.Stop();
+            }
+        }    
     }
 
     void StartPlaying(PlayableDirector director)
     {
-        //musicInstance = RuntimeManager.CreateInstance(musicEvent);
-        //musicInstance.start();
-
-        //snapshotInstance = RuntimeManager.CreateInstance(snapshotEvent);
-        //snapshotInstance.start();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     void FinishedPlaying(PlayableDirector director)
     {
-        //musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //musicInstance.release();
-
-        //snapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //snapshotInstance.release();
-
-        ScriptExecution.BeginPlay();
-
-        for (int i = 0; i < introObjects.Length; i++)
+        if (!quitting)
         {
-            Destroy(introObjects[i]);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+            ScriptExecution.BeginPlay();
+
+            for (int i = 0; i < introObjects.Length; i++)
+            {
+                Destroy(introObjects[i]);
+            }
+
+            skipAction.performed -= OnSkipButton;
+            skipAction.canceled -= OnSkipButton;
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameMode : MonoBehaviour
 {
-    private static bool quitting;
+    protected static bool quitting;
 
     /// <summary>
     /// If set, will spawn this pawn and make the player posses it. If not set, the player controller will find a pawn marked "auto possess player" in the world

@@ -455,8 +455,30 @@ MonoBehaviour:
   - {fileID: 1799606907}
   - {fileID: 1089912991}
   - {fileID: 1912402449}
-  musicEvent: event:/MX/Level01IntroCutscene
-  snapshotEvent: snapshot:/Intro
+  skipAction:
+    m_Name: Skip
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ff7e46a7-8af8-4236-8f3c-b73e02d8d128
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 312935b7-c152-450c-9f47-310128e89ab0
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f0c0afc7-10f8-4cc2-b527-cafbeb5c3597
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
 --- !u!114 &325507003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2698,7 +2720,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.7071068}
   m_LocalPosition: {x: 53.336887, y: 0.67433554, z: 6.797563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
