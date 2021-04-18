@@ -2698,6 +2698,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   OverridePlayingEvents: 0
+  IgnoreNewPlays: 1
   programmerSoundKeys:
   - Dx_Salesman_01
   - Dx_Salesman_02

@@ -24,7 +24,16 @@ namespace FMODUnity
         public bool AllowFadeout = true;
         public bool TriggerOnce = false;
         public bool Preload = false;
+
+        /// <summary>
+        /// If true and an event is playing, new sounds will stop the current one
+        /// </summary>
         public bool OverridePlayingEvents;
+
+        /// <summary>
+        /// If true, new sounds won't play if an event is already playing
+        /// </summary>
+        public bool IgnoreNewPlays;
 
         protected FMOD.Studio.EventDescription eventDescription;
         public FMOD.Studio.EventDescription EventDescription { get { return eventDescription; } }
@@ -294,14 +303,6 @@ namespace FMODUnity
                 return;
             }
 
-            if (IsPlaying())
-            {
-                if (OverridePlayingEvents)
-                {
-                    Stop();
-                }
-            }
-
             string newKey = "";
 
             switch (playOrder)
@@ -323,19 +324,7 @@ namespace FMODUnity
                     break;
             }
 
-            if (instance.isValid())
-            {
-                instance.release();
-                instance.clearHandle();
-            }
-
-            Play();
-
-            // Pin the string
-            GCHandle stringHandle = GCHandle.Alloc(newKey, GCHandleType.Pinned);
-
-            // Set the new user data
-            instance.setUserData(GCHandle.ToIntPtr(stringHandle));
+            PlayProgrammerSound(newKey);
         }
 
         /// <summary>
@@ -350,7 +339,13 @@ namespace FMODUnity
             {
                 if (OverridePlayingEvents)
                 {
+                    // If overriding, stop current event
                     Stop();
+                }
+                else if (IgnoreNewPlays)
+                {
+                    // Don't play at all if something is playing and we should ignore
+                    return;
                 }
             }
 
