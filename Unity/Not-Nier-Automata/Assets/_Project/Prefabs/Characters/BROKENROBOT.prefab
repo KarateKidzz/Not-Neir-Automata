@@ -110,8 +110,9 @@ GameObject:
   - component: {fileID: 766176235}
   - component: {fileID: 766176236}
   - component: {fileID: 2673727901214248841}
+  - component: {fileID: 3370811689063030731}
   m_Layer: 8
-  m_Name: Basic Motions Dummy - Idle
+  m_Name: BROKENROBOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   OverridePlayingEvents: 0
+  IgnoreNewPlays: 0
   programmerSoundKeys:
   - RoadmanRobot_CanIHelpYou_F#
   - RoadmanRobot_DoYouMind_F#
@@ -345,6 +347,26 @@ MonoBehaviour:
   inventoryWeapons: []
   currentlyEquippedWeapon: {fileID: 7926755122667917459}
   useCameraAsDirection: 0
+--- !u!114 &3370811689063030731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573847291939246954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - Robot
+  - James
+  - RoadmanRobot
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &2573874922511683962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,5 +2377,6 @@ MonoBehaviour:
   damage: 5
   useCameraForAim: 0
   attackSoundEvent: event:/SFX/PodFire
+  cooldownSoundEvent: 
   projectilePrefab: {fileID: 7078719393187948800, guid: fdeb34f3a89aa46d8beefdade40f0ef8,
     type: 3}

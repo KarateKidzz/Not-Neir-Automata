@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 325507004}
   - component: {fileID: 325507005}
   - component: {fileID: 325507006}
+  - component: {fileID: 325507007}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -334,8 +335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPawnPrefab: {fileID: 7390603271446795770, guid: 52c48ff4464964237aedb4e0385f203f,
     type: 3}
+  defaultSpectatorPawnPrefab: {fileID: 0}
   defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: ea7c71b65247c44bc92ee6b4583e6d25,
     type: 3}
+  delayGameStart: 0
 --- !u!114 &325507003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +367,7 @@ MonoBehaviour:
   combatMusicEvent: event:/MX/RoryBATTLE
   explorationMusicEvent: event:/MX/ExplorationTest
   currentState: 0
+  playExploreMusic: 1
 --- !u!114 &325507005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +393,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leniency: 0.1
+--- !u!114 &325507007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - Misc
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &339594794
 GameObject:
   m_ObjectHideFlags: 0
