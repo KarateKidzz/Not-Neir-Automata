@@ -84,6 +84,8 @@
 		<relationship name="modules">
 			<destination>{7b7be92f-b8d7-4b13-9ca6-6b0c02862da1}</destination>
 			<destination>{a6360d30-dda7-47ef-8d6d-ac80681b2a17}</destination>
+			<destination>{8ec2c5cd-c7df-4f76-9551-14f6374c5cc5}</destination>
+			<destination>{5aa275ce-7701-4919-90a9-fd0a84715799}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f473445c-433e-446c-9251-35883b600397}</destination>
@@ -154,6 +156,8 @@
 			<destination>{255fd576-e0c3-417f-bd71-619a2cc90c2d}</destination>
 			<destination>{14d73bc7-66c4-495e-8239-d9c8327f79fa}</destination>
 			<destination>{74cfb3aa-1f56-4655-9e73-37eec8eb3345}</destination>
+			<destination>{8ec2c5cd-c7df-4f76-9551-14f6374c5cc5}</destination>
+			<destination>{5aa275ce-7701-4919-90a9-fd0a84715799}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{45e3c936-ce44-46f5-bbcf-ba32c9e9b1f2}">
@@ -292,7 +296,7 @@
 			<value>40</value>
 		</property>
 		<property name="length">
-			<value>36</value>
+			<value>8</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>40</value>
@@ -309,10 +313,44 @@
 			<value>80</value>
 		</property>
 		<property name="length">
-			<value>32</value>
+			<value>8</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>80</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{b1218c35-5f7b-47ea-bc11-7739626f57af}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{8ec2c5cd-c7df-4f76-9551-14f6374c5cc5}">
+		<property name="color">
+			<value>Green Light 1</value>
+		</property>
+		<property name="start">
+			<value>56</value>
+		</property>
+		<property name="length">
+			<value>8</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>56</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{b1218c35-5f7b-47ea-bc11-7739626f57af}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{5aa275ce-7701-4919-90a9-fd0a84715799}">
+		<property name="color">
+			<value>Green Light 1</value>
+		</property>
+		<property name="start">
+			<value>96</value>
+		</property>
+		<property name="length">
+			<value>8</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>96</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{b1218c35-5f7b-47ea-bc11-7739626f57af}</destination>
