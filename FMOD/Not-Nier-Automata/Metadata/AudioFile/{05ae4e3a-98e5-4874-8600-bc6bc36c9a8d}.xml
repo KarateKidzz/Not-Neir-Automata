@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{05ae4e3a-98e5-4874-8600-bc6bc36c9a8d}">
 		<property name="assetPath">
-			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Ngoni_Resample.wav</value>
+			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Ngoni_Resample_Ebm_120bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

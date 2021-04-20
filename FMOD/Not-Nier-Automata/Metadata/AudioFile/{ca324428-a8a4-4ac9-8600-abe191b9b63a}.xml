@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{ca324428-a8a4-4ac9-8600-abe191b9b63a}">
 		<property name="assetPath">
-			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Erhu.wav</value>
+			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Erhu_Ebm_120bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
