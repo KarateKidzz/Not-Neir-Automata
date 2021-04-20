@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{ecd6b418-8b00-467a-a9d4-ff6c4e0e3bb0}">
 		<property name="assetPath">
-			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Side Chain_Group_Ebm_120bpm.wav</value>
+			<value>MX/R&amp;J - Exploration/DesertExplore_Side Chain_Group_Ebm_120bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

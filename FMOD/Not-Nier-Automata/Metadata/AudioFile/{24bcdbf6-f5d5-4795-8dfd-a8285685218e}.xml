@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{24bcdbf6-f5d5-4795-8dfd-a8285685218e}">
 		<property name="assetPath">
-			<value>MX/R&amp;J - Exploration/R&amp;J_Explore - Cajon_Bump_Ebm_120bpm.wav</value>
+			<value>MX/R&amp;J - Exploration/DesertExplore_Cajon_Bump_Ebm_120bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
