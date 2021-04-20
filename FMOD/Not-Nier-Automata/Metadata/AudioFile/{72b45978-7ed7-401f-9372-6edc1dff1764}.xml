@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{72b45978-7ed7-401f-9372-6edc1dff1764}">
+		<property name="assetPath">
+			<value>MX/Desert_Exploration/DesertExplore_SantoorVerseA_120bpm_4-4_L16M_P0.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>36</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>
