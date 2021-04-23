@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{caad7489-2e7d-46bd-a7f6-bb29a2302b1f}">
+	<object class="AudioFile" id="{5c54afea-4c85-41bf-bd96-f4fd47a78b4d}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Adrian/Dx_Adrian_01.wav</value>
+			<value>DX/RobotNPC_DX/Ghoul/Dx_Ghoul_02.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>4.7952500000000002</value>
+			<value>11.988125</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

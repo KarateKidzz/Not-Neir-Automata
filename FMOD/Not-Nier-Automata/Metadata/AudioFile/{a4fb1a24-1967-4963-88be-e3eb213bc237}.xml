@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{c0033349-e4cd-4673-b72a-c25a6b24d086}">
+	<object class="AudioFile" id="{a4fb1a24-1967-4963-88be-e3eb213bc237}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Salesman/Dx_Salesman_02.wav</value>
+			<value>DX/RobotNPC_DX/FashionGirl/Dx_FashionGirl_01-PostFX.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.0406249999999999</value>
+			<value>17.982187499999998</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

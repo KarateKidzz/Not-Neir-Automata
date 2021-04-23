@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{ceb427fb-8f89-47d1-afb0-b2cce6dffabf}">
+	<object class="AudioFile" id="{4486b8d6-f79a-4da7-b943-51b3a1e1df50}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Ghoul/Dx_Ghoul_01.wav</value>
+			<value>DX/RobotNPC_DX/Salesman/Dx_Salesman_03.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>5.3807499999999999</value>
+			<value>3.5964375</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

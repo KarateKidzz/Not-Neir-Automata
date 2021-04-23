@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{68e53fc0-46d2-4e0a-8032-ccb9751b3b3a}">
+	<object class="AudioFile" id="{92ba7464-e343-43df-b645-c8439050d24f}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Salesman/Dx_Salesman_01.wav</value>
+			<value>DX/RobotNPC_DX/ChillGuy/Dx_ ChillGuy_03.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>2.6896666666666667</value>
+			<value>8.3916874999999997</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

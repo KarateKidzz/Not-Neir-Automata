@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{cc4cae8c-7f7e-48e1-9e5e-519d6b86efa9}">
+	<object class="AudioFile" id="{ca9de757-8a82-4c11-8b08-01992e4b0858}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Adrian/Dx_Adrian_02.wav</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>DX/RobotNPC_DX/ChillGuy/Dx_ ChillGuy_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -14,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>19.168749999999999</value>
+			<value>8.3916874999999997</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
