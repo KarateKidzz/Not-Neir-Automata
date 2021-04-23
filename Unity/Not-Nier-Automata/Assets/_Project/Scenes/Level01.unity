@@ -1005,6 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0250d9f694f8d492d968bb53285dd122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueSnapshot: snapshot:/Dialogue
 --- !u!114 &325507004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3537,8 +3538,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 53.336887, y: 0.67433554, z: 6.797563}
+  m_LocalRotation: {x: 0.00068714836, y: 0.9926485, z: 0.005649353, w: -0.120899156}
+  m_LocalPosition: {x: 4.422904, y: 1.4532828, z: 8.695063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
