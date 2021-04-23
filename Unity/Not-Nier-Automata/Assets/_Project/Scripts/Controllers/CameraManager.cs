@@ -17,6 +17,8 @@ public class CameraManager : Actor, ITick
 
     public GameObject firstPersonCamera;
 
+    public Cinemachine.CinemachineBrain brain;
+
     /// <summary>
     /// Cameras that need a follow target
     /// </summary>

@@ -7,7 +7,7 @@ using UnityEngine.Events;
 /// Defines an object that can be interacted with by the player
 /// </summary>
 [RequireComponent(typeof(Pawn))]
-public class Interactable : MonoBehaviour
+public class Interactable : Actor, IInitialize
 {
     protected Pawn owningPawn;
 
@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
 
     public UnityEvent onFailedInteraction;
 
-    private void Awake()
+    public void Initialize()
     {
         owningPawn = GetComponent<Pawn>();
     }
