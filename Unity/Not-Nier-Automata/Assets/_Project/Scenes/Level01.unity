@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 325507003}
   - component: {fileID: 325507004}
   - component: {fileID: 325507005}
+  - component: {fileID: 325507006}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -1016,6 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de13b14d8724fecbf338f712136d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jammerParameter: Jammers
   uiParent: {fileID: 821170043}
 --- !u!114 &325507005
 MonoBehaviour:
@@ -1035,6 +1037,22 @@ MonoBehaviour:
   - Misc
   CollisionTag: 
   PreloadSamples: 0
+--- !u!114 &325507006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204e7da08e9d04963b0bc77fd16b3811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatMusicEvent: event:/MX/RoryBATTLE
+  explorationMusicEvent: event:/MX/Level01Exploration
+  currentState: 0
+  playExploreMusic: 1
 --- !u!1 &339594794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,8 +3537,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: 0.015992373, y: 0.427324, z: 0.0075610783, w: -0.90392554}
-  m_LocalPosition: {x: 18.84729, y: 2.508351, z: -27.454233}
+  m_LocalRotation: {x: 0.00014899673, y: 0.9998401, z: 0.010189676, w: -0.014696361}
+  m_LocalPosition: {x: -0.15872486, y: 0.25698727, z: 9.476346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

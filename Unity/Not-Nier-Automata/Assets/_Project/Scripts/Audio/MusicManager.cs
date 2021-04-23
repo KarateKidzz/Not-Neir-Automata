@@ -51,10 +51,19 @@ public class MusicManager : GameModeUtil
     void StartInstance()
     {
         BeatCallbacks beatCallbacks = GetComponent<BeatCallbacks>();
-        beatCallbacks.SetupForEventInstance(eventInstance);
+
+        if (beatCallbacks)
+        {
+            beatCallbacks.SetupForEventInstance(eventInstance);
+        }
+        
 
         TempoSync tempoSync = GetComponent<TempoSync>();
-        tempoSync.StartTrackingBeats(eventInstance);
+
+        if (tempoSync)
+        {
+            tempoSync.StartTrackingBeats(eventInstance);
+        } 
 
         eventInstance.start();
     }

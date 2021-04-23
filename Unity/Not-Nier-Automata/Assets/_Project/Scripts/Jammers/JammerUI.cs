@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class JammerUI : GameModeUtil
 {
+    [ParamRef]
+    public string jammerParameter;
+
+    FMOD.Studio.PARAMETER_DESCRIPTION jammerParameterDescription;
+
+    int jammerNumber;
+
     string currentInput;
 
     Jammer currentJammer;
@@ -17,7 +25,34 @@ public class JammerUI : GameModeUtil
     {
         base.StartUtil(gameMode);
 
+        RuntimeManager.StudioSystem.getParameterDescriptionByName(jammerParameter, out jammerParameterDescription);
+
         Close();
+    }
+
+    public void IncrementJammerNumber()
+    {
+        jammerNumber++;
+        SetJammerParameter();
+    }
+
+    public void DecrementJammerNumber()
+    {
+        jammerNumber--;
+        if (jammerNumber < 0)
+        {
+            jammerNumber = 0;
+        }
+        SetJammerParameter();
+    }
+
+    void SetJammerParameter()
+    {
+        FMOD.RESULT result = RuntimeManager.StudioSystem.setParameterByID(jammerParameterDescription.id, jammerNumber);
+        if (result != FMOD.RESULT.OK)
+        {
+            Debug.LogError(string.Format(("[FMOD] StudioGlobalParameterTrigger failed to set parameter {0} : result = {1}"), jammerParameterDescription, result));
+        }
     }
 
     public void StartJammerInteract(Jammer jammer)

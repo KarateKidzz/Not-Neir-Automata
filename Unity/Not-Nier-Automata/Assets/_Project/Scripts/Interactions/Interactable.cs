@@ -17,7 +17,7 @@ public class Interactable : Actor, IInitialize
 
     public UnityEvent onFailedInteraction;
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         owningPawn = GetComponent<Pawn>();
     }

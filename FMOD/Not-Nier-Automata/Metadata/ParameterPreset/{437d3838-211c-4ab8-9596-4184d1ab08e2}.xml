@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{437d3838-211c-4ab8-9596-4184d1ab08e2}">
+		<property name="name">
+			<value>Jammers</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4be3c623-a925-49d9-8dc5-4a80d089a05e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d82487cb-9ffe-4e83-95ae-bd5541f42889}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d82487cb-9ffe-4e83-95ae-bd5541f42889}">
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

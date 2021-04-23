@@ -115,6 +115,20 @@ public sealed class GameManager : Singleton<GameManager>
         }
     }
 
+    public static T GetGameModeUtil<T> () where T : GameModeUtil
+    {
+        if (IsValid())
+        {
+            GameMode gameMode = Instance.GetCurrentGameMode();
+
+            if (gameMode)
+            {
+                return gameMode.GetGameModeUtil<T>();
+            }
+        }
+        return null;
+    }
+
     public void TrySpawnPlayerController()
     {
         if (!playerController)
