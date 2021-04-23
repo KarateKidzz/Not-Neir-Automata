@@ -47,6 +47,11 @@ public class JammerUI : GameModeUtil
         currentInput = "";
     }
 
+    public void PressCloseButton()
+    {
+        Close();
+    }
+
     public void UnlockJammer()
     {
         if (currentJammer)
