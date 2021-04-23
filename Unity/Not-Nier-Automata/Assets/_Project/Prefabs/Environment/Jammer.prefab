@@ -109,10 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/MX/3DMusic
+  Event: event:/MX/JammerMusic
   PlayEvent: 1
   StopEvent: 2
-  AllowFadeout: 0
+  AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params: []
