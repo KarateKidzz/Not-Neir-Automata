@@ -157,3 +157,4 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: 
     audioLine: Fier_IntroLine_09
+  useDialogueSnapshot: 1

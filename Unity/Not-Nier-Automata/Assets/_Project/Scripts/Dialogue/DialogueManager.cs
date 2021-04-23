@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class DialogueManager : GameModeUtil
 {
@@ -12,12 +13,53 @@ public class DialogueManager : GameModeUtil
         public FMODUnity.StudioVoiceEmitter currentVoice = null;
     }
 
+    [EventRef]
+    public string dialogueSnapshot;
+
+    FMOD.Studio.EventInstance dialogueSnapshotInstance;
+
+    int dialoguesUsingSnapshot;
+
     [SerializeField, ReadOnly]
     List<OngoingDialogue> scripts = new List<OngoingDialogue>();
+
+    public override void StartUtil(GameMode gameMode)
+    {
+        base.StartUtil(gameMode);
+
+        if (!string.IsNullOrEmpty(dialogueSnapshot))
+        {
+            dialogueSnapshotInstance = RuntimeManager.CreateInstance(dialogueSnapshot);
+        }
+    }
+
+    public override void EndUtil()
+    {
+        base.EndUtil();
+
+        if (dialogueSnapshotInstance.isValid())
+        {
+            dialogueSnapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            dialogueSnapshotInstance.release();
+        }
+    }
 
     public void StartDialogue(DialogueScript script)
     {
         scripts.Add(new OngoingDialogue() { script = script });
+        if (script.useDialogueSnapshot)
+        {
+            dialoguesUsingSnapshot++;
+            if (dialogueSnapshotInstance.isValid())
+            {
+                FMOD.Studio.PLAYBACK_STATE state;
+                dialogueSnapshotInstance.getPlaybackState(out state);
+                if (dialoguesUsingSnapshot > 0 && state != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    dialogueSnapshotInstance.start();
+                }
+            }
+        }
         Debug.Log($"[Dialogue Manager] Starting script {script}");
     }
 
@@ -80,6 +122,23 @@ public class DialogueManager : GameModeUtil
 
         foreach(OngoingDialogue dialogue in toRemove)
         {
+            if (dialogue.script.useDialogueSnapshot)
+            {
+                dialoguesUsingSnapshot--;
+                if (dialoguesUsingSnapshot < 0)
+                {
+                    dialoguesUsingSnapshot = 0;
+                }
+                if (dialoguesUsingSnapshot == 0)
+                {
+                    FMOD.Studio.PLAYBACK_STATE state;
+                    dialogueSnapshotInstance.getPlaybackState(out state);
+                    if (dialogueSnapshotInstance.isValid() && state != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                    {
+                        dialogueSnapshotInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    }
+                }
+            }
             scripts.Remove(dialogue);
         }
 

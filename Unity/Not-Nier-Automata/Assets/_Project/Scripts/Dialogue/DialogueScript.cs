@@ -25,4 +25,9 @@ public struct DialogueLine
 public class DialogueScript : ScriptableObject
 {
     public DialogueLine[] lines;
+
+    /// <summary>
+    /// Use the dialogue snapshot to duck some sounds and make speech easier to hear
+    /// </summary>
+    public bool useDialogueSnapshot;
 }
