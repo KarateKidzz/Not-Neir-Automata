@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Jammer : Interactable, IBeginPlay, IEndPlay
 {
     public string unlockPhrase = "1234";
+
+    public UnityEvent onUnlock;
 
     JammerUI jammerUI;
 
@@ -22,6 +25,7 @@ public class Jammer : Interactable, IBeginPlay, IEndPlay
 
     public void DisableJammer()
     {
+        onUnlock?.Invoke();
         Destory();
     }
 
