@@ -172,7 +172,7 @@ MonoBehaviour:
   onFailedInteraction:
     m_PersistentCalls:
       m_Calls: []
-  unlockPhrase: 1234
+  unlockPhrase: 5146
   onUnlock:
     m_PersistentCalls:
       m_Calls: []

@@ -28,3 +28,6 @@ MonoBehaviour:
   - AssetID: 9822a352f6fd24f2298d5c32e6341c44
     Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
       type: 3}
+  - AssetID: a08f5976dc4fc43818be2c843714cd0b
+    Object: {fileID: 4593286364634705827, guid: a08f5976dc4fc43818be2c843714cd0b,
+      type: 3}

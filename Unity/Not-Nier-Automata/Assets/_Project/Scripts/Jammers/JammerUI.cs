@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
+using DG.Tweening;
 
 public class JammerUI : GameModeUtil
 {
@@ -9,6 +10,8 @@ public class JammerUI : GameModeUtil
     public string jammerParameter;
 
     FMOD.Studio.PARAMETER_DESCRIPTION jammerParameterDescription;
+
+    FMOD.DSP channelMixDSP;
 
     int jammerNumber;
 
@@ -26,6 +29,29 @@ public class JammerUI : GameModeUtil
         base.StartUtil(gameMode);
 
         RuntimeManager.StudioSystem.getParameterDescriptionByName(jammerParameter, out jammerParameterDescription);
+
+        channelMixDSP.clearHandle();
+        if (RuntimeManager.StudioSystem.getBus("bus:/", out FMOD.Studio.Bus masterBus) == FMOD.RESULT.OK)
+        {
+            
+            if (masterBus.getChannelGroup(out FMOD.ChannelGroup channelGroup) == FMOD.RESULT.OK)
+            {
+                int numberOfDsp = -1;
+                channelGroup.getNumDSPs(out numberOfDsp);
+
+                for (int i = 0; i < numberOfDsp; i++)
+                {
+                    channelGroup.getDSP(i, out FMOD.DSP dsp);
+                    dsp.getType(out FMOD.DSP_TYPE type);
+                    if (type == FMOD.DSP_TYPE.CHANNELMIX)
+                    {
+                        channelMixDSP = dsp;
+                        break;
+                    }
+                }
+            }
+        }
+
 
         Close();
     }
@@ -52,6 +78,40 @@ public class JammerUI : GameModeUtil
         if (result != FMOD.RESULT.OK)
         {
             Debug.LogError(string.Format(("[FMOD] StudioGlobalParameterTrigger failed to set parameter {0} : result = {1}"), jammerParameterDescription, result));
+        }
+    }
+
+    float GetRightChannelVolume()
+    {
+        float result = 0f;
+        if (channelMixDSP.hasHandle())
+        {
+            channelMixDSP.getParameterFloat((int)FMOD.DSP_CHANNELMIX.GAIN_CH1, out result);
+        }
+        return result;
+    }
+
+    void SetRightChannelVolume(float volume)
+    {
+        if (channelMixDSP.hasHandle())
+        {
+            channelMixDSP.setParameterFloat((int)FMOD.DSP_CHANNELMIX.GAIN_CH1, volume);
+        }
+    }
+
+    public void MuteRightEar()
+    {
+        if (channelMixDSP.hasHandle())
+        {
+            DOTween.To(()=> GetRightChannelVolume(), value => SetRightChannelVolume(value), -80f, 2f);
+        }
+    }
+
+    public void UnmuteRightEar()
+    {
+        if (channelMixDSP.hasHandle())
+        {
+            DOTween.To(() => GetRightChannelVolume(), value => SetRightChannelVolume(value), 0f, 2f);
         }
     }
 
