@@ -24,8 +24,7 @@ public class Jammer : Interactable, IBeginPlay, IEndPlay
     }
 
     public void DisableJammer()
-    {
-        onUnlock?.Invoke();
+    {   
         Destory();
     }
 
@@ -45,7 +44,9 @@ public class Jammer : Interactable, IBeginPlay, IEndPlay
         {
             return;
         }
-        
+
+        onUnlock?.Invoke();
+
         if (jammerUI)
         {
             jammerUI.DecrementJammerNumber();
