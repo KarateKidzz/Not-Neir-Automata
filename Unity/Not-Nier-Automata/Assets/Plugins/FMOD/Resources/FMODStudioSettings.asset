@@ -358,16 +358,20 @@ MonoBehaviour:
   - BrokenRobot
   - ChildRobot
   - ChillGuy
+  - DeafGiver
   - FashionGirl
   - Fier
   - Ghoul
   - HappyGreenGuy
+  - HelpfulPasswordGiver
   - HummingRobot
   - James
   - Level01
   - Level01_Cinematic
+  - LoudMusicGiver
   - Menu
   - Misc
+  - MusicWanterGiver
   - NewYorkGuy
   - RoadmanRobot
   - Robot
