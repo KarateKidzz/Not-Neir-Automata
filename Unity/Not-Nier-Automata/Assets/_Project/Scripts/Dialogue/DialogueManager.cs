@@ -113,6 +113,10 @@ public class DialogueManager : GameModeUtil
                     Debug.Log($"[Dialogue] {speaker.gameObject.name} is saying \"{line.subtitle}\"");
                     voice.PlayProgrammerSound(line.audioLine);
                 }
+                else
+                {
+                    Debug.LogError($"[Dialogue Manager] Can't play line because {speaker.gameObject.name} doesn't have a voice!");
+                }
             }
             else
             {
