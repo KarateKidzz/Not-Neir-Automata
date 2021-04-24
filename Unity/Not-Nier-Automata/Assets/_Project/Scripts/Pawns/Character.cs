@@ -183,15 +183,12 @@ public class Character : Pawn, IPhysicsTick
         {
             if (companion.WeaponUser)
             {
-                Debug.Log("Set rate");
-
                 Weapon weapon = companion.WeaponUser.currentlyEquippedWeapon;
 
                 BeatAttackWeapon beatAttackWeapon = weapon ? weapon as BeatAttackWeapon : null;
 
                 if (beatAttackWeapon)
                 {
-                    Debug.Log("Weapon exists");
                     beatAttackWeapon.fireRate = (BeatFireRate)rate;
                 }
             }
