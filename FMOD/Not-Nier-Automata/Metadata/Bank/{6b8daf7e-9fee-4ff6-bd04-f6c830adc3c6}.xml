@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{6b8daf7e-9fee-4ff6-bd04-f6c830adc3c6}">
+		<property name="name">
+			<value>HelpfulPasswordGiver</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{50e6deef-d1d8-46f7-a591-bc01b6ce8662}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{50e6deef-d1d8-46f7-a591-bc01b6ce8662}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/HelpfulPasswordGiver</value>
+		</property>
+	</object>
+</objects>

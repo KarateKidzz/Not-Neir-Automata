@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{e8253340-eeab-4734-b511-925790e0eb92}">
+		<property name="name">
+			<value>DeafGiver</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{0570375c-3bc6-4cb6-a862-1e354f8442b6}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{0570375c-3bc6-4cb6-a862-1e354f8442b6}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/DeafGiver</value>
+		</property>
+	</object>
+</objects>

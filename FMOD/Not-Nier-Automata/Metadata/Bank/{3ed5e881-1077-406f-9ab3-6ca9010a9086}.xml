@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{3ed5e881-1077-406f-9ab3-6ca9010a9086}">
+		<property name="name">
+			<value>LoudMusicGiver</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{b08ac289-cfeb-45e6-a3c7-7d03277f39dd}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{b08ac289-cfeb-45e6-a3c7-7d03277f39dd}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/LoudMusicGiver</value>
+		</property>
+	</object>
+</objects>

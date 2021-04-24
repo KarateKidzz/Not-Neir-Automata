@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{ddb0491b-d54f-43a8-a1c2-7ca99ed7bd22}">
+		<property name="assetPath">
+			<value>DX/RobotNPC_DX/HelpfulPasswordGiver/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>
