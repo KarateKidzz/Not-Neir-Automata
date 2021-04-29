@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [SerializeField, ReadOnly]
     Interactable currentInteractable;
 
     private void OnTriggerEnter(Collider other)
     {
         GameObject go = other.gameObject;
-        currentInteractable = go.GetComponent<Interactable>();
+        Interactable interactable = go.GetComponentInParentThenChildren<Interactable>();
+        if (currentInteractable)
+        {
+            if (interactable)
+            {
+                currentInteractable = interactable;
+            }
+        }
+        else
+        {
+            currentInteractable = interactable;
+        }
     }
 
     private void OnTriggerExit(Collider other)
