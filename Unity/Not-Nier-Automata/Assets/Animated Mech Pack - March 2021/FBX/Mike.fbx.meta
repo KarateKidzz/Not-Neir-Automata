@@ -111,7 +111,12 @@ ModelImporter:
   - first:
       74: 3085827095450492783
     second: RobotArmature|Yes
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mike_Texture
+    second: {fileID: 2100000, guid: 616ee53f7a658fa44bcf28ff51b941d4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

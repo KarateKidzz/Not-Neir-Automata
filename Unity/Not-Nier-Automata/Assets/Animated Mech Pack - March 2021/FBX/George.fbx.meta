@@ -123,7 +123,12 @@ ModelImporter:
   - first:
       74: 3085827095450492783
     second: RobotArmature|Yes
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: George_Texture
+    second: {fileID: 2100000, guid: 23e492685fe34432cb0a4d068dec7198, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

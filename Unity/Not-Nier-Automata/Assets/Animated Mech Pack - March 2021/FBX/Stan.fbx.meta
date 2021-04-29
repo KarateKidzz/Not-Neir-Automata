@@ -111,7 +111,12 @@ ModelImporter:
   - first:
       74: 3085827095450492783
     second: RobotArmature|Yes
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stan_Texture
+    second: {fileID: 2100000, guid: c1ac8d4a97cd9d64fb177ae794e3e6a9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

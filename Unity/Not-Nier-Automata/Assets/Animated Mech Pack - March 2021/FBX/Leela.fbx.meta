@@ -111,7 +111,12 @@ ModelImporter:
   - first:
       74: 3085827095450492783
     second: RobotArmature|Yes
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leela_Texture
+    second: {fileID: 2100000, guid: cb3a02cc7736241f48f9d4d0b27f36a0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
