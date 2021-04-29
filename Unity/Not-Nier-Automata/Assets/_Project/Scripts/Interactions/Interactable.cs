@@ -6,7 +6,6 @@ using UnityEngine.Events;
 /// <summary>
 /// Defines an object that can be interacted with by the player
 /// </summary>
-[RequireComponent(typeof(Pawn))]
 public class Interactable : Actor, IInitialize
 {
     protected Pawn owningPawn;
