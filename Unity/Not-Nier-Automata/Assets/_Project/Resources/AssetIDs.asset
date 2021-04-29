@@ -31,3 +31,5 @@ MonoBehaviour:
   - AssetID: a08f5976dc4fc43818be2c843714cd0b
     Object: {fileID: 4593286364634705827, guid: a08f5976dc4fc43818be2c843714cd0b,
       type: 3}
+  - AssetID: e044392dd6923425da10a66c17a69e4e
+    Object: {fileID: 0}

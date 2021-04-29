@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 2642324445707300647}
   - component: {fileID: 2642324445707300646}
   - component: {fileID: 2642324445707300645}
+  - component: {fileID: 9222830073256170494}
+  - component: {fileID: 3225412153280338565}
+  - component: {fileID: 4461177583421184896}
+  - component: {fileID: 9139833050779313832}
   m_Layer: 8
   m_Name: George
   m_TagString: Untagged
@@ -89,8 +93,76 @@ MonoBehaviour:
   onFailedInteraction:
     m_PersistentCalls:
       m_Calls: []
---- !u!64 &2642324445072026381
-MeshCollider:
+--- !u!114 &9222830073256170494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642324445707300643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedGuid: 
+--- !u!114 &3225412153280338565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642324445707300643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0bc17cd8457404184a01e3aa05565a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: e044392dd6923425da10a66c17a69e4e
+  guidComponent: {fileID: 0}
+--- !u!114 &4461177583421184896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642324445707300643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/DX/RobotVoice
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  OverridePlayingEvents: 1
+  IgnoreNewPlays: 0
+  programmerSoundKeys: []
+  playOrder: 0
+--- !u!114 &9139833050779313832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642324445707300643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 7
+  UnloadEvent: 8
+  Banks:
+  - HelpfulPasswordGiver
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!65 &7066519223932089238
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -99,10 +171,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 4.38, y: 6.44, z: 2.21}
+  m_Center: {x: 0, y: 3.18, z: 0.36}
 --- !u!1001 &2642324445072026378
 PrefabInstance:
   m_ObjectHideFlags: 0

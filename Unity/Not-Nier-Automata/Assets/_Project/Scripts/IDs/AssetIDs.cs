@@ -157,7 +157,10 @@ public class AssetIDs : ScriptableObject
                 return false;
             }
 
-            Debug.LogError($"Old Object for ID and new object don't match. Old: {currentObject}. New {setObject}");
+            if (currentObject != null)
+            {
+                Debug.LogError($"Old Object for ID and new object don't match. Old: {currentObject}. New {setObject}");
+            } 
 
             assetsIDs[index] = new UniquePair() { Object = setObject, AssetID = id };
             return true;
