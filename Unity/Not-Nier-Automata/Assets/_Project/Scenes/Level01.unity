@@ -9375,7 +9375,7 @@ PrefabInstance:
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
@@ -9384,9 +9384,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
+        type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 325507003}
+    - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 325507004}
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -9394,8 +9404,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
+        type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UnmuteRightEar
       objectReference: {fileID: 0}
     - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
@@ -9407,6 +9427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: DialogueScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2642324445707300645, guid: e044392dd6923425da10a66c17a69e4e,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9222830073256170494, guid: e044392dd6923425da10a66c17a69e4e,
         type: 3}
