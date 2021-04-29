@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Generic class that can be attached to game modes to provide additional behaviour like music or combat.
 /// </summary>
-public class GameModeUtil : MonoBehaviour
+public class GameModeUtil : Actor
 {
     protected GameMode owningGameMode;
 

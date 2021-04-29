@@ -15,23 +15,23 @@ MonoBehaviour:
   lines:
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 38ce112ff8e46c438d5771f4eb148358
-      cachedName: One Ear Password Giver
-      cachedScene: {fileID: 102900000, guid: aee43144f2f334971b57bff05658f5b1, type: 3}
+      serializedGuid: baa77c0042878149b8c7e3dc716129fa
+      cachedName: Right Ear Giver
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: Dx_DeadGiver_InRightEar
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 38ce112ff8e46c438d5771f4eb148358
-      cachedName: One Ear Password Giver
-      cachedScene: {fileID: 102900000, guid: aee43144f2f334971b57bff05658f5b1, type: 3}
+      serializedGuid: baa77c0042878149b8c7e3dc716129fa
+      cachedName: Right Ear Giver
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: Dx_DeadGiver_Passcode
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 38ce112ff8e46c438d5771f4eb148358
-      cachedName: One Ear Password Giver
-      cachedScene: {fileID: 102900000, guid: aee43144f2f334971b57bff05658f5b1, type: 3}
+      serializedGuid: baa77c0042878149b8c7e3dc716129fa
+      cachedName: Right Ear Giver
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: Dx_DeadGiver_DidYouGetThat
   useDialogueSnapshot: 0

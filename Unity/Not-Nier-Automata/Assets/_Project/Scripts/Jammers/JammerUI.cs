@@ -4,7 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using DG.Tweening;
 
-public class JammerUI : GameModeUtil
+public class JammerUI : GameModeUtil, IInitialize
 {
     [ParamRef]
     public string jammerParameter;
@@ -28,13 +28,19 @@ public class JammerUI : GameModeUtil
     {
         base.StartUtil(gameMode);
 
+        Close();
+    }
+
+    public void Initialize()
+    {
         RuntimeManager.StudioSystem.getParameterDescriptionByName(jammerParameter, out jammerParameterDescription);
 
         channelMixDSP.clearHandle();
         if (RuntimeManager.StudioSystem.getBus("bus:/", out FMOD.Studio.Bus masterBus) == FMOD.RESULT.OK)
         {
-            
-            if (masterBus.getChannelGroup(out FMOD.ChannelGroup channelGroup) == FMOD.RESULT.OK)
+            masterBus.lockChannelGroup();
+            FMOD.RESULT result = masterBus.getChannelGroup(out FMOD.ChannelGroup channelGroup);
+            if (result == FMOD.RESULT.OK)
             {
                 int numberOfDsp = -1;
                 channelGroup.getNumDSPs(out numberOfDsp);
@@ -49,11 +55,22 @@ public class JammerUI : GameModeUtil
                         break;
                     }
                 }
+                if (!channelMixDSP.hasHandle())
+                {
+                    Debug.LogError("No dsp");
+                }
             }
+            else
+            {
+                Debug.LogError("No channel group");
+                Debug.LogError(result);
+            }
+            masterBus.unlockChannelGroup();
         }
-
-
-        Close();
+        else
+        {
+            Debug.LogError("No master");
+        }
     }
 
     public void IncrementJammerNumber()
@@ -104,6 +121,10 @@ public class JammerUI : GameModeUtil
         if (channelMixDSP.hasHandle())
         {
             DOTween.To(()=> GetRightChannelVolume(), value => SetRightChannelVolume(value), -80f, 2f);
+        }
+        else
+        {
+            Debug.LogError("DID NOT GET DSP");
         }
     }
 
