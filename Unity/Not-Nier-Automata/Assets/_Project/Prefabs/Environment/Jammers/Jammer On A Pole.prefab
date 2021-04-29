@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4307694370759776460}
   - component: {fileID: 4307694370759776463}
   - component: {fileID: 4307694370759776462}
-  - component: {fileID: 4307694370759776449}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -879,20 +878,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4307694370759776451}
   m_Mesh: {fileID: 0}
---- !u!64 &4307694370759776449
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4307694370759776451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4307694370963208547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1063,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Jammer Cone
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3374285640816364609, guid: 29245d3e768a44fd9a82a9f62220ce80, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29245d3e768a44fd9a82a9f62220ce80, type: 3}
 --- !u!4 &1521055438147157589 stripped
 Transform:
@@ -1183,7 +1169,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large Jammer Cone (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3374285640816364609, guid: 29245d3e768a44fd9a82a9f62220ce80, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29245d3e768a44fd9a82a9f62220ce80, type: 3}
 --- !u!4 &1521055437997303647 stripped
 Transform:
