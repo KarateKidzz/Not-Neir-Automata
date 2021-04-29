@@ -15,9 +15,9 @@ MonoBehaviour:
   lines:
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 536141c5ef746245ba886a82ce70877c
-      cachedName: Too Loud Password Giver
-      cachedScene: {fileID: 102900000, guid: aee43144f2f334971b57bff05658f5b1, type: 3}
+      serializedGuid: f744ee64d750264faa46c6e08ab76677
+      cachedName: George (1)
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: Dx_LoudMusicGiver_TooLoud
   useDialogueSnapshot: 0
