@@ -63,6 +63,13 @@ public class DialogueManager : GameModeUtil
         Debug.Log($"[Dialogue Manager] Starting script {script}");
     }
 
+    public void SkipAllDialogue()
+    {
+        Debug.Log($"[Dialogue Manager] Skipping all dialogue");
+
+        toRemove.AddRange(scripts);
+    }
+
     List<OngoingDialogue> toRemove = new List<OngoingDialogue>();
 
     public override void UpdateUtil()

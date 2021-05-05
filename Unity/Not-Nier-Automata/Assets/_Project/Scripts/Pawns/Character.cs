@@ -36,6 +36,7 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["FireRate3"].performed += FireRate3;
         inputComponent.actions["Pause"].performed += Pause;
         inputComponent.actions["Interact"].performed += Interact;
+        inputComponent.actions["Skip Dialogue"].performed += SkipDialogue;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["Sprint"].canceled += Sprint;
@@ -46,6 +47,7 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["FireRate3"].canceled += FireRate3;
         inputComponent.actions["Pause"].canceled += Pause;
         inputComponent.actions["Interact"].canceled += Interact;
+        inputComponent.actions["Skip Dialogue"].canceled += SkipDialogue;
     }
 
     public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
@@ -59,6 +61,7 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["FireRate3"].performed -= FireRate3;
         inputComponent.actions["Pause"].performed -= Pause;
         inputComponent.actions["Interact"].performed -= Interact;
+        inputComponent.actions["Skip Dialogue"].performed -= SkipDialogue;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
@@ -69,6 +72,7 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["FireRate3"].canceled -= FireRate3;
         inputComponent.actions["Pause"].canceled -= Pause;
         inputComponent.actions["Interact"].canceled -= Interact;
+        inputComponent.actions["Skip Dialogue"].canceled -= SkipDialogue;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -207,6 +211,16 @@ public class Character : Pawn, IPhysicsTick
             {
                 GameManager.Instance.PauseGame(true);
             }
+        }
+    }
+
+    public void SkipDialogue(InputAction.CallbackContext context)
+    {
+        DialogueManager dialogueManager = GameManager.GetGameModeUtil<DialogueManager>();
+
+        if (dialogueManager)
+        {
+            dialogueManager.SkipAllDialogue();
         }
     }
 
