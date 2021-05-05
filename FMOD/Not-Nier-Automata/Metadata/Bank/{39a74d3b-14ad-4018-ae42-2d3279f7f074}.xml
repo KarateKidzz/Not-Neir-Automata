@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{39a74d3b-14ad-4018-ae42-2d3279f7f074}">
+		<property name="name">
+			<value>Keith</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{c1aa0a62-edb3-4555-a013-57b0b45a2714}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{c1aa0a62-edb3-4555-a013-57b0b45a2714}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/Keith</value>
+		</property>
+	</object>
+</objects>

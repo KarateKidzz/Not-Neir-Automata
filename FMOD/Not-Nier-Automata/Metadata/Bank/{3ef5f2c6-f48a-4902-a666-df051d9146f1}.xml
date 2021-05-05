@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{3ef5f2c6-f48a-4902-a666-df051d9146f1}">
+		<property name="name">
+			<value>Jammer</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{4f9c34e7-5dd7-44ab-9f22-8cb081babb72}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{4f9c34e7-5dd7-44ab-9f22-8cb081babb72}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/Jammer</value>
+		</property>
+	</object>
+</objects>
