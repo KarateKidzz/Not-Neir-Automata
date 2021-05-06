@@ -31,6 +31,13 @@ public class JammerUI : GameModeUtil, IInitialize
         Close();
     }
 
+    public override void EndUtil()
+    {
+        base.EndUtil();
+
+        UnmuteRightEar();
+    }
+
     public void Initialize()
     {
         RuntimeManager.StudioSystem.getParameterDescriptionByName(jammerParameter, out jammerParameterDescription);
@@ -120,7 +127,7 @@ public class JammerUI : GameModeUtil, IInitialize
     {
         if (channelMixDSP.hasHandle())
         {
-            DOTween.To(()=> GetRightChannelVolume(), value => SetRightChannelVolume(value), -80f, 2f);
+            DOTween.To(()=> GetRightChannelVolume(), value => SetRightChannelVolume(value), -80f, 5f);
         }
         else
         {
