@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{5f274adf-f354-439d-b935-97abd4fd291f}">
+		<property name="assetPath">
+			<value>DX/DX_DELT-A/Dx_DELT-A_Quest4_ Line1.sfk</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>
