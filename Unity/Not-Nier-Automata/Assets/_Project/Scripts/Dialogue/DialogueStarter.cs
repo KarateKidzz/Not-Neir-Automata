@@ -33,31 +33,19 @@ public class DialogueStarter : EventHandler, IBeginPlay
     {
         if (playEvent == gameEvent)
         {
-            if (!playing)
-            {
-                PlayDialogue();
-            }
-
-            if (gameEvent == EmitterGameEvent.TriggerEnter)
-            {
-                playing = true;
-            }
-
-            if (gameEvent == EmitterGameEvent.TriggerExit)
-            {
-                playing = false;
-            }
+            PlayDialogue();
         }
     }
-
-    bool playing;
 
     public void PlayDialogue()
     {
         DialogueManager dialogueManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<DialogueManager>();
         if (dialogueManager != null)
         {
-            dialogueManager.StartDialogue(script);
+            if (!dialogueManager.IsPlayingDialogueScript(script))
+            {
+                dialogueManager.StartDialogue(script);
+            }
         }
         else
         {

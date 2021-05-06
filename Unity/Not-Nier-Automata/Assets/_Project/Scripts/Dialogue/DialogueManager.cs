@@ -44,6 +44,11 @@ public class DialogueManager : GameModeUtil
         }
     }
 
+    public bool IsPlayingDialogueScript(DialogueScript script)
+    {
+        return scripts.Exists(x => x.script == script);
+    }
+
     public void StartDialogue(DialogueScript script)
     {
         scripts.Add(new OngoingDialogue() { script = script });
