@@ -35,6 +35,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2531539109141548257}
+  - {fileID: 5898664764246659506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,17 +133,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   Event: event:/DX/RobotVoice
-  PlayEvent: 0
+  PlayEvent: 3
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
   OverridePlayingEvents: 1
   IgnoreNewPlays: 0
-  programmerSoundKeys: []
-  playOrder: 0
+  programmerSoundKeys:
+  - QUEST1_KIETH One Shot
+  - QUEST1_KIETH One Shot2
+  - QUEST1_KIETH One Shot3
+  - QUEST1_KIETH One Shot4
+  playOrder: 1
 --- !u!114 &9139833050779313832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +179,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.38, y: 6.44, z: 2.21}
   m_Center: {x: 0, y: 3.18, z: 0.36}
+--- !u!1 &7603515713736391880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5898664764246659506}
+  - component: {fileID: 263306266324906727}
+  m_Layer: 8
+  m_Name: Dialogue Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5898664764246659506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603515713736391880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.377, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2642324445707300644}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &263306266324906727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603515713736391880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2642324445072026378
 PrefabInstance:
   m_ObjectHideFlags: 0
