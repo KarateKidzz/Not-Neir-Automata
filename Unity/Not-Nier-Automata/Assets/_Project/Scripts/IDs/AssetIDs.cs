@@ -49,12 +49,6 @@ public class AssetIDs : ScriptableObject
     private static AssetIDs instance = null;
     private static bool isInitializing = false;
 
-    private static Comparer<UniquePair> orderUniquePairsByAssetId = Comparer<UniquePair>.Create(
-    (x, y) => x.AssetID.CompareTo(y.AssetID));
-
-    private static Comparer<RuntimeAssets> orderRuntimeAssetsByAssetId = Comparer<RuntimeAssets>.Create(
-        (x, y) => x.AssetID.CompareTo(y.AssetID));
-
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
     {
@@ -113,9 +107,9 @@ public class AssetIDs : ScriptableObject
 
         string assetGUID = uniqueAsset.ID;
 
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == assetGUID);
 
-        if (index >= 0)
+        if (runtimeIDs.Exists(x => x.AssetID == assetGUID))
         {
             runtimeIDs[index].Instances.Add(uniqueAsset);
         }
@@ -137,7 +131,7 @@ public class AssetIDs : ScriptableObject
 
         string assetGUID = uniqueAsset.ID;
 
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == assetGUID);
 
         if (index >= 0)
         {
@@ -148,7 +142,7 @@ public class AssetIDs : ScriptableObject
 
     public bool Set(string id, Object setObject)
     {
-        int index = assetsIDs.BinarySearch(new UniquePair { AssetID = id }, orderUniquePairsByAssetId);
+        int index = assetsIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             Object currentObject = assetsIDs[index].Object;
@@ -175,7 +169,7 @@ public class AssetIDs : ScriptableObject
 
     public Object GetPrefabObjectOfID(string id)
     {
-        int index = assetsIDs.BinarySearch(new UniquePair { AssetID = id }, orderUniquePairsByAssetId);
+        int index = assetsIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             return assetsIDs[index].Object;
@@ -185,7 +179,7 @@ public class AssetIDs : ScriptableObject
 
     public List<UniqueAsset> GetInstancesOfID(string id)
     {
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets { AssetID = id }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             return runtimeIDs[index].Instances;
