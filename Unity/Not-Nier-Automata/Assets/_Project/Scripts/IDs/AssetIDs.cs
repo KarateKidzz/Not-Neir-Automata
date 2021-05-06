@@ -49,17 +49,12 @@ public class AssetIDs : ScriptableObject
     private static AssetIDs instance = null;
     private static bool isInitializing = false;
 
-    private static Comparer<UniquePair> orderUniquePairsByAssetId = Comparer<UniquePair>.Create(
-    (x, y) => x.AssetID.CompareTo(y.AssetID));
-
-    private static Comparer<RuntimeAssets> orderRuntimeAssetsByAssetId = Comparer<RuntimeAssets>.Create(
-        (x, y) => x.AssetID.CompareTo(y.AssetID));
-
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
     {
         AssetIDs tempInstance = Instance;
         Debug.Assert(tempInstance);
+        tempInstance.ClearRuntimeInstances();
     }
 
     public static AssetIDs Instance
@@ -113,7 +108,7 @@ public class AssetIDs : ScriptableObject
 
         string assetGUID = uniqueAsset.ID;
 
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == assetGUID);
 
         if (index >= 0)
         {
@@ -137,7 +132,7 @@ public class AssetIDs : ScriptableObject
 
         string assetGUID = uniqueAsset.ID;
 
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets() { AssetID = assetGUID }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == assetGUID);
 
         if (index >= 0)
         {
@@ -148,7 +143,7 @@ public class AssetIDs : ScriptableObject
 
     public bool Set(string id, Object setObject)
     {
-        int index = assetsIDs.BinarySearch(new UniquePair { AssetID = id }, orderUniquePairsByAssetId);
+        int index = assetsIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             Object currentObject = assetsIDs[index].Object;
@@ -175,7 +170,7 @@ public class AssetIDs : ScriptableObject
 
     public Object GetPrefabObjectOfID(string id)
     {
-        int index = assetsIDs.BinarySearch(new UniquePair { AssetID = id }, orderUniquePairsByAssetId);
+        int index = assetsIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             return assetsIDs[index].Object;
@@ -185,7 +180,7 @@ public class AssetIDs : ScriptableObject
 
     public List<UniqueAsset> GetInstancesOfID(string id)
     {
-        int index = runtimeIDs.BinarySearch(new RuntimeAssets { AssetID = id }, orderRuntimeAssetsByAssetId);
+        int index = runtimeIDs.FindIndex(0, x => x.AssetID == id);
         if (index >= 0)
         {
             return runtimeIDs[index].Instances;
@@ -193,13 +188,84 @@ public class AssetIDs : ScriptableObject
         return null;
     }
 
+    /// <summary>
+    /// Get first valid runtime object with this id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public UniqueAsset GetFirstInstanceOfID(string id)
     {
         List<UniqueAsset> allInstances = GetInstancesOfID(id);
         if (allInstances != null && allInstances.Count > 0)
         {
-            return allInstances[0];
+            if (allInstances.Count == 0)
+            {
+                return allInstances[0];
+            }
+            foreach(UniqueAsset uniqueAsset in allInstances)
+            {
+                if (uniqueAsset != null)
+                {
+                    return uniqueAsset;
+                }
+            }
         }
         return null;
+    }
+
+    /// <summary>
+    /// Clears all runtime instances. Should be called at the start of the game
+    /// </summary>
+    public void ClearRuntimeInstances()
+    {
+        runtimeIDs.Clear();
+
+        Debug.Log("[Asset IDs] Cleared runtime instances");
+    }
+
+#if UNITY_EDITOR
+    [MenuItem("Tools/Clean IDs")]
+#endif
+    public static void CleanAssetIDs()
+    {
+        Debug.Log("[Asset IDs] Cleaning assets");
+
+        Instance.ClearRuntimeInstances();
+
+        //List<UniquePair> assetsIDs
+        HashSet<string> foundGuids = new HashSet<string>();
+        HashSet<Object> foundObjects = new HashSet<Object>();
+        int totalRemoved = 0;
+        for (int i = Instance.assetsIDs.Count - 1; i >= 0; i--)
+        { 
+            UniquePair pair = Instance.assetsIDs[i];
+
+            GUID outGuid;
+            if (!GUID.TryParse(pair.AssetID, out outGuid) || pair.Object == null)
+            {
+                Debug.LogWarning($"[Asset IDs] Removing asset pair with either invalid guid or null object");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+
+            if (!foundGuids.Add(pair.AssetID))
+            {
+                Debug.LogWarning($"[Asset IDs] ID '{pair.AssetID} already found. Removing this duplicate");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+
+            if (!foundObjects.Add(pair.Object))
+            {
+                Debug.LogWarning($"[Asset IDs] Object '{pair.Object} already found. Removing this duplicate");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+        }
+
+        Debug.Log($"[Asset IDs] Removed a total of {totalRemoved} invalid asset ids");
     }
 }

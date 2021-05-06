@@ -19,33 +19,21 @@ MonoBehaviour:
   - AssetID: f62327f52756a4f7fa9b6701f78bff36
     Object: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
-  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
-    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
-      type: 3}
-  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
-    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
-      type: 3}
-  - AssetID: 9822a352f6fd24f2298d5c32e6341c44
-    Object: {fileID: 1374130387016223905, guid: 9822a352f6fd24f2298d5c32e6341c44,
-      type: 3}
   - AssetID: a08f5976dc4fc43818be2c843714cd0b
     Object: {fileID: 4593286364634705827, guid: a08f5976dc4fc43818be2c843714cd0b,
       type: 3}
+  - AssetID: 0d8115a935dd749208326279926e885d
+    Object: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
+      type: 3}
+  - AssetID: 0d8115a935dd749208326279926e885d
+    Object: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
+      type: 3}
+  - AssetID: 0d8115a935dd749208326279926e885d
+    Object: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
+      type: 3}
+  - AssetID: 0d8115a935dd749208326279926e885d
+    Object: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
+      type: 3}
   - AssetID: e044392dd6923425da10a66c17a69e4e
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
-  - AssetID: 453893153825b4aaa9818723407eed18
-    Object: {fileID: 0}
+    Object: {fileID: 3225412153280338565, guid: e044392dd6923425da10a66c17a69e4e,
+      type: 3}

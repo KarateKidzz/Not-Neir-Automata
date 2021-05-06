@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f760919d-2043-4a3c-bd1b-0e181e8dd580}">
+		<property name="assetPath">
+			<value>DX/RobotNPC_DX/Keith/QUEST1_KIETH Line2_ALT.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8935624999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>

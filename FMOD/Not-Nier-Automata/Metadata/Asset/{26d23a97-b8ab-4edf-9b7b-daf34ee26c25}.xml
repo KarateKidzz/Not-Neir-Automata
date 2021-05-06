@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{26d23a97-b8ab-4edf-9b7b-daf34ee26c25}">
+		<property name="assetPath">
+			<value>DX/RobotNPC_DX/Keith/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
+		</relationship>
+	</object>
+</objects>

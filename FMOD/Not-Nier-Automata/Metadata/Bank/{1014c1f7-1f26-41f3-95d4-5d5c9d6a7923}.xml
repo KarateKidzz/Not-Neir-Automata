@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{1014c1f7-1f26-41f3-95d4-5d5c9d6a7923}">
+		<property name="name">
+			<value>CR33P-0</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{723d3e51-85d9-431a-ae2c-c9bc8f1055cc}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{723d3e51-85d9-431a-ae2c-c9bc8f1055cc}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/CR33P-0</value>
+		</property>
+	</object>
+</objects>

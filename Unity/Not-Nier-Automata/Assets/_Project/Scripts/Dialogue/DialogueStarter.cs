@@ -42,7 +42,10 @@ public class DialogueStarter : EventHandler, IBeginPlay
         DialogueManager dialogueManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<DialogueManager>();
         if (dialogueManager != null)
         {
-            dialogueManager.StartDialogue(script);
+            if (!dialogueManager.IsPlayingDialogueScript(script))
+            {
+                dialogueManager.StartDialogue(script);
+            }
         }
         else
         {
