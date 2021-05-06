@@ -198,7 +198,17 @@ public class AssetIDs : ScriptableObject
         List<UniqueAsset> allInstances = GetInstancesOfID(id);
         if (allInstances != null && allInstances.Count > 0)
         {
-            return allInstances[0];
+            if (allInstances.Count == 0)
+            {
+                return allInstances[0];
+            }
+            foreach(UniqueAsset uniqueAsset in allInstances)
+            {
+                if (uniqueAsset != null)
+                {
+                    return uniqueAsset;
+                }
+            }
         }
         return null;
     }
