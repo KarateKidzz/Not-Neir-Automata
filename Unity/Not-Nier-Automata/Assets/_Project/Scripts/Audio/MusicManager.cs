@@ -11,7 +11,7 @@ public enum MusicState
     Combat
 }
 
-public class MusicManager : GameModeUtil
+public class MusicManager : GameModeUtil, IBeginPlay
 {
     [EventRef]
     public string combatMusicEvent;
@@ -26,7 +26,7 @@ public class MusicManager : GameModeUtil
 
     EventInstance eventInstance;
 
-    private void Start()
+    public void BeginPlay()
     {
         StartCoroutine(StartExplorationAfterWait(2f));
     }
