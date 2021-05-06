@@ -12,5 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
   m_Name: Ear Muted
   m_EditorClassIdentifier: 
-  lines: []
-  useDialogueSnapshot: 0
+  lines:
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: 
+    audioLine: QUEST2_FIER Line1
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: 
+    audioLine: QUEST2_FIER Line2
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: 
+    audioLine: QUEST1_AUTO Line5
+  useDialogueSnapshot: 1
