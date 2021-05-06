@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelTransitionOnTrigger : MonoBehaviour
+public class LevelTransitionOnTrigger : Actor
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string levelToLoad;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Debug.Log("ON TRIGGER");
+        Debug.Log(other.tag);
+        if (other.CompareTag("Player") || (other.attachedRigidbody && other.attachedRigidbody.CompareTag("Player")))
+        {
+            Debug.Log("IS PLAYER");
+            GameManager.Instance.LevelLoader.LoadScene(levelToLoad);
+        }
     }
 }
