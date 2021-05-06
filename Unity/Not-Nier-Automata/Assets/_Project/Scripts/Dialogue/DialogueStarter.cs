@@ -33,9 +33,24 @@ public class DialogueStarter : EventHandler, IBeginPlay
     {
         if (playEvent == gameEvent)
         {
-            PlayDialogue();
+            if (!playing)
+            {
+                PlayDialogue();
+            }
+
+            if (gameEvent == EmitterGameEvent.TriggerEnter)
+            {
+                playing = true;
+            }
+
+            if (gameEvent == EmitterGameEvent.TriggerExit)
+            {
+                playing = false;
+            }
         }
     }
+
+    bool playing;
 
     public void PlayDialogue()
     {
