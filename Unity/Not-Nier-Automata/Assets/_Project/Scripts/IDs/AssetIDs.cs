@@ -54,6 +54,7 @@ public class AssetIDs : ScriptableObject
     {
         AssetIDs tempInstance = Instance;
         Debug.Assert(tempInstance);
+        tempInstance.ClearRuntimeInstances();
     }
 
     public static AssetIDs Instance
@@ -105,16 +106,20 @@ public class AssetIDs : ScriptableObject
             return;
         }
 
+        Debug.Log($"[Asset IDs] Adding {uniqueAsset} as runtime instance");
+
         string assetGUID = uniqueAsset.ID;
 
         int index = runtimeIDs.FindIndex(0, x => x.AssetID == assetGUID);
 
-        if (runtimeIDs.Exists(x => x.AssetID == assetGUID))
+        if (index >= 0)
         {
+            Debug.Log($"[Asset IDs] Appending entry for {uniqueAsset.ID} and the new runtime object {uniqueAsset.gameObject}");
             runtimeIDs[index].Instances.Add(uniqueAsset);
         }
         else
         {
+            Debug.Log($"[Asset IDs] Creating new entry for {uniqueAsset.ID} objects");
             List<UniqueAsset> guidReferences = new List<UniqueAsset>();
             guidReferences.Add(uniqueAsset);
             runtimeIDs.Add(new RuntimeAssets() { AssetID = assetGUID, Instances = guidReferences });
@@ -218,6 +223,8 @@ public class AssetIDs : ScriptableObject
     public void ClearRuntimeInstances()
     {
         runtimeIDs.Clear();
+
+        Debug.Log("[Asset IDs] Cleared runtime instances");
     }
 
 #if UNITY_EDITOR

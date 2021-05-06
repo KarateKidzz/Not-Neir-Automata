@@ -37,12 +37,11 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: 
     audioLine: QUEST2_FIER Line4
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
+  - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
+      serializedGuid: d240251d8b3e154891686e256b8a9354
+      cachedName: Jammer Talker
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: QUEST2_Jammer Line1
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
@@ -53,12 +52,11 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: 
     audioLine: QUEST2_FIER Line5
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
+  - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
+      serializedGuid: d240251d8b3e154891686e256b8a9354
+      cachedName: Jammer Talker
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: QUEST2_Jammer Line2
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
@@ -69,12 +67,11 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: 
     audioLine: QUEST2_FIER Line6
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
+  - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
+      serializedGuid: d240251d8b3e154891686e256b8a9354
+      cachedName: Jammer Talker
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
     subtitle: 
     audioLine: QUEST2_Jammer Line3
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
