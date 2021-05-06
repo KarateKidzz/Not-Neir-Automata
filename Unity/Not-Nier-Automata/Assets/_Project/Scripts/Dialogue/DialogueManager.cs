@@ -92,11 +92,12 @@ public class DialogueManager : GameModeUtil
                 DialogueLine line = dialogue.script.lines[dialogue.currentLine];
 
                 UniqueAsset uniqueAsset = line.staticSpeaker;
+                UniqueAsset runtimeSpeaker = null;
                 GameObject speaker;
 
                 if (uniqueAsset != null)
                 {
-                    UniqueAsset runtimeSpeaker = AssetIDs.Instance.GetFirstInstanceOfID(uniqueAsset.ID);
+                    runtimeSpeaker = AssetIDs.Instance.GetFirstInstanceOfID(uniqueAsset.ID);
                     speaker = runtimeSpeaker ? runtimeSpeaker.gameObject : null;
                 }
                 else
@@ -106,6 +107,7 @@ public class DialogueManager : GameModeUtil
 
                 if (speaker == null)
                 {
+                    Debug.LogError($"[Dialogue Manager] Could not find a speaker for this line. Static Speaker: {uniqueAsset}. Runtime Speaker: {runtimeSpeaker}. Line: {line}");
                     continue;
                 }
 
