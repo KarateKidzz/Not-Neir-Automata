@@ -61,6 +61,7 @@ public sealed class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
+        AssetIDs.Instance.ClearRuntimeInstances();
         levelLoader.LoadFirstLevel();
     }
 

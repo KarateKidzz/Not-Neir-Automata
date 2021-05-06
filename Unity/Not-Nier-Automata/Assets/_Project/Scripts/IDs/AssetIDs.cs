@@ -193,6 +193,11 @@ public class AssetIDs : ScriptableObject
         return null;
     }
 
+    /// <summary>
+    /// Get first valid runtime object with this id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public UniqueAsset GetFirstInstanceOfID(string id)
     {
         List<UniqueAsset> allInstances = GetInstancesOfID(id);
@@ -211,5 +216,59 @@ public class AssetIDs : ScriptableObject
             }
         }
         return null;
+    }
+
+    /// <summary>
+    /// Clears all runtime instances. Should be called at the start of the game
+    /// </summary>
+    public void ClearRuntimeInstances()
+    {
+        runtimeIDs.Clear();
+    }
+
+#if UNITY_EDITOR
+    [MenuItem("Tools/Clean IDs")]
+#endif
+    public static void CleanAssetIDs()
+    {
+        Debug.Log("[Asset IDs] Cleaning assets");
+
+        Instance.ClearRuntimeInstances();
+
+        //List<UniquePair> assetsIDs
+        HashSet<string> foundGuids = new HashSet<string>();
+        HashSet<Object> foundObjects = new HashSet<Object>();
+        int totalRemoved = 0;
+        for (int i = Instance.assetsIDs.Count - 1; i >= 0; i--)
+        { 
+            UniquePair pair = Instance.assetsIDs[i];
+
+            GUID outGuid;
+            if (!GUID.TryParse(pair.AssetID, out outGuid) || pair.Object == null)
+            {
+                Debug.LogWarning($"[Asset IDs] Removing asset pair with either invalid guid or null object");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+
+            if (!foundGuids.Add(pair.AssetID))
+            {
+                Debug.LogWarning($"[Asset IDs] ID '{pair.AssetID} already found. Removing this duplicate");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+
+            if (!foundObjects.Add(pair.Object))
+            {
+                Debug.LogWarning($"[Asset IDs] Object '{pair.Object} already found. Removing this duplicate");
+                Instance.assetsIDs.RemoveAt(i);
+                totalRemoved++;
+                continue;
+            }
+        }
+
+        Debug.Log($"[Asset IDs] Removed a total of {totalRemoved} invalid asset ids");
     }
 }
