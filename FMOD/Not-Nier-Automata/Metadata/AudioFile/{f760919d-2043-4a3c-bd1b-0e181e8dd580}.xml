@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{f760919d-2043-4a3c-bd1b-0e181e8dd580}">
 		<property name="assetPath">
-			<value>DX/RobotNPC_DX/Keith/QUEST1_KIETH Line 2ALT.wav</value>
+			<value>DX/RobotNPC_DX/Keith/QUEST1_KIETH Line2_ALT.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
