@@ -102,6 +102,8 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     IEnumerator StartExplorationAfterWait(float wait)
     {
+        CurrentEventIndex = combatMusicEvents.Length;
+
         yield return new WaitForSeconds(wait);
 
         if (!eventInstance.isValid())
