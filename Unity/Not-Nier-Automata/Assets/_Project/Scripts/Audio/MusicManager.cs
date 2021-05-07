@@ -26,6 +26,8 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     EventInstance eventInstance;
 
+    public EventInstance EventInstance => eventInstance;
+
     public void BeginPlay()
     {
         StartCoroutine(StartExplorationAfterWait(2f));

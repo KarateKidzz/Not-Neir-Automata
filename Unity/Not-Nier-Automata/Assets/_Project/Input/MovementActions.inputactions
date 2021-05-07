@@ -148,6 +148,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "OpenCompanionUI",
+                    "type": "Button",
+                    "id": "918c7ef6-beef-46ff-b2a7-3785fe5d1392",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -599,6 +607,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Skip Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5445fe9b-d2f3-4a34-bd96-1678850585b8",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OpenCompanionUI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

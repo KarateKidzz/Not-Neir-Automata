@@ -47,6 +47,7 @@ public class CompanionSpawner : Actor, IBeginPlay, IInitialize
         {
             foreach (Companion companion in spawnedCompanions)
             {
+                companion.Initialize();
                 pawn.AddCompanion(companion);
             }
         }    

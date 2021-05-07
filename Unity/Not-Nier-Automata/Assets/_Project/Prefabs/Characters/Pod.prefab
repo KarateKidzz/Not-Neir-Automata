@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 5
   followOffset: {x: 1.13, y: 2, z: -1}
+  companionUIPrefab: {fileID: 5398117240004226536, guid: e604bd99e28354d20b17db877297bc91,
+    type: 3}
 --- !u!114 &3504165867168990812
 MonoBehaviour:
   m_ObjectHideFlags: 0
