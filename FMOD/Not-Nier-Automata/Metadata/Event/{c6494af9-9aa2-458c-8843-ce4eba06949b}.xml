@@ -117,9 +117,6 @@
 		<property name="length">
 			<value>2</value>
 		</property>
-		<relationship name="placeholder">
-			<destination>{979c2676-f4b2-4fa4-afc7-e3078f040fc5}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2cbc9b31-fdd2-43fd-9db3-016ea97b05b9}">
 		<property name="name">
@@ -196,10 +193,10 @@
 			<value>1</value>
 		</property>
 		<property name="soundSize">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="minimumExtent">
-			<value>50</value>
+			<value>180</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{6c46cc9a-8588-4815-a7f1-1237c11bd97a}" />

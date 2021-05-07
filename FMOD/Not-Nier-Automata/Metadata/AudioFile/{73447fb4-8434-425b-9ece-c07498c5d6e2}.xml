@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{73447fb4-8434-425b-9ece-c07498c5d6e2}">
 		<property name="assetPath">
-			<value>DX/DX_CR33P0/Dx_CR33P0_Quest02_02.wav</value>
+			<value>DX/RobotNPC_DX/CR33P-0/Dx_CR33P0_Quest02_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

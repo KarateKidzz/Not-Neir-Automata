@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{432e0926-b770-4ddb-ac26-e886ef89a337}">
 		<property name="assetPath">
-			<value>DX/DX_DELT-A/Dx_DELT-A_Quest4_08.wav</value>
+			<value>DX/RobotNPC_DX/Delt-A/Dx_DELT-A_Quest4_08.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

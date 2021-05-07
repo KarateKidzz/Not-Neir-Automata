@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
-  m_Name: Mono a Mono
+  m_Name: Quest1 - Main Dialogue
   m_EditorClassIdentifier: 
   lines:
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
@@ -19,115 +19,129 @@ MonoBehaviour:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line3
+    subtitle: Don't know why but I have a feeling we've found the source.
+    audioLine: Dx_Fier_Quest01_01
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_AUTO Line1
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line4
+    subtitle: Here is the password!
+    audioLine: Dx_AUTO_Quest01_01
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: d240251d8b3e154891686e256b8a9354
-      cachedName: Jammer Talker
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
       cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
-    subtitle: 
-    audioLine: QUEST2_Jammer Line1
+    subtitle: Here is the password!
+    audioLine: Dx_Bobby_Quest01_01
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line5
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_02
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: d240251d8b3e154891686e256b8a9354
-      cachedName: Jammer Talker
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
       cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
-    subtitle: 
-    audioLine: QUEST2_Jammer Line2
+    subtitle: Here is the password!
+    audioLine: Dx_Bobby_Quest01_02
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line6
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_03
   - staticSpeaker: {fileID: 0}
     runtimeSpeaker:
-      serializedGuid: d240251d8b3e154891686e256b8a9354
-      cachedName: Jammer Talker
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
       cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
-    subtitle: 
-    audioLine: QUEST2_Jammer Line3
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line7
+    subtitle: Here is the password!
+    audioLine: Dx_Bobby_Quest01_03
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_AUTO Line2
+    subtitle: Here is the password!
+    audioLine: Dx_AUTO_Quest01_02
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: Here is the password!
+    audioLine: Dx_Bobby_Quest01_04
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line8
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_04
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_AUTO Line3
+    subtitle: Here is the password!
+    audioLine: Dx_AUTO_Quest01_03
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line9
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_05
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_AUTO Line4
+    subtitle: Here is the password!
+    audioLine: Dx_AUTO_Quest01_04
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line10
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_06
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_07
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: Here is the password!
+    audioLine: Dx_Bobby_Quest01_05
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Here is the password!
+    audioLine: Dx_Fier_Quest01_08
   useDialogueSnapshot: 1

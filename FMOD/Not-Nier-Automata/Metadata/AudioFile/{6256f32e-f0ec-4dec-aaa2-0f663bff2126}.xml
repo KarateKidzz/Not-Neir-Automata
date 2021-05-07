@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{6256f32e-f0ec-4dec-aaa2-0f663bff2126}">
 		<property name="assetPath">
-			<value>DX/DX_AUTO/Dx_AUTO_Quest03_01.wav</value>
+			<value>DX/RB.VIII-AUTO/Dx_AUTO_Quest03_01.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

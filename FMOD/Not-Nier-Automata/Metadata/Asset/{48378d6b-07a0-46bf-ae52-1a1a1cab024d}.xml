@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="EncodableAsset" id="{b3f62fc0-f450-4906-a221-5949875dbe8a}">
+	<object class="EncodableAsset" id="{48378d6b-07a0-46bf-ae52-1a1a1cab024d}">
 		<property name="assetPath">
-			<value>DX/AnimeBattleVoice_DX (Cringe)/</value>
+			<value>DX/RobotNPC_DX/Delt-A/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>

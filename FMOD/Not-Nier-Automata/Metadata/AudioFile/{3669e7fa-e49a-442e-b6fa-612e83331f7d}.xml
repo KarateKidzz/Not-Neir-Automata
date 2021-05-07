@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{3669e7fa-e49a-442e-b6fa-612e83331f7d}">
 		<property name="assetPath">
-			<value>DX/Player/Player_Grunt_02.wav</value>
+			<value>DX/FIER/Player_Grunt_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

@@ -16,7 +16,7 @@
 			<value>Audio Table</value>
 		</property>
 		<property name="sourceDirectory">
-			<value>Assets/DX/Player</value>
+			<value>Assets/DX/FIER</value>
 		</property>
 	</object>
 </objects>

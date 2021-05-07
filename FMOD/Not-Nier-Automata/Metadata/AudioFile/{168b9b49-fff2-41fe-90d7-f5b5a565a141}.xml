@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{168b9b49-fff2-41fe-90d7-f5b5a565a141}">
 		<property name="assetPath">
-			<value>DX/DX_BOBBY/Dx_Bobby_OneShot_02.wav</value>
+			<value>DX/RobotNPC_DX/Keith/Dx_Bobby_OneShot_02.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

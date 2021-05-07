@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
-  m_Name: Ear Muted
+  m_Name: Quest1 - PostJammer
   m_EditorClassIdentifier: 
   lines:
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,

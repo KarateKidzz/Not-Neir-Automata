@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{371c3556-40a7-436a-883f-f8103fdaf15c}">
 		<property name="assetPath">
-			<value>DX/DX_JAMMER/Dx_Jammer_Quest2_03.wav</value>
+			<value>DX/RobotNPC_DX/Jammer/Dx_Jammer_Quest2_03.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

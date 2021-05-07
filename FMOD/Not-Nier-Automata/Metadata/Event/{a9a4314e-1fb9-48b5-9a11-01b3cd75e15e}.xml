@@ -109,9 +109,6 @@
 		<property name="length">
 			<value>2</value>
 		</property>
-		<relationship name="placeholder">
-			<destination>{979c2676-f4b2-4fa4-afc7-e3078f040fc5}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{00aeec0a-8552-4450-ac1f-b01df329b6a0}">
 		<property name="name">
@@ -182,7 +179,7 @@
 			<value>1</value>
 		</property>
 		<property name="soundSize">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="minimumExtent">
 			<value>180</value>
