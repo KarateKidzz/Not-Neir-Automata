@@ -27,7 +27,17 @@ public class PodPlaylist : Actor, IInitialize, IBeginPlay
     {
         if (musicManager)
         {
-            
+            int currentIndex = musicManager.CurrentEventIndex;
+            List<string> allEvents = musicManager.AllEvents;
+            currentIndex--;
+            if (currentIndex < 0)
+            {
+                currentIndex = allEvents.Count - 1;
+            }
+            musicManager.PlayEvent(allEvents[currentIndex], true);
+            musicManager.CurrentEventIndex = currentIndex;
+
+            ShowMusicText();
         }
     }
 
@@ -51,7 +61,18 @@ public class PodPlaylist : Actor, IInitialize, IBeginPlay
     {
         if (musicManager)
         {
+            int currentIndex = musicManager.CurrentEventIndex;
+            List<string> allEvents = musicManager.AllEvents;
+            currentIndex++;
+            if (currentIndex >= allEvents.Count)
+            {
+                currentIndex = 0;
+            }
+            musicManager.PlayEvent(allEvents[currentIndex], true);
 
+            musicManager.CurrentEventIndex = currentIndex;
+
+            ShowMusicText();
         }
     }
 
@@ -59,7 +80,7 @@ public class PodPlaylist : Actor, IInitialize, IBeginPlay
     {
         if (musicManager)
         {
-            if (musicManager.EventInstance.getDescription(out FMOD.Studio.EventDescription description) == FMOD.RESULT.OK)
+            FMOD.Studio.EventDescription description = musicManager.GetDescriptionOfCurrentEvent;
             {
                 if (description.getUserProperty("title", out FMOD.Studio.USER_PROPERTY property) == FMOD.RESULT.OK)
                 {

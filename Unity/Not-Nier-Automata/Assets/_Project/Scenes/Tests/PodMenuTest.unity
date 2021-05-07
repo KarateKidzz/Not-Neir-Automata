@@ -364,10 +364,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204e7da08e9d04963b0bc77fd16b3811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combatMusicEvent: event:/MX/RoryBATTLE
-  explorationMusicEvent: event:/MX/RoryBATTLE
+  combatMusicEvents:
+  - event:/MX/RoryBATTLE
+  - event:/MX/JamesBattle
+  explorationMusicEvents:
+  - event:/MX/ExplorationTest
   currentState: 0
   playExploreMusic: 1
+  CurrentEventIndex: 0
 --- !u!114 &325507005
 MonoBehaviour:
   m_ObjectHideFlags: 0

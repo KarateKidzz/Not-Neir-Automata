@@ -14,10 +14,10 @@ public enum MusicState
 public class MusicManager : GameModeUtil, IBeginPlay
 {
     [EventRef]
-    public string combatMusicEvent;
+    public string[] combatMusicEvents;
 
     [EventRef]
-    public string explorationMusicEvent;
+    public string[] explorationMusicEvents;
 
     [SerializeField, ReadOnly]
     protected MusicState currentState;
@@ -28,6 +28,24 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     public EventInstance EventInstance => eventInstance;
 
+    EventDescription nextEventDescription;
+
+    public EventDescription GetDescriptionOfCurrentEvent => nextEventDescription;
+
+    public int CurrentEventIndex;
+
+    public List<string> AllEvents => GetAllEvents();
+
+    List<string> GetAllEvents()
+    {
+        List<string> result = new List<string>();
+
+        result.AddRange(combatMusicEvents);
+        result.AddRange(explorationMusicEvents);
+
+        return result;
+    }
+
     public void BeginPlay()
     {
         StartCoroutine(StartExplorationAfterWait(2f));
@@ -35,12 +53,14 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     public void StartCombat()
     {
-        StartCoroutine(WaitForInstanceToEnd(MusicState.Combat));
+        PlayEvent(combatMusicEvents[0]);
+        CurrentEventIndex = 0;
     }
 
     public void EndCombat()
     {
-        StartCoroutine(WaitForInstanceToEnd(MusicState.Exploration));
+        PlayEvent(explorationMusicEvents[0]);
+        CurrentEventIndex = combatMusicEvents.Length;
     }
 
     public override void EndUtil()
@@ -86,11 +106,24 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
         if (!eventInstance.isValid())
         {
-            yield return WaitForInstanceToEnd(MusicState.Exploration);
+            PlayEvent(explorationMusicEvents[0]);
         }
     }
 
-    IEnumerator WaitForInstanceToEnd(MusicState nextState)
+    public void PlayEvent(string eventName, bool stopInstantly = false)
+    {
+        nextEventDescription.clearHandle();
+        nextEventDescription = RuntimeManager.GetEventDescription(eventName);
+
+        if (stopInstantly)
+        {
+            StopInstance();
+        }
+
+        StartCoroutine(WaitForInstanceToEnd(eventName));
+    }
+
+    IEnumerator WaitForInstanceToEnd(string nextEvent)
     {
         if (eventInstance.isValid())
         {
@@ -110,16 +143,8 @@ public class MusicManager : GameModeUtil, IBeginPlay
             eventInstance.clearHandle();
         }
 
-        if (nextState == MusicState.Exploration && playExploreMusic)
-        {
-            eventInstance = RuntimeManager.CreateInstance(explorationMusicEvent);
-            StartInstance();
-        }
-        else if (nextState == MusicState.Combat)
-        {
-            eventInstance = RuntimeManager.CreateInstance(combatMusicEvent);
-            StartInstance();
-        }
+        nextEventDescription.createInstance(out eventInstance);
+        StartInstance();
 
         yield return null;
     }
