@@ -16,7 +16,13 @@ public class DebugPlayerController : PlayerController
         base.SetupInput(inputComponent);
 
         inputComponent.actions["Debug"].performed += ToggleDebug;
+        inputComponent.actions["OpenCompanionUI"].performed += OpenCompanionUI;
+
         inputComponent.actions["Debug"].canceled += ToggleDebug;
+        inputComponent.actions["OpenCompanionUI"].canceled += OpenCompanionUI;
+
+        inputComponent.actions.FindActionMap("UI").FindAction("OpenCompanionUI").performed += OpenCompanionUI;
+        inputComponent.actions.FindActionMap("UI").FindAction("OpenCompanionUI").canceled += OpenCompanionUI;
     }
 
     protected override void ClearInput(PlayerInput inputComponent)
@@ -24,7 +30,13 @@ public class DebugPlayerController : PlayerController
         base.ClearInput(inputComponent);
 
         inputComponent.actions["Debug"].performed -= ToggleDebug;
+        inputComponent.actions["OpenCompanionUI"].performed -= OpenCompanionUI;
+
         inputComponent.actions["Debug"].canceled -= ToggleDebug;
+        inputComponent.actions["OpenCompanionUI"].canceled -= OpenCompanionUI;
+
+        inputComponent.actions.FindActionMap("UI").FindAction("OpenCompanionUI").performed -= OpenCompanionUI;
+        inputComponent.actions.FindActionMap("UI").FindAction("OpenCompanionUI").canceled -= OpenCompanionUI;
     }
 
     protected void ToggleDebug(InputAction.CallbackContext context)
@@ -87,6 +99,29 @@ public class DebugPlayerController : PlayerController
                                 DebugEnabled = true;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    public void OpenCompanionUI(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            if (PossessedPawn && PossessedPawn.Companions.Count > 0)
+            {
+                Companion companion = PossessedPawn.Companions[0];
+
+                if (companion)
+                {
+                    if (companion.ShowingCompanionUI())
+                    {
+                        companion.HideCompanionUI();
+                    }
+                    else
+                    {
+                        companion.ShowCompanionUI();
                     }
                 }
             }

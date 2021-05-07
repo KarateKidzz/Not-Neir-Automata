@@ -37,7 +37,6 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["Pause"].performed += Pause;
         inputComponent.actions["Interact"].performed += Interact;
         inputComponent.actions["Skip Dialogue"].performed += SkipDialogue;
-        inputComponent.actions["OpenCompanionUI"].performed += OpenCompanionUI;
 
         inputComponent.actions["Move"].canceled += Move;
         inputComponent.actions["Sprint"].canceled += Sprint;
@@ -49,7 +48,6 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["Pause"].canceled += Pause;
         inputComponent.actions["Interact"].canceled += Interact;
         inputComponent.actions["Skip Dialogue"].canceled += SkipDialogue;
-        inputComponent.actions["OpenCompanionUI"].canceled += OpenCompanionUI;
     }
 
     public override void ClearInput(UnityEngine.InputSystem.PlayerInput inputComponent)
@@ -64,7 +62,6 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["Pause"].performed -= Pause;
         inputComponent.actions["Interact"].performed -= Interact;
         inputComponent.actions["Skip Dialogue"].performed -= SkipDialogue;
-        inputComponent.actions["OpenCompanionUI"].performed -= OpenCompanionUI;
 
         inputComponent.actions["Move"].canceled -= Move;
         inputComponent.actions["Sprint"].canceled -= Sprint;
@@ -76,7 +73,6 @@ public class Character : Pawn, IPhysicsTick
         inputComponent.actions["Pause"].canceled -= Pause;
         inputComponent.actions["Interact"].canceled -= Interact;
         inputComponent.actions["Skip Dialogue"].canceled -= SkipDialogue;
-        inputComponent.actions["OpenCompanionUI"].canceled -= OpenCompanionUI;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -243,29 +239,6 @@ public class Character : Pawn, IPhysicsTick
                 cachePlayerInteract = GetComponent<PlayerInteract>();
                 Debug.Assert(cachePlayerInteract);
                 cachePlayerInteract.Interact();
-            }
-        }
-    }
-
-    public void OpenCompanionUI(InputAction.CallbackContext context)
-    {
-        if (context.ReadValueAsButton())
-        {
-            if(Companions.Count > 0)
-            {
-                Companion companion = Companions[0];
-
-                if (companion)
-                {
-                    if (companion.ShowingCompanionUI())
-                    {
-                        companion.HideCompanionUI();
-                    }
-                    else
-                    {
-                        companion.ShowCompanionUI();
-                    }
-                }
             }
         }
     }

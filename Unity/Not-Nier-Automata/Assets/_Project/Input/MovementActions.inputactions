@@ -636,6 +636,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "OpenCompanionUI",
+                    "type": "Button",
+                    "id": "2fd2c8c1-01ff-4b6b-a83d-765ffd0ca09d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Submit",
                     "type": "Button",
                     "id": "ac4ae103-a29c-4eff-88a2-366627693d8d",
@@ -1124,6 +1132,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a844b0fc-5e1c-4fac-9108-b8c9f7b9c9d4",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OpenCompanionUI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

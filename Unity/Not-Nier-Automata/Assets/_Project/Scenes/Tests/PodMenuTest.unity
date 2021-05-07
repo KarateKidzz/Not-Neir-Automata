@@ -336,7 +336,7 @@ MonoBehaviour:
   defaultPawnPrefab: {fileID: 7390603271446795770, guid: 52c48ff4464964237aedb4e0385f203f,
     type: 3}
   defaultSpectatorPawnPrefab: {fileID: 0}
-  defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: ea7c71b65247c44bc92ee6b4583e6d25,
+  defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: da1c0ab85ecca4071a8681694d945e38,
     type: 3}
   delayGameStart: 0
 --- !u!114 &325507003
