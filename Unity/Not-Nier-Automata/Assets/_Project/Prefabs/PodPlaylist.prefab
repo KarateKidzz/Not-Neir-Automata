@@ -59,7 +59,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c59631b097404eceb1ea3fd7cfc0280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleText: {fileID: 5398117240228848506}
 --- !u!1 &5398117240152702917
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +232,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5398117240152702914}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5728354577908200650}
+        m_MethodName: PressPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5398117240228848508
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +388,7 @@ GameObject:
   - component: {fileID: 5398117240292907157}
   - component: {fileID: 5398117240292907156}
   m_Layer: 5
-  m_Name: Previous (2)
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,7 +545,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5398117240947851131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5728354577908200650}
+        m_MethodName: PressPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5398117241128498534
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +674,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5398117241128498531}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5728354577908200650}
+        m_MethodName: PressPrevious
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5398117241226943127
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +842,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5398117241397580946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5728354577908200650}
+        m_MethodName: PressNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5398117241548798746
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +990,7 @@ GameObject:
   - component: {fileID: 5398117241957859969}
   - component: {fileID: 5398117241957859968}
   m_Layer: 5
-  m_Name: Previous (3)
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -996,7 +1041,7 @@ GameObject:
   - component: {fileID: 5398117242064787889}
   - component: {fileID: 5398117242064787888}
   m_Layer: 5
-  m_Name: Previous (1)
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -43,6 +43,9 @@
 		<relationship name="timeline">
 			<destination>{aa93917d-30bf-4d1d-babd-4e26a17f2d99}</destination>
 		</relationship>
+		<relationship name="userProperties">
+			<destination>{6b92b29e-54dc-49f9-bef1-81dbfd03e993}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{cd05550e-4477-48df-a6a8-62349918ba17}</destination>
 		</relationship>
@@ -245,6 +248,14 @@
 			<destination>{65bb6d0f-f504-4e6d-b802-4b2580113b60}</destination>
 			<destination>{bc4b1a92-04c9-440d-b004-97ae6f751743}</destination>
 		</relationship>
+	</object>
+	<object class="UserProperty" id="{6b92b29e-54dc-49f9-bef1-81dbfd03e993}">
+		<property name="key">
+			<value>title</value>
+		</property>
+		<property name="value">
+			<value>Rory Battle Theme</value>
+		</property>
 	</object>
 	<object class="EventMixerMaster" id="{4c4b28cc-8fc9-44b3-8312-1f3e332d6fc2}">
 		<property name="volume">

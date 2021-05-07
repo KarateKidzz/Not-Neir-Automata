@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PodPlaylist : Actor, IInitialize
+public class PodPlaylist : Actor, IInitialize, IBeginPlay
 {
     MusicManager musicManager;
+
+    public TMPro.TextMeshProUGUI titleText;
+
 
     public void Initialize()
     {
@@ -13,6 +16,11 @@ public class PodPlaylist : Actor, IInitialize
         {
             Debug.LogWarning("No music manager");
         }
+    }
+
+    public void BeginPlay()
+    {
+        ShowMusicText();
     }
 
     public void PressPrevious()
@@ -44,6 +52,20 @@ public class PodPlaylist : Actor, IInitialize
         if (musicManager)
         {
 
+        }
+    }
+
+    public void ShowMusicText()
+    {
+        if (musicManager)
+        {
+            if (musicManager.EventInstance.getDescription(out FMOD.Studio.EventDescription description) == FMOD.RESULT.OK)
+            {
+                if (description.getUserProperty("title", out FMOD.Studio.USER_PROPERTY property) == FMOD.RESULT.OK)
+                {
+                    titleText.SetText(property.stringValue());
+                }
+            }
         }
     }
 }

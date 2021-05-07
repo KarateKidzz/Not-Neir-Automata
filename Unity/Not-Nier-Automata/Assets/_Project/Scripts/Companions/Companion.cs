@@ -114,6 +114,9 @@ public class Companion : Actor, ITick, IInitialize, IEndPlay
         }
     }
 
+    private CursorLockMode previousLockMode = CursorLockMode.None;
+    private bool previousCursorVisible = true;
+
     public void ShowCompanionUI()
     {
         if (!spawnedCompanionUI)
@@ -123,6 +126,23 @@ public class Companion : Actor, ITick, IInitialize, IEndPlay
         }
 
         spawnedCompanionUI.SetActive(true);
+
+        if (GameManager.IsValid() && GameManager.Instance.PlayerController && GameManager.Instance.PlayerController.CameraManager)
+        {
+            GameManager.Instance.PlayerController.CameraManager.brain.enabled = false;
+        }
+
+        if (GameManager.Instance.PlayerController)
+        {
+            UnityEngine.InputSystem.PlayerInput playerInput = GameManager.Instance.PlayerController.GetPlayerInputComponent();
+
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+
+        previousLockMode = Cursor.lockState;
+        previousCursorVisible = Cursor.visible;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void HideCompanionUI()
@@ -130,6 +150,21 @@ public class Companion : Actor, ITick, IInitialize, IEndPlay
         if (spawnedCompanionUI)
         {
             spawnedCompanionUI.SetActive(false);
+
+            if (GameManager.IsValid() && GameManager.Instance.PlayerController && GameManager.Instance.PlayerController.CameraManager)
+            {
+                GameManager.Instance.PlayerController.CameraManager.brain.enabled = true;
+            }
+
+            if (GameManager.Instance.PlayerController)
+            {
+                UnityEngine.InputSystem.PlayerInput playerInput = GameManager.Instance.PlayerController.GetPlayerInputComponent();
+
+                playerInput.SwitchCurrentActionMap("Player");
+            }
+
+            Cursor.lockState = previousLockMode;
+            Cursor.visible = previousCursorVisible;
         }
     }
 
