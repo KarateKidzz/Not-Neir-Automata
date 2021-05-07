@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4243370100389810861}
+  - component: {fileID: -1154251188733844312}
   - component: {fileID: 5211496262601127556}
   - component: {fileID: 3504165867168990812}
   - component: {fileID: 2112945259528323034}
@@ -42,6 +43,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1154251188733844312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243370100389810858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1e1d677a3cf40d5b299b99b52e0df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopMovement: 0
+  faction: {fileID: 11400000, guid: 11107f3dd80d14e9a980c1c0b6d279b5, type: 2}
+  autoPossessPlayer: 0
+  autoPossessAI: 0
+  aiControllerPrefab: {fileID: 0}
+  cameraFollowTarget: {fileID: 0}
+  cameraLookAtTarget: {fileID: 0}
+  autoHideCursorOnPossess: 0
+  companions: []
 --- !u!114 &5211496262601127556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,15 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a40a07e45fad463899946a80440f7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopMovement: 0
-  faction: {fileID: 0}
-  autoPossessPlayer: 0
-  autoPossessAI: 0
-  aiControllerPrefab: {fileID: 0}
-  cameraFollowTarget: {fileID: 0}
-  cameraLookAtTarget: {fileID: 0}
-  autoHideCursorOnPossess: 0
-  companions: []
   turnSpeed: 5
   followOffset: {x: 1.13, y: 2, z: -1}
 --- !u!114 &3504165867168990812
@@ -176,6 +189,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 1
   OverridePlayingEvents: 0
+  IgnoreNewPlays: 0
   programmerSoundKeys: []
   playOrder: 0
 --- !u!114 &-5425330765604659394

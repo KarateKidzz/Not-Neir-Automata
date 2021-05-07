@@ -5,12 +5,21 @@ using UnityEngine;
 /// <summary>
 /// Follows a pawn
 /// </summary>
-public class Companion : Pawn, ITick
+[RequireComponent(typeof(Pawn))]
+[DisallowMultipleComponent]
+public class Companion : Actor, ITick, IInitialize, IEndPlay
 {
     /// <summary>
     /// Party leader / pawn to follow
     /// </summary>
     protected Pawn leader;
+
+    /// <summary>
+    /// The pawn attached to this companion
+    /// </summary>
+    protected Pawn owner;
+
+    public Pawn Pawn => owner;
 
     /// <summary>
     /// Camera manager of the pawn. Only applies if the leader is the player
@@ -23,10 +32,28 @@ public class Companion : Pawn, ITick
 
     public Vector3 followOffset;
 
-    public override void Initialize()
+    /// <summary>
+    /// A piece of UI that can be spawned to show more information about the companion
+    /// </summary>
+    public GameObject companionUIPrefab;
+
+    /// <summary>
+    /// The spawned UI, if it exists
+    /// </summary>
+    protected GameObject spawnedCompanionUI;
+
+    public void Initialize()
     {
-        base.Initialize();
         noise = GetComponent<MovementNoise>();
+        owner = GetComponent<Pawn>();
+    }
+
+    public void EndPlay(EndPlayModeReason Reason)
+    {
+        if (spawnedCompanionUI)
+        {
+            Destroy(spawnedCompanionUI);
+        }
     }
 
     /// <summary>
@@ -75,15 +102,39 @@ public class Companion : Pawn, ITick
 
                 Vector3 updatedPosition = Vector3.Lerp(transform.position, finalPosition, turnSpeed * DeltaTime);
 
-                AddMovement(updatedPosition - transform.position);
+                owner.AddMovement(updatedPosition - transform.position);
                 
             }
             else
             {
                 Vector3 updatedPosition = leader.transform.position + followOffset;
 
-                AddMovement(updatedPosition - transform.position);
+                owner.AddMovement(updatedPosition - transform.position);
             }
         }
+    }
+
+    public void ShowCompanionUI()
+    {
+        if (!spawnedCompanionUI)
+        {
+            spawnedCompanionUI = Instantiate(companionUIPrefab);
+            Debug.Assert(spawnedCompanionUI);
+        }
+
+        spawnedCompanionUI.SetActive(true);
+    }
+
+    public void HideCompanionUI()
+    {
+        if (spawnedCompanionUI)
+        {
+            spawnedCompanionUI.SetActive(false);
+        }
+    }
+
+    public bool ShowingCompanionUI()
+    {
+        return spawnedCompanionUI && spawnedCompanionUI.activeSelf;
     }
 }

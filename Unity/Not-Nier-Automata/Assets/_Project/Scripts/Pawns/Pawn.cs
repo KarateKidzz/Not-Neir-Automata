@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DisallowMultipleComponent]
 public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 { 
     protected Controller owningController;
@@ -176,9 +177,9 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
         Debug.Log($"{gameObject.name} added {companion.gameObject.name} as a companion");
         Companions.Add(companion);
         companion.Follow(this);
-        if (companion.WeaponUser)
+        if (companion.Pawn.WeaponUser)
         {
-            companion.WeaponUser.useCameraAsDirection = true;
+            companion.Pawn.WeaponUser.useCameraAsDirection = true;
         }
     }
 
@@ -186,9 +187,9 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
     {
         Debug.Log($"{gameObject.name} removed {companion.gameObject.name} as a companion");
         companion.StopFollowing();
-        if (companion.WeaponUser)
+        if (companion.Pawn.WeaponUser)
         {
-            companion.WeaponUser.useCameraAsDirection = false;
+            companion.Pawn.WeaponUser.useCameraAsDirection = false;
         }
         Companions.RemoveAll(c => c == companion);
     }

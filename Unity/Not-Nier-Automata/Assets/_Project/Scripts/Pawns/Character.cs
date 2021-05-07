@@ -139,9 +139,9 @@ public class Character : Pawn, IPhysicsTick
         {
             foreach(Companion companion in Companions)
             {
-                if (companion.WeaponUser)
+                if (companion.Pawn.WeaponUser)
                 {
-                    companion.WeaponUser.AttackAutomatic();
+                    companion.Pawn.WeaponUser.AttackAutomatic();
                 }
             }
         }
@@ -149,9 +149,9 @@ public class Character : Pawn, IPhysicsTick
         {
             foreach (Companion companion in Companions)
             {
-                if (companion.WeaponUser)
+                if (companion.Pawn.WeaponUser)
                 {
-                    companion.WeaponUser.FinishAttack();
+                    companion.Pawn.WeaponUser.FinishAttack();
                 }
             }
         }
@@ -185,9 +185,9 @@ public class Character : Pawn, IPhysicsTick
     {
         foreach (Companion companion in Companions)
         {
-            if (companion.WeaponUser)
+            if (companion.Pawn.WeaponUser)
             {
-                Weapon weapon = companion.WeaponUser.currentlyEquippedWeapon;
+                Weapon weapon = companion.Pawn.WeaponUser.currentlyEquippedWeapon;
 
                 BeatAttackWeapon beatAttackWeapon = weapon ? weapon as BeatAttackWeapon : null;
 
