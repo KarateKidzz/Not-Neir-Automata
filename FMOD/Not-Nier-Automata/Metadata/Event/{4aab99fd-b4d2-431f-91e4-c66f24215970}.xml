@@ -40,6 +40,9 @@
 		<relationship name="timeline">
 			<destination>{e8b08619-8d38-48c4-aed7-4d7dfe7c658b}</destination>
 		</relationship>
+		<relationship name="userProperties">
+			<destination>{ecc095c0-0805-4af9-b081-79f8bf53cfb1}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{cd05550e-4477-48df-a6a8-62349918ba17}</destination>
 		</relationship>
@@ -168,6 +171,14 @@
 			<destination>{16bd5056-60f6-4301-9933-dfa43d03b2d7}</destination>
 			<destination>{f39486e1-9ab0-4a0b-9269-d17ac22f7f93}</destination>
 		</relationship>
+	</object>
+	<object class="UserProperty" id="{ecc095c0-0805-4af9-b081-79f8bf53cfb1}">
+		<property name="key">
+			<value>title</value>
+		</property>
+		<property name="value">
+			<value>James Battle</value>
+		</property>
 	</object>
 	<object class="EventMixerMaster" id="{1c15ba89-c2c5-40e1-b49c-980ad7b37753}">
 		<relationship name="effectChain">
