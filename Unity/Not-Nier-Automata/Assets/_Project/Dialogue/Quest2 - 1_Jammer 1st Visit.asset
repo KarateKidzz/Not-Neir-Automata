@@ -79,7 +79,7 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: Now. Relaying. The. New. Password. To. Your. Right. Audio. Receptor.
       *inaudible*
-    audioLine: Dx_Jammer_Quest02_03
+    audioLine: Dx_Jammer_Quest2_03
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:

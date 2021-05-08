@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{c776f7ff-c65d-4dc1-af98-e92017cc4f25}">
+		<property name="name">
+			<value>SOPRANO-0</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{34a2b0eb-0ca2-4710-9e48-5591f3743867}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{34a2b0eb-0ca2-4710-9e48-5591f3743867}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/SOPRAN-0</value>
+		</property>
+	</object>
+</objects>

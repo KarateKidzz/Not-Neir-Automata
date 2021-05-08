@@ -23,14 +23,15 @@ MonoBehaviour:
       alone witcha massive sword... and ya flying robot. I'm gonna have to ask to
       180 and get lost.
     audioLine: Dx_SOPRAN-0_Quest03_01
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Just takin' a look at your computer over there.
-    audioLine: Dx_Fier_Quest03_01
+    subtitle: My colleague and I are part of the maintinence crew. We're just trying
+      to access that terminal behind you.
+    audioLine: Dx_AUTO_Quest03_01
   - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
       type: 3}
     runtimeSpeaker:
@@ -41,15 +42,14 @@ MonoBehaviour:
       I have absolutely no idea what you're talkin' about. Ya gonna have to work
       with me on this, say it again, use ya vocal cords and speak up.
     audioLine: Dx_SOPRAN-0_Quest03_02
-  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: My colleague and I are part of the maintinence crew. We're just trying
-      to access that terminal behind you.
-    audioLine: Dx_AUTO_Quest03_01
+    subtitle: Just taking a look at your computer over there.
+    audioLine: Dx_Fier_Quest03_01
   - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
       type: 3}
     runtimeSpeaker:
