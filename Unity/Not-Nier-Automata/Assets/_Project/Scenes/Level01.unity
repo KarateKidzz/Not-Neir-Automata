@@ -1175,10 +1175,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatMusicEvents: []
-  explorationMusicEvents: []
+  explorationMusicEvents:
+  - event:/MX/Level01Exploration
+  - event:/MX/JamesBattle
+  - event:/MX/RoryBATTLE
   currentState: 0
   playExploreMusic: 1
-  CurrentEventIndex: 0
+  CurrentEventIndex: 1
 --- !u!43 &329511573
 Mesh:
   m_ObjectHideFlags: 0
