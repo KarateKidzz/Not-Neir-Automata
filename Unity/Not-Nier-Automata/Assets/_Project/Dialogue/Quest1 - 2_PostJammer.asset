@@ -19,7 +19,7 @@ MonoBehaviour:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
+    subtitle: What the- Ahh! My audio receptor's gone jank.
     audioLine: Dx_Fier_Quest02_01
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
@@ -27,7 +27,8 @@ MonoBehaviour:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Here is the password!
+    subtitle: "Uh, that\u2019s just great.\r Going to have to finish this mission
+      in mono I guess.\r"
     audioLine: Dx_Fier_Quest02_02
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}

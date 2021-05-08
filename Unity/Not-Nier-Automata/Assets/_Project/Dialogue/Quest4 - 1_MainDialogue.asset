@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: Quest4 - 1_MainDialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Look up there! I think that's the last control panel. There appears
+      to be an entrance into The Factory as well.
+    audioLine: Dx_AUTO_Quest04_01
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Weird. Don\u2019t see anyone guarding it\u2026 \r\rHang on, what the
+      hell?\r Are they okay?\r"
+    audioLine: Dx_Fier_Quest04_01
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Hm, the fate of workers they deem inefficient, I'm guiessing.
+    audioLine: Dx_AUTO_Quest04_02
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Dumped behind the factory? \rWhy is no one helping them?"
+    audioLine: Dx_Fier_Quest04_02
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Hey, are you alright? Let\u2019s get you up."
+    audioLine: Dx_Fier_Quest04_03
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: There were four overall, but they were joined by... the infinite.
+    audioLine: Dx_DELT-A_Quest4_01
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "I don\u2019t understand, what\u2019s wrong?"
+    audioLine: Dx_Fier_Quest04_04
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: They didn't make much on their own... But she would make them sing...
+      She had so many wires.
+    audioLine: Dx_DELT-A_Quest4_02
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "What\u2019s happened to him, Auto?\r He\u2019s not making any sense.\r"
+    audioLine: Dx_Fier_Quest04_05
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Fier, did you ever read about the Anti-Obsolescence Act?
+    audioLine: Dx_AUTO_Quest04_03
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Yeah, an ethics class I took talked about it once...
+    audioLine: Dx_Fier_Quest04_06
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "...Manufacturers were aware of \u201Cright to repair\u201D laws not
+      including robotic AI and took advantage of that, right?\r Sabotaging robots
+      to fail after a while.\r\n"
+    audioLine: Dx_Fier_Quest04_07
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Mhm. For decades, the cognizance installed within these early machines
+      wasn\u2019t considered equal by their creators and their legal systems, despite
+      being classified as sentient. With so few competitors, manufacturers felt comfortable
+      generating more sales through the planned obsolescence of their models."
+    audioLine: Dx_AUTO_Quest04_04
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Communication, cognition,  motor function, memory and behavioural systems
+      were designed to permanently cease functioning within 2 to 3 years. This maintained
+      demand for replacement units. Which, in turn, maintained a steady stream of
+      revenue for these manufacturuers.
+    audioLine: Dx_AUTO_Quest04_05
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: What happened to them?
+    audioLine: Dx_Fier_Quest04_08
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Those affected would start to degrade. Symptoms would eventually manifest,
+      not unlike that of neurocognitive disorders, such as dementia. Within weeks,
+      cognitive function would defect to a point of brain death.
+    audioLine: Dx_AUTO_Quest04_06
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "That\u2019s horrible. Were they not allowed to be buried?"
+    audioLine: Dx_Fier_Quest04_09
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Manufactures would stipulate that they held the rights to \u201Ccondemned
+      units''. This was done to part strip and recycle the dead\u2026 The majority
+      of synthetic life we see today probably share components with dozens of these
+      robots, myself included."
+    audioLine: Dx_AUTO_Quest04_07
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "So then\u2026 You\u2019re body\u2026 \rI can't even imagine Auto.\r"
+    audioLine: Dx_Fier_Quest04_10
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "It\u2019s strange, I feel comfort knowing that they\u2019re with me,
+      in a way. Like, I know that... what they went through is why I'm here now.
+      However, it doesn't make any of THIS, any less concerning."
+    audioLine: Dx_AUTO_Quest04_08
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "These robots are degrading aren\u2019t they."
+    audioLine: Dx_Fier_Quest04_11
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Yes, I think so.
+    audioLine: Dx_AUTO_Quest04_09
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Damn. Someone is installing this crap in them and we\u2019re going
+      to find out who\u2026 \nShut down the Jammer.\r Shut down the Factory.\r\n"
+    audioLine: Dx_Fier_Quest04_12
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Your sound... That... Music...
+    audioLine: Dx_DELT-A_Quest4_03
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Huh? The music?
+    audioLine: Dx_Fier_Quest04_13
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: Delt-A
+      cachedScene: {fileID: 0}
+    subtitle: She played... Music... Can I hear her?
+    audioLine: Dx_DELT-A_Quest4_04
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: You need me to play something, buddy?
+    audioLine: Dx_Fier_Quest04_14
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Vertically... Four. But she pulled many across them...
+    audioLine: Dx_DELT-A_Quest4_05
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: The sound of wires perhaps?
+    audioLine: Dx_AUTO_Quest04_10
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "No, I think he\u2019s describing an old world instrument. Auto, show
+      me all  your music files, I\u2019ve got an idea."
+    audioLine: Dx_Fier_Quest04_15
+  useDialogueSnapshot: 1

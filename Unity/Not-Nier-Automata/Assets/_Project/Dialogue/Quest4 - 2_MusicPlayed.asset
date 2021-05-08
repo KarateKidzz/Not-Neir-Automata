@@ -10,47 +10,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
-  m_Name: Quest2 - 2_Market Shop
+  m_Name: Quest4 - 2_MusicPlayed
   m_EditorClassIdentifier: 
   lines:
-  - staticSpeaker: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: What're ya buyin'?
-    audioLine: Dx_CR33P0_Quest02_01
+    subtitle: It's her... I'd almost forgotten her. I put her away... In my head.
+      Because... The others, they went away. Thank you... For helping me find her.
+    audioLine: Dx_DELT-A_Quest4_06
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: "Lookin\u2019 for spares, got any?"
-    audioLine: Dx_Fier_Quest02_11
-  - staticSpeaker: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
+    subtitle: Don't worry about it.
+    audioLine: Dx_Fier_Quest04_16
+  - staticSpeaker: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Take a look, stranger!
-    audioLine: Dx_CR33P0_Quest02_02
-  - staticSpeaker: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
+    subtitle: The wires, she called them CGDA... You should remember that.
+    audioLine: Dx_DELT-A_Quest4_07
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Is that all, stranger?
-    audioLine: Dx_CR33P0_Quest02_03
+    subtitle: I think he's trying to tell us something.
+    audioLine: Dx_AUTO_Quest04_11
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Yeah, cheers mate. See you around.
-    audioLine: Dx_Fier_Quest02_12
+    subtitle: Let's take a look around.
+    audioLine: Dx_Fier_Quest04_17
   useDialogueSnapshot: 1

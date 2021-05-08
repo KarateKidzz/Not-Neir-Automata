@@ -10,131 +10,148 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
-  m_Name: Quest2 - 1_Jammer 1st Visit
+  m_Name: Quest3 - 1_Main Dialogue
   m_EditorClassIdentifier: 
   lines:
+  - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Ayy, whaddya take me for? Some kinda mook? Ya can't come up here, let
+      alone witcha massive sword... and ya flying robot. I'm gonna have to ask to
+      180 and get lost.
+    audioLine: Dx_SOPRAN-0_Quest03_01
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: "Doesn\u2019t seem to be anyone baby sitting this one, fingers crossed
-      it doesn't have a password eh?\r\n"
-    audioLine: Dx_Fier_Quest02_03
+    subtitle: Just takin' a look at your computer over there.
+    audioLine: Dx_Fier_Quest03_01
+  - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Okay now, granted, my ears ain't the best. I'll give you that... But
+      I have absolutely no idea what you're talkin' about. Ya gonna have to work
+      with me on this, say it again, use ya vocal cords and speak up.
+    audioLine: Dx_SOPRAN-0_Quest03_02
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: I don't think I'm able to "cross" my fingers. My design notes suggest
-      they're primarily aesthetic...
-    audioLine: Dx_AUTO_Quest02_01
+    subtitle: My colleague and I are part of the maintinence crew. We're just trying
+      to access that terminal behind you.
+    audioLine: Dx_AUTO_Quest03_01
+  - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: I'm sorry, all I hear is your music. Turn it off. 'Cause I'm about
+      to lose my shit. I can't even hear myself think, let alone you! So turn it
+      off.
+    audioLine: Dx_SOPRAN-0_Quest03_03
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: "Okay okay whatever. Let\u2019s just shut this thing down."
-    audioLine: Dx_Fier_Quest02_04
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Please. Enter. The. Passcode.
-    audioLine: Dx_Jammer_Quest2_01
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Uhhhh... I forgot?
-    audioLine: Dx_Fier_Quest02_05
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Would. You. Like. To. Reset. Your. Password?
-    audioLine: Dx_Jammer_Quest2_02
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Yeah, yeah I would.
-    audioLine: Dx_Fier_Quest02_06
-  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Now. Relaying. The. New. Password. To. Your. Right. Audio. Receptor.
-      *inaudible*
-    audioLine: Dx_Jammer_Quest02_03
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
-      type: 3}
-    runtimeSpeaker:
-      serializedGuid: 00000000000000000000000000000000
-      cachedName: 
-      cachedScene: {fileID: 0}
-    subtitle: Is this thing for real?
-    audioLine: Dx_Fier_Quest02_07
+    subtitle: "Oh right, I always forget we aren\u2019t the only ones listening to
+      our music. Auto, can you pause it real quick?\r"
+    audioLine: Dx_Fier_Quest03_02
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Hmm, pretty contrived if you ask me... also really inconvenient.
-    audioLine: Dx_AUTO_Quest02_02
+    subtitle: I'm sorry, Fier. I'm afraid I can't do that.
+    audioLine: Dx_AUTO_Quest03_02
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: You're tellin' me!
-    audioLine: Dx_Fier_Quest02_08
+    subtitle: Huh? Why not?
+    audioLine: Dx_Fier_Quest03_03
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Well... Who else would I be talking to?
-    audioLine: Dx_AUTO_Quest02_03
+    subtitle: I no longer have access to these folders. Looks like you're going to
+      have to do this manually.
+    audioLine: Dx_AUTO_Quest03_03
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: '*sighs*'
-    audioLine: Dx_Fier_Quest02_09
+    subtitle: Seriously? You need Admin Privileges to do THAT?
+    audioLine: Dx_Fier_Quest03_04
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 'The market that we saw on the way in: I bet they have some spare parts
-      lying around.'
-    audioLine: Dx_AUTO_Quest02_04
+    subtitle: Perhaps we could remove those parental controls?
+    audioLine: Dx_AUTO_Quest03_04
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: Yeah, sure.
-    audioLine: Dx_Fier_Quest02_10
+    subtitle: "I\u2019ll remove them when you can be trusted not to have a 3 terabyte
+      \u201CHomework\u201D folder."
+    audioLine: Dx_Fier_Quest03_05
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: As I've said before, it was merely a collection of pre-development
+      blueprints.
+    audioLine: Dx_AUTO_Quest03_05
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Dude, I know what blueprints look like.\r Also, I remember those robots
+      looked pretty \u201Cdeveloped\u201D to me.\r"
+    audioLine: Dx_Fier_Quest03_06
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: I'm telling you, I was just researching them!
+    audioLine: Dx_AUTO_Quest03_06
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Yeah, I\u2019ll bet you were.\r.. Right, c\u2019mere let\u2019s take
+      a look.\r\n"
+    audioLine: Dx_Fier_Quest03_07
   useDialogueSnapshot: 1

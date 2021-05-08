@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: Quest3 - 2_VolumeChanged
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Hey guy, is that better?
+    audioLine: Dx_Fier_Quest03_08
+  - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Oh I can't tell you how much better that feels. I think my ears get
+      sensitive? I should really go to a Doctor... Yeah, so anyway, what can I do
+      for ya?
+    audioLine: Dx_SOPRAN-0_Quest03_04
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Checkin\u2019 the jammer display. Maintenance check and everything."
+    audioLine: Dx_Fier_Quest03_09
+  - staticSpeaker: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: No kiddin'? I'm guessin' the Boss send you. In that case, I'm gonna
+      go on my lunch break. Think I need to find my nephew Bobby too, he's really
+      fuckin' weird. Oh I think the code is like... 420? So like, do whatever you
+      want. I'll catch you guys later.
+    audioLine: Dx_SOPRAN-0_Quest03_05
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Heh, nice.
+    audioLine: Dx_Fier_Quest03_10
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Thank you for your assistance.
+    audioLine: Dx_AUTO_Quest03_07
+  useDialogueSnapshot: 1
