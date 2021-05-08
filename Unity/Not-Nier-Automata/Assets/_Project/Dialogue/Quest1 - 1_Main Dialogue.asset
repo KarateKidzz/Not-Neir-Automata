@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: Quest1 - 1_Main Dialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Don't know why but I have a feeling we've found the source.
+    audioLine: Dx_Fier_Quest01_01
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 28e84a6b8d152f4c908b9a2df2de3e0e
+      cachedName: Pod
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: What's causing the network to go down?
+    audioLine: Dx_AUTO_Quest01_01
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: Oh! So this is what a Signal Jammer is! Man, I just can't get over
+      how BIG this Signal Jammer is... It's such a big SIGNAL JAMMER!
+    audioLine: Dx_Bobby_Quest01_01
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Just a hunch.
+    audioLine: Dx_Fier_Quest01_02
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: It's totally designed to stop network signals and stuff!
+    audioLine: Dx_Bobby_Quest01_02
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Ummm?
+    audioLine: Dx_Fier_Quest01_03
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: I gotta make sure not to lose the password... the password is the only
+      way you could turn it off.
+    audioLine: Dx_Bobby_Quest01_03
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: I think this robot is stuck on "Exposition Mode".
+    audioLine: Dx_AUTO_Quest01_02
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: Oh man, I should really stop expositing dialogue! It'd be really unfortunate
+      if someone overheard. I don't know... what're the chances of THAT happening?
+      It's like... that'd be really REALLY convenient for them... Who am I talking
+      to?
+    audioLine: Dx_Bobby_Quest01_04
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Wow, this is dumb.
+    audioLine: Dx_Fier_Quest01_04
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: They appear to have been programmed to be self-aware and ironic.
+    audioLine: Dx_AUTO_Quest01_03ALT
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "I guess. But it feels kind of lazy, don\u2019t you think?"
+    audioLine: Dx_Fier_Quest01_05
+  - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Mhm, I suppose. I think sometimes it can be quite charming. However,
+      imagine a story analysing itself or its characters discussing the writing...
+      I bet that would be a really boring experience.
+    audioLine: Dx_AUTO_Quest01_04
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: "Yeah, totally.\r Only a really insecure hipster would be that meta.\r"
+    audioLine: Dx_Fier_Quest01_06
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: '*Fier coughing*'
+    audioLine: Dx_Fier_Quest01_07
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: 035168df3c639e45b6211b2038694a52
+      cachedName: George
+      cachedScene: {fileID: 102900000, guid: 948c7fd3d4eaef3408dbc09e1adaed40, type: 3}
+    subtitle: What was the password again? Ohhhhh.... wai- what... I can't r- wait
+      I forgot... Oh that's right it was 0123... 0123, that's the password! The password
+      that would shut down the Signal Jammer! The password I'm not supposed to say!
+    audioLine: Dx_Bobby_Quest01_05
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: '*sighs* Let''s go.'
+    audioLine: Dx_Fier_Quest01_08
+  useDialogueSnapshot: 1

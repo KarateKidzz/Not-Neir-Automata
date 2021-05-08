@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
-  m_Name: Quest1 - PostJammer
+  m_Name: Quest2 - 3_Jammer 2nd Visit
   m_EditorClassIdentifier: 
   lines:
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
@@ -19,22 +19,31 @@ MonoBehaviour:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line1
-  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+    subtitle: "Right, let\u2019s try this again."
+    audioLine: Dx_Fier_Quest02_13
+  - staticSpeaker: {fileID: 6209165465798845058, guid: 0d8115a935dd749208326279926e885d,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST2_FIER Line2
+    subtitle: Now. Relaying. The. New. Password. To. Your. Right. Audio. Receptor.
+      7337.
+    audioLine: Dx_Jammer_Quest2_03
   - staticSpeaker: {fileID: 5449906070918686544, guid: f62327f52756a4f7fa9b6701f78bff36,
       type: 3}
     runtimeSpeaker:
       serializedGuid: 00000000000000000000000000000000
       cachedName: 
       cachedScene: {fileID: 0}
-    subtitle: 
-    audioLine: QUEST1_AUTO Line5
+    subtitle: Two down, two to go.
+    audioLine: Dx_AUTO_Quest02_05ALT
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: Halfway there.
+    audioLine: Dx_Fier_Quest02_14
   useDialogueSnapshot: 1
