@@ -19,6 +19,8 @@ public struct DialogueLine
     public string subtitle;
 
     public string audioLine;
+
+    public DialogueAction finishedDialogueAction;
 }
 
 [CreateAssetMenu(fileName = "Script", menuName = "Game/Create Dialogue Script", order = 1)]

@@ -21,6 +21,7 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: What're ya buyin'?
     audioLine: Dx_CR33P0_Quest02_01
+    finishedDialogueAction: {fileID: 0}
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
@@ -29,6 +30,7 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: "Lookin\u2019 for spares, got any?"
     audioLine: Dx_Fier_Quest02_11
+    finishedDialogueAction: {fileID: 0}
   - staticSpeaker: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
       type: 3}
     runtimeSpeaker:
@@ -37,6 +39,8 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: Take a look, stranger!
     audioLine: Dx_CR33P0_Quest02_02
+    finishedDialogueAction: {fileID: 11400000, guid: 8ac565c722a154e229aeba63c4b261e3,
+      type: 2}
   - staticSpeaker: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
       type: 3}
     runtimeSpeaker:
@@ -45,6 +49,7 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: Is that all, stranger?
     audioLine: Dx_CR33P0_Quest02_03
+    finishedDialogueAction: {fileID: 0}
   - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
       type: 3}
     runtimeSpeaker:
@@ -53,4 +58,5 @@ MonoBehaviour:
       cachedScene: {fileID: 0}
     subtitle: Yeah, cheers mate. See you around.
     audioLine: Dx_Fier_Quest02_12
+    finishedDialogueAction: {fileID: 0}
   useDialogueSnapshot: 1
