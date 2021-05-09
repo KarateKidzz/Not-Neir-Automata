@@ -11,8 +11,6 @@ public class DialogueStarterIfRightEar : DialogueStarter
     {
         if (playEvent == gameEvent)
         {
-            PlayDialogue();
-
             DialogueManager dialogueManager = GameManager.Instance.GetCurrentGameMode().GetGameModeUtil<DialogueManager>();
             JammerUI jammerUI = GameManager.GetGameModeUtil<JammerUI>();
             if (dialogueManager != null && jammerUI != null)
