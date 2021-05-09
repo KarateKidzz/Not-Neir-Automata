@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000004, guid: 078c2c7090bb14159ae3734b059e10ea,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3953,8 +3953,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 53.336887, y: 0.67433554, z: 6.797563}
+  m_LocalRotation: {x: 0.0030134919, y: -0.658084, z: 0.0026338708, w: 0.7529339}
+  m_LocalPosition: {x: 111.21304, y: 2.3858838, z: -44.273014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9132,21 +9132,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 25167741074954898}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2143870974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143870973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b461db9e40a4e2dafec927680be79c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  playEvent: 3
-  script: {fileID: 11400000, guid: 5dcb8dfce447c4e7c9d91f6746c3eea0, type: 2}
 --- !u!114 &2143870975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9165,6 +9150,23 @@ MonoBehaviour:
   - Jammer
   CollisionTag: 
   PreloadSamples: 0
+--- !u!114 &2143870976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143870973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc52793bdcec480ca490efca153f34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  playEvent: 3
+  script: {fileID: 11400000, guid: 5dcb8dfce447c4e7c9d91f6746c3eea0, type: 2}
+  scriptIfRightEarUnMuted: {fileID: 11400000, guid: 4d951f3a2ad81974593592dfb1a51288,
+    type: 2}
 --- !u!1001 &25167741074954898
 PrefabInstance:
   m_ObjectHideFlags: 0

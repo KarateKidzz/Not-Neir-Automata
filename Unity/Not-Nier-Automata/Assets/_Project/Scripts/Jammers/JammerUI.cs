@@ -143,6 +143,16 @@ public class JammerUI : GameModeUtil, IInitialize
         }
     }
 
+    public bool IsRightEarMuted()
+    {
+        if (channelMixDSP.hasHandle())
+        {
+            channelMixDSP.getParameterFloat((int)FMOD.DSP_CHANNELMIX.GAIN_CH1, out float volume);
+            return volume < 1;
+        }
+        return false;
+    }
+
     public void StartJammerInteract(Jammer jammer)
     {
         currentJammer = jammer;
