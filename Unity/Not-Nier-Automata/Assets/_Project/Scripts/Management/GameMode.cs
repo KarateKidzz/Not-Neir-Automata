@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMode : MonoBehaviour
+public class GameMode : Actor
 {
     protected static bool quitting;
 
