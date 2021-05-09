@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{fd0af032-cd95-471d-8a17-fff414b19463}">
+		<property name="name">
+			<value>Delt-A</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2c155140-3d91-4e86-bfc0-08717a0a87f4}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{7534ff57-3635-499c-967a-53845a3f08e6}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{7534ff57-3635-499c-967a-53845a3f08e6}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/RobotNPC_DX/Delt-A</value>
+		</property>
+	</object>
+</objects>
