@@ -109,6 +109,11 @@ public class Companion : Actor, ITick, IInitialize, IEndPlay
             {
                 Vector3 updatedPosition = leader.transform.position + followOffset;
 
+                if (noise)
+                {
+                    updatedPosition += noise.GetMovementNoise();
+                }
+
                 owner.AddMovement(updatedPosition - transform.position);
             }
         }
