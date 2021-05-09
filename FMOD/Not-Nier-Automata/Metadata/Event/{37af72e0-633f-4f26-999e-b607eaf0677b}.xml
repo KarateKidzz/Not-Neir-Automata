@@ -60,6 +60,9 @@
 		<relationship name="parameters">
 			<destination>{054c8606-cd34-4170-b6b6-033653590ad8}</destination>
 		</relationship>
+		<relationship name="userProperties">
+			<destination>{2e55484a-d70b-4b0a-93d7-289a22bb8770}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{cd05550e-4477-48df-a6a8-62349918ba17}</destination>
 		</relationship>
@@ -422,6 +425,14 @@
 		<relationship name="preset">
 			<destination>{d82487cb-9ffe-4e83-95ae-bd5541f42889}</destination>
 		</relationship>
+	</object>
+	<object class="UserProperty" id="{2e55484a-d70b-4b0a-93d7-289a22bb8770}">
+		<property name="key">
+			<value>title</value>
+		</property>
+		<property name="value">
+			<value>Exploration</value>
+		</property>
 	</object>
 	<object class="EventMixerMaster" id="{e1dd37f6-f2d7-4e0d-b021-26c84216220f}">
 		<property name="volume">

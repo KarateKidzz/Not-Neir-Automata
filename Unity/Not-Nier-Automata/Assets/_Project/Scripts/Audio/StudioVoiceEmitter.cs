@@ -400,7 +400,7 @@ namespace FMODUnity
                             var keyResult = FMODUnity.RuntimeManager.StudioSystem.getSoundInfo(key, out dialogueSoundInfo);
                             if (keyResult != FMOD.RESULT.OK)
                             {
-                                //Debug.LogError(keyResult);
+                                Debug.LogError(keyResult);
                                 break;
                             }
                             FMOD.Sound dialogueSound;
@@ -410,6 +410,10 @@ namespace FMODUnity
                                 parameter.sound = dialogueSound.handle;
                                 parameter.subsoundIndex = dialogueSoundInfo.subsoundindex;
                                 Marshal.StructureToPtr(parameter, parameterPtr, false);
+                            }
+                            else
+                            {
+                                Debug.LogError(soundResult);
                             }
                         }
                         break;

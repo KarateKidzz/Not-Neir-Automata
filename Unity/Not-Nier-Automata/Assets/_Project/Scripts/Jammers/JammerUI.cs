@@ -143,6 +143,17 @@ public class JammerUI : GameModeUtil, IInitialize
         }
     }
 
+    public bool IsRightEarMuted()
+    {
+        if (channelMixDSP.hasHandle())
+        {
+            channelMixDSP.getParameterFloat((int)FMOD.DSP_CHANNELMIX.GAIN_CH1, out float volume);
+            return volume < -10;
+        }
+        Debug.LogWarning("No channel mix DSP");
+        return false;
+    }
+
     public void StartJammerInteract(Jammer jammer)
     {
         currentJammer = jammer;

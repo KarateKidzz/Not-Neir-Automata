@@ -8,7 +8,7 @@ public class LevelTransitionOnTrigger : Actor
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
+        Debug.Log(gameObject.name);
         if (other.CompareTag("Player") || (other.attachedRigidbody && other.attachedRigidbody.CompareTag("Player")))
         {
             GameManager.Instance.LevelLoader.LoadScene(levelToLoad);

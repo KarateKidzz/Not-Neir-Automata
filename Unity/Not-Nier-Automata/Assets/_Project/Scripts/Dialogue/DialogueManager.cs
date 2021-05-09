@@ -90,6 +90,15 @@ public class DialogueManager : GameModeUtil
             dialogue.currentSpeaker = null;
             dialogue.currentVoice = null;
 
+            if (dialogue.currentLine < dialogue.script.lines.Length && dialogue.currentLine >= 0)
+            {
+                DialogueLine line = dialogue.script.lines[dialogue.currentLine];
+                if (line.finishedDialogueAction)
+                {
+                    line.finishedDialogueAction.TriggerDialogueAction();
+                }
+            }
+
             dialogue.currentLine++;
 
             if (dialogue.currentLine < dialogue.script.lines.Length)
