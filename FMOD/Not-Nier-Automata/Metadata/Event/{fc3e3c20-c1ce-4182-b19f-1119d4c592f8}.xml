@@ -31,8 +31,11 @@
 		<relationship name="timeline">
 			<destination>{f0321f42-4dce-4021-a184-df9766818fc9}</destination>
 		</relationship>
+		<relationship name="userProperties">
+			<destination>{dabb3a96-12b6-4118-88d5-34c7018ca71d}</destination>
+		</relationship>
 		<relationship name="banks">
-			<destination>{2b8f007d-dd68-4bf9-ab53-ade508ac25f3}</destination>
+			<destination>{cd05550e-4477-48df-a6a8-62349918ba17}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{51d0c6f2-c0b0-4a92-af63-7b38d28cfe11}">
@@ -70,6 +73,14 @@
 		<relationship name="modules">
 			<destination>{8f3b053a-b261-4c8f-8a43-55b56addaaf2}</destination>
 		</relationship>
+	</object>
+	<object class="UserProperty" id="{dabb3a96-12b6-4118-88d5-34c7018ca71d}">
+		<property name="key">
+			<value>title</value>
+		</property>
+		<property name="value">
+			<value>Cello</value>
+		</property>
 	</object>
 	<object class="EventMixerMaster" id="{ab12ba42-bdcb-41ab-b0b4-b967850035b1}">
 		<relationship name="effectChain">
