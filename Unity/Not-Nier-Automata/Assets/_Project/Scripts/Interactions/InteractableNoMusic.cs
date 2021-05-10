@@ -24,6 +24,15 @@ public class InteractableNoMusic : Interactable
             }
         }
 
+        MusicManager musicManager = GameManager.GetGameModeUtil<MusicManager>();
+
+        if (musicManager)
+        {
+            musicManager.EventInstance.getPaused(out bool paused);
+
+            return paused;
+        }
+
         return false;
 
     }
