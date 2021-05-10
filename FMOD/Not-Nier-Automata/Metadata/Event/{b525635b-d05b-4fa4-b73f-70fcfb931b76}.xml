@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{b525635b-d05b-4fa4-b73f-70fcfb931b76}">
 		<property name="name">
-			<value>Cello Anomaly2D</value>
+			<value>Cello Anomaly</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
