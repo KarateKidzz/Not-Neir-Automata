@@ -1417,6 +1417,7 @@ MonoBehaviour:
   - event:/MX/Level01Exploration
   - event:/MX/JamesBattle
   - event:/MX/RoryBATTLE
+  - event:/MX/Cello Anomaly
   currentState: 0
   playExploreMusic: 1
   CurrentEventIndex: 1
@@ -1885,7 +1886,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  wantedEventName: James Battle
+  wantedEventName: Cello
 --- !u!1001 &414709621
 PrefabInstance:
   m_ObjectHideFlags: 0
