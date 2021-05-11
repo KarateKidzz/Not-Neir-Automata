@@ -41,8 +41,9 @@ MonoBehaviour:
     Object: {fileID: 6714988535178849462, guid: 6f1257d6fcd832c46955733c426ece26,
       type: 3}
   - AssetID: c3c9855ce4e9e4eb5931a41a5e1de275
-    Object: {fileID: 1464567076951351902, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
-      type: 3}
+    Object: {fileID: 0}
   - AssetID: 8c6cbd4dc7d000e46b639910c5fb01c3
     Object: {fileID: -1652721653630422791, guid: 8c6cbd4dc7d000e46b639910c5fb01c3,
       type: 3}
+  - AssetID: 0cb650a1f239041408c256e26c3a9e2d
+    Object: {fileID: 0}
