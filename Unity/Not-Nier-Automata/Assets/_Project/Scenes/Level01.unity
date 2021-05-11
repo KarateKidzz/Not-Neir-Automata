@@ -4509,7 +4509,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.92376244}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.7071068}
   m_LocalPosition: {x: 53.336887, y: 0.67433554, z: 6.797563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5178,12 +5178,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3c9855ce4e9e4eb5931a41a5e1de275, type: 3}
---- !u!4 &731051189 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1464567076951351897, guid: c3c9855ce4e9e4eb5931a41a5e1de275,
-    type: 3}
-  m_PrefabInstance: {fileID: 731051188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &732303881
 GameObject:
   m_ObjectHideFlags: 0
@@ -8335,9 +8329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scenes:
-  - Level01_Gameplay
-  - Level01_Environment
   - Level01_Audio
+  - Level01_Environment
 --- !u!4 &1672112111
 Transform:
   m_ObjectHideFlags: 0
