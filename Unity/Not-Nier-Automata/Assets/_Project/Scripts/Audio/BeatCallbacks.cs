@@ -11,10 +11,6 @@ public class BeatCallbacks : Actor, IInitialize
 {
     EVENT_CALLBACK beatCallback;
 
-    TIMELINE_BEAT_PROPERTIES currentBeats;
-
-    TIMELINE_MARKER_PROPERTIES currentMarkers;
-
     /// <summary>
     /// Callback when the beat or bar changes.
     /// </summary>
@@ -24,8 +20,6 @@ public class BeatCallbacks : Actor, IInitialize
     /// Callback when the marker changes.
     /// </summary>
     public static Action<EventInstance, TIMELINE_MARKER_PROPERTIES> OnMarkerChange;
-
-    EventInstance firstInstance;
 
     public void Initialize()
     { 
@@ -49,51 +43,8 @@ public class BeatCallbacks : Actor, IInitialize
     /// <param name="eventInstance"></param>
     public void SetupForEventInstance(EventInstance eventInstance)
     {
-        if (!firstInstance.isValid())
-        {
-            firstInstance = eventInstance;
-            OnBeatChange += OnBeat;
-            OnMarkerChange += OnMarker;
-        }
-
         eventInstance.setCallback(beatCallback, EVENT_CALLBACK_TYPE.TIMELINE_BEAT | EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
     }
-
-    /// <summary>
-    /// Callback for on beat changes for GUI
-    /// </summary>
-    /// <param name="eventInstance"></param>
-    /// <param name="properties"></param>
-    void OnBeat(EventInstance eventInstance, TIMELINE_BEAT_PROPERTIES properties)
-    {
-        if (eventInstance.handle == firstInstance.handle)
-        {
-            currentBeats = properties;
-        }
-    }
-
-    /// <summary>
-    /// Callack for on marker changes for GUI
-    /// </summary>
-    /// <param name="eventInstance"></param>
-    /// <param name="marker"></param>
-    void OnMarker(EventInstance eventInstance, TIMELINE_MARKER_PROPERTIES marker)
-    {
-        if (eventInstance.handle == firstInstance.handle)
-        {
-            currentMarkers = marker;
-        }
-    }
-
-    /// <summary>
-    /// Visualise the beat and bar
-    /// </summary>
-    void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(Screen.width / 2, 10, 400, 100));
-            GUILayout.Box(string.Format("Current Bar = {0}, Current Beat = {2}, Last Marker = {1}", currentBeats.bar, (string)currentMarkers.name, currentBeats.beat));
-        GUILayout.EndArea();
-    } 
 
     /// <summary>
     /// Callback from FMOD
