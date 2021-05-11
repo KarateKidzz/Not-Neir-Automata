@@ -50,6 +50,6 @@ public class Damageable : Actor, IInitialize
     public void Die()
     {
         Debug.Log($"{gameObject.name} died");
-        Destroy(gameObject);
+        Destory();
     }
 }
