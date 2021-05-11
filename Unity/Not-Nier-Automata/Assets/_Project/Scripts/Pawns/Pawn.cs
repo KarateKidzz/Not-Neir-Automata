@@ -76,6 +76,14 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
         if (Reason != EndPlayModeReason.ApplicationQuit)
         {
             GameManager.Instance.AllPawns.Remove(this);
+
+            if (Reason != EndPlayModeReason.LevelTransition)
+            {
+                if (owningController)
+                {
+                    owningController.Destory();
+                }
+            }   
         }
     }
 
