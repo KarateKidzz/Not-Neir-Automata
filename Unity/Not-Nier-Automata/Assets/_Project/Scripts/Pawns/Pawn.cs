@@ -57,6 +57,8 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 
     public event Action<Controller> OnUnpossess;
 
+    public event Action<Pawn> OnDestroyPawn;
+
     /// <summary>
     /// This update's movement
     /// </summary>
@@ -79,6 +81,8 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 
             if (Reason != EndPlayModeReason.LevelTransition)
             {
+                OnDestroyPawn?.Invoke(this);
+
                 if (owningController)
                 {
                     owningController.Destory();
