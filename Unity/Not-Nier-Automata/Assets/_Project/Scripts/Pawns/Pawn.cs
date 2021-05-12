@@ -113,7 +113,7 @@ public class Pawn : Actor, IInitialize, IBeginPlay, IEndPlay, ILateTick
 
     public virtual void LateTick(float DeltaTime)
     {
-        if (movementVector != Vector3.zero)
+        if (movementVector != Vector3.zero && !stopMovement)
         {
             transform.position += ConsumeMovement();
         }

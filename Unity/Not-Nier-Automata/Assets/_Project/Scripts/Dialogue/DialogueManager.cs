@@ -65,6 +65,7 @@ public class DialogueManager : GameModeUtil
                 }
             }
         }
+        GameManager.Instance.PlayerController.PossessedPawn.stopMovement = true;
         Debug.Log($"[Dialogue Manager] Starting script {script}");
     }
 
@@ -166,6 +167,7 @@ public class DialogueManager : GameModeUtil
                     }
                 }
             }
+            GameManager.Instance.PlayerController.PossessedPawn.stopMovement = false;
             scripts.Remove(dialogue);
         }
 
