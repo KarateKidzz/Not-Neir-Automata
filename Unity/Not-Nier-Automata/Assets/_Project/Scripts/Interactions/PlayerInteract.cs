@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInteract : MonoBehaviour
+public class PlayerInteract : Actor, IInitialize
 {
     [SerializeField, ReadOnly]
     Interactable currentInteractable;
+
+    InteractionManager interactionManager;
+
+    public void Initialize()
+    {
+        interactionManager = GameManager.GetGameModeUtil<InteractionManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,13 +29,23 @@ public class PlayerInteract : MonoBehaviour
         {
             currentInteractable = interactable;
         }
+
+        if (currentInteractable && interactionManager)
+        {
+            interactionManager.ShowInteract();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Interactable>())
+        if (other.gameObject.GetComponentInParentThenChildren<Interactable>())
         {
-            currentInteractable = null; 
+            currentInteractable = null;
+
+            if (interactionManager)
+            {
+                interactionManager.HideInteract();
+            }
         }
     }
 

@@ -135,6 +135,11 @@ public class Character : Pawn, IPhysicsTick
 
     public void CompanionAttack(InputAction.CallbackContext context)
     {
+        if (stopMovement)
+        {
+            return;
+        }
+
         if (context.ReadValueAsButton())
         {
             foreach(Companion companion in Companions)
@@ -228,6 +233,11 @@ public class Character : Pawn, IPhysicsTick
 
     public void Interact(InputAction.CallbackContext context)
     {
+        if (stopMovement)
+        {
+            return;
+        }
+
         if (context.ReadValueAsButton())
         {
             if (cachePlayerInteract)
@@ -249,7 +259,7 @@ public class Character : Pawn, IPhysicsTick
 
     public void PhysicsTick(float DeltaTime)
     {
-        bool isMoving = move.magnitude > 0.1f;
+        bool isMoving = !stopMovement ? move.magnitude > 0.1f : false;
         float speed = isMoving ? isSprinting ? 1f : 0.5f : 0f;
 
         speed = Mathf.SmoothDamp(animator.GetFloat(VelocityHash), speed, ref velocity, 0.2f);

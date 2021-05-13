@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,6 +23,8 @@ public class CombatManager : GameModeUtil
     TempoSync tempoSync;
 
     public TempoSync TempoSync => tempoSync;
+
+    public Action onEndCombat;
 
     public override void StartUtil(GameMode gameMode)
     {
@@ -58,6 +61,14 @@ public class CombatManager : GameModeUtil
         return tempoSync.IsInputInTime();
     }
 
+    public void OnDestoryPawn(Pawn pawn)
+    {
+        if (pawn)
+        {
+            RemoveAttacker(pawn);
+        }
+    }
+
     public void AddAttacker(Pawn attackingPawn)
     {
         int previousAttackers = NumberOfAttackers;
@@ -72,6 +83,8 @@ public class CombatManager : GameModeUtil
         {
             combatLines.PlayLine(combatLines.enterCombatLines.GetRandomLine());
         }
+
+        attackingPawn.OnDestroyPawn += OnDestoryPawn;
     }
 
     public void RemoveAttacker(Pawn attackingPawn)
@@ -88,6 +101,8 @@ public class CombatManager : GameModeUtil
         {
             EndCombat();
         }
+
+        attackingPawn.OnDestroyPawn -= OnDestoryPawn;
     }
 
     void StartCombat()
@@ -112,6 +127,8 @@ public class CombatManager : GameModeUtil
         {
             musicManager.EndCombat();
         }
+
+        onEndCombat?.Invoke();
     }
 
     void SayEnemyCombatLine()
@@ -121,11 +138,11 @@ public class CombatManager : GameModeUtil
             return;
         }
 
-        float random = Random.Range(0f, 100f);
+        float random = UnityEngine.Random.Range(0f, 100f);
 
         if (random < combatLineChance)
         {
-            int randomEnemy = Random.Range(0, attackers.Count);
+            int randomEnemy = UnityEngine.Random.Range(0, attackers.Count);
 
             Pawn randomPawn = attackers[randomEnemy];
 
