@@ -167,7 +167,11 @@ public class DialogueManager : GameModeUtil
                     }
                 }
             }
-            GameManager.Instance.PlayerController.PossessedPawn.stopMovement = false;
+            if (GameManager.IsValid() && GameManager.Instance.PlayerController && GameManager.Instance.PlayerController.PossessedPawn)
+            {
+                GameManager.Instance.PlayerController.PossessedPawn.stopMovement = false;
+            }
+            
             scripts.Remove(dialogue);
         }
 
