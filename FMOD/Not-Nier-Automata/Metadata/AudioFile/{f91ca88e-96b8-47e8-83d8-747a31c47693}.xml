@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{1f01bedb-8739-466b-8d4a-dd6e5e9dbc8d}">
+	<object class="AudioFile" id="{f91ca88e-96b8-47e8-83d8-747a31c47693}">
 		<property name="assetPath">
-			<value>SFX/Footsteps_SFX/Cutsom_ Footstep4.wav</value>
+			<value>SFX/Footsteps_SFX/SFX_Footstep01.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.34375</value>
+			<value>0.58739583333333334</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{32cfdd45-6891-454c-8dc8-bf2111ef1f35}</destination>
