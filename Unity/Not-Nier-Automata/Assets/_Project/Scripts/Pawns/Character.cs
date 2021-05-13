@@ -135,14 +135,14 @@ public class Character : Pawn, IPhysicsTick
 
     public void CompanionAttack(InputAction.CallbackContext context)
     {
-        if (stopMovement)
-        {
-            return;
-        }
-
         if (context.ReadValueAsButton())
         {
-            foreach(Companion companion in Companions)
+            if (stopMovement)
+            {
+                return;
+            }
+
+            foreach (Companion companion in Companions)
             {
                 if (companion.Pawn.WeaponUser)
                 {
