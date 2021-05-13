@@ -24,6 +24,12 @@ public class Damageable : Actor, IInitialize
     {
         health -= amount;
 
+        if (health <= 0)
+        {
+            Die();
+            return;
+        }
+
         if (combatLines)
         {
             combatLines.PlayLine(combatLines.damageLines.GetRandomLine());
@@ -31,10 +37,6 @@ public class Damageable : Actor, IInitialize
 
         onDamage.Invoke();
         Debug.Log($"{gameObject.name} health is {health}");
-        if (health <= 0)
-        {
-            Die();
-        }
     }
 
     public void Heal(int amount)

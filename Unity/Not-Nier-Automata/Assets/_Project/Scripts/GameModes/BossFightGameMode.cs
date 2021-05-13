@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossFightGameMode : GameMode, IBeginPlay
 {
+    public DialogueScript endGameScript;
+
     public void BeginPlay()
     {
         CombatManager combatManager = GetGameModeUtil<CombatManager>();
@@ -16,7 +18,11 @@ public class BossFightGameMode : GameMode, IBeginPlay
 
     public void OnEndCombat()
     {
-        Debug.LogWarning("end of level!!!");
-        GameManager.Instance.LevelLoader.LoadScene("Menu");
+        DialogueManager dialogueManager = GetGameModeUtil<DialogueManager>();
+
+        if (dialogueManager)
+        {
+            dialogueManager.StartDialogue(endGameScript);
+        }
     }
 }
