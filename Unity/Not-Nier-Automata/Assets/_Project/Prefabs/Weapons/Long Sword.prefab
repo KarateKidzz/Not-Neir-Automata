@@ -111,6 +111,7 @@ MonoBehaviour:
   useCameraForAim: 0
   attackSoundEvent: 
   cooldownSoundEvent: 
+  onHitEvent: event:/SFX/SwordHit
 --- !u!1001 &5198280394726169369
 PrefabInstance:
   m_ObjectHideFlags: 0
