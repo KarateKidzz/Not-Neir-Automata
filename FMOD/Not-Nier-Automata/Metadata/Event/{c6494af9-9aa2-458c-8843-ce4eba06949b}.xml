@@ -190,7 +190,7 @@
 			<value>4</value>
 		</property>
 		<property name="maximumDistance">
-			<value>50</value>
+			<value>7</value>
 		</property>
 		<property name="extentMode">
 			<value>1</value>
