@@ -95,12 +95,24 @@ public class CombatLines : MonoBehaviour
     /// </summary>
     public VoiceLines gruntLines;
 
+    static bool isQuitting = false;
+
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     /// <summary>
     /// Play a voice line
     /// </summary>
     /// <param name="line"></param>
     public void PlayLine(string line)
     {
+        if (isQuitting)
+        {
+            return;
+        }
+
         Debug.Assert(voiceEmitter);
 
         if (string.IsNullOrEmpty(line))
@@ -112,6 +124,11 @@ public class CombatLines : MonoBehaviour
 
     public void Grunt()
     {
+        if (isQuitting)
+        {
+            return;
+        }
+
         if (gruntLines.HasEvent())
         {
             RuntimeManager.PlayOneShotAttached(gruntLines.audioEvent, gameObject);

@@ -91,11 +91,6 @@ public class CombatManager : GameModeUtil
     {
         int previousAttackers = NumberOfAttackers;
         attackers.Remove(attackingPawn);
-        CombatLines combatLines = attackingPawn.GetComponent<CombatLines>();
-        if (combatLines)
-        {
-            combatLines.PlayLine(combatLines.leaveCombatLines.GetRandomLine());
-        }
 
         if (NumberOfAttackers == 0 && previousAttackers > 0)
         {

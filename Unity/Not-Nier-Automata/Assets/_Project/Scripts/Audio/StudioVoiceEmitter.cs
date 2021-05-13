@@ -369,8 +369,18 @@ namespace FMODUnity
         {
             FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
 
+            if (!instance.isValid())
+            {
+                return FMOD.RESULT.ERR_EVENT_NOTFOUND;
+            }
+
             // Retrieve the user data
             instance.getUserData(out IntPtr stringPtr);
+
+            if (stringPtr == IntPtr.Zero)
+            {
+                return FMOD.RESULT.ERR_MEMORY;
+            }
 
             // Get the string object
             GCHandle stringHandle = GCHandle.FromIntPtr(stringPtr);
@@ -401,7 +411,7 @@ namespace FMODUnity
                             if (keyResult != FMOD.RESULT.OK)
                             {
                                 Debug.LogError(keyResult);
-                                break;
+                                return keyResult;
                             }
                             FMOD.Sound dialogueSound;
                             var soundResult = FMODUnity.RuntimeManager.CoreSystem.createSound(dialogueSoundInfo.name_or_data, soundMode | dialogueSoundInfo.mode, ref dialogueSoundInfo.exinfo, out dialogueSound);
@@ -414,6 +424,7 @@ namespace FMODUnity
                             else
                             {
                                 Debug.LogError(soundResult);
+                                return soundResult;
                             }
                         }
                         break;

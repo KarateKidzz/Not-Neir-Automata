@@ -18,9 +18,6 @@ public class BossFightGameMode : GameMode, IBeginPlay
 
     public void OnEndCombat()
     {
-
-        //GameManager.Instance.LevelLoader.LoadScene("Menu");
-
         DialogueManager dialogueManager = GetGameModeUtil<DialogueManager>();
 
         if (dialogueManager)
