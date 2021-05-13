@@ -436,7 +436,7 @@
 		<relationship name="modules">
 			<destination>{8ffc2905-ca4e-4f41-9a28-920d5a7c0f9e}</destination>
 			<destination>{d879f0a7-32d3-450d-8baf-4a1e4c6aecfb}</destination>
-			<destination>{9b9eaa34-0a61-43b2-b38d-13195431bda2}</destination>
+			<destination>{fa6c02c0-2943-465e-90a1-d894c235d11a}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{52ff1e47-3e50-4265-828a-c4559f96bcc2}</destination>
@@ -601,7 +601,6 @@
 			<destination>{e2588523-0cba-474a-9fa2-ab88b57cf470}</destination>
 			<destination>{cea66fba-6041-45c4-942e-fe41ef19481d}</destination>
 			<destination>{dfd7ac51-8f25-412c-bcbf-b25c9ad1a734}</destination>
-			<destination>{9b9eaa34-0a61-43b2-b38d-13195431bda2}</destination>
 			<destination>{6d4c3737-1c65-4a9f-b58a-a6746ac1f0ca}</destination>
 			<destination>{9a96ff57-3326-4afc-82a3-cb548d04f8b2}</destination>
 			<destination>{bfc30067-b966-46ce-bbb8-c6405583c215}</destination>
@@ -618,6 +617,7 @@
 			<destination>{cbc362bb-4cf9-40de-b4ab-f4a486709968}</destination>
 			<destination>{7cef4edb-5016-4ab7-b0a0-5ccd8d9c76e8}</destination>
 			<destination>{044f0c47-3001-4df5-b8c7-36e6bf713ae8}</destination>
+			<destination>{fa6c02c0-2943-465e-90a1-d894c235d11a}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{6e943f74-d62c-4f91-8e40-6714f14cadbc}</destination>
@@ -2118,20 +2118,23 @@
 			<value>0</value>
 		</property>
 	</object>
-	<object class="SingleSound" id="{9b9eaa34-0a61-43b2-b38d-13195431bda2}">
+	<object class="SingleSound" id="{fa6c02c0-2943-465e-90a1-d894c235d11a}">
 		<property name="start">
 			<value>48</value>
 		</property>
 		<property name="length">
-			<value>36</value>
+			<value>40</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{221b1189-ca6b-437f-a022-266c602d471c}</destination>
+			<destination>{f7937d9b-cde2-40b9-b404-03f6f92071db}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{52ff1e47-3e50-4265-828a-c4559f96bcc2}">
 		<property name="color">
 			<value>Green</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<property name="name">
 			<value>STRINGS</value>
@@ -2230,7 +2233,7 @@
 			<value>Purple</value>
 		</property>
 		<property name="volume">
-			<value>3</value>
+			<value>3.5</value>
 		</property>
 		<property name="name">
 			<value>BASS</value>
@@ -2299,7 +2302,7 @@
 			<value>Purple</value>
 		</property>
 		<property name="volume">
-			<value>5.5</value>
+			<value>7</value>
 		</property>
 		<property name="name">
 			<value>TAMB</value>
@@ -2380,6 +2383,9 @@
 		<property name="color">
 			<value>Yellow</value>
 		</property>
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="name">
 			<value>NGONI</value>
 		</property>
@@ -2425,7 +2431,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="volume">
-			<value>8</value>
+			<value>7</value>
 		</property>
 		<property name="name">
 			<value>ERHU</value>
