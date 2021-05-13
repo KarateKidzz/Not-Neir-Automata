@@ -386,8 +386,137 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &226652337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[0]
+      value: RoadmanRobot_YouStartin_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[1]
+      value: RoadmanRobot_SayGoodbyeToUrTeeth_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[0]
+      value: RoadmanRobot_YouStartin_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[1]
+      value: RoadmanRobot_GonnaPutYouInTheBin_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.499062
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573847291939246954, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: m_Name
+      value: Basic Motions Dummy - Idle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[0]
+      value: RoadmanRobot_OwwwwwJeez_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[1]
+      value: RoadmanRobot_SayGoodbyeToUrTeeth_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[5]
+      value: RoadmanRobot_Grunt5_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[6]
+      value: RoadmanRobot_Grunt5_A#
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
 --- !u!1 &313350218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 147.712, y: -25.77301, z: -51.981995}
 --- !u!1001 &866986619
 PrefabInstance:
@@ -1281,6 +1410,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[0]
+      value: RoadmanRobot_YouStartin_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[1]
+      value: RoadmanRobot_SayGoodbyeToUrTeeth_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: leaveCombatLines.lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[0]
+      value: RoadmanRobot_YouStartin_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[1]
+      value: RoadmanRobot_GonnaPutYouInTheBin_A#
+      objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
       propertyPath: m_RootOrder
@@ -1340,6 +1504,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Motions Dummy - Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[0]
+      value: RoadmanRobot_OwwwwwJeez_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[1]
+      value: RoadmanRobot_SayGoodbyeToUrTeeth_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[5]
+      value: RoadmanRobot_Grunt5_A#
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[6]
+      value: RoadmanRobot_Grunt5_A#
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
@@ -1513,6 +1702,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8202220548489088516, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: Banks.Array.data[2]
+      value: StacyRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[0]
+      value: StaceyRobot_Yoga_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[1]
+      value: StaceyRobot_VegonBegon_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[2]
+      value: StaceyRobot_TotesGonnaHitYou_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: combatLines.lines.Array.data[3]
+      value: StaceyRobot_SooooGonaTellMyDad2_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[0]
+      value: StaceyRobot_Yoga_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[1]
+      value: StaceyRobot_VegonBegon_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[2]
+      value: StaceyRobot_TotesGonnaHitYou_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[3]
+      value: StaceyRobot_SooooGonaTellMyDad2_A
+      objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
       propertyPath: m_RootOrder
@@ -1572,6 +1816,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Motions Dummy - Idle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: TriggerOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[0]
+      value: StacyRobot_Uh
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[1]
+      value: StacyRobot_Rude
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[2]
+      value: StacyRobot_CanYouLikeNot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[3]
+      value: StaceyRobot_TotesGonnaHitYou_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[4]
+      value: StaceyRobot_StopHittingME_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[5]
+      value: StaceyRobot_SooooGonnaTellMyDad_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[6]
+      value: StaceyRobot_SooooGonaTellMyDad2_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[7]
+      value: StaceyRobot_PlzStop_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[8]
+      value: StaceyRobot_OOOOWWWWW_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[9]
+      value: StaceyRobot_OOF_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[10]
+      value: StaceyRobot_OOF2_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[11]
+      value: StaceyRobot_Jeezus_A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
@@ -1828,7 +2142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 150.241, y: 18.859985, z: -60.56201}
 --- !u!1001 &1403512150
 PrefabInstance:
@@ -1837,10 +2151,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8202220548489088516, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: Banks.Array.data[2]
+      value: SlaveRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[0]
+      value: SlaveRobot_ImLeaking_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047744104790266311, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: enterCombatLines.lines.Array.data[1]
+      value: SlaveRobot_NeckPunch_C
+      objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
@@ -1896,6 +2225,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Motions Dummy - Idle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[0]
+      value: SlaveRobot_HeyThatHurts2_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[1]
+      value: SlaveRobot_IsaidStop_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[2]
+      value: SlaveRobot_NeckPunch_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[3]
+      value: SlaveRobot_OW_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[4]
+      value: SlaveRobot_OwStopHittingMe_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[5]
+      value: SlaveRobot_Umff3_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[6]
+      value: SlaveRobot_ThatDoesIt_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[7]
+      value: SlaveRobot_Umff2_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: programmerSoundKeys.Array.data[8]
+      value: SlaveRobot_Umff4_C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
@@ -2062,75 +2441,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1517600559
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.499062
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2570553944337172870, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573847291939246954, guid: 51daf680524134ec48676e587a792d10,
-        type: 3}
-      propertyPath: m_Name
-      value: Basic Motions Dummy - Idle (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 51daf680524134ec48676e587a792d10, type: 3}
 --- !u!43 &1742607363
 Mesh:
   m_ObjectHideFlags: 0
