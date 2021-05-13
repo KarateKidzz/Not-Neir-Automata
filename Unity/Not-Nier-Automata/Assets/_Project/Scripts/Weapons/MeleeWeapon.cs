@@ -11,6 +11,9 @@ public class MeleeWeapon : SingleAttackWeapon
 
     private int collidersEnabled;
 
+    [FMODUnity.EventRef]
+    public string onHitEvent;
+
     private void Awake()
     {
         Collider[] rootColliders = GetComponents<Collider>();
@@ -78,6 +81,10 @@ public class MeleeWeapon : SingleAttackWeapon
 
                 if (hit)
                 {
+                    if (!string.IsNullOrEmpty(onHitEvent))
+                    {
+                        FMODUnity.RuntimeManager.PlayOneShotAttached(onHitEvent, gameObject);
+                    }
                     Debug.Log("Weapon hit something: " + collision.gameObject.transform.root.gameObject.name);
                     weaponUser.RegisterHit(hit);
                 }
