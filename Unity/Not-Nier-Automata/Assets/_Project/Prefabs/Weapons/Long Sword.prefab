@@ -107,6 +107,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Long Sword
+  damage: 50
+  useCameraForAim: 0
+  attackSoundEvent: 
+  cooldownSoundEvent: 
 --- !u!1001 &5198280394726169369
 PrefabInstance:
   m_ObjectHideFlags: 0

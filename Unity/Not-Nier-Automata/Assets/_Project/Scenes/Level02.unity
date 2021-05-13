@@ -285,6 +285,109 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &219861732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219861737}
+  - component: {fileID: 219861736}
+  - component: {fileID: 219861735}
+  - component: {fileID: 219861734}
+  - component: {fileID: 219861733}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &219861733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219861732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Boss
+  - Robot
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!114 &219861734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219861732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/DX/Robot2DVoice
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  OverridePlayingEvents: 0
+  IgnoreNewPlays: 0
+  programmerSoundKeys: []
+  playOrder: 0
+--- !u!114 &219861735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219861732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0bc17cd8457404184a01e3aa05565a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  guidComponent: {fileID: 0}
+--- !u!114 &219861736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219861732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bbc2c1e63e98543830eec78d976795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedGuid: b75a9406bcf1404497464ef7dd46120a
+--- !u!4 &219861737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219861732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313350218
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +403,7 @@ GameObject:
   - component: {fileID: 313350225}
   - component: {fileID: 313350224}
   - component: {fileID: 313350223}
+  - component: {fileID: 313350226}
   m_Layer: 0
   m_Name: GameMode
   m_TagString: Untagged
@@ -326,6 +430,7 @@ MonoBehaviour:
   defaultPlayerControllerPrefab: {fileID: 9081435157633656733, guid: da1c0ab85ecca4071a8681694d945e38,
     type: 3}
   delayGameStart: 0
+  endGameScript: {fileID: 11400000, guid: 96751a5d5bc414ed2bc8810ad02ddbb2, type: 2}
 --- !u!4 &313350220
 Transform:
   m_ObjectHideFlags: 0
@@ -416,6 +521,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatLineChance: 23.1
+--- !u!114 &313350226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313350218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0250d9f694f8d492d968bb53285dd122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSnapshot: snapshot:/Dialogue
 --- !u!1 &440578926
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="Bank" id="{9d814862-8af1-42ee-a2fd-99919c398faf}">
+		<property name="name">
+			<value>Boss</value>
+		</property>
+		<relationship name="folder">
+			<destination>{90ba8783-b957-45ed-a833-f17e8c13379d}</destination>
+		</relationship>
+		<relationship name="audioTable">
+			<destination>{beea68dc-1f72-479e-9bc1-c5b758d8032b}</destination>
+		</relationship>
+	</object>
+	<object class="AudioTable" id="{beea68dc-1f72-479e-9bc1-c5b758d8032b}">
+		<property name="name">
+			<value>Audio Table</value>
+		</property>
+		<property name="sourceDirectory">
+			<value>Assets/DX/BIG BOSS</value>
+		</property>
+	</object>
+</objects>

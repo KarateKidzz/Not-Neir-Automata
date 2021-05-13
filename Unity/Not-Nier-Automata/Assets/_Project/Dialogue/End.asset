@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10769fcc256c046a9802307277ed3f56, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  lines:
+  - staticSpeaker: {fileID: -5206099949525424089, guid: 52c48ff4464964237aedb4e0385f203f,
+      type: 3}
+    runtimeSpeaker:
+      serializedGuid: 00000000000000000000000000000000
+      cachedName: 
+      cachedScene: {fileID: 0}
+    subtitle: 
+    audioLine: Dx_Fier_Boss_01
+    finishedDialogueAction: {fileID: 0}
+  - staticSpeaker: {fileID: 0}
+    runtimeSpeaker:
+      serializedGuid: b75a9406bcf1404497464ef7dd46120a
+      cachedName: Boss
+      cachedScene: {fileID: 102900000, guid: 668cb91bb5f2f4d12abe517e9e92d078, type: 3}
+    subtitle: 
+    audioLine: Dx_BOSS_WET_01
+    finishedDialogueAction: {fileID: 0}
+  useDialogueSnapshot: 1
