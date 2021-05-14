@@ -1790,6 +1790,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 518488129}
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &390488329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,6 +2581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3390dfa642f64276aa38791c1912ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: event:/Menu Click
+  hoverSound: event:/Menu Hover
 --- !u!1001 &580075013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7599,6 +7612,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 518488129}
         m_MethodName: LoadLevelOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 518488129}
+        m_MethodName: PlayClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
