@@ -128,7 +128,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95208
+  m_Name: pb_Mesh-391662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -489,6 +489,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Motions Dummy - Idle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: Event
+      value: event:/DX/RobotCombatVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: IgnoreNewPlays
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
@@ -980,7 +990,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95210
+  m_Name: pb_Mesh-391664
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1507,6 +1517,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
+      propertyPath: Event
+      value: event:/DX/RobotCombatVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: IgnoreNewPlays
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
       propertyPath: programmerSoundKeys.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -1538,7 +1558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95206
+  m_Name: pb_Mesh-391660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1819,8 +1839,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
+      propertyPath: Event
+      value: event:/DX/RobotCombatVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
       propertyPath: TriggerOnce
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: IgnoreNewPlays
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
@@ -1895,7 +1925,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95202
+  m_Name: pb_Mesh-391656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2228,6 +2258,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
         type: 3}
+      propertyPath: Event
+      value: event:/DX/RobotCombatVoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: IgnoreNewPlays
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
+      propertyPath: OverridePlayingEvents
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575070638344023310, guid: 51daf680524134ec48676e587a792d10,
+        type: 3}
       propertyPath: programmerSoundKeys.Array.size
       value: 9
       objectReference: {fileID: 0}
@@ -2447,7 +2492,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-95204
+  m_Name: pb_Mesh-391658
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
