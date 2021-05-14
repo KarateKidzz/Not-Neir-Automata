@@ -2608,8 +2608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3390dfa642f64276aa38791c1912ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: event:/Menu Click
-  hoverSound: event:/Menu Hover
+  clickSound: event:/SFX/Menu Click
+  hoverSound: event:/SFX/Menu Hover
 --- !u!1001 &580075013
 PrefabInstance:
   m_ObjectHideFlags: 0
