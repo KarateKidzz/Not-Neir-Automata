@@ -14,6 +14,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject mainPauseButtons;
     public GameObject optionsButtons;
 
+    [EventRef]
+    public string clickSound;
+
+    [EventRef]
+    public string hoverSound;
+
     private void Awake()
     {
         UnPause();
@@ -152,6 +158,22 @@ public class PauseMenu : MonoBehaviour
             masterBus.lockChannelGroup();
             masterBus.setVolume(value);
             masterBus.unlockChannelGroup();
+        }
+    }
+
+    public void PlayClickSound()
+    {
+        if (!string.IsNullOrEmpty(clickSound))
+        {
+            RuntimeManager.PlayOneShot(clickSound);
+        }
+    }
+
+    public void PlayHoverSound()
+    {
+        if (!string.IsNullOrEmpty(hoverSound))
+        {
+            RuntimeManager.PlayOneShot(hoverSound);
         }
     }
 }
