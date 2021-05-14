@@ -172,11 +172,8 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
             eventInstance.getVolume(out volume, out finalVolume);
 
-            while (finalVolume > 0)
+            while (finalVolume > 0.1f)
             {
-                Debug.Log(volume);
-                Debug.Log(finalVolume);
-
                 eventInstance.getVolume(out volume, out finalVolume);
                 yield return null;
             }
