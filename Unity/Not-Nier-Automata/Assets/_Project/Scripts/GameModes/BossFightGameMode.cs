@@ -18,11 +18,19 @@ public class BossFightGameMode : GameMode, IBeginPlay
 
     public void OnEndCombat()
     {
-        DialogueManager dialogueManager = GetGameModeUtil<DialogueManager>();
+        MusicManager musicManager = GetGameModeUtil<MusicManager>();
 
-        if (dialogueManager)
+        if (musicManager)
         {
-            dialogueManager.StartDialogue(endGameScript);
+            musicManager.FadeOutMusic(() =>
+            {
+                DialogueManager dialogueManager = GetGameModeUtil<DialogueManager>();
+
+                if (dialogueManager)
+                {
+                    dialogueManager.StartDialogue(endGameScript);
+                }
+            });
         }
     }
 }

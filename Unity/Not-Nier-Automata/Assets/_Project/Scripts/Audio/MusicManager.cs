@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
@@ -36,6 +37,8 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     public List<string> AllEvents => GetAllEvents();
 
+    public bool allowEndCombat = true;
+
     List<string> GetAllEvents()
     {
         List<string> result = new List<string>();
@@ -59,8 +62,11 @@ public class MusicManager : GameModeUtil, IBeginPlay
 
     public void EndCombat()
     {
-        PlayEvent(explorationMusicEvents[0]);
-        CurrentEventIndex = combatMusicEvents.Length;
+        if (allowEndCombat)
+        {
+            PlayEvent(explorationMusicEvents[0]);
+            CurrentEventIndex = combatMusicEvents.Length;
+        }
     }
 
     public override void EndUtil()
@@ -149,5 +155,33 @@ public class MusicManager : GameModeUtil, IBeginPlay
         StartInstance();
 
         yield return null;
+    }
+
+    public void FadeOutMusic(Action onEndCallback)
+    {
+        StartCoroutine(FadeOutMusicImplementation(onEndCallback));
+    }
+
+    IEnumerator FadeOutMusicImplementation(Action onEndCallback)
+    {
+        if (eventInstance.isValid())
+        {
+            eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            float volume, finalVolume;
+
+            eventInstance.getVolume(out volume, out finalVolume);
+
+            while (finalVolume > 0)
+            {
+                Debug.Log(volume);
+                Debug.Log(finalVolume);
+
+                eventInstance.getVolume(out volume, out finalVolume);
+                yield return null;
+            }
+        }
+
+        onEndCallback?.Invoke();
     }
 }

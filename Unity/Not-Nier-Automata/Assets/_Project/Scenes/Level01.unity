@@ -1246,7 +1246,7 @@ MonoBehaviour:
   Banks:
   - Level01_Cinematic
   CollisionTag: 
-  PreloadSamples: 0
+  PreloadSamples: 1
 --- !u!4 &237124434
 Transform:
   m_ObjectHideFlags: 0
