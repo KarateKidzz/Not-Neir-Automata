@@ -136,10 +136,15 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{5d229e27-8323-4890-9db0-df08f02b9b59}">
 		<relationship name="effects">
+			<destination>{94ca6fb7-e4fd-4a47-963c-b48d9c611518}</destination>
 			<destination>{a706a2bf-3535-415a-a39c-dda692543c69}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{e45340eb-dc2b-4bb0-82a5-d07994ba843c}" />
+	<object class="MixerBusPanner" id="{e45340eb-dc2b-4bb0-82a5-d07994ba843c}">
+		<property name="overridingOutputFormat">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{399b9b8b-f0e4-4337-ab89-bc16007734b2}" />
 	<object class="AutomationPoint" id="{8bf87c51-2cb2-4548-a423-b885fb8eaef9}">
 		<property name="position">
@@ -158,6 +163,11 @@
 		</property>
 		<property name="value">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="ChannelMixEffect" id="{94ca6fb7-e4fd-4a47-963c-b48d9c611518}">
+		<property name="outputGrouping">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{a706a2bf-3535-415a-a39c-dda692543c69}" />
