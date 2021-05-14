@@ -3229,6 +3229,7 @@
 		<relationship name="effects">
 			<destination>{6992a1ab-ce2b-474e-b28c-ff60750511c9}</destination>
 			<destination>{ce300b69-8a38-4cd9-b832-68909dfe0dff}</destination>
+			<destination>{8d0b12e7-0190-41cd-8ba0-3dbfb358ba27}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c73ebefd-552d-49ad-91c7-3ac0caacfd1d}" />
@@ -3599,6 +3600,14 @@
 	<object class="GainEffect" id="{ce300b69-8a38-4cd9-b832-68909dfe0dff}">
 		<property name="gain">
 			<value>10</value>
+		</property>
+	</object>
+	<object class="TransceiverEffect" id="{8d0b12e7-0190-41cd-8ba0-3dbfb358ba27}">
+		<property name="transmitMode">
+			<value>true</value>
+		</property>
+		<property name="channel">
+			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{31e510e2-5e0f-4d0f-b846-cfe1e4da4d3e}">
