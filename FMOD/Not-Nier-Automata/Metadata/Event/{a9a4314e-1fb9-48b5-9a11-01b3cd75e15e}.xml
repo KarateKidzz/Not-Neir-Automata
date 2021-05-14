@@ -42,7 +42,7 @@
 	</object>
 	<object class="MasterTrack" id="{d831b3e5-c55f-4278-9042-64dbaf110a43}">
 		<relationship name="automationTracks">
-			<destination>{676aea23-0899-4173-948a-9a97360a201c}</destination>
+			<destination>{94113581-5a4e-4830-acfb-ca52bbedaaf5}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{185c8d20-2f5c-4c8f-b97e-a49955de31fb}</destination>
@@ -91,7 +91,7 @@
 			<destination>{a460e409-8e18-45d6-871a-11239d317e90}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{676aea23-0899-4173-948a-9a97360a201c}">
+	<object class="AutomationTrack" id="{94113581-5a4e-4830-acfb-ca52bbedaaf5}">
 		<relationship name="automator">
 			<destination>{8b3eb0f9-9525-489b-b2da-61461ace5ddb}</destination>
 		</relationship>
@@ -179,10 +179,10 @@
 			<value>1</value>
 		</property>
 		<property name="soundSize">
-			<value>2</value>
+			<value>11.5</value>
 		</property>
 		<property name="minimumExtent">
-			<value>180</value>
+			<value>360</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{114e5c91-5772-40e9-9573-48ef0486b8ad}" />
@@ -191,10 +191,10 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.381462783</value>
+			<value>0.451619565</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{f02a3727-17e1-4d55-981e-f60619db9d73}">
@@ -202,7 +202,7 @@
 			<value>60</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-73.3333359</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{5e5b2b11-3319-4720-a2f7-a87a861e7d01}">
@@ -210,10 +210,10 @@
 			<value>20</value>
 		</property>
 		<property name="value">
-			<value>-3.5</value>
+			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.138864473</value>
+			<value>0.323489487</value>
 		</property>
 	</object>
 </objects>

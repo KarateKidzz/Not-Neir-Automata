@@ -93,7 +93,7 @@
 	<object class="MixerBusPanner" id="{7be251fa-7218-4149-9884-c604c3adb0e4}" />
 	<object class="MultiSound" id="{01ff6970-740b-48cc-9639-f38d7a978f61}">
 		<property name="length">
-			<value>2.2385416666666669</value>
+			<value>0.78125000000000011</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{fbd684d4-1a22-42da-af94-77af3eb4caec}</destination>
@@ -179,18 +179,18 @@
 	<object class="SpatialiserEffect" id="{f2b9a9ca-6209-43f1-a92c-222aa9e49367}" />
 	<object class="AutomationPoint" id="{f56562ea-ff1e-41d4-942a-d34b25367af8}">
 		<property name="position">
-			<value>1.5</value>
+			<value>0.15625</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>0.25471893</value>
+			<value>-0.410599858</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b99b46d4-2ec2-4bdb-87d3-6554662435b9}">
 		<property name="position">
-			<value>2.2385416666666669</value>
+			<value>0.78125</value>
 		</property>
 		<property name="value">
 			<value>0</value>
