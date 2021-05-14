@@ -390,7 +390,7 @@ namespace FMODUnity
             {
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND:
                     {
-                        FMOD.MODE soundMode = FMOD.MODE.LOOP_NORMAL | FMOD.MODE.CREATECOMPRESSEDSAMPLE | FMOD.MODE.NONBLOCKING;
+                        FMOD.MODE soundMode = FMOD.MODE.LOOP_OFF | FMOD.MODE.CREATECOMPRESSEDSAMPLE | FMOD.MODE.NONBLOCKING | FMOD.MODE.IGNORETAGS | FMOD.MODE.LOWMEM;
                         var parameter = (FMOD.Studio.PROGRAMMER_SOUND_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.PROGRAMMER_SOUND_PROPERTIES));
 
                         if (key.Contains("."))
