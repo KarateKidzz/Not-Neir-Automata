@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2473,8 +2473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPauseButtons: {fileID: 1284527879}
   optionsButtons: {fileID: 1988139937}
-  clickSound: event:/Menu Click
-  hoverSound: event:/Menu Hover
+  clickSound: event:/SFX/Menu Click
+  hoverSound: event:/SFX/Menu Hover
 --- !u!1 &1389776809
 GameObject:
   m_ObjectHideFlags: 0

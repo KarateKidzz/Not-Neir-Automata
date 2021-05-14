@@ -604,6 +604,7 @@ MonoBehaviour:
   currentState: 0
   playExploreMusic: 1
   CurrentEventIndex: 0
+  allowEndCombat: 0
 --- !u!114 &313350222
 MonoBehaviour:
   m_ObjectHideFlags: 0
