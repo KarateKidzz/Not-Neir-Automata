@@ -1,10 +1,12 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
 [InitializeOnLoad]
@@ -240,8 +242,9 @@ public class AssetIDs : ScriptableObject
         { 
             UniquePair pair = Instance.assetsIDs[i];
 
-            GUID outGuid;
-            if (!GUID.TryParse(pair.AssetID, out outGuid) || pair.Object == null)
+            
+            Guid outGuid;
+            if (!Guid.TryParse(pair.AssetID, out outGuid) || pair.Object == null)
             {
                 Debug.LogWarning($"[Asset IDs] Removing asset pair with either invalid guid or null object");
                 Instance.assetsIDs.RemoveAt(i);
