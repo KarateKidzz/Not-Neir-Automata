@@ -49,6 +49,11 @@ public class MusicManager : GameModeUtil, IBeginPlay
         return result;
     }
 
+    public void Resume()
+    {
+        EventInstance.setPaused(false);   
+    }
+
     public void BeginPlay()
     {
         StartCoroutine(StartExplorationAfterWait(2f));
