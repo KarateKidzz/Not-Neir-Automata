@@ -9,6 +9,9 @@ public class JammerUI : GameModeUtil, IInitialize
     [ParamRef]
     public string jammerParameter;
 
+    [EventRef]
+    public string pressSound;
+
     FMOD.Studio.PARAMETER_DESCRIPTION jammerParameterDescription;
 
     FMOD.DSP channelMixDSP;
@@ -160,6 +163,14 @@ public class JammerUI : GameModeUtil, IInitialize
         Open();
     }
 
+    void PlaySound()
+    {
+        if (!string.IsNullOrEmpty(pressSound))
+        {
+            RuntimeManager.PlayOneShot(pressSound);
+        }
+    }
+
     public void PressButton(int number)
     {
         if (!currentJammer)
@@ -174,16 +185,20 @@ public class JammerUI : GameModeUtil, IInitialize
             Debug.Log("[Jammer UI] Input Accepted! Unlocking Jammer");
             UnlockJammer();
         }
+
+        PlaySound();
     }
 
     public void PressResetButton()
     {
         currentInput = "";
+        PlaySound();
     }
 
     public void PressCloseButton()
     {
         Close();
+        PlaySound();
     }
 
     public void UnlockJammer()
@@ -204,7 +219,7 @@ public class JammerUI : GameModeUtil, IInitialize
         }
 
         uiParent.SetActive(true);
-        PressResetButton();
+        currentInput = "";
 
         if (GameManager.Instance.PlayerController)
         {
@@ -226,7 +241,7 @@ public class JammerUI : GameModeUtil, IInitialize
             GameManager.Instance.PlayerController.CameraManager.brain.enabled = true;
         }
 
-        PressResetButton();
+        currentInput = "";
         uiParent.SetActive(false);
         currentJammer = null;
 

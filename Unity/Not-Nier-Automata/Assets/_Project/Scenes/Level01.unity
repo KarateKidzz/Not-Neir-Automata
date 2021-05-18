@@ -1382,6 +1382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jammerParameter: Jammers
+  pressSound: event:/SFX/Menu Click
   uiParent: {fileID: 821170043}
 --- !u!114 &325507005
 MonoBehaviour:
@@ -4841,8 +4842,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600642635}
-  m_LocalRotation: {x: -0.038453273, y: 0.94468725, z: -0.1199609, w: -0.30281478}
-  m_LocalPosition: {x: 12.135758, y: 1.7358613, z: 8.333555}
+  m_LocalRotation: {x: -0.014423456, y: 0.7168502, z: 0.014832861, w: 0.69692016}
+  m_LocalPosition: {x: 44.511593, y: 1.3647794, z: 5.0479736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
