@@ -2731,6 +2731,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3d37ea68-62d6-4ac4-9e50-f7d1855d1035}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
 		<property name="name">
 			<value>HummingBot</value>
 		</property>
@@ -3227,9 +3230,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{6730d411-25c7-48ce-9762-4f2572633e72}">
 		<relationship name="effects">
-			<destination>{6992a1ab-ce2b-474e-b28c-ff60750511c9}</destination>
-			<destination>{ce300b69-8a38-4cd9-b832-68909dfe0dff}</destination>
 			<destination>{8d0b12e7-0190-41cd-8ba0-3dbfb358ba27}</destination>
+			<destination>{6992a1ab-ce2b-474e-b28c-ff60750511c9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c73ebefd-552d-49ad-91c7-3ac0caacfd1d}" />
@@ -3596,12 +3598,6 @@
 			<value>1</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{6992a1ab-ce2b-474e-b28c-ff60750511c9}" />
-	<object class="GainEffect" id="{ce300b69-8a38-4cd9-b832-68909dfe0dff}">
-		<property name="gain">
-			<value>10</value>
-		</property>
-	</object>
 	<object class="TransceiverEffect" id="{8d0b12e7-0190-41cd-8ba0-3dbfb358ba27}">
 		<property name="transmitMode">
 			<value>true</value>
@@ -3610,6 +3606,7 @@
 			<value>1</value>
 		</property>
 	</object>
+	<object class="MixerBusFader" id="{6992a1ab-ce2b-474e-b28c-ff60750511c9}" />
 	<object class="AutomationPoint" id="{31e510e2-5e0f-4d0f-b846-cfe1e4da4d3e}">
 		<property name="position">
 			<value>0.99999999999999956</value>

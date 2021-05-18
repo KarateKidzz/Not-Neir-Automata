@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3174842378894881208}
   - component: {fileID: 7686905878397509120}
-  - component: {fileID: 1516834702842194542}
+  - component: {fileID: 9144519025311032955}
   - component: {fileID: 2819768367347099269}
   - component: {fileID: 7664689704223524806}
   m_Layer: 0
@@ -97,7 +97,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1516834702842194542
+--- !u!114 &9144519025311032955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,23 +106,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 3174842378895043672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f214ba292c3142a692b63322c5d5ac2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/DX/RobotVoice
-  PlayEvent: 3
+  CollisionTag: 
+  Event: event:/DX/HummingBotVoices
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
-  OverridePlayingEvents: 0
-  IgnoreNewPlays: 1
-  programmerSoundKeys:
-  - Dx_SwedishCook_01
-  - Dx_SwedishCook_02
-  - Dx_SwedishCook_03
-  playOrder: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 7
 --- !u!114 &2819768367347099269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadEvent: 1
-  UnloadEvent: 2
+  LoadEvent: 7
+  UnloadEvent: 8
   Banks:
   - HummingRobot
   CollisionTag: 
@@ -176,7 +173,7 @@ MonoBehaviour:
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0.32, b: 0, a: 1}
+      m_TextColor: {r: 0, g: 0.64, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -404,7 +401,7 @@ MonoBehaviour:
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0.64, b: 0, a: 1}
+      m_TextColor: {r: 0, g: 0.32, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -924,7 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 7664689704223524854}
   hideChildren: 0
-  selected: 1
+  selected: 0
   label: 
   handleScale: 1
 --- !u!1 &3174842378895043984
